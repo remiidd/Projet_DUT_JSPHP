@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1>index serveur Wamp</h1>
-    <p>test<p>
+    <p>test bite<p>
     <?php echo "test php";?></p>
     <script src="scripts/js/script.js"></script>
     <?php include 'scripts/php/script.php'; ?>
