@@ -6,6 +6,6 @@
   </head>
   <body>
     <h1>index serveur Wamp</h1>
-    <p>Repartition des tâches du projet</p>
+    <p>test</p>
   </body>
 </html>
