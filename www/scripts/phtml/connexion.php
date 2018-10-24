@@ -7,7 +7,22 @@
   <body>
     <div id="connexion">
       <center>
-        
+        <form class="form_connexion" action="" method="post">
+          <p>
+            <label>Identifiant</label>
+            </br>
+            <input type="text" name="id">
+          </p>
+          <p>
+            <label>Mot de passe</label>
+            </br>
+            <input type="password" name="mdp">
+          </p>
+          <input type="submit" value="Connexion">
+        </form>
+        <p>
+          <a href="">Inscrivez-vous</a>
+        </p>
       </center>
     </div>
   </body>
