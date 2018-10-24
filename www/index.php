@@ -11,5 +11,6 @@
     <?php echo "test php";?></p>
     <script src="scripts/js/script.js"></script>
     <?php include 'scripts/php/script.php'; ?>
+    <a href="phtml/connexion.php"></a>
   </body>
 </html>
