@@ -7,7 +7,8 @@
   </head>
   <body>
     <h1>index serveur Wamp</h1>
-    <p><?php echo "test php";?></p>
+    <p>gros sexe<p>
+    <?php echo "test php";?></p>
     <script src="scripts/js/script.js"></script>
     <?php include 'scripts/php/script.php'; ?>
   </body>
