@@ -16,5 +16,6 @@
     <script src="scripts/js/script.js"></script>
     <?php include 'scripts/php/script.php'; ?>
     <a href="phtml/connexion.php">Connexion</a>
+    <br/><a href="profil.php?id=1">Profil de Utili Le Test</a>
   </body>
 </html>
