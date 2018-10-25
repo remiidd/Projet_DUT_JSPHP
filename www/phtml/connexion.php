@@ -9,7 +9,7 @@
       <center>
         <form class="form_connexion" action="" method="post">
           <p>
-            <label>Identifiants</label>
+            <label>Identifiant</label>
             </br>
             <input type="text" name="id">
           </p>
