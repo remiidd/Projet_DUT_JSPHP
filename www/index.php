@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="css/styles.css"/>
   </head>
   <body>
+    <div class="content">
+      <div id="gauche"></div>
+      <div id="droite"></div>
+    </div>
     <h1>index serveur Wamp coucou</h1>
     <p>test test test test<p>
     <?php echo "test php";?></p>
