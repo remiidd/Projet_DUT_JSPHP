@@ -6,6 +6,5 @@
   </head>
   <body>
     <p>Utilisateur avec l'id : <?php echo $_GET["id"]; ?></p>
-    <p>Sexe</p>
   </body>
 </html>
