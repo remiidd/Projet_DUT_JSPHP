@@ -32,6 +32,7 @@
       }
     ?>
     <?php include 'bar_navigation/nonco.php' ?>
+    <!-- CONTENU DANS CETTE DIV -->
     <div class="content">
       <p>Utilisateur avec l'id : <?php echo $_GET["id"]; ?> s'appelle <?php echo $data["prenom"]." ".$data["nom"]; ?></p>
     </div>
