@@ -1,6 +1,7 @@
 .content{
   width: 100%;
   height: 500px;
+  margin-top: 56px;
 }
 
 .navbar {
@@ -23,4 +24,19 @@
   width: 40%;
   height: 100%;
   background-color: blue;
+}
+
+#nomprenom_insci{
+  height: 2em;
+  background-color: grey;
+}
+
+#prenom_insci{
+  width: 50%;
+  float: left;
+}
+
+#nom_insci{
+  width: 50%;
+  float: right;
 }

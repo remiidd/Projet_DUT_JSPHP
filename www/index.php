@@ -20,8 +20,8 @@
       <div id="droite">
         <form id="inscription" action="" method="post">
           <div id="nomprenom_insci">
-            <div id="prenom"></div>
-            <div id="nom"></div>
+            <div id="prenom_insci"></div>
+            <div id="nom_insci"></div>
           </div>
         </form>
       </div>
