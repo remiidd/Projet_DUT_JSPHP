@@ -11,13 +11,10 @@
     } catch (\Exception $e) {
       die('Erreur :'.$e->getMessage());
     }
-
-
-
-      //$reponse = $bdd->query('SELECT * FROM profil WHERE id=\''.$_GET['id'].'\'');
-      //$data = $reponse->fetch();
+      $reponse = $bdd->query('SELECT * FROM profil WHERE id=\''.$_GET['id'].'\'');
+      $data = $reponse->fetch();
     ?>
     <p>Utilisateur avec l'id : <?php echo $_GET["id"]; ?> s'appelle <?php //echo $data["prenom"]." ".$data["nom"]; ?></p>
-    <?php // $reponse->closeCursor(); ?>
+    <?php $reponse->closeCursor(); ?>
   </body>
 </html>
