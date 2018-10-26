@@ -8,8 +8,9 @@
     <?php
       $bdd = new PDO('mysql:host=91.216.107.164;dbname=debra756602_19tfmd;charset=utf8', 'debra756602_19tfmd', 'root');
 
-      $reponse = $bdd->query('');
+      $reponse = $bdd->query('SELECT * FROM profil WHERE id=\''.$_GET['id'].'\'');
+      $data = $reponse->fetch();
     ?>
-    <p>Utilisateur avec l'id : <?php echo $_GET["id"]; ?></p>
+    <p>Utilisateur avec l'id : <?php echo $_GET["id"]; ?> s'appelle <?php echo $data["prenom"]." ".$data["nom"]; ?></p>
   </body>
 </html>
