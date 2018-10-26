@@ -17,7 +17,14 @@
     <?php include 'bar_navigation/nonco.php' ?>
     <div class="content">
       <div id="gauche"></div>
-      <div id="droite"></div>
+      <div id="droite">
+        <form id="inscription" action="" method="post">
+          <div id="nomprenom_insci">
+            <div id="prenom"></div>
+            <div id="nom"></div>
+          </div>
+        </form>
+      </div>
     </div>
     <h1>index serveur Wamp coucou</h1>
     <p>test test test test<p>
