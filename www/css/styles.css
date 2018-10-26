@@ -34,7 +34,16 @@
 #prenom_insci, #nom_insci{
   width: 50%;
   height: 100%;
+  float: left;
 }
+
+#nom_insci{
+  width: 50%;
+  float: right;
+}
+
+
+
 
 /* ====================  CSS PAGE DE PROFIL ==================== */
 .cover {
