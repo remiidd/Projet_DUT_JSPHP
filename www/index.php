@@ -9,7 +9,7 @@
     <?php include 'bar_navigation/nonco.php' ?>
     <div class="content">
       <div id="gauche">
-        <img src="src/media/index.jpg" alt="">
+        <img src="src/media/index.jpg" width="100%">
         <div id="droite">
           <form id="inscription" action="" method="post">
             <div id="nomprenom_insci">
