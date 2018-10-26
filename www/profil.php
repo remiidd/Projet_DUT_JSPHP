@@ -34,8 +34,9 @@
     <?php include 'bar_navigation/nonco.php' ?>
     <!-- CONTENU DANS CETTE DIV -->
     <div class="content">
-      <div id="couv"></div>
-      <div id="pdp"></div>
+      <div id="presentation">
+        <img class="fit-picture" src="/media/examples/Grapefruit_Slice--332x332.jpg" alt="Grapefruit slice atop a pile of other slices"/>
+      </div>
       <div id="infos"></div>
 
 
