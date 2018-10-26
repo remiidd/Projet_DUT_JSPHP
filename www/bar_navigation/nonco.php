@@ -12,7 +12,7 @@
     <div class="navbar-nav mr-auto"></div>
     <div class="navbar-nav my-2 my-lg-0">
       <form method="post" action="connexion.php">
-        <input type="submit" value="Connexion"/>
+        <input id="cobout" type="submit" value="Connexion"/>
       </form>
     </div>
   </div>
