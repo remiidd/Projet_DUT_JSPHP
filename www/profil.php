@@ -14,7 +14,7 @@
       $reponse = $bdd->query('SELECT * FROM profil WHERE id=\''.$_GET['id'].'\'');
       $data = $reponse->fetch();
     ?>
-    <p>Utilisateur avec l'id : <?php echo $_GET["id"]; ?> s'appelle <?php //echo $data["prenom"]." ".$data["nom"]; ?></p>
+    <p>Utilisateur avec l'id : <?php echo $_GET["id"]; ?> s'appelle <?php echo $data["prenom"]." ".$data["nom"]; ?></p>
     <?php $reponse->closeCursor(); ?>
   </body>
 </html>
