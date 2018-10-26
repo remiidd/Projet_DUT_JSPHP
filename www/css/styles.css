@@ -3,6 +3,14 @@
   height: 500px;
 }
 
+.navbar {
+  background-color: #FFC3F5 ! important;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  top: 0;
+}
+
 #gauche{
   float: left;
   width: 60%;
