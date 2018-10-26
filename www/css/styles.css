@@ -29,7 +29,8 @@
 }
 
 #gauche > img{
-  width=100%;
+  width:100%;
+  overflow: hidden;
 }
 
 #nomprenom_insci{
