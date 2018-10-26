@@ -31,12 +31,8 @@
   background-color: grey;
 }
 
-#prenom_insci{
+#prenom_insci, #nom_insci{
   width: 50%;
+  height: 100%;
   float: left;
-}
-
-#nom_insci{
-  width: 50%;
-  float: right;
 }

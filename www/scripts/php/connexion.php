@@ -7,5 +7,20 @@
         die('Erreur : ' . $e->getMessage());
   }
 
-  //$reponse = $bdd->query('SELECT * FROM profil');
+  //variables
+  $reponse = $bdd->query('SELECT * FROM profil');
+  $util = $_POST['id'];
+  $mdp = md5($_POST['mdp']);
+
+
+  //test si id == OK
+  while ($donnees = $reponse->fetch())
+  {
+    if(($donnees['password'] == $mdp && $donnees['email'] == $util) || ($donnees['password'] == $mdp && $donnees['numerotel'] == $util)){
+      echo "succes";
+    }
+    else {
+      echo "pas succes";
+    }
+  }
 ?>
