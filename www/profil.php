@@ -13,6 +13,6 @@
       //$data = $reponse->fetch();
     ?>
     <p>Utilisateur avec l'id : <?php echo $_GET["id"]; ?> s'appelle <?php //echo $data["prenom"]." ".$data["nom"]; ?></p>
-    <?php// $reponse->closeCursor(); ?>
+    <?php // $reponse->closeCursor(); ?>
   </body>
 </html>
