@@ -12,6 +12,7 @@
         <div id="droite">
           <form id="inscription" action="" method="post">
             <div id="nomprenom_insci">
+              <img src="scr/media/index.jpg" alt="">
               <div id="prenom_insci">
                 <input class="insciform" type="text" name="prenom" value="Prénom">
               </div>
