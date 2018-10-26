@@ -35,7 +35,7 @@
     <!-- CONTENU DANS CETTE DIV -->
     <div class="content">
       <div id="presentation">
-        <div class="cover"><!--<img class="profilcover" src="src/media/default_profil_cover.jpg" alt="Default profil cover"/>--></div>
+        <div class="cover"><img class="profilcover" src="src/media/default_profil_cover.jpg" alt="Default profil cover"/></div>
         <div class="pp"><img class="profilpicture" src="src/media/default_profil_picture.jpg" alt="Default profil picture"/></div>
 
 
