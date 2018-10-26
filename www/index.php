@@ -13,7 +13,7 @@
         <form id="inscription" action="" method="post">
           <div id="nomprenom_insci">
             <div id="prenom_insci">
-              <input class="insciform" type="text" name="prenom" aria-label="Prénom">
+              <input class="insciform" type="text" name="prenom" title="Prénom">
             </div>
             <div id="nom_insci">
               <input class="insciform" type="text" name="nom" value="Nom">
