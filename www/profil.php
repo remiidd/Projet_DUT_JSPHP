@@ -31,7 +31,7 @@
         <?php
       }
     ?>
-
+    <?php include 'bar_navigation/nonco.php' ?>
     <div class="content">
       <p>Utilisateur avec l'id : <?php echo $_GET["id"]; ?> s'appelle <?php echo $data["prenom"]." ".$data["nom"]; ?></p>
     </div>
