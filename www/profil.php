@@ -35,8 +35,8 @@
     <!-- CONTENU DANS CETTE DIV -->
     <div class="content">
       <div id="presentation">
-        <div class="cover"><img class="profilcover" src="<?php if($data["photo_profil"]!=null) { ?>src/media/default_profil_cover.jpg<?php } else { ?>src/media/default_profil_cover.jpg<?php } ?>" alt="Default profil cover"/></div>
-        <div class="pp"><img class="profilpicture" src="src/media/default_profil_picture.jpg" alt="Default profil picture"/></div>
+        <div class="cover"><img class="profilcover" src="<?php if($data["photo_couverture"]!=null) { ?>src/media/default_profil_cover.jpg<?php } else { ?>src/media/default_profil_cover.jpg<?php } ?>" alt="Default profil cover"/></div>
+        <div class="pp"><img class="profilpicture" src="<?php if($data["photo_profil"]!=null) { ?>src/media/default_profil_picture.jpg<?php } else { ?>src/media/default_profil_picture.jpg<?php } ?>" alt="Default profil picture"/></div>
         <h1 class="name"><?php echo $data["prenom"]." ".$data["nom"]; ?></h1>
       </div>
       <div id="infos"></div>
