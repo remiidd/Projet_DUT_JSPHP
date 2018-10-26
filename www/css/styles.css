@@ -28,6 +28,10 @@
   background-color: #dbd4f952;
 }
 
+#gauche > img{
+  width="100%";
+}
+
 #nomprenom_insci{
   height: 2em;
   background-color: grey;
