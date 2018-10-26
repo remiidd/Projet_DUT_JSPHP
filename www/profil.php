@@ -35,7 +35,7 @@
     <!-- CONTENU DANS CETTE DIV -->
     <div class="content">
       <div id="presentation">
-        <img class="fit-picture" src="/media/examples/Grapefruit_Slice--332x332.jpg" alt="Grapefruit slice atop a pile of other slices"/>
+        <img class="profilpicture" src="src/media/default_profil_picture.jpg" alt="Default profil picture"/>
       </div>
       <div id="infos"></div>
 
