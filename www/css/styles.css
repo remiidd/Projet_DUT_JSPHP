@@ -52,7 +52,7 @@
   height: 300px;
   width: 80%;
   margin-left: 10%;
-  /*background-color: red;*/
+  background-color: red;
   overflow: hidden;
   text-align: center;
 }
