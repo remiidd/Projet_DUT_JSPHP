@@ -7,7 +7,7 @@
   <body>
     <?php
 
-      $bdd = new PDO('mysql:host=91.216.107.164;dbname=debra756602_19tfmd;charset=utf8', 'debra756602_19tfmd', 'rooto');
+      $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=debrayalois;charset=utf8', 'debrayalois', 'testdebrayalois');
 
       //$reponse = $bdd->query('SELECT * FROM profil WHERE id=\''.$_GET['id'].'\'');
       //$data = $reponse->fetch();
