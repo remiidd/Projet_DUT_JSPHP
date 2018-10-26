@@ -8,18 +8,19 @@
   <body>
     <?php include 'bar_navigation/nonco.php' ?>
     <div class="content">
-      <div id="gauche"></div>
-      <div id="droite">
-        <form id="inscription" action="" method="post">
-          <div id="nomprenom_insci">
-            <div id="prenom_insci">
-              <input class="insciform" type="text" name="prenom" value="Prénom">
+      <div id="gauche">
+        <div id="droite">
+          <form id="inscription" action="" method="post">
+            <div id="nomprenom_insci">
+              <div id="prenom_insci">
+                <input class="insciform" type="text" name="prenom" value="Prénom">
+              </div>
+              <div id="nom_insci">
+                <input class="insciform" type="text" name="nom" value="Nom">
+              </div>
             </div>
-            <div id="nom_insci">
-              <input class="insciform" type="text" name="nom" value="Nom">
-            </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
     <h1>index serveur Wamp coucou</h1>
