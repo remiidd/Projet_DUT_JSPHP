@@ -12,7 +12,11 @@
       <div id="droite">
         <form id="inscription" action="" method="post">
           <div id="nomprenom_insci">
-            <div id="prenom_insci"></div>
+            <div id="prenom_insci">
+              <label>Prenom</label>
+              </br>
+              <input type="text" name="id" value="prenom">
+            </div>
             <div id="nom_insci"></div>
           </div>
         </form>
