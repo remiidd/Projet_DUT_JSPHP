@@ -40,12 +40,6 @@
         <h1 class="name"><?php echo $data["prenom"]." ".$data["nom"]; ?></h1>
       </div>
       <div id="infos"></div>
-
-
-
-
-
-      <p>Utilisateur avec l'id : <?php echo $_GET["id"]; ?> s'appelle <?php echo $data["prenom"]." ".$data["nom"]; ?></p>
     </div>
     <?php $reponse->closeCursor(); ?>
   </body>
