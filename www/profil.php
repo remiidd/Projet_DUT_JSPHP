@@ -14,7 +14,7 @@
       $reponse = $bdd->query('SELECT * FROM profil WHERE id=\''.$_GET['id'].'\'');
       $data = $reponse->fetch();
       if($data["prenom"]==null) {
-        header('Location :index.php');
+        header('Location:index.php');
       }
     ?>
     <p>Utilisateur avec l'id : <?php echo $_GET["id"]; ?> s'appelle <?php echo $data["prenom"]." ".$data["nom"]; ?></p>
