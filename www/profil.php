@@ -9,7 +9,7 @@
     try {
       $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=debrayalois;charset=utf8', 'debrayalois', 'testdebrayalois');
     } catch (\Exception $e) {
-      die(e->getMessage());
+      die('Erreur :'.$e->getMessage());
     }
 
 
