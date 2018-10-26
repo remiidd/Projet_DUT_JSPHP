@@ -15,6 +15,11 @@
       $data = $reponse->fetch();
       if($data["prenom"]==null) {
         header('Location:index.php');
+      } else {
+        ?>
+        <script>
+          window.parent.document.title = '<?php echo $data["prenom"]; ?>'</script>
+        <?php
       }
     ?>
     <p>Utilisateur avec l'id : <?php echo $_GET["id"]; ?> s'appelle <?php echo $data["prenom"]." ".$data["nom"]; ?></p>
