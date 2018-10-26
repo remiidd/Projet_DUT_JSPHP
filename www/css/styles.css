@@ -39,6 +39,12 @@
   float: left;
 }
 
+
+#nomprenom_insci > id > input{
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
 /* ====================  Fin CSS page principale ==================== */
 
 /* ====================  CSS PAGE DE PROFIL ==================== */
