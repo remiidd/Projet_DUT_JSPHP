@@ -7,7 +7,7 @@
   <body>
     <?php
     try {
-      $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=debrayalois;charset=utf8', 'debrayalois', 'testdebrayalois');
+      $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;charset=utf8', 'derayalois', 'testdebrayalois');
     } catch (\Exception $e) {
       die('Erreur :'.$e->getMessage());
     }
