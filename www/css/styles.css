@@ -36,3 +36,43 @@
   height: 100%;
   float: left;
 }
+<<<<<<< HEAD
+=======
+
+#nom_insci{
+  width: 50%;
+  float: right;
+}
+
+
+
+
+/* ====================  CSS PAGE DE PROFIL ==================== */
+.cover {
+  height: 300px;
+  width: 80%;
+  margin-left: 10%;
+  /*background-color: red;*/
+  overflow: hidden;
+  text-align: center;
+}
+.pp {
+  height: 180px;
+  width: 180px;
+  overflow: hidden;
+  border: 2px solid red;
+  border-radius: 90px;
+  margin-top: -120px;
+  margin-left: 18%;
+}
+.name {
+  margin-top: -50px;
+  margin-left: 38%;
+}
+
+
+
+
+
+/* ====================  FIN CSS PAGE DE PROFIL ==================== */
+>>>>>>> 5a5e6bdfbf49886ec4dcc33adbc9018a0ed8fbe2
