@@ -18,7 +18,8 @@
       } else {
         ?>
         <script>
-          window.parent.document.title = '<?php echo $data["prenom"]; ?>'</script>
+          window.parent.document.title = 'Profil de <?php echo $data["prenom"]; ?>'
+        </script>
         <?php
       }
     ?>
