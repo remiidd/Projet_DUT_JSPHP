@@ -55,11 +55,11 @@
             $_POST["textarea_posts"] = null;
 
             $posts = htmlentities($posts);
-
+            $today = new DateTime();
             $req = $bdd->prepare('INSERT INTO posts(id, nom_createur, date_publication, contenu, photo, profil, nb_com, nb_like, nb_share) VALUES('', :noms, :date_publi, :contenu, :photo, :profil,'0','0','0')');
             $req->execute(array(
             	'noms' => $data["prenom"]." ".$data["nom"],
-            	'date_publi' => new DateTime(),
+            	'date_publi' => $today,
             	'contenu' => $message,
             	'photo' => "",
             	'profil' => $data["id"]
