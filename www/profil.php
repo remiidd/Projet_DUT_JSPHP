@@ -40,7 +40,7 @@
         <h1 class="name"><?php echo $data["prenom"]." ".$data["nom"]; ?></h1>
       </div>
       <div id="infos">
-        <p></p>
+        <p>Habite à <strong><?php echo $data["ville"]; ?></strong></p>
       </div>
     </div>
     <?php $reponse->closeCursor(); ?>
