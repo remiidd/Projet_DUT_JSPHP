@@ -41,7 +41,7 @@
       </div>
       <div id="infos">
         <p>Habite à <strong><?php echo $data["ville"]; ?></strong></p>
-        <p>Age de <?php $today = new DateTime();$naissance = new DateTime($data["naissance"]);echo $today->diff($naissance)->format("%Y");//->diff($data["naissance"])->format("jours : %d");?> !</p>
+        <p>Age de <?php $today = new DateTime();$naissance = new DateTime($data["naissance"]);echo $today->diff($naissance)->format("%d");//->diff($data["naissance"])->format("jours : %d");?> !</p>
       </div>
     </div>
     <?php $reponse->closeCursor(); ?>
