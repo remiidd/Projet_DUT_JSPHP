@@ -19,6 +19,17 @@
               <input class="insciform" type="text" name="nom" value="Nom">
             </div>
           </div>
+          <div class="inscriform">
+            <input type="email" name="email" value="Email">
+            </br>
+            <label>Mot de passe</label>
+            </br>
+            <input type="password" name="mdp" value="">
+            </br>
+            <label>Confirmer le mot de passe</label>
+            </br>
+            <input type="password" name="mdprepeat" value="">
+          </div>
         </form>
       </div>
       <img id="gauche" src="src/media/index.jpg" alt="">
