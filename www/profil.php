@@ -44,7 +44,9 @@
         <p>Agé de <strong><?php $today = new DateTime();$naissance = new DateTime($data["naissance"]);echo $today->diff($naissance)->format("%Y");?></strong> ans</p>
         <?php if(($today->format("%m%d"))==($naissance->format("%m%d"))) { ?><p>Bon anniversaire !</p><?php } ?>
       </div>
-      <div></div>
+      <div class="envoyer_post">
+        
+      </div>
     </div>
     <?php $reponse->closeCursor(); ?>
   </body>
