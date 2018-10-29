@@ -24,7 +24,7 @@
             </br>
             <label>Mot de passe</label>
             </br>
-            <input class="inscriform" type="password" name="mdp" value="">
+            <input class="inscriform" type="password" name="mdp" value="Mot de passe">
             </br>
             <label>Confirmer le mot de passe</label>
             </br>
