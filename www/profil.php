@@ -57,7 +57,7 @@
             'date_publi' => $today->format("%Y-%m-%d"),
             'contenu' => $message,
             'photo' => "",
-            'profil' => $_GET["id"];
+            'profil' => $_GET["id"]
             ));
         ?>
       </div>
