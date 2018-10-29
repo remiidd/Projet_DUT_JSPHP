@@ -42,7 +42,7 @@
       <div id="infos">
         <p>Habite à <strong><?php echo $data["ville"]; ?></strong></p>
         <p>Agé de <strong><?php $today = new DateTime();$naissance = new DateTime($data["naissance"]);echo $today->diff($naissance)->format("%Y");?></strong> ans</p>
-        <?php if(($today->format("%m%d"))==($naissance->format("%m%d"))) { ?><p>C'est son anniversaire !</p><?php } ?>
+        <?php if(($today->format("%m%d"))==($naissance->format("%m%d"))) { ?><p>Bon anniversaire !</p><?php } ?>
       </div>
       <div></div>
     </div>
