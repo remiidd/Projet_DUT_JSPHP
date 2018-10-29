@@ -13,22 +13,22 @@
           <h1>Inscription</h1>
           <div id="nomprenom_insci">
             <div id="prenom_insci">
-              <input class="insciform" type="text" name="prenom" value="Prénom">
+              <input class="inscriform" type="text" name="prenom" value="Prénom">
             </div>
             <div id="nom_insci">
-              <input class="insciform" type="text" name="nom" value="Nom">
+              <input class="inscriform" type="text" name="nom" value="Nom">
             </div>
           </div>
-          <div class="inscriform">
-            <input type="email" name="email" value="Email">
+          <div class="inscridiv">
+            <input class="inscriform" type="email" name="email" value="Email">
             </br>
             <label>Mot de passe</label>
             </br>
-            <input type="password" name="mdp" value="">
+            <input class="inscriform" type="password" name="mdp" value="">
             </br>
             <label>Confirmer le mot de passe</label>
             </br>
-            <input type="password" name="mdprepeat" value="">
+            <input class="inscriform" type="password" name="mdprepeat" value="">
           </div>
         </form>
       </div>

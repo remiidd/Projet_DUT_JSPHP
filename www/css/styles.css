@@ -4,6 +4,8 @@
   margin-top: 56px;
 }
 
+/* ====================  CSS menu ==================== */
+
 .navbar {
   background-color: #FFA07A ! important;
   position: fixed;
@@ -12,9 +14,9 @@
   top: 0;
 }
 
-/* ====================  CSS menu ==================== */
-
 /* ====================  fin CSS menu ==================== */
+
+/* ====================  CSS PAGE connexion ==================== */
 
 #cobout{
   padding-top: 2px;
@@ -32,6 +34,8 @@
   border-style: dashed;
   transition: 0.1s;
 }
+
+/* ====================  fin CSS PAGE connexion ==================== */
 
 /* ====================  CSS PAGE Principale ==================== */
 
@@ -69,7 +73,16 @@
   margin-left: 2.5%;
 }
 
-.insciform{
+.inscridiv{
+  margin-top: 10px;
+  margin-left: 2.5%;
+}
+
+.inscridiv > label {
+  color: white;
+}
+
+.inscriform{
   height: 100%;
   width: 100%;
   padding: 10px;
