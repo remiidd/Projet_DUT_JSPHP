@@ -49,9 +49,7 @@
           <textarea name="textarea_posts"></textarea>
           <input type="submit" name="bouton_posts" value="Bananez !"/>
         </form>
-        <p><?php
-          echo $_POST["textarea_posts"];
-        ?></p>
+        <p></p>
       </div>
     </div>
     <?php $reponse->closeCursor(); ?>
