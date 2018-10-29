@@ -51,8 +51,22 @@
         </form>
         <?php
           if($_POST["textarea_posts"]!=null) {
-            $message = $_POST["textarea_posts"];
+            $posts = $_POST["textarea_posts"];
             $_POST["textarea_posts"] = null;
+
+            $posts = htmlentities($posts);
+
+            $req = $bdd->prepare('INSERT INTO jeux_video(nom, possesseur, console, prix, nbre_joueurs_max, commentaires) VALUES(:nom, :possesseur, :console, :prix, :nbre_joueurs_max, :commentaires)');
+            $req->execute(array(
+            	'nom' => $nom,
+            	'possesseur' => $possesseur,
+            	'console' => $console,
+            	'prix' => $prix,
+            	'nbre_joueurs_max' => $nbre_joueurs_max,
+            	'commentaires' => $commentaires
+            	));
+
+
           }
 
 
