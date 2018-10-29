@@ -67,7 +67,12 @@
         ?>
       </div>
       <div class="feed_profil">
-        
+        <?php $reponse = $bdd->query('SELECT * FROM posts WHERE profil=\''.$_GET['id'].'\'');
+        while($feed = $reponse->fetch()) {
+          ?><div><hr>
+            <h3><?php echo $feed["nom_createur"]; ?></h3><p><i><?php echo $feed["date_publication"]; ?></i></p><br><p><?php echo $feed["contenu"]; ?></p><br><hr>
+          </div><?php
+        } ?>
       </div>
     </div>
     <?php $reponse->closeCursor(); ?>
