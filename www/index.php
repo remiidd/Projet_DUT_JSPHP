@@ -30,6 +30,9 @@
             </br>
             <input class="inscriform" type="password" name="mdprepeat">
           </div>
+          <center>
+            <input type="submit" name="inscribout" value="S'inscrire">
+          </center>
         </form>
       </div>
       <img id="gauche" src="src/media/index.jpg" alt="">
