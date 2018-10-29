@@ -56,9 +56,9 @@
             $today = new DateTime();
             $req = $bdd->prepare('INSERT INTO posts(id, nom_createur, date_publication, contenu, photo, profil, nb_com, nb_like, nb_share) VALUES(NULL, :noms, CURRENT_DATE(), :contenu, :photo, :profil,\'0\',\'0\',\'0\')');
             $req->execute(array(
-              'noms' => $_POST["prenom"]." ".$data["nom"],
+              'noms' => $data["prenom"]." ".$data["nom"],
               'contenu' => $message,
-              'photo' => "photo",
+              'photo' => "",
               'profil' => $_GET["id"]
             )) or die(print_r($req->errorInfo(), TRUE));
             echo $today->format("Y-m-d");
