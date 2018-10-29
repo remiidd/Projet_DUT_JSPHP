@@ -39,7 +39,9 @@
         <div class="pp"><img class="profilpicture" src="<?php if($data["photo_profil"]!=null) { echo $data["photo_profil"]; } else { ?>src/media/default_profil_picture.jpg<?php } ?>" alt="Default profil picture"/></div>
         <h1 class="name"><?php echo $data["prenom"]." ".$data["nom"]; ?></h1>
       </div>
-      <div id="infos"></div>
+      <div id="infos">
+        <p></p>
+      </div>
     </div>
     <?php $reponse->closeCursor(); ?>
   </body>
