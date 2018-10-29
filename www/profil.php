@@ -49,27 +49,6 @@
           <textarea name="textarea_posts"></textarea>
           <input type="submit" name="bouton_posts" value="Bananez !"/>
         </form>
-        <?php
-          /*if($_POST["textarea_posts"]!="") {
-            $posts = $_POST["textarea_posts"];
-            $_POST["textarea_posts"] = "";
-
-            $posts = htmlentities($posts);
-            $today = new DateTime();
-            $req = $bdd->prepare('INSERT INTO posts(id, nom_createur, date_publication, contenu, photo, profil, nb_com, nb_like, nb_share) VALUES('', :noms, :date_publi, :contenu, :photo, :profil,'0','0','0')');
-            $req->execute(array(
-            	'noms' => $data["prenom"]." ".$data["nom"],
-            	'date_publi' => $today,
-            	'contenu' => $message,
-            	'photo' => "",
-            	'profil' => $data["id"]
-            ));
-
-
-          }*/
-
-
-        ?>
       </div>
     </div>
     <?php $reponse->closeCursor(); ?>
