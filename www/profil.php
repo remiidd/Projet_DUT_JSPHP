@@ -55,7 +55,6 @@
             $req = $bdd->prepare('INSERT INTO posts(id, nom_createur, date_publication, contenu, photo, profil, nb_com, nb_like, nb_share) VALUES(NULL, :noms, CURRENT_DATE(), :contenu, :photo, :profil,\'0\',\'0\',\'0\')');
             $req->execute(array(
               'noms' => $_POST["prenom"]." ".$data["nom"],
-              'date_publi' => $today->format("Y-m-d"),
               'contenu' => $message,
               'photo' => "photo",
               'profil' => $_GET["id"]
