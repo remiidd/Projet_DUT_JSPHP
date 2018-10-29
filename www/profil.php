@@ -50,8 +50,8 @@
           <input type="submit" name="bouton_posts" value="Bananez !"/>
         </form>
         <?php
-          /*if(isset($_POST["textarea_posts"])) {
-            $today = new DateTime();
+          if(isset($_POST["textarea_posts"])) {
+            /*$today = new DateTime();
             $req = $bdd->prepare('INSERT INTO posts(id, nom_createur, date_publication, contenu, photo, profil, nb_com, nb_like, nb_share) VALUES('', :noms, :date_publi, :contenu, :photo, :profil,'0','0','0')');
             $req->execute(array(
               'noms' => $_POST["prenom"]." ".$data["nom"],
@@ -59,8 +59,9 @@
               'contenu' => $message,
               'photo' => "",
               'profil' => $_GET["id"]
-              ));
-          }*/
+            ));*/
+            echo "yes!";
+          }
         ?>
       </div>
     </div>
