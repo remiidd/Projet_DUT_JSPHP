@@ -45,7 +45,7 @@
         <?php if(($today->format("%m%d"))==($naissance->format("%m%d"))) { ?><p>Bon anniversaire !</p><?php } ?>
       </div>
       <div class="envoyer_post">
-        <form class="form_envoyer_post" action="#" method="post">
+        <form class="form_envoyer_post" action="" method="post">
           <textarea name="textarea_posts"></textarea>
           <input type="submit" name="bouton_posts" value="Bananez !"/>
         </form>
