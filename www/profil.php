@@ -41,7 +41,7 @@
       </div>
       <div id="infos">
         <p>Habite à <strong><?php echo $data["ville"]; ?></strong></p>
-        <p>Age de <?php $today = new DateTime();echo $data["naissance"];?> !</p>
+        <p>Age de <?php $today = new DateTime();echo $today;?> !</p>
       </div>
     </div>
     <?php $reponse->closeCursor(); ?>
