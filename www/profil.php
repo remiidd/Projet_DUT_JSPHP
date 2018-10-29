@@ -60,7 +60,9 @@
               'contenu' => $message,
               'photo' => "",
               'profil' => $_GET["id"]
-            )) or die(print_r($req->errorInfo(), TRUE));
+            ));
+            $url_refresh = "Location:profil.php?id=".$_GET["id"];
+            header($url_refresh);
           }
         ?>
       </div>
