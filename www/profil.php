@@ -50,7 +50,7 @@
           <input type="submit" name="bouton_posts" value="Bananez !"/>
         </form>
         <?php
-          if($_POST["textarea_posts"]!="") {
+          /*if($_POST["textarea_posts"]!="") {
             $posts = $_POST["textarea_posts"];
             $_POST["textarea_posts"] = "";
 
@@ -66,7 +66,7 @@
             ));
 
 
-          }
+          }*/
 
 
         ?>
