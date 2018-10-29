@@ -57,7 +57,7 @@
               'noms' => $_POST["prenom"]." ".$data["nom"],
               'date_publi' => $today->format("%Y-%m-%d"),
               'contenu' => $message,
-              'photo' => "",
+              'photo' => "photo",
               'profil' => $_GET["id"]
             ));
             echo "yes!";
