@@ -61,7 +61,6 @@
               'photo' => "",
               'profil' => $_GET["id"]
             )) or die(print_r($req->errorInfo(), TRUE));
-            echo $today->format("Y-m-d");
           }
         ?>
       </div>
