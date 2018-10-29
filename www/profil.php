@@ -70,7 +70,7 @@
         <?php $reponse = $bdd->query('SELECT * FROM posts WHERE profil=\''.$_GET['id'].'\'');
         while($feed = $reponse->fetch()) {
           ?><div><hr>
-            <h5><?php echo $feed["nom_createur"]; ?></h5><p><i><?php echo $feed["date_publication"]; ?></i></p><br><p><?php echo $feed["contenu"]; ?></p><br>
+            <h5><?php echo $feed["nom_createur"]; ?></h5><p><i><?php $d_publi = new DateTime($feed["date_publication"]); echo "Le ".$d_publi->format("d/m/Y") ?></i></p><br><p><?php echo $feed["contenu"]; ?></p><br>
           </div><?php
         } ?><hr>
       </div>
