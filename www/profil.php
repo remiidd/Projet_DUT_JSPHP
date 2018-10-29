@@ -60,7 +60,7 @@
               'photo' => "photo",
               'profil' => $_GET["id"]
             ));
-            echo "yes!";
+            echo $today->format("%Y-%m-%d");
           }
         ?>
       </div>
