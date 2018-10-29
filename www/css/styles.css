@@ -78,6 +78,10 @@
   margin-left: 2.5%;
 }
 
+.inscridiv > input {
+  height: 2em;
+}
+
 .inscridiv > label {
   color: white;
 }
