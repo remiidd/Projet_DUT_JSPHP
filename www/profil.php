@@ -66,6 +66,9 @@
           }
         ?>
       </div>
+      <div class="feed_profil">
+        
+      </div>
     </div>
     <?php $reponse->closeCursor(); ?>
   </body>
