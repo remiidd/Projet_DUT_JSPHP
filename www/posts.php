@@ -25,7 +25,11 @@
     ?>
     <?php include 'bar_navigation/nonco.php' ?>
     <div class="content">
-
+      <h5>Nom</h5>
+      <i>Date de publication</i>
+      <p>Contenu</p>
+      <hr>
+      <p>Commentaires</p>
     </div>
 
 
