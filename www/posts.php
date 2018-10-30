@@ -36,7 +36,7 @@
     <?php include 'bar_navigation/nonco.php' ?>
     <div class="content">
       <h5>Nom</h5>
-      <i><?php $d_publi = new DateTime($data["date_publication"]); echo "Publié le ".$d_publi->format(d/m/Y);?></i>
+      <i><?php $d_publi = new DateTime($data["date_publication"]); echo "Publié le ".$d_publi->format("d/m/Y");?></i>
       <p><?php echo $data["contenu"]; ?></p>
       <hr>
       <p>Commentaires</p>
