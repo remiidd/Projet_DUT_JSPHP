@@ -21,7 +21,7 @@
     if(($donnees['password'] == $mdp && $donnees['email'] == $util) || ($donnees['password'] == $mdp && $donnees['numerotel'] == $util)){
       echo "succes" . $donnees['id'];
       $_SESSION['idcon'] = $donnees['id'];
-      echo $_SESSION['idcon'];
+      echo "-session : " . $_SESSION['idcon'];
     }
     else {
       echo "pas succes";
