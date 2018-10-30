@@ -13,14 +13,14 @@
           <h1>Inscription</h1>
           <div id="nomprenom_insci">
             <div id="prenom_insci">
-              <input class="inscriform" type="text" name="prenom" value="Prénom">
+              <input class="inscriform" type="text" name="prenom" placeholder="Prénom">
             </div>
             <div id="nom_insci">
-              <input class="inscriform" type="text" name="nom" value="Nom">
+              <input class="inscriform" type="text" name="nom" placeholder="Nom">
             </div>
           </div>
           <div class="inscridiv">
-            <input class="inscriform" type="email" name="email" value="Email">
+            <input class="inscriform" type="email" name="email" placeholder="Email">
             </br>
             <label>Mot de passe</label>
             </br>
