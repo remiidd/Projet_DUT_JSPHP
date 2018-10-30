@@ -1,5 +1,6 @@
 <?php
   session_start();
+
   //BASE DE DONNEE
   try{
     $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
@@ -19,7 +20,7 @@
   {
     if(($donnees['password'] == $mdp && $donnees['email'] == $util) || ($donnees['password'] == $mdp && $donnees['numerotel'] == $util)){
       echo "succes" . $donnees['id'];
-      $_SESSION['id'] = $donnees['id'];
+      $_SESSION['idcon'] = $donnees['id'];
     }
     else {
       echo "pas succes";
