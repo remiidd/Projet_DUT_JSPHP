@@ -1,8 +1,8 @@
 document.addEventListener("keydown", infosClavier);
-const CANVAS_BORDER_COLOUR = 'black';
-const CANVAS_BACKGROUND_COLOUR = "white";
-const SNAKE_COLOUR = 'lightgreen';
-const SNAKE_BORDER_COLOUR = 'darkgreen';
+const bordure = 'black';
+const background = "white";
+const couleur_snack = 'lightgreen';
+const contour_snack = 'darkgreen';
 
 let snake = [
   {x: 290, y: 190},
@@ -17,8 +17,8 @@ var fen2d = fenetre.getContext("2d");
 var scoreaff = document.getElementById("score");
 
 
-fen2d.fillStyle = CANVAS_BACKGROUND_COLOUR;
-fen2d.strokestyle = CANVAS_BORDER_COLOUR;
+fen2d.fillStyle = background;
+fen2d.strokestyle = bordure;
 
 
 fen2d.fillRect(0, 0, fenetre.width, fenetre.height);
@@ -98,8 +98,8 @@ function des_snack() {
 }
 
 function des_partie(snakePart) {
-  fen2d.fillStyle = SNAKE_COLOUR;
-  fen2d.strokestyle = SNAKE_BORDER_COLOUR;
+  fen2d.fillStyle = couleur_snack;
+  fen2d.strokestyle = contour_snack;
 
   fen2d.fillRect(snakePart.x, snakePart.y, 10, 10);
   fen2d.strokeRect(snakePart.x, snakePart.y, 10, 10);
