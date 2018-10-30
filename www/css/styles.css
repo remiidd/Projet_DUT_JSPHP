@@ -82,6 +82,7 @@
 
 .inscridiv > input {
   height: 2em;
+  margin-top: 10px;
 }
 
 .inscridiv > label {
