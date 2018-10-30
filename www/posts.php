@@ -23,8 +23,10 @@
         <?php
       }
     ?>
+    <?php include 'bar_navigation/nonco.php' ?>
+    <div class="content">
 
-    <p><?php echo $data["contenu"];?></p>
+    </div>
 
 
 
