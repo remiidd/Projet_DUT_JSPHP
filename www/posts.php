@@ -35,7 +35,7 @@
     ?>
     <?php include 'bar_navigation/nonco.php' ?>
     <div class="content">
-      <h5><a href="<?php echo "profil.php?id=".$data["profil"]; ?>"><?php echo $data["nom_createur"]; ?></a></h5>
+      <h5><a class="no_deco_link" href="<?php echo "profil.php?id=".$data["profil"]; ?>"><?php echo $data["nom_createur"]; ?></a></h5>
       <i><?php $d_publi = new DateTime($data["date_publication"]); echo "Publié le ".$d_publi->format("d/m/Y");?></i>
       <p><?php echo $data["contenu"]; ?></p>
       <hr>
