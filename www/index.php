@@ -22,13 +22,9 @@
           <div class="inscridiv">
             <input class="inscriform" type="email" name="email" placeholder="Email">
             </br>
-            <label>Mot de passe</label>
+            <input class="inscriform" type="password" name="mdp" placeholder="Mot de passe">
             </br>
-            <input class="inscriform" type="password" name="mdp" placeholder="mdp">
-            </br>
-            <label>Confirmer le mot de passe</label>
-            </br>
-            <input class="inscriform" type="password" name="mdprepeat">
+            <input class="inscriform" type="password" name="mdprepeat" placeholder="Retapper votre mot de passe">
           </div>
           <center>
             <input type="submit" name="inscribout" value="S'inscrire">
