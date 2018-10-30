@@ -71,6 +71,11 @@
         while($feed = $reponse->fetch()) {
           ?><div><hr>
             <h5><?php echo $feed["nom_createur"]; ?></h5><p><i><?php $d_publi = new DateTime($feed["date_publication"]); echo "Le ".$d_publi->format("d/m/Y") ?></i></p><br><p><?php echo $feed["contenu"]; ?></p><br>
+            <ul>
+              <li><?php echo $feed["nb_like"];?> Likes</li>
+              <li><?php echo $feed["nb_com"];?> Commantaires</li>
+              <li><?php echo $feed["nb_share"];?> Shares</li>
+            </ul>
           </div><?php
         } ?><hr>
       </div>
