@@ -127,6 +127,11 @@
 }
 .barre_posts li {
   display: inline;
+  list-style: none;
+}
+.elements_barre_posts {
+  display:inline;
+  list-style: none;
 }
 
 
