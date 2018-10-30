@@ -84,7 +84,7 @@ function main() {
     avancer();
     des_snack();
 
-    if (didGameEnd()){
+    if (fin_partie()){
       alert("Perdu !");
     }
     else{
@@ -126,7 +126,7 @@ function supprimersnack() {
   fen2d.strokeRect(0, 0, fenetre.width, fenetre.height);
 }
 
-function didGameEnd() {
+function fin_partie() {
   for (let i = 4; i < snake.length; i++) {
     if (didCollide = snake[i].x === snake[0].x && snake[i].y === snake[0].y){
       return true
