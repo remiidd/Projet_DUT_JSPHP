@@ -26,7 +26,13 @@
   }
 
   if ($emailexiste == false) {
-    echo "ok";
+    $_SESSION['prenom'] = $_POST['prenom'];
+    $_SESSION['nom'] = $_POST['nom'];
+    $_SESSION['email'] = $_POST['email'];
+    $_SESSION['naissance'] = $_POST['naissance'];
+    $_SESSION['sexe'] = $_POST['sexe'];
+    header('Location:../../inscription2.php');
+    exit();
   }
   else {
     $_SESSION['exist'] = true;
