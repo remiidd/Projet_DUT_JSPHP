@@ -27,10 +27,12 @@
             </br>
             <input class="inscriform" type="password" name="mdprepeat" placeholder="Retapper votre mot de passe">
             </br>
-            <label>Sexe</label>
-            <input type="radio" name="sexe" value="homme">Homme<br>
-            <input type="radio" name="sexe" value="femme">Femme<br>
-            <input type="radio" name="sexe" value="banana">BANANAAAAAAAA<br>
+            <div id="formSexe">
+              <label>Sexe</label>
+              <input type="radio" name="sexe" value="homme">Homme<br>
+              <input type="radio" name="sexe" value="femme">Femme<br>
+              <input type="radio" name="sexe" value="banana">BANANAAAAAAAA<br>
+            </div>
           </div>
           <center>
             <input type="submit" name="inscribout" value="S'inscrire">
