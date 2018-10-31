@@ -11,7 +11,7 @@
     <?php include 'bar_navigation/nonco.php' ?>
     <div class="content">
       <div id="droite">
-        <form id="inscription" action="scripts/php/inscription.php" method="post">
+        <form id="inscription" action="/scripts/php/inscription.php" method="post">
           <h1>Inscription</h1>
           <div id="nomprenom_insci">
             <div id="prenom_insci">
