@@ -31,7 +31,8 @@
         <?php
       }
     ?>
-    <?php include 'bar_navigation/nonco.php' ?>
+    <?php include 'bar_navigation/nonco.php'
+    mail("pro@debrayremi.fr","test","message");?>
     <!-- CONTENU DANS CETTE DIV -->
     <div class="content">
       <div id="presentation">
