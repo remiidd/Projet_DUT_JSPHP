@@ -12,7 +12,7 @@ function getXMLHttpRequest() {
 			xhr = new XMLHttpRequest();
 		}
 	} else {
-		alert("Votre navigateur ne supporte pas l'objet XMLHTTPRequest...");
+		alert("Votre navigateur ne supporte pas l'objet XMLHTTPRequest");
 		return null;
 	}
 
