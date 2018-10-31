@@ -23,6 +23,8 @@
           <div class="inscridiv">
             <input required class="inscriform" type="email" name="email" placeholder="Email">
             </br>
+            <label id="passerror"></label>
+            <br>
             <input required class="inscriform" type="password" name="mdp" placeholder="Mot de passe">
             </br>
             <input required class="inscriform" type="password" name="mdprepeat" placeholder="Retapper votre mot de passe">

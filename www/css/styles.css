@@ -109,6 +109,11 @@
   transition: 0.1s;
 }
 
+#passerror{
+  color: red;
+  display: none;
+}
+
 .inscridiv{
   margin-top: 10px;
   margin-left: 2.5%;
