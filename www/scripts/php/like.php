@@ -14,6 +14,11 @@ if(isset($_GET["id_post"])) {
 
 if(($id_post!=null)&&($id_profil!=null)) {
   $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;charset=utf8', 'derayalois', 'testdebrayalois');
+  $req = $bdd->prepare('INSERT INTO like_table(id, id_post, profil_like) VALUES(NULL, :id_post, :profil_like)');
+  $req->execute(array(
+    'id_post' => $id_post,
+    'profil_like' => $id_profil
+  ));
 }
 
 
