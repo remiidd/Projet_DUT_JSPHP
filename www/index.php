@@ -26,9 +26,9 @@
             </br>
             <label id="passerror">Les mots de passe ne correspondent pas</label>
             <br>
-            <input required class="inscriform" type="password" name="mdp" placeholder="Mot de passe">
+            <input id="mdp" required class="inscriform" type="password" name="mdp" placeholder="Mot de passe">
             </br>
-            <input required class="inscriform" type="password" name="mdprepeat" placeholder="Retapper votre mot de passe">
+            <input id="mdp1" required class="inscriform" type="password" name="mdprepeat" placeholder="Retapper votre mot de passe">
             </br>
             <label>Date de naissance</label>
             <br>
