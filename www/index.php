@@ -14,26 +14,26 @@
           <h1>Inscription</h1>
           <div id="nomprenom_insci">
             <div id="prenom_insci">
-              <input class="inscriform" type="text" name="prenom" placeholder="Prénom">
+              <input required class="inscriform" type="text" name="prenom" placeholder="Prénom">
             </div>
             <div id="nom_insci">
-              <input class="inscriform" type="text" name="nom" placeholder="Nom">
+              <input required class="inscriform" type="text" name="nom" placeholder="Nom">
             </div>
           </div>
           <div class="inscridiv">
-            <input class="inscriform" type="email" name="email" placeholder="Email">
+            <input required class="inscriform" type="email" name="email" placeholder="Email">
             </br>
-            <input class="inscriform" type="password" name="mdp" placeholder="Mot de passe">
+            <input required class="inscriform" type="password" name="mdp" placeholder="Mot de passe">
             </br>
-            <input class="inscriform" type="password" name="mdprepeat" placeholder="Retapper votre mot de passe">
+            <input required class="inscriform" type="password" name="mdprepeat" placeholder="Retapper votre mot de passe">
             </br>
             <label>Date de naissance</label>
             <br>
-            <input type="date" name="naissance" value="2018-10-24">
+            <input required type="date" name="naissance" value="2018-10-24">
             <div id="formSexe">
-              <input type="radio" name="sexe" value="homme">Homme
-              <input type="radio" name="sexe" value="femme">Femme
-              <input type="radio" name="sexe" value="banana">BANANAAAAAAAA<br>
+              <input required type="radio" name="sexe" value="homme">Homme
+              <input required type="radio" name="sexe" value="femme">Femme
+              <input required type="radio" name="sexe" value="banana">BANANAAAAAAAA<br>
             </div>
           </div>
           <div id="condigene">
