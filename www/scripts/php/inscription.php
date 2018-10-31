@@ -25,6 +25,8 @@
     }
   }
 
+  echo "apres boucle";
+
   if ($emailexiste == false) {
     echo "ok";
   }
