@@ -24,9 +24,8 @@
           <div class="inscridiv">
             <input required class="inscriform" type="email" name="email" placeholder="Email">
             </br>
-            <label id="passerror">Les mots de passe ne correspondent pas</label>
-            <br>
-            <input id="mdp" required class="inscriform" type="password" name="mdp" placeholder="Mot de passe">
+            <a id="passerror">Les mots de passe ne correspondent pas</a>
+            <input id="mdp" required type="password" name="mdp" placeholder="Mot de passe">
             </br>
             <input id="mdp1" required class="inscriform" type="password" name="mdprepeat" placeholder="Retapper votre mot de passe">
             </br>
