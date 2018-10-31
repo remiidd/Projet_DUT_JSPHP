@@ -22,25 +22,25 @@
               ?>
               <div id="formSexe2">
                 <input readonly required type="radio" name="sexe" value="homme" checked>Homme
-                <input readonly required type="radio" name="sexe" value="femme">Femme
-                <input readonly required type="radio" name="sexe" value="banana">BANANAAAAAAAA<br>
+                <input readonly required type="radio" name="sexe" value="femme" disabled>Femme
+                <input readonly required type="radio" name="sexe" value="banana" disabled>BANANAAAAAAAA<br>
               </div>
               <?php
             }
             elseif ($_SESSION['sexe'] == "Femme") {
               ?>
               <div id="formSexe2">
-                <input readonly required type="radio" name="sexe" value="homme">Homme
+                <input readonly required type="radio" name="sexe" value="homme" disabled>Homme
                 <input readonly required type="radio" name="sexe" value="femme" checked>Femme
-                <input readonly required type="radio" name="sexe" value="banana">BANANAAAAAAAA<br>
+                <input readonly required type="radio" name="sexe" value="banana" disabled>BANANAAAAAAAA<br>
               </div>
               <?php
             }
             else{
               ?>
               <div id="formSexe2">
-                <input readonly required type="radio" name="sexe" value="homme">Homme
-                <input readonly required type="radio" name="sexe" value="femme">Femme
+                <input readonly required type="radio" name="sexe" value="homme" disabled>Homme
+                <input readonly required type="radio" name="sexe" value="femme" disabled>Femme
                 <input readonly required type="radio" name="sexe" value="banana" checked>BANANAAAAAAAA<br>
               </div>
               <?php
