@@ -17,7 +17,7 @@ if(($id_post!=null)&&($id_profil!=null)) {
 
   $ok = false;
   $reponse = $bdd->query('SELECT * FROM like_table WHERE profil_like=\''.$id_profil.'\' AND id_post=\''.$id_post.'\'');
-  while($rep = $reponse->fetch()){}
+  while($rep = $reponse->fetch()){$ok=true;}
 
 
 
