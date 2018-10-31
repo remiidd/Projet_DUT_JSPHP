@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>BananaBook</title>
-    <script src="scripts/js/inscription.js"></script>
+
     <?php  include 'scripts/html/head.html';?>
   </head>
   <body>
@@ -54,4 +54,5 @@
     </div>
     <br/><a href="profil.php?id=1">Profil de Utili Le Test</a>
   </body>
+  <script src="scripts/js/inscription.js"></script>
 </html>
