@@ -16,14 +16,14 @@
   $util = $_POST['id'];
   $mdp = md5($_POST['mdp']);
 
-/*
+
   //test si id == OK
   while ($donnees = $reponse->fetch())
   {
-    if($reponse['email'] = $email){
+    if($donnees['email'] = $email){
       $emailexiste = true;
     }
-  }*/
+  }
 
   echo "apres boucle";
 
