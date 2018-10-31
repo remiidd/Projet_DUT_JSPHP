@@ -78,6 +78,11 @@
   margin-right: 3px;
 }
 
+#condigene {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .inscridiv{
   margin-top: 10px;
   margin-left: 2.5%;
