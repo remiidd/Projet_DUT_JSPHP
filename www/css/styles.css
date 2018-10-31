@@ -114,6 +114,17 @@
   display: none;
 }
 
+#pseudoerror{
+  color: red;
+  display: none;
+}
+
+#mailerror{
+  color: red;
+  display: none;
+}
+
+
 .inscridiv{
   margin-top: 10px;
   margin-left: 2.5%;
