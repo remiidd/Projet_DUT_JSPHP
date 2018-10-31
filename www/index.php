@@ -36,6 +36,13 @@
               <input type="radio" name="sexe" value="banana">BANANAAAAAAAA<br>
             </div>
           </div>
+          <div id="condigene">
+            En cliquant sur s'inscrire, vous accepter les thermes du contract.
+              Vous donnez l'accès à toutes vos informations personnelles. BananaBook
+              sera en droit de revendre vos informations personelles ainsi que vos
+              photos. Vous donnez aussi accès à BananaBook de lire vos messages, de regarder
+              et enregistrer vos photos/vidéos. 
+          </div>
           <center>
             <input type="submit" name="inscribout" value="S'inscrire">
           </center>
