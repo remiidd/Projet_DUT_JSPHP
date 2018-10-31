@@ -44,12 +44,14 @@
         <p>Agé de <strong><?php $today = new DateTime();$naissance = new DateTime($data["naissance"]);echo $today->diff($naissance)->format("%Y");?></strong> ans</p>
         <?php if(($today->format("%m%d"))==($naissance->format("%m%d"))) { ?><p>Bon anniversaire !</p><?php } ?>
       </div>
-      <div class="envoyer_post">
-        <form class="form_envoyer_post" method="POST">
-          <textarea name="textarea_posts"></textarea>
-          <input type="submit" name="bouton_posts" value="Bananez !"/>
-        </form>
+      <?php if($_SESSION["idcon"]==$_GET["id"]){ ?>
+        <div class="envoyer_post">
+          <form class="form_envoyer_post" method="POST">
+            <textarea name="textarea_posts"></textarea>
+            <input type="submit" name="bouton_posts" value="Bananez !"/>
+          </form>
         <?php
+        }
           if(isset($_POST["textarea_posts"])) {
             $message = htmlentities($_POST["textarea_posts"]);
 
