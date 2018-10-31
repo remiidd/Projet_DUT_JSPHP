@@ -27,6 +27,9 @@
             </br>
             <input class="inscriform" type="password" name="mdprepeat" placeholder="Retapper votre mot de passe">
             </br>
+            <label>Date de naissance</label>
+            <br>
+            <input type="date" name="naissance" value="2018-10-24">
             <div id="formSexe">
               <input type="radio" name="sexe" value="homme">Homme
               <input type="radio" name="sexe" value="femme">Femme
