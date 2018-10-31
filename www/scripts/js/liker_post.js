@@ -24,8 +24,12 @@ function liker_post(id_posts, id_profils) {
 
   var id_post = encodeURIComponent(id_posts);
   var id_profil = encodeURIComponent(id_profils);
-  xhr.open("GET", "scripts/php/like.php?id_post="+id_post+"&id_profil="+id_profil,true);
-  xhr.send(null);
+  try {
+    xhr.open("GET", "scripts/php/like.php?id_post="+id_post+"&id_profil="+id_profil,true);
+    xhr.send(null);
+  }catch(error) {
+    alert(error);
+  }
 
   alert(id_posts+" "+id_profils);
 }
