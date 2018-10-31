@@ -72,6 +72,16 @@
   margin-bottom: 10px;
   margin-left: 2.5%;
 }
+#formSexe > label{
+  color: white;
+  font-size: 1.2em;
+  margin-bottom: 0px;
+}
+
+#formSexe > input {
+  margin-left: 5px;
+  margin-right: 3px;
+}
 
 .inscridiv{
   margin-top: 10px;
