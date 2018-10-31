@@ -25,6 +25,8 @@ if(($id_post!=null)&&($id_profil!=null)) {
       'id_post' => $id_post,
       'profil_like' => $id_profil
     ));
+    //UPDATE `derayalois`.`posts` SET `nb_like` = '1' WHERE `posts`.`id` = 3;
+    $req = $bdd->query('UPDATE posts SET nb_like=nb_like+1 WHERE id=\''.$id_profil.'\'');
   }
   if($ok){
 
