@@ -11,7 +11,7 @@
     <?php include 'bar_navigation/nonco.php' ?>
     <div class="content">
       <div id="droite">
-        <form id="inscription" action="" method="post">
+        <form id="inscription" action="scripts/php/inscription.php" method="post">
           <h1>Inscription</h1>
           <div id="nomprenom_insci">
             <div id="prenom_insci">
@@ -25,7 +25,6 @@
             <input required class="inscriform" type="email" name="email" placeholder="Email">
             </br>
             <a id="passerror">Les mots de passe ne correspondent pas</a>
-            <a id="pseudoerror">Ce pseudo existe deja</a>
             <a id="mailerror">Cet email existe deja</a>
             <input id="mdp" required class="inscriform" type="password" name="mdp" placeholder="Mot de passe">
             </br>
