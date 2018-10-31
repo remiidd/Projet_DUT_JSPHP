@@ -27,5 +27,5 @@ function liker_post(id_posts, id_profils) {
   xhr.open("GET", "../like.php?id_post="+id_post+"&id_profil="+id_profil,true);
   xhr.send(null);
 
-  alert(id_posts,id_profils);
+  alert(id_posts+" "+id_profils);
 }
