@@ -12,7 +12,7 @@ if(isset($_GET["id_post"])) {
   $id_profil=null;
 }
 
-if(($id_post!=null)&&($id_profil!=null)) {
+if(($id_post!=null)&&($id_profil!=null)&&($id_post!=0)&&($id_profil!=0)) {
   $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;charset=utf8', 'derayalois', 'testdebrayalois');
 
   $ok = false;
