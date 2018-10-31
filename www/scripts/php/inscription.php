@@ -29,7 +29,7 @@
     echo "ok";
   }
   else {
-    echo "pasok";
     echo "<script type='text/javascript'>alert('Cet email existe deja');</script>";
+    header('Location:../../index.php');
   }
 ?>
