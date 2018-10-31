@@ -31,6 +31,4 @@ function liker_post(id_posts, id_profils) {
   }catch(error) {
     alert(error);
   }
-
-  alert(id_posts+" "+id_profils);
 }
