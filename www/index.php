@@ -29,6 +29,7 @@
             </br>
             <div id="formSexe">
               <label>Sexe</label>
+              <br>
               <input type="radio" name="sexe" value="homme">Homme
               <input type="radio" name="sexe" value="femme">Femme
               <input type="radio" name="sexe" value="banana">BANANAAAAAAAA<br>
