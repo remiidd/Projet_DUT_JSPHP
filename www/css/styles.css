@@ -81,6 +81,10 @@
 #condigene {
   text-align: justify;
   text-justify: inter-word;
+  font-size: 0.6em;
+  color: white;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
 }
 
 .inscridiv{
