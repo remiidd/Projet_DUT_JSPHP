@@ -44,7 +44,7 @@
               et enregistrer vos photos/vidéos.
           </div>
           <center>
-            <input id="inscriBout"type="submit" name="inscribout" value="S'inscrire">
+            <input id="inscriBout" type="submit" name="inscribout" value="S'inscrire">
           </center>
         </form>
       </div>
