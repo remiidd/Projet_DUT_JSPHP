@@ -74,7 +74,7 @@
           ?><div><hr>
             <h5><img class="pp_posts" src="<?php if($data["photo_profil"]!=null) { echo $data["photo_profil"]; } else { ?>src/media/default_profil_cover.jpg<?php } ?>" alt="Default profil cover"/><?php echo " ".$feed["nom_createur"]; ?></h5><p><i><?php $d_publi = new DateTime($feed["date_publication"]); echo "Le ".$d_publi->format("d/m/Y") ?></i></p><br><p><?php echo $feed["contenu"]; ?></p><br>
             <ul class="barre_posts">
-              <li class="elements_barre_posts"><?php echo $feed["nb_like"];?><a href="" class="liker"> Likes </a></li>
+              <li class="elements_barre_posts"><a href="" class="liker"><?php echo $feed["nb_like"];?> Likes </a></li>
               <li class="elements_barre_posts"><a href="posts.php?id=<?php echo $feed["id"]; ?>"><?php echo $feed["nb_com"];?> Commentaires </a></li>
               <li class="elements_barre_posts"><?php echo $feed["nb_share"];?> Shares </li>
             </ul>
