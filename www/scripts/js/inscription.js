@@ -11,11 +11,11 @@ mdp1.addEventListener("input", function (e){
 function pass_match(){
   if(mdp.value != mdp1.value){
     document.getElementById('passerror').style.display = "inline";
-    document.getElementById('login').setAttribute("disabled", "");
+    document.getElementById('inscriBout').setAttribute("disabled", "");
   }
   else{
     document.getElementById('passerror').style.display = "none";
-    document.getElementById('login').removeAttribute("disabled");
+    document.getElementById('inscriBout').removeAttribute("disabled");
   }
 }
 
