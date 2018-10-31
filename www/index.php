@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>BananaBook</title>
+    <script src="scripts/js/inscription.js"></script>
     <?php  include 'scripts/html/head.html';?>
   </head>
   <body>
