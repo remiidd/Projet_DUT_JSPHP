@@ -29,7 +29,9 @@ if(($id_post!=null)&&($id_profil!=null)) {
     $req = $bdd->query('UPDATE posts SET nb_like=nb_like+1 WHERE id=\''.$id_post.'\'');
   }
   if($ok){
-
+    //DELETE FROM `derayalois`.`like_table` WHERE `like_table`.`id` = 8;
+    $req = $bdd->query('DELETE FROM like_table WHERE profil_like=\''.$id_profil.'\' AND id_post=\''.$id_post.'\'');
+    $req = $bdd->query('UPDATE posts SET nb_like=nb_like-1 WHERE id=\''.$id_post.'\'');
   }
 }
 
