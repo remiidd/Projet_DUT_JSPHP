@@ -23,7 +23,7 @@
           <div class="inscridiv">
             <input required class="inscriform" type="email" name="email" placeholder="Email">
             </br>
-            <label id="passerror"></label>
+            <label id="passerror">Les mots de passe ne correspondent pas</label>
             <br>
             <input required class="inscriform" type="password" name="mdp" placeholder="Mot de passe">
             </br>
