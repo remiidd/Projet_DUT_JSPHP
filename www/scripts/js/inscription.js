@@ -1,5 +1,5 @@
-var mdp = document.getElementById('psw');
-var mdp1 = document.getElementById('psw1');
+var mdp = document.getElementById('mdp');
+var mdp1 = document.getElementById('mdprepeat');
 
 mdp.addEventListener("input", function (e){
   pass_match();
