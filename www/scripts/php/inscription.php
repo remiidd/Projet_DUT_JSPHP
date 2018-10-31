@@ -20,7 +20,7 @@
   //test si id == OK
   while ($donnees = $reponse->fetch())
   {
-    if($donnees['email'] = $email){
+    if($donnees['email'] == $email){
       $emailexiste = true;
     }
   }
