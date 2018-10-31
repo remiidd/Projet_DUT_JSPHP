@@ -14,8 +14,10 @@ if(isset($_GET["id_post"])) {
 
 if(($id_post!=null)&&($id_profil!=null)) {
   $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;charset=utf8', 'derayalois', 'testdebrayalois');
-  $reponse = $bdd->query('SELECT * FROM posts WHERE profil=\''.$_GET['id'].'\' ORDER BY id DESC');
-  while($feed = $reponse->fetch()){}
+
+  $ok = false;
+  $reponse = $bdd->query('SELECT * FROM like_table WHERE profil_like=\''.$id_profil.'\' AND id_post=\''.$id_post.'\'');
+  while($rep = $reponse->fetch()){}
 
 
 
