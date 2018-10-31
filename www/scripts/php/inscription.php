@@ -29,7 +29,8 @@
     echo "ok";
   }
   else {
-    echo "<script type='text/javascript'>alert('Cet email existe deja');</script>";
+    $_SESSION['exist'] = true;
     header('Location:../../index.php');
+    exit();
   }
 ?>

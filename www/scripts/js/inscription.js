@@ -8,6 +8,10 @@ mdp1.addEventListener("input", function (e){
   pass_match();
 });
 
+function emailexiste(){
+  document.getElementById('mailerror').style.display = "inline";
+}
+
 function pass_match(){
   if(mdp.value != mdp1.value){
     document.getElementById('passerror').style.display = "inline";

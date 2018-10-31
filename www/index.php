@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -25,7 +25,7 @@
             <input required class="inscriform" type="email" name="email" placeholder="Email">
             </br>
             <a id="passerror">Les mots de passe ne correspondent pas</a>
-            <a id="mailerror">Cet email existe deja</a>
+            <a id="mailerror">L'email utilisé existe deja</a>
             <input id="mdp" required class="inscriform" type="password" name="mdp" placeholder="Mot de passe">
             </br>
             <input id="mdp1" required class="inscriform" type="password" name="mdprepeat" placeholder="Retapper votre mot de passe">
@@ -56,4 +56,13 @@
     <br/><a href="profil.php?id=1">Profil de Utili Le Test</a>
   </body>
   <script src="scripts/js/inscription.js"></script>
+  <?php
+    if(isset($_SESSION['exist'])){
+      if($_SESSION['exist'] == true){
+        echo "<script type=text/javascript>
+                emailexiste();
+              </script>";
+      }
+    }
+  ?>
 </html>
