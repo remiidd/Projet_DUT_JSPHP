@@ -11,6 +11,9 @@
     <!--Fin des fichiers bootstrap-->
     <script src="scripts/js/liker_post.js"></script>
     <link rel="stylesheet" href="css/styles.css"/>
+    <script>
+      //$('.areapost').autoResize();
+    </script>
   </head>
   <body>
     <?php
