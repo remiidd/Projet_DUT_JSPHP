@@ -44,9 +44,10 @@
           <p>Habite à <strong><?php echo $data["ville"]; ?></strong></p>
           <p>Agé de <strong><?php $today = new DateTime();$naissance = new DateTime($data["naissance"]);echo $today->diff($naissance)->format("%Y");?></strong> ans</p>
           <?php if(($today->format("%m%d"))==($naissance->format("%m%d"))) { ?><p>Bon anniversaire !</p><?php } ?>
-        </div>
-        <?php if($_SESSION["idcon"]==$_GET["id"]){ ?>
 
+        <?php if($_SESSION["idcon"]==$_GET["id"]){ ?>
+          <p><a href="settings.php?id=<?php echo $_SESSION["idcon"]; ?>"></a></p>
+          </div>
           <div class="envoyer_post">
             <form class="form_envoyer_post" method="POST">
               <textarea id="areapost" name="textarea_posts" rows="8" cols="130" placeholder="<?php
