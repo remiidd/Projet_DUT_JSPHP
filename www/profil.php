@@ -11,9 +11,6 @@
     <!--Fin des fichiers bootstrap-->
     <script src="scripts/js/liker_post.js"></script>
     <link rel="stylesheet" href="css/styles.css"/>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/autoresize.jquery.js">
-      $('textarea').autoResize();
-    </script>
   </head>
   <body>
     <?php
