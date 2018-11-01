@@ -48,7 +48,33 @@
         <?php if($_SESSION["idcon"]==$_GET["id"]){ ?>
           <div class="envoyer_post">
             <form class="form_envoyer_post" method="POST">
-              <textarea class="areapost" name="textarea_posts" rows="6" cols="100" placeholder="Ecriver ce qui vous passe par la tête"></textarea><br/>
+              <textarea class="areapost" name="textarea_posts" rows="6" cols="100" placeholder="<?php
+                $var = rand(0,5);
+                switch ($var) {
+                  case 0:
+                    echo "Ecrivez ce qui vous passe par la tête...";
+                    break;
+                  case 1:
+                    echo "Expliquez pourquoi pensez vous que la bananne est la star du rayon fruits et légumes ?";
+                    break;
+                  case 2:
+                    echo "Decrivez ici votre journée";
+                    break;
+                  case 3:
+                    echo "Comment s'est passé votre weekend ?";
+                    break;
+                  case 4:
+                    echo "Quel est votre film préféré ?";
+                    break;
+                  case 5:
+                    echo "Raconte moi ta vie";
+                    break;
+                  default:
+                    echo "Ecrivez ce qui vous passe par la tête...";
+                    break;
+                }
+
+              ?>"></textarea><br/>
               <input id="inscriBout" type="submit" name="bouton_posts" value="Bananez !"/>
             </form>
           <?php
