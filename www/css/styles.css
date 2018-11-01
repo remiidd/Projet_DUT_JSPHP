@@ -155,7 +155,6 @@
   height: 300px;
   width: 80%;
   margin-left: 10%;
-  background-color: red;
   overflow: hidden;
   text-align: center;
 }
@@ -193,6 +192,9 @@
   height: 125px;
   width: 125px;
   border-radius: 62.5px;
+}
+.wrapp {
+  background-color:red;
 }
 
 
