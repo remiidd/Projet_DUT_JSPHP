@@ -81,7 +81,7 @@
             </form>
             <script src="scripts/js/caractere_max.js"></script>
           <?php
-        } else {?> </div> <?php}
+        } else {?> </div> <?php }
             if(isset($_POST["textarea_posts"])) {
               $message = htmlentities($_POST["textarea_posts"]);
 
