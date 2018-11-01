@@ -8,14 +8,14 @@
   <body>
     <div class="contenu">
       <center>
-        <form id="inscription2" action="scripts/php/inscription2.php" method="post">
+        <form id="inscription2" action="scripts/php/inscription2.php" method="post" enctype="multipart/form-data">
           <input type="text" name="prenom" placeholder="<?php echo $_SESSION['prenom']; ?>" readonly>
           <br>
           <input type="text" name="nom" placeholder="<?php echo $_SESSION['nom']; ?>" readonly>
           <br>
           <input type="text" name="email" placeholder="<?php echo $_SESSION['email']; ?>" readonly>
           <br>
-          <input type="date" name="nom" value="<?php echo $_SESSION['naissance']; ?>" readonly>
+          <input type="date" name="naissance" value="<?php echo $_SESSION['naissance']; ?>" readonly>
           <br>
           <?php
             if($_SESSION['sexe'] == "Homme"){
@@ -48,9 +48,9 @@
           ?>
           <input type="tel" name="tel" placeholder="Téléphone">
           <br>
-          <input type="file" name="" value="pp">
+          <input type="text" name="ville" value="Ville">
           <br>
-          <input type="file" name="" value="pc">
+          <input type="file" name="pp" id="pp">
           <br>
           <input type="submit" name="inscri" value="S'inscrire">
         </form>
