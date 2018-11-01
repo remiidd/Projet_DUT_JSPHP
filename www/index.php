@@ -44,7 +44,7 @@
               Vous donnez l'accès à toutes vos informations personnelles. BananaBook
               sera en droit de revendre vos informations personelles ainsi que vos
               photos. Vous donnez aussi accès à BananaBook de lire vos messages, de regarder
-              et enregistrer vos photos/vidéos.
+              et enregistrer vos photos/vidéos/nudes.
           </div>
           <center>
             <input id="inscriBout" type="submit" name="inscribout" value="S'inscrire">
