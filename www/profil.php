@@ -75,7 +75,7 @@
                 }
 
               ?>"></textarea><br/>
-              <p id="nb_caract_string"><i id="nb_caract">0</i> / 500 caractères maximum</p><input id="inscriBout" type="submit" name="bouton_posts" value="Bananez !"/>
+              <p id="nb_caract_string"><i id="nb_caract">0</i> / 500 caractères maximum</p><input id="inscriBout" type="submit" disabled="disabled" name="bouton_posts" value="Bananez !"/>
             </form>
             <script src="scripts/js/caractere_max.js"></script>
           <?php
