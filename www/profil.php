@@ -48,7 +48,7 @@
         <?php if($_SESSION["idcon"]==$_GET["id"]){ ?>
           <div class="envoyer_post">
             <form class="form_envoyer_post" method="POST">
-              <textarea id="areapost" name="textarea_posts" rows="6" cols="100" placeholder="<?php
+              <textarea id="areapost" name="textarea_posts" rows="8" cols="130" placeholder="<?php
                 $var = rand(0,5);
                 switch ($var) {
                   case 0:
