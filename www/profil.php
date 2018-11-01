@@ -58,7 +58,7 @@
                     echo "Expliquez pourquoi pensez vous que la bananne est la star du rayon fruits et légumes ?";
                     break;
                   case 2:
-                    echo "Decrivez ici votre journée";
+                    echo "Décrivez ici votre journée";
                     break;
                   case 3:
                     echo "Comment s'est passé votre weekend ?";
