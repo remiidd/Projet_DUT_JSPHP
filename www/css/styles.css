@@ -200,7 +200,7 @@
 }
 .areapost {
   resize: none;
-  overflow: auto;
+  overflow:hidden;
 }
 
 
