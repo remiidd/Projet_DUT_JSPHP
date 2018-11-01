@@ -12,7 +12,7 @@
     <script src="scripts/js/liker_post.js"></script>
     <link rel="stylesheet" href="css/styles.css"/>
     <script>
-      $('.areapost').autoResize();
+      $('textarea').autoResize();
     </script>
   </head>
   <body>
