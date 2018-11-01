@@ -9,7 +9,7 @@
     <div class="contenu">
       <center>
         <form id="inscription2" action="" method="post">
-          <input type="text" name="prenom" value="<?php echo $_SESSION['prenom']; ?>" readonly>
+          <input type="text" name="prenom" placeholder="<?php echo $_SESSION['prenom']; ?>" readonly>
           <br>
           <input type="text" name="nom" value="<?php echo $_SESSION['nom']; ?>" readonly>
           <br>
@@ -46,6 +46,7 @@
               <?php
             }
           ?>
+          <input type="tel" name="tel" placeholder="Téléphone">
         </form>
       </center>
     </div>
