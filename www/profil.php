@@ -75,7 +75,7 @@
                 }
 
               ?>"></textarea><br/>
-              <p>0 / 500 caractères maximum</p><input id="inscriBout" type="submit" name="bouton_posts" value="Bananez !"/>
+              <p>0</p><p> / 500 caractères maximum</p><input id="inscriBout" type="submit" name="bouton_posts" value="Bananez !"/>
             </form>
           <?php
           }
