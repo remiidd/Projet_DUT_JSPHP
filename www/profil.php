@@ -34,52 +34,54 @@
     <?php include 'bar_navigation/nonco.php'?>
     <!-- CONTENU DANS CETTE DIV -->
     <div class="content">
-      <div id="presentation">
-        <div class="cover" style="background-repeat: no-repeat;background-size: cover;background-position: center center;background-image:url(<?php if($data["photo_couv"]!=null) { echo $data["photo_couv"]; } else { ?>src/media/default_profil_cover.jpg<?php } ?>);"></div>
-        <div class="pp"><img class="profilpicture" src="<?php if($data["photo_profil"]!=null) { echo $data["photo_profil"]; } else { ?>src/media/default_profil_picture.jpg<?php } ?>" alt="Default profil picture"/></div>
-        <h1 class="name"><?php echo $data["prenom"]." ".$data["nom"]; ?></h1>
-      </div>
-      <div id="infos">
-        <p>Habite à <strong><?php echo $data["ville"]; ?></strong></p>
-        <p>Agé de <strong><?php $today = new DateTime();$naissance = new DateTime($data["naissance"]);echo $today->diff($naissance)->format("%Y");?></strong> ans</p>
-        <?php if(($today->format("%m%d"))==($naissance->format("%m%d"))) { ?><p>Bon anniversaire !</p><?php } ?>
-      </div>
-      <?php if($_SESSION["idcon"]==$_GET["id"]){ ?>
-        <div class="envoyer_post">
-          <form class="form_envoyer_post" method="POST">
-            <textarea name="textarea_posts"></textarea>
-            <input type="submit" name="bouton_posts" value="Bananez !"/>
-          </form>
-        <?php
-        }
-          if(isset($_POST["textarea_posts"])) {
-            $message = htmlentities($_POST["textarea_posts"]);
-
-            $today = new DateTime();
-            $req = $bdd->prepare('INSERT INTO posts(id, nom_createur, date_publication, contenu, photo, profil, nb_com, nb_like, nb_share) VALUES(NULL, :noms, CURRENT_DATE(), :contenu, :photo, :profil,\'0\',\'0\',\'0\')');
-            $req->execute(array(
-              'noms' => $data["prenom"]." ".$data["nom"],
-              'contenu' => $message,
-              'photo' => "",
-              'profil' => $_GET["id"]
-            ));
-            $url_refresh = "Location:profil.php?id=".$_GET["id"];
-            header($url_refresh);
+      <div class="wrapp">
+        <div id="presentation">
+          <div class="cover" style="background-repeat: no-repeat;background-size: cover;background-position: center center;background-image:url(<?php if($data["photo_couv"]!=null) { echo $data["photo_couv"]; } else { ?>src/media/default_profil_cover.jpg<?php } ?>);"></div>
+          <div class="pp"><img class="profilpicture" src="<?php if($data["photo_profil"]!=null) { echo $data["photo_profil"]; } else { ?>src/media/default_profil_picture.jpg<?php } ?>" alt="Default profil picture"/></div>
+          <h1 class="name"><?php echo $data["prenom"]." ".$data["nom"]; ?></h1>
+        </div>
+        <div id="infos">
+          <p>Habite à <strong><?php echo $data["ville"]; ?></strong></p>
+          <p>Agé de <strong><?php $today = new DateTime();$naissance = new DateTime($data["naissance"]);echo $today->diff($naissance)->format("%Y");?></strong> ans</p>
+          <?php if(($today->format("%m%d"))==($naissance->format("%m%d"))) { ?><p>Bon anniversaire !</p><?php } ?>
+        </div>
+        <?php if($_SESSION["idcon"]==$_GET["id"]){ ?>
+          <div class="envoyer_post">
+            <form class="form_envoyer_post" method="POST">
+              <textarea name="textarea_posts"></textarea>
+              <input type="submit" name="bouton_posts" value="Bananez !"/>
+            </form>
+          <?php
           }
-        ?>
-      </div>
-      <div class="feed_profil">
-        <?php $reponse = $bdd->query('SELECT * FROM posts WHERE profil=\''.$_GET['id'].'\' ORDER BY id DESC');
-        while($feed = $reponse->fetch()) {
-          ?><div><hr>
-            <h5><img class="pp_posts" src="<?php if($data["photo_profil"]!=null) { echo $data["photo_profil"]; } else { ?>src/media/default_profil_cover.jpg<?php } ?>" alt="Default profil cover"/><?php echo " ".$feed["nom_createur"]; ?></h5><p><i><?php $d_publi = new DateTime($feed["date_publication"]); echo "Le ".$d_publi->format("d/m/Y") ?></i></p><br><p><?php echo $feed["contenu"]; ?></p><br>
-            <ul class="barre_posts">
-              <li class="elements_barre_posts"><a href="" onclick="liker_post(<?php echo $feed["id"].",".$_SESSION["idcon"]; ?>)"><?php echo $feed["nb_like"];?> Likes </a></li>
-              <li class="elements_barre_posts"><a href="posts.php?id=<?php echo $feed["id"]; ?>"><?php echo $feed["nb_com"];?> Commentaires </a></li>
-              <li class="elements_barre_posts"><?php echo $feed["nb_share"];?> Shares </li>
-            </ul>
-          </div><?php
-        } ?><hr>
+            if(isset($_POST["textarea_posts"])) {
+              $message = htmlentities($_POST["textarea_posts"]);
+
+              $today = new DateTime();
+              $req = $bdd->prepare('INSERT INTO posts(id, nom_createur, date_publication, contenu, photo, profil, nb_com, nb_like, nb_share) VALUES(NULL, :noms, CURRENT_DATE(), :contenu, :photo, :profil,\'0\',\'0\',\'0\')');
+              $req->execute(array(
+                'noms' => $data["prenom"]." ".$data["nom"],
+                'contenu' => $message,
+                'photo' => "",
+                'profil' => $_GET["id"]
+              ));
+              $url_refresh = "Location:profil.php?id=".$_GET["id"];
+              header($url_refresh);
+            }
+          ?>
+        </div>
+        <div class="feed_profil">
+          <?php $reponse = $bdd->query('SELECT * FROM posts WHERE profil=\''.$_GET['id'].'\' ORDER BY id DESC');
+          while($feed = $reponse->fetch()) {
+            ?><div><hr>
+              <h5><img class="pp_posts" src="<?php if($data["photo_profil"]!=null) { echo $data["photo_profil"]; } else { ?>src/media/default_profil_cover.jpg<?php } ?>" alt="Default profil cover"/><?php echo " ".$feed["nom_createur"]; ?></h5><p><i><?php $d_publi = new DateTime($feed["date_publication"]); echo "Le ".$d_publi->format("d/m/Y") ?></i></p><br><p><?php echo $feed["contenu"]; ?></p><br>
+              <ul class="barre_posts">
+                <li class="elements_barre_posts"><a href="" onclick="liker_post(<?php echo $feed["id"].",".$_SESSION["idcon"]; ?>)"><?php echo $feed["nb_like"];?> Likes </a></li>
+                <li class="elements_barre_posts"><a href="posts.php?id=<?php echo $feed["id"]; ?>"><?php echo $feed["nb_com"];?> Commentaires </a></li>
+                <li class="elements_barre_posts"><?php echo $feed["nb_share"];?> Shares </li>
+              </ul>
+            </div><?php
+          } ?><hr>
+        </div>
       </div>
     </div>
     <?php $reponse->closeCursor(); ?>
