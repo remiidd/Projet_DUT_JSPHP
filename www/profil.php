@@ -93,9 +93,8 @@
               ));
               $url_refresh = "Location:profil.php?id=".$_GET["id"];
               header($url_refresh);
-            }
           ?>
-        </div>
+        </div><?php } ?>
         <div class="feed_profil">
           <?php $reponse = $bdd->query('SELECT * FROM posts WHERE profil=\''.$_GET['id'].'\' ORDER BY id DESC');
           while($feed = $reponse->fetch()) {
