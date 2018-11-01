@@ -46,6 +46,7 @@
           <?php if(($today->format("%m%d"))==($naissance->format("%m%d"))) { ?><p>Bon anniversaire !</p><?php } ?>
         </div>
         <?php if($_SESSION["idcon"]==$_GET["id"]){ ?>
+
           <div class="envoyer_post">
             <form class="form_envoyer_post" method="POST">
               <textarea id="areapost" name="textarea_posts" rows="8" cols="130" placeholder="<?php
@@ -79,7 +80,7 @@
             </form>
             <script src="scripts/js/caractere_max.js"></script>
           <?php
-          }
+        } else {?> </div> <?php}
             if(isset($_POST["textarea_posts"])) {
               $message = htmlentities($_POST["textarea_posts"]);
 
