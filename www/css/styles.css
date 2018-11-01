@@ -153,8 +153,6 @@
 /* ====================  CSS PAGE DE PROFIL ==================== */
 .cover {
   height: 300px;
-  width: 80%;
-  margin-left: 10%;
   overflow: hidden;
   text-align: center;
 }
