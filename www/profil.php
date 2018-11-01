@@ -48,7 +48,7 @@
         <?php if($_SESSION["idcon"]==$_GET["id"]){ ?>
           <div class="envoyer_post">
             <form class="form_envoyer_post" method="POST">
-              <textarea class="areapost" name="textarea_posts" rows="6" cols="100"></textarea><br/>
+              <textarea class="areapost" name="textarea_posts" rows="6" cols="100" placeholder="Ecriver ce qui vous passe par la tête"></textarea><br/>
               <input id="inscriBout" type="submit" name="bouton_posts" value="Bananez !"/>
             </form>
           <?php
