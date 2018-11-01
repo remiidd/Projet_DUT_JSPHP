@@ -15,7 +15,7 @@
           <br>
           <input type="text" name="email" placeholder="<?php echo $_SESSION['email']; ?>" readonly>
           <br>
-          <input type="date" name="nom" placeholder="<?php echo $_SESSION['naissance']; ?>" readonly>
+          <input type="date" name="nom" value="<?php echo $_SESSION['naissance']; ?>" readonly>
           <br>
           <?php
             if($_SESSION['sexe'] == "Homme"){
