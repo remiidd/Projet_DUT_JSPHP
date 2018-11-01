@@ -51,6 +51,8 @@
           <input type="file" name="" value="pp">
           <br>
           <input type="file" name="" value="pc">
+          <br>
+          <input type="submit" name="inscri" value="S'inscrire">
         </form>
       </center>
     </div>
