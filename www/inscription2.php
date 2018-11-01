@@ -8,7 +8,7 @@
   <body>
     <div class="contenu">
       <center>
-        <form id="inscription2" action="scripts/inscription2.php" method="post">
+        <form id="inscription2" action="scripts/php/inscription2.php" method="post">
           <input type="text" name="prenom" placeholder="<?php echo $_SESSION['prenom']; ?>" readonly>
           <br>
           <input type="text" name="nom" placeholder="<?php echo $_SESSION['nom']; ?>" readonly>
