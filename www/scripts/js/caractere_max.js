@@ -10,5 +10,6 @@ text_post.addEventListener("input", function(e){
   if(text_post.value.length <= 500){
     document.getElementById('nb_caract_string').style.color = 'black';
     document.getElementById('inscriBout').disabled = false;
+    document.getElementById('inscriBout').style.backgroundColor = '#FFA07A';
   }
 });
