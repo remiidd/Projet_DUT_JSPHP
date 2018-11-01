@@ -47,6 +47,7 @@
             }
           ?>
           <input type="tel" name="tel" placeholder="Téléphone">
+          <input type="image" name="" value="">
         </form>
       </center>
     </div>
