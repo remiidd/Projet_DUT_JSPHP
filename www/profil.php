@@ -35,7 +35,7 @@
     <!-- CONTENU DANS CETTE DIV -->
     <div class="content">
       <div id="presentation">
-        <div class="cover" style="background-repeat: no-repeat;background-size: cover;background-position: center;background-image:url(<?php if($data["photo_couv"]!=null) { echo $data["photo_couv"]; } else { ?>src/media/default_profil_cover.jpg<?php } ?>);"></div>
+        <div class="cover" style="background-repeat: no-repeat;background-size: cover;background-position: center center;background-image:url(<?php if($data["photo_couv"]!=null) { echo $data["photo_couv"]; } else { ?>src/media/default_profil_cover.jpg<?php } ?>);"></div>
         <div class="pp"><img class="profilpicture" src="<?php if($data["photo_profil"]!=null) { echo $data["photo_profil"]; } else { ?>src/media/default_profil_picture.jpg<?php } ?>" alt="Default profil picture"/></div>
         <h1 class="name"><?php echo $data["prenom"]." ".$data["nom"]; ?></h1>
       </div>
