@@ -198,7 +198,7 @@
 .form_envoyer_post {
   text-align: center;
 }
-.areapost {
+#areapost {
   resize: none;
   overflow:hidden;
 }
