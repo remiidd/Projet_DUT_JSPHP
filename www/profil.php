@@ -46,7 +46,7 @@
           <?php if(($today->format("%m%d"))==($naissance->format("%m%d"))) { ?><p>Bon anniversaire !</p><?php } ?>
 
         <?php if($_SESSION["idcon"]==$_GET["id"]){ ?>
-          <p><a href="settings.php?id=<?php echo $_SESSION["idcon"]; ?>"></a></p>
+          <p><a href="settings.php?id=<?php echo $_SESSION["idcon"]; ?>">Modifier vos informations personnelles</a></p>
           </div>
           <div class="envoyer_post">
             <form class="form_envoyer_post" method="POST">
