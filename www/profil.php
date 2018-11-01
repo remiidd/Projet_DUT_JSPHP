@@ -10,6 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!--Fin des fichiers bootstrap-->
     <script src="scripts/js/liker_post.js"></script>
+    <script src="scripts/js/caractere_max.js"></script>
     <link rel="stylesheet" href="css/styles.css"/>
   </head>
   <body>
