@@ -53,6 +53,10 @@
   height: 100%;
 }
 
+#img_gauche{
+  float: left;
+}
+
 /* ====================  fin CSS Inscription ==================== */
 
 /* ====================  CSS PAGE Principale ==================== */
