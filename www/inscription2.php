@@ -52,6 +52,8 @@
           <br>
           <input type="file" name="pp" id="pp">
           <br>
+          <input type="file" name="cover" id="pp">
+          <br>
           <input type="submit" name="inscri" value="S'inscrire">
         </form>
       </center>
