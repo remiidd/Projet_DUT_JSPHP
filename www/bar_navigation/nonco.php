@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav mr-auto"></div>
           <div class="navbar-nav my-2 my-lg-0">
-            <form method="post" action="deconnexion.php">
+            <form method="post" action="../scripts/php/deconnexion.php">
               <input id="cobout" type="submit" value="Déconnexion"/>
             </form>
           </div>
