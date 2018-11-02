@@ -4,7 +4,7 @@
   use PHPMailer\PHPMailer\PHPMailer;
   use PHPMailer\PHPMailer\Exception;
 
-  echo 'ici';
+
   /* Exception class. */
   require '../../PHPMailer-master/src/Exception.php';
 
@@ -14,7 +14,7 @@
   /* SMTP class, needed if you want to use SMTP. */
   require '../../PHPMailer-master/src/SMTP.php';
 
-
+  echo 'ici';
 
   $email = new PHPMailer(TRUE);
   $email->isSMTP();
