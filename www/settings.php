@@ -37,6 +37,9 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
     ?>
     <?php include 'bar_navigation/nonco.php'?>
     <div class="content">
+      <div class="wrapp">
+
+      </div>
 
     </div>
   </body>
