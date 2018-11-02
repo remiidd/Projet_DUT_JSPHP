@@ -12,6 +12,20 @@
   require '../../PHPMailer/src/SMTP.php';
 
   $email = new PHPMailer(TRUE);
+  $email->isSMTP();
+  $email->SMTPAuth = true;
+  $email->SMTPSecure = 'ssl';
+  $email->Host = 'smtp.gmail.com';
+  $email->Port = '465';
+  $email->isHTML();
+  $email->Username = 'bananabook.contact@gmail.com';
+  $email->Password = 'mailbanana';
+  $email->SetFrom('no-reply@bananabook.com');
+  $email->Subject = 'mail';
+  $email->Body = 'test';
+  $email->addAddress('aloisguitton@orange.fr');
+
+  $email->send();
   /*$email = $_POST['email'];
 
   try{
