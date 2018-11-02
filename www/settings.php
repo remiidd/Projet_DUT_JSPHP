@@ -38,7 +38,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
     <?php include 'bar_navigation/nonco.php'?>
     <div class="content">
       <div class="wrapp">
-        <div class="cover" style="background-repeat: no-repeat;background-size: cover;background-position: center center;background-image:url(<?php if($data["photo_couv"]!=null) { echo $data["photo_couv"]; } else { ?>src/media/default_profil_cover.jpg<?php } ?>);">
+        <div class="cover" style="background-color: black;background-repeat: no-repeat;background-size: cover;background-position: center center;background-image:url(<?php if($data["photo_couv"]!=null) { echo $data["photo_couv"]; } else { ?>src/media/default_profil_cover.jpg<?php } ?>);">
           <h1 class="titre_param">Paramètres généraux du compte de <?php echo $data["prenom"];?></h1>
         </div>
       </div>
