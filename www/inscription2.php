@@ -1,4 +1,10 @@
-<?php session_start(); ?>
+<?php session_start();
+  if(!(isset($_SESSION['prenom']))){
+    header("Location:../../index.php");
+    exit();
+  }
+  else {
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -60,3 +66,6 @@
     </div>
   </body>
 </html>
+<?php
+  }
+?>
