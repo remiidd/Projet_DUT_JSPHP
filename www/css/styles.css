@@ -216,7 +216,7 @@
   height: 120%;
   background-color: black;
   opacity: 0.3;
-  position: static;
+  position: relative;
 }
 
 
