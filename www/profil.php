@@ -69,7 +69,7 @@
                     echo "Quel est votre film préféré ?";
                     break;
                   case 5:
-                    echo "Raconte moi ta vie";
+                    echo "Raconte moi ta vie !";
                     break;
                   default:
                     echo "Ecrivez ce qui vous passe par la tête...";
