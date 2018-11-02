@@ -36,7 +36,7 @@
     $mail->addBCC('bcc@example.com');
 
     //Attachments
-    $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+    $mail->addAttachment('like.php');         // Add attachments
     $mail->addAttachment('like.php', 'new.php');    // Optional name
 
     //Content
