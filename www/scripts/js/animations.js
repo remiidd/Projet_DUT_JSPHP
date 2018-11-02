@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $(".titre_param").animate({
     top:'120px',
-    color:white,
+    color:'white',
     opacity:'1'
   });
 });
