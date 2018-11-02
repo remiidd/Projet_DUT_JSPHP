@@ -6,13 +6,13 @@
 
   echo 'ici';
   /* Exception class. */
-  require '../../PHPMailer/src/Exception.php';
+  require '../../PHPMailer-master/src/Exception.php';
 
   /* The main PHPMailer class. */
-  require '../../PHPMailer/src/PHPMailer.php';
+  require '../../PHPMailer-master/src/PHPMailer.php';
 
   /* SMTP class, needed if you want to use SMTP. */
-  require '../../PHPMailer/src/SMTP.php';
+  require '../../PHPMailer-master/src/SMTP.php';
 
 
 
