@@ -16,7 +16,7 @@
     <?php
       include 'bar_navigation/connexion.php'
     ?>
-    <div class="contenu">
+    <div class="content">
       <center>
         <form id="inscription2" action="scripts/php/inscription2.php" method="post" enctype="multipart/form-data">
           <label>Prenom : </label>
