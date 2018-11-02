@@ -28,7 +28,7 @@
     'ville' => $ville,
     'photo_profil' => "",
     'photo_couv' => ""
-  ));
+  ));*/
 
   try{
     $bdd1 = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
@@ -36,7 +36,7 @@
   catch (Exception $e){
         die('Erreur : ' . $e->getMessage());
   }
-*/
+
   //variables
   $reponse = $bdd1->query("SELECT * FROM profil WHERE `email`='$email'");
   $donnees = $reponse->fetch();
