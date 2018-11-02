@@ -48,7 +48,7 @@
   echo $id;
 
   $target_dir = "../../src/media/profils/";
-  $target_file =  $target_dir . $id . "-pp" . $_FILES['pp']['type'];
+  $target_file =  $target_dir . $id . "-pp." . $_FILES['pp']['type'];
   $uploadOk = 1;
   $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
   // Check if image file is a actual image or fake image
