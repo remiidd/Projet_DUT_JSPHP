@@ -65,13 +65,13 @@
 
     if($existpp || $existcover){
       try{
-        $bdd1 = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
+        $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
       }
       catch (Exception $e){
             die('Erreur : ' . $e->getMessage());
       }
 
-      $reponse = $bdd1->query("SELECT * FROM profil WHERE `email`='$email'");
+      $reponse = $bdd->query("SELECT * FROM profil WHERE `email`='$email'");
       $donnees = $reponse->fetch();
 
       $id = $donnees['id'];
@@ -81,14 +81,21 @@
         $target_file =  $target_dir . $id . "-pp." . $extension_uploadpp;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         $resultat = move_uploaded_file($_FILES['pp']['tmp_name'], $target_file);
-        if ($resultat) echo "Transfert réussi pp";
+        if ($resultat){
+          $targetForBddpp = "../src/media/profils/" . $id . "-pp." . $extension_uploadpp;
+          $bdd->exec("UPDATE `profil` SET `photo_profil` = '$targetForBddpp' WHERE `id` = $id");
+        }
+
       }
 
       if ($existcover) {
         $target_file =  $target_dir . $id . "-cover." . $extension_uploadcover;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         $resultat = move_uploaded_file($_FILES['cover']['tmp_name'], $target_file);
-        if ($resultat) echo "Transfert réussi cover";
+        if ($resultat){
+          $targetForBddcover = "../src/media/profils/" . $id . "-cover." . $extension_uploadpp;
+          $bdd->exec("UPDATE `profil` SET `photo_couv` = '$targetForBddcover' WHERE `id` = $id");
+        }
       }
     }
   }
