@@ -26,6 +26,7 @@
   $email->Body = 'test';
   $email->addAddress('aloisguitton@orange.fr');
 
+  echo 'ici';
   if(!($email->Send())) {
 		echo 'Mail error: '.$email->ErrorInfo;
 	} else {
