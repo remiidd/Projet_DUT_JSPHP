@@ -29,8 +29,7 @@
   color: white;
   background-color: #FFA07A;
   border-color: white;
-  border-style: dotted;
-  margin-top: 15px;
+  border-style: dotted; 
 }
 
 #cobout:hover{
