@@ -1,9 +1,10 @@
 <?php
   echo 'mail';
-  echo 'ici';
+
   use PHPMailer\PHPMailer\PHPMailer;
   use PHPMailer\PHPMailer\Exception;
 
+  echo 'ici';
   /* Exception class. */
   require '../../PHPMailer/src/Exception.php';
 
