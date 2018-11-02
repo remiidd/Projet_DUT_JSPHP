@@ -17,25 +17,27 @@
   echo 'ici';
 
   $email = new PHPMailer(TRUE);
-  $email->isSMTP();
-  $email->SMTPAuth = true;
-  $email->SMTPSecure = 'ssl';
-  $email->Host = 'smtp.gmail.com';
-  $email->Port = '465';
-  $email->isHTML();
-  $email->Username = 'bananabook.contact@gmail.com';
-  $email->Password = 'mailbanana';
-  $email->SetFrom('no-reply@bananabook.com');
-  $email->Subject = 'mail';
-  $email->Body = 'test';
-  $email->addAddress('aloisguitton@orange.fr');
+  try{
+    $email->isSMTP();
+    $email->SMTPAuth = true;
+    $email->SMTPSecure = 'ssl';
+    $email->Host = 'smtp.gmail.com';
+    $email->Port = '465';
+    $email->isHTML();
+    $email->Username = 'bananabook.contact@gmail.com';
+    $email->Password = 'mailbanana';
+    $email->SetFrom('no-reply@bananabook.com');
+    $email->Subject = 'mail';
+    $email->Body = 'test';
+    $email->addAddress('aloisguitton@orange.fr');
 
-/*
-  if(!($email->Send())) {
-		echo 'Mail error: '.$email->ErrorInfo;
-	} else {
-		echo 'true';
-	}*/
+    $mail->send();
+    echo 'Message has been sent';
+  } catch (Exception $e) {
+      echo 'Message could not be sent.';
+      echo 'Mailer Error: ' . $mail->ErrorInfo;
+  }
+
   /*$email = $_POST['email'];
 
   try{
