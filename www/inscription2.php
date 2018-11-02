@@ -20,6 +20,9 @@
       <div>
         <img id="img_gauche" src="src/media/hochet-banane.jpg" />
       </div>
+      <div>
+        <img id="img_droite" src="src/media/deguisement-banane.jpg" />
+      </div>
       <center id="center_inscri">
         <form id="inscription2" action="scripts/php/inscription2.php" method="post" enctype="multipart/form-data">
           <label>Prenom : </label>

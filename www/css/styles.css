@@ -61,6 +61,15 @@
   margin-left: -150px;
 }
 
+#img_gauche{
+  height: 100%;
+  float: right;
+  position: fixed;
+  overflow: hidden;
+  object-fit: cover;
+  margin-left: -150px;
+}
+
 /* ====================  fin CSS Inscription ==================== */
 
 /* ====================  CSS PAGE Principale ==================== */
