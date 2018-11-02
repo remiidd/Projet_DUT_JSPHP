@@ -82,7 +82,7 @@
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         $resultat = move_uploaded_file($_FILES['pp']['tmp_name'], $target_file);
         if ($resultat){
-          $targetForBddpp = "../src/media/profils/" . $id . "-pp." . $extension_uploadpp;
+          $targetForBddpp = "src/media/profils/" . $id . "-pp." . $extension_uploadpp;
           $bdd->exec("UPDATE `profil` SET `photo_profil` = '$targetForBddpp' WHERE `id` = $id");
         }
 
@@ -93,7 +93,7 @@
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         $resultat = move_uploaded_file($_FILES['cover']['tmp_name'], $target_file);
         if ($resultat){
-          $targetForBddcover = "../src/media/profils/" . $id . "-cover." . $extension_uploadpp;
+          $targetForBddcover = "src/media/profils/" . $id . "-cover." . $extension_uploadpp;
           $bdd->exec("UPDATE `profil` SET `photo_couv` = '$targetForBddcover' WHERE `id` = $id");
         }
       }
