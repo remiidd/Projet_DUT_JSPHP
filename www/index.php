@@ -1,4 +1,10 @@
-<?php session_start();?>
+<?php session_start();
+  if(isset($_SESSION['id'])){
+    $id = $_SESSION['id'];
+    header("Location:../../profil.php?id=$id");
+    exit();
+  }
+  else {?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -66,3 +72,6 @@
     }
   ?>
 </html>
+<?php
+}
+?>
