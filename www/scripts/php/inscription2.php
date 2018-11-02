@@ -42,14 +42,14 @@
   $donnees = $reponse->fetch();
 
   echo $donnees['id'];
+  phpinfo();
 
   $target_dir = "../../src/media";
-  $target_file =  "../../src/media" . $donnees['id'];
+  $target_file =  basename($_FILES["pp"]["name"]);
   $uploadOk = 1;
   $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
   // Check if image file is a actual image or fake image
   $resultat = move_uploaded_file($_FILES['pp']['tmp_name'], $target_file);
-  echo $resultat;
   if ($resultat) echo "Transfert réussi";
 
 ?>
