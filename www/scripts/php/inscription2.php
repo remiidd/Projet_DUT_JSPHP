@@ -38,7 +38,7 @@
         die('Erreur : ' . $e->getMessage());
   }
 
-  echo $email;
+  //echo $email;
 
   //variables
   $reponse = $bdd1->query("SELECT * FROM profil WHERE `email`='$email'");
