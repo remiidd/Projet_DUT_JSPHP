@@ -53,7 +53,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <p>Photo de profil</p>
         <p>Photo de couverture</p>
         <p>Date de naissance : <?php $naissance = new DateTime($data["naissance"]); echo $naissance->format("d / m / Y"); ?></p>
-        <p>Ville : <?php $data["ville"]; ?></p>
+        <p>Ville : <?php echo $data["ville"]; ?></p>
         <p>Emploi</p>
         <p>Etudes</p>
       </div>
