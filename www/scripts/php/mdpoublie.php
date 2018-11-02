@@ -1,15 +1,13 @@
 <?php
-  use PHPMailer\PHPMailer\PHPMailer;
-  use PHPMailer\PHPMailer\Exception;
-
-  /* Exception class. */
-  require '../../PHPMailer/src/Exception.php';
+  echo 'mail';
+//  use PHPMailer\PHPMailer\PHPMailer;
+//  require '../../PHPMailer/src/Exception.php';
 
   /* The main PHPMailer class. */
-  require '../../PHPMailer/src/PHPMailer.php';
+//require '../../PHPMailer/src/PHPMailer.php';
 
   /* SMTP class, needed if you want to use SMTP. */
-  require '../../PHPMailer/src/SMTP.php';
+  /*require '../../PHPMailer/src/SMTP.php';
 
   $email = new PHPMailer(TRUE);
   $email->isSMTP();
@@ -29,7 +27,7 @@
 		echo 'Mail error: '.$email->ErrorInfo;
 	} else {
 		echo 'true';
-	}
+	}*/
   /*$email = $_POST['email'];
 
   try{
