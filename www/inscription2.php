@@ -17,9 +17,9 @@
       include 'bar_navigation/connexion.php'
     ?>
     <div class="content">
-      <p class="gauche">
-        <img src="src/media/hochet-banane.jpg" alt="Nouveau !" />
-      </p>
+      <div>
+        <img id="img_gauche" src="src/media/hochet-banane.jpg" />
+      </div>
       <center id="center_inscri">
         <form id="inscription2" action="scripts/php/inscription2.php" method="post" enctype="multipart/form-data">
           <label>Prenom : </label>

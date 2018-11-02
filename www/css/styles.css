@@ -54,7 +54,11 @@
 }
 
 #img_gauche{
-  float: left;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  object-fit: cover;
+  margin-left: -150px;
 }
 
 /* ====================  fin CSS Inscription ==================== */
