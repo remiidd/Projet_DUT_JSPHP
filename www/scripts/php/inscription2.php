@@ -21,7 +21,7 @@
     }
   }
 
-  if (isset($_FILES['cover'])) {
+  if ($_FILES['cover']['name'] != "") {
     //si cover present
     $extension_uploadcover = strtolower(  substr(  strrchr($_FILES['cover']['name'], '.')  ,1)  );
     if (!(in_array($extension_uploadcover,$extensions_valides))){
