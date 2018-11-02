@@ -207,8 +207,9 @@
 
 /* ====================  CSS PAGE DE Parametres ==================== */
 .titre_param {
-  color: black;
+  color: white;
   position: relative;
+  opacity: 0;
 }
 .cover_couche {
   top:0px;
