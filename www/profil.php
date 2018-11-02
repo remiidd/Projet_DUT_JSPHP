@@ -105,11 +105,11 @@
               <h5><img class="pp_posts" src="<?php if($data["photo_profil"]!=null) { echo $data["photo_profil"]; } else { ?>src/media/default_profil_cover.jpg<?php } ?>" alt="Default profil cover"/><?php echo " ".$feed["nom_createur"]; ?></h5><p><i><?php $d_publi = new DateTime($feed["date_publication"]); echo "Le ".$d_publi->format("d/m/Y") ?></i></p><br><p><?php echo $feed["contenu"]; ?></p><br>
               <ul class="barre_posts">
                 <?php
-                $ok = false;
+                $okk = false;
                 $result = $bdd->query('SELECT * FROM like_table WHERE profil_like=\''.$_SESSION["idcon"].'\' AND id_post=\''.$feed["id"].'\'');
-                if($result->fetch()){$ok=true;}
+                if($result->fetch()){$okk=true;}
                 ?>
-                <li class="elements_barre_posts"><a href="" onclick="liker_post(<?php echo $feed["id"].",".$_SESSION["idcon"]; ?>)"><?php echo $feed["nb_like"];?> Likes <i class="<?php if($ok){ echo "fas"; } else { echo "far"; } ?> fa-thumbs-up"></i></a></li>
+                <li class="elements_barre_posts"><a href="" onclick="liker_post(<?php echo $feed["id"].",".$_SESSION["idcon"]; ?>)"><?php echo $feed["nb_like"];?> Likes <i class="<?php if($okk){ echo "fas"; } else { echo "far"; } ?> fa-thumbs-up"></i></a></li>
                 <li class="elements_barre_posts"><a href="posts.php?id=<?php echo $feed["id"]; ?>"><?php echo $feed["nb_com"];?> Commentaires <i class="far fa-comments"></i></a></li>
                 <li class="elements_barre_posts"><?php echo $feed["nb_share"];?> Shares <i class="fas fa-share"></i></li>
               </ul>
