@@ -106,7 +106,7 @@
               <h5><img class="pp_posts" src="<?php if($data["photo_profil"]!=null) { echo $data["photo_profil"]; } else { ?>src/media/default_profil_cover.jpg<?php } ?>" alt="Default profil cover"/><?php echo " ".$feed["nom_createur"]; ?></h5><p><i><?php $d_publi = new DateTime($feed["date_publication"]); echo "Le ".$d_publi->format("d/m/Y") ?></i></p><br><p><?php echo $feed["contenu"]; ?></p><br>
               <ul class="barre_posts">
                 <?php
-                $of = false;
+                $ok = false;
                 $result = $bdd->query('SELECT * FROM like_table WHERE profil_like=\''.$_SESSION["idcon"].'\' AND id_post=\''.$feed["id"].'\'');
                 if($result->fetch()){$ok=true;}
                 ?>
