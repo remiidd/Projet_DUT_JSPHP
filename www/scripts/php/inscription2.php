@@ -21,8 +21,8 @@
 
   if (isset($_FILES['cover'])) {
     //si cover present
-    $extension_uploadpp = strtolower(  substr(  strrchr($_FILES['cover']['name'], '.')  ,1)  );
-    if (!(in_array($extension_uploadpp,$extensions_valides))){
+    $extension_uploadcover = strtolower(  substr(  strrchr($_FILES['cover']['name'], '.')  ,1)  );
+    if (!(in_array($extension_uploadcover,$extensions_valides))){
       $_SESSION['errorext'] = true;
       header('Location:../../inscription2.php');
       exit();
@@ -78,14 +78,14 @@
       $target_dir = "../../src/media/profils/";
 
       if ($existpp) {
-        $target_file =  $target_dir . $id . "-pp." . $extension_upload;
+        $target_file =  $target_dir . $id . "-pp." . $extension_uploadpp;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         $resultat = move_uploaded_file($_FILES['pp']['tmp_name'], $target_file);
         if ($resultat) echo "Transfert réussi pp";
       }
 
       if ($existcover) {
-        $target_file =  $target_dir . $id . "-cover." . $extension_upload;
+        $target_file =  $target_dir . $id . "-cover." . $extension_uploadcover;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         $resultat = move_uploaded_file($_FILES['cover']['tmp_name'], $target_file);
         if ($resultat) echo "Transfert réussi cover";
