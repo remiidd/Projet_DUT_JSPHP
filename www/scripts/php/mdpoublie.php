@@ -1,6 +1,9 @@
 <?php
   echo 'mail';
-//  use PHPMailer\PHPMailer\PHPMailer;
+  use PHPMailer\PHPMailer\PHPMailer;
+  use PHPMailer\PHPMailer\Exception;
+
+  /* Exception class. */
 //  require '../../PHPMailer/src/Exception.php';
 
   /* The main PHPMailer class. */
