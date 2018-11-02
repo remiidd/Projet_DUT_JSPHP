@@ -6,7 +6,7 @@
   $existcover = false;
   $extensions_valides = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
 
-  if (isset($_FILES['pp'])) {
+  if ($_FILES['pp']['name'] != "") {
     //si pp present
     $extension_uploadpp = strtolower(  substr(  strrchr($_FILES['pp']['name'], '.')  ,1)  );
     echo $_FILES['pp']['name'];
