@@ -50,12 +50,12 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <p class="marge">Numéro de telephone : <?php echo "+33".$data["numerotel"]; ?></p>
         <hr>
         <h5><i class="fas fa-cog"></i> Informations personnelles du profil</h5>
-        <p class="marge">Photo de profil</p>
-        <p class="marge">Photo de couverture</p>
+        <p class="marge">Photo de profil :</p>
+        <p class="marge">Photo de couverture :</p>
         <p class="marge">Date de naissance : <?php $naissance = new DateTime($data["naissance"]); echo $naissance->format("d / m / Y"); ?></p>
         <p class="marge">Ville : <?php echo $data["ville"]; ?></p>
-        <p class="marge">Emploi</p>
-        <p class="marge">Etudes</p>
+        <p class="marge">Emploi :</p>
+        <p class="marge">Etudes :</p>
       </div>
     </div>
     <script src="scripts/js/animations.js"></script>
