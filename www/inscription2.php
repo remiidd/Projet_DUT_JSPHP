@@ -12,21 +12,29 @@
     <title>Inscription</title>
   </head>
   <body>
+    <?php
+      include 'bar_navigation/connexion.php'
+    ?>
     <div class="contenu">
       <center>
         <form id="inscription2" action="scripts/php/inscription2.php" method="post" enctype="multipart/form-data">
+          <label>Prenom : </label>
           <input type="text" name="prenom" placeholder="<?php echo $_SESSION['prenom']; ?>" readonly>
           <br>
+          <label>Nom : </label>
           <input type="text" name="nom" placeholder="<?php echo $_SESSION['nom']; ?>" readonly>
           <br>
+          <label>Email : </label>
           <input type="text" name="email" placeholder="<?php echo $_SESSION['email']; ?>" readonly>
           <br>
+          <label>Date de naissance : </label>
           <input type="date" name="naissance" value="<?php echo $_SESSION['naissance']; ?>" readonly>
           <br>
           <?php
             if($_SESSION['sexe'] == "Homme"){
               ?>
               <div id="formSexe2">
+                <label>Sexe : </label>
                 <input readonly required type="radio" name="sexe" placeholder="homme" checked>Homme
                 <input readonly required type="radio" name="sexe" placeholder="femme" disabled>Femme
                 <input readonly required type="radio" name="sexe" placeholder="banana" disabled>BANANAAAAAAAA<br>
@@ -36,6 +44,7 @@
             elseif ($_SESSION['sexe'] == "Femme") {
               ?>
               <div id="formSexe2">
+                <label>Sexe : </label>
                 <input readonly required type="radio" name="sexe" placeholder="homme" disabled>Homme
                 <input readonly required type="radio" name="sexe" placeholder="femme" checked>Femme
                 <input readonly required type="radio" name="sexe" placeholder="banana" disabled>BANANAAAAAAAA<br>
@@ -45,6 +54,7 @@
             else{
               ?>
               <div id="formSexe2">
+                <label>Sexe : </label>
                 <input readonly required type="radio" name="sexe" placeholder="homme" disabled>Homme
                 <input readonly required type="radio" name="sexe" placeholder="femme" disabled>Femme
                 <input readonly required type="radio" name="sexe" placeholder="banana" checked>BANANAAAAAAAA<br>
@@ -52,12 +62,16 @@
               <?php
             }
           ?>
+          <label>Téléphone : </label>
           <input type="tel" name="tel" placeholder="Téléphone">
           <br>
+          <label>Ville : </label>
           <input type="text" name="ville" placeholder="Ville">
           <br>
+          <label>Photo de profil : </label>
           <input type="file" name="pp" id="pp">
           <br>
+          <label>Photo de couverture : </label>
           <input type="file" name="cover" id="pp">
           <br>
           <input type="submit" name="inscri" value="S'inscrire">
