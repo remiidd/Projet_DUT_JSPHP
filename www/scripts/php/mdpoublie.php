@@ -15,7 +15,7 @@
   require '../../PHPMailer-master/src/SMTP.php';
 
   echo 'ici';
-/*
+
   $email = new PHPMailer(TRUE);
   $email->isSMTP();
   $email->SMTPAuth = true;
@@ -30,7 +30,7 @@
   $email->Body = 'test';
   $email->addAddress('aloisguitton@orange.fr');
 
-
+/*
   if(!($email->Send())) {
 		echo 'Mail error: '.$email->ErrorInfo;
 	} else {
