@@ -1,6 +1,6 @@
 <?php
   session_start();
-/*
+
   $nom = $_SESSION['nom'];
   $prenom = $_SESSION['prenom'];
   $email = $_SESSION['email'];
@@ -8,6 +8,7 @@
   $naissance = $_SESSION['naissance'];
   $ville = $_POST['ville'];
   $password = $_SESSION['password'];
+  /*
   try{
     $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
   }
@@ -36,6 +37,8 @@
   catch (Exception $e){
         die('Erreur : ' . $e->getMessage());
   }
+
+  echo $email;
 
   //variables
   $reponse = $bdd1->query("SELECT * FROM profil WHERE `email`='$email'");
