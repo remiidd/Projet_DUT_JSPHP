@@ -208,6 +208,7 @@
 /* ====================  CSS PAGE DE Parametres ==================== */
 .titre_param {
   color: white;
+  transition: 1s;
 }
 
 
