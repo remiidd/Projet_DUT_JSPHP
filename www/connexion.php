@@ -24,7 +24,10 @@
             <input type="submit" value="Connexion">
           </form>
           <p>
-            <a href="">Inscrivez-vous</a>
+            <a href="mdpoublie.php?">Mot de passe oublié ?</a>
+          </p>
+          <p>
+            <a href="index.php">Inscrivez-vous</a>
           </p>
         </center>
       </div>
