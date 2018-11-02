@@ -203,12 +203,18 @@
   resize: none;
   overflow:hidden;
 }
-
-
-
-
-
 /* ====================  FIN CSS PAGE DE PROFIL ==================== */
+
+/* ====================  CSS PAGE DE Parametres ==================== */
+.titre_param {
+  color: white;
+}
+
+
+
+
+
+/* ====================  FIN CSS PAGE DE Parametres ==================== */
 .no_deco_link {
   text-decoration: none;
   color: black;
