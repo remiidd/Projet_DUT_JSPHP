@@ -52,7 +52,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <h5><i class="fas fa-cog"></i>Informations personnelles du profil</h5>
         <p>Photo de profil</p>
         <p>Photo de couverture</p>
-        <p>Date de naissance : <?php $naissance = new DateTime($data["naissance"]); echo $naissance->format("d / m / Y");</p>
+        <p>Date de naissance : <?php $naissance = new DateTime($data["naissance"]); echo $naissance->format("d / m / Y"); ?></p>
         <p>Ville : <?php $data["ville"]; ?></p>
         <p>Emploi</p>
         <p>Etudes</p>
