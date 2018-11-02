@@ -15,7 +15,7 @@
   require '../../PHPMailer-master/src/SMTP.php';
 
   echo 'ici';
-
+/*
   $email = new PHPMailer(TRUE);
   $email->isSMTP();
   $email->SMTPAuth = true;
@@ -35,7 +35,7 @@
 		echo 'Mail error: '.$email->ErrorInfo;
 	} else {
 		echo 'true';
-	}
+	}*/
   /*$email = $_POST['email'];
 
   try{
