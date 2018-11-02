@@ -25,12 +25,12 @@
   $email->Subject = 'mail';
   $email->Body = 'test';
   $email->addAddress('aloisguitton@orange.fr');
-/*
-  if(!$email->Send()) {
+
+  if(!($email->Send())) {
 		echo 'Mail error: '.$email->ErrorInfo;
 	} else {
 		echo 'true';
-	}*/
+	}
   /*$email = $_POST['email'];
 
   try{
