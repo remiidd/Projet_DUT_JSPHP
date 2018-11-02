@@ -23,6 +23,7 @@
       $_SESSION['idcon'] = $donnees['id'];
       echo "-session : " . $_SESSION['idcon'];
       header('Location:../../index.php');
+      exit();
     }
     else {
       echo "pas succes";
