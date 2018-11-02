@@ -19,10 +19,9 @@
   while ($donnees = $reponse->fetch())
   {
     if(($donnees['password'] == $mdp && $donnees['email'] == $util) || ($donnees['password'] == $mdp && $donnees['numerotel'] == $util)){
-      echo "succes" . $donnees['id'];
-      $_SESSION['idcon'] = $donnees['id'];
-      echo "-session : " . $_SESSION['idcon'];
-      header("Location:../../index.php");
+      $id = $donnees['id'];
+      $_SESSION['idcon'] = $id;
+      header("Location:../../index.php?id=$id");
       exit();
     }
     else {
