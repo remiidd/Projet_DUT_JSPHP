@@ -68,6 +68,7 @@
         echo "<script type=text/javascript>
                 emailexiste();
               </script>";
+        $_SESSION['exist'] = false;
       }
     }
   ?>
