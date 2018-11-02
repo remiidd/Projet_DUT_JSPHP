@@ -17,7 +17,7 @@
       include 'bar_navigation/connexion.php'
     ?>
     <div class="content">
-      <center>
+      <center id="center_inscri">
         <form id="inscription2" action="scripts/php/inscription2.php" method="post" enctype="multipart/form-data">
           <label>Prenom : </label>
           <input type="text" name="prenom" placeholder="<?php echo $_SESSION['prenom']; ?>" readonly>

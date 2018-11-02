@@ -42,6 +42,17 @@
 
 /* ====================  fin CSS menu ==================== */
 
+/* ==================== CSS PAGE Inscription ==================== */
+
+#center_inscri {
+  width: 50%;
+  margin-left: 25%;
+  background-color: violet;
+  padding: 15px;
+}
+
+/* ====================  fin CSS Inscription ==================== */
+
 /* ====================  CSS PAGE Principale ==================== */
 
 #gauche{
