@@ -26,13 +26,13 @@
       <center id="center_inscri">
         <form id="inscription2" action="scripts/php/inscription2.php" method="post" enctype="multipart/form-data">
           <label>Prenom : </label>
-          <input type="text" name="prenom" placeholder="<?php echo $_SESSION['prenom']; ?>" readonly>
+          <input type="text" name="prenom" value="<?php echo $_SESSION['prenom']; ?>" readonly>
           <br>
           <label>Nom : </label>
-          <input type="text" name="nom" placeholder="<?php echo $_SESSION['nom']; ?>" readonly>
+          <input type="text" name="nom" value="<?php echo $_SESSION['nom']; ?>" readonly>
           <br>
           <label>Email : </label>
-          <input type="text" name="email" placeholder="<?php echo $_SESSION['email']; ?>" readonly>
+          <input type="text" name="email" value="<?php echo $_SESSION['email']; ?>" readonly>
           <br>
           <label>Date de naissance : </label>
           <input type="date" name="naissance" value="<?php echo $_SESSION['naissance']; ?>" readonly>
@@ -42,9 +42,9 @@
               ?>
               <div id="formSexe2">
                 <label>Sexe : </label>
-                <input readonly required type="radio" name="sexe" placeholder="homme" checked>Homme
-                <input readonly required type="radio" name="sexe" placeholder="femme" disabled>Femme
-                <input readonly required type="radio" name="sexe" placeholder="banana" disabled>BANANAAAAAAAA<br>
+                <input readonly required type="radio" name="sexe" value="homme" checked>Homme
+                <input readonly required type="radio" name="sexe" value="femme" disabled>Femme
+                <input readonly required type="radio" name="sexe" value="banana" disabled>BANANAAAAAAAA<br>
               </div>
               <?php
             }
@@ -52,9 +52,9 @@
               ?>
               <div id="formSexe2">
                 <label>Sexe : </label>
-                <input readonly required type="radio" name="sexe" placeholder="homme" disabled>Homme
-                <input readonly required type="radio" name="sexe" placeholder="femme" checked>Femme
-                <input readonly required type="radio" name="sexe" placeholder="banana" disabled>BANANAAAAAAAA<br>
+                <input readonly required type="radio" name="sexe" value="homme" disabled>Homme
+                <input readonly required type="radio" name="sexe" value="femme" checked>Femme
+                <input readonly required type="radio" name="sexe" value="banana" disabled>BANANAAAAAAAA<br>
               </div>
               <?php
             }
@@ -62,9 +62,9 @@
               ?>
               <div id="formSexe2">
                 <label>Sexe : </label>
-                <input readonly required type="radio" name="sexe" placeholder="homme" disabled>Homme
-                <input readonly required type="radio" name="sexe" placeholder="femme" disabled>Femme
-                <input readonly required type="radio" name="sexe" placeholder="banana" checked>BANANAAAAAAAA<br>
+                <input readonly required type="radio" name="sexe" value="homme" disabled>Homme
+                <input readonly required type="radio" name="sexe" value="femme" disabled>Femme
+                <input readonly required type="radio" name="sexe" value="banana" checked>BANANAAAAAAAA<br>
               </div>
               <?php
             }
