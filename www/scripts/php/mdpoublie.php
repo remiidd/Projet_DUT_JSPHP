@@ -18,6 +18,7 @@
 
   $email = new PHPMailer(TRUE);
   try{
+    $email->SMTPDebug = 2; 
     $email->isSMTP();
     $email->SMTPAuth = true;
     $email->SMTPSecure = 'ssl';
