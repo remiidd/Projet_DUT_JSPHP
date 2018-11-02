@@ -4,10 +4,10 @@
   use PHPMailer\PHPMailer\Exception;
 
   /* Exception class. */
-//  require '../../PHPMailer/src/Exception.php';
+  require '../../PHPMailer/src/Exception.php';
 
   /* The main PHPMailer class. */
-//require '../../PHPMailer/src/PHPMailer.php';
+  require '../../PHPMailer/src/PHPMailer.php';
 
   /* SMTP class, needed if you want to use SMTP. */
   /*require '../../PHPMailer/src/SMTP.php';
