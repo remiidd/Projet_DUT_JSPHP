@@ -21,7 +21,7 @@
     if(($donnees['password'] == $mdp && $donnees['email'] == $util) || ($donnees['password'] == $mdp && $donnees['numerotel'] == $util)){
       $id = $donnees['id'];
       $_SESSION['idcon'] = $id;
-      header("Location:../../index.php?id=$id");
+      header("Location:../../profil.php?id=$id");
       exit();
     }
     else {
