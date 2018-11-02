@@ -47,8 +47,10 @@
   $id = $donnees['id'];
   echo $id;
 
+  $extension_upload = strtolower(  substr(  strrchr($_FILES['pp']['name'], '.')  ,1)  );
+  echo $extension_upload;
   $target_dir = "../../src/media/profils/";
-  $target_file =  $target_dir . $id . "-pp";
+  $target_file =  $target_dir . $id . "-pp.";
   $uploadOk = 1;
   $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
   // Check if image file is a actual image or fake image
