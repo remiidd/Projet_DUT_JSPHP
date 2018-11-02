@@ -45,5 +45,6 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         </div>
       </div>
     </div>
+    <script src="scripts/js/animations.js"></script>
   </body>
 </html>
