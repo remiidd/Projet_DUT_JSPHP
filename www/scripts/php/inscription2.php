@@ -1,6 +1,6 @@
 <?php
   session_start();
-
+/*
   $nom = $_SESSION['nom'];
   $prenom = $_SESSION['prenom'];
   $email = $_SESSION['email'];
@@ -36,7 +36,7 @@
   catch (Exception $e){
         die('Erreur : ' . $e->getMessage());
   }
-
+*/
   //variables
   $reponse = $bdd1->query("SELECT * FROM profil WHERE `email`='$email'");
   $donnees = $reponse->fetch();
@@ -49,6 +49,7 @@
   $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
   // Check if image file is a actual image or fake image
   $resultat = move_uploaded_file($_FILES['pp']['tmp_name'], $target_file);
+  echo $resultat;
   if ($resultat) echo "Transfert réussi";
 
 ?>
