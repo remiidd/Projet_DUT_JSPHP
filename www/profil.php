@@ -33,7 +33,7 @@
         <?php
       }
     ?>
-    
+
     <!-- CONTENU DANS CETTE DIV -->
     <div class="content">
       <div class="wrapp">
@@ -107,7 +107,7 @@
               <ul class="barre_posts">
                 <li class="elements_barre_posts"><a href="" onclick="liker_post(<?php echo $feed["id"].",".$_SESSION["idcon"]; ?>)"><?php echo $feed["nb_like"];?> Likes <i class="<?php
                 $res = $bdd->query('SELECT * FROM like_table WHERE profil_like=\''.$_SESSION["idcon"].'\' AND id_post=\''.$feed["id"].'\'');
-                while($rep = $res->fetch()){$ok=true;}
+                if($res->fetch()){$ok=true;}
                 if($ok){
                   echo "fas";
                 } else {
