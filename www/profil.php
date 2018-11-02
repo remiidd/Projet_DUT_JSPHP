@@ -10,7 +10,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <!--Fin des fichiers bootstrap-->
-    <script src="scripts/js/liker_post.js"></script>
     <link rel="stylesheet" href="css/styles.css"/>
   </head>
   <body>
@@ -120,5 +119,6 @@
       </div>
     </div>
     <?php $reponse->closeCursor(); ?>
+    <script src="scripts/js/liker_post.js"></script>
   </body>
 </html>
