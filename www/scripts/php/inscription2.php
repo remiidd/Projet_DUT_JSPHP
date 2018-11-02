@@ -1,10 +1,38 @@
 <?php
   session_start();
 
+  $_SESSION['errorext'] = false;
+  $existpp = false;
+  $existcover = false;
   $extensions_valides = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
-  $extension_upload = strtolower(  substr(  strrchr($_FILES['pp']['name'], '.')  ,1)  );
 
-  if ( in_array($extension_upload,$extensions_valides) ){
+  if (isset($_FILES['pp'])) {
+    //si pp present
+    $extension_uploadpp = strtolower(  substr(  strrchr($_FILES['pp']['name'], '.')  ,1)  );
+    if (!(in_array($extension_uploadpp,$extensions_valides))){
+      $_SESSION['errorext'] = true;
+      header('Location:../../inscription2.php');
+      exit();
+    }
+    else {
+      $existpp = true;
+    }
+  }
+
+  if (isset($_FILES['cover'])) {
+    //si cover present
+    $extension_uploadpp = strtolower(  substr(  strrchr($_FILES['cover']['name'], '.')  ,1)  );
+    if (!(in_array($extension_uploadpp,$extensions_valides))){
+      $_SESSION['errorext'] = true;
+      header('Location:../../inscription2.php');
+      exit();
+    }
+    else {
+      $existcover = true;
+    }
+  }
+
+  if($_SESSION['errorext'] == false){
     $nom = $_SESSION['nom'];
     $prenom = $_SESSION['prenom'];
     $email = $_SESSION['email'];
@@ -35,29 +63,33 @@
       'photo_couv' => ""
     ));*/
 
-    try{
-      $bdd1 = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
+    if($existpp || $existcover){
+      try{
+        $bdd1 = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
+      }
+      catch (Exception $e){
+            die('Erreur : ' . $e->getMessage());
+      }
+
+      $reponse = $bdd1->query("SELECT * FROM profil WHERE `email`='$email'");
+      $donnees = $reponse->fetch();
+
+      $id = $donnees['id'];
+      $target_dir = "../../src/media/profils/";
+
+      if ($existpp) {
+        $target_file =  $target_dir . $id . "-pp." . $extension_upload;
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        $resultat = move_uploaded_file($_FILES['pp']['tmp_name'], $target_file);
+        if ($resultat) echo "Transfert réussi pp";
+      }
+
+      if ($existcover) {
+        $target_file =  $target_dir . $id . "-cover." . $extension_upload;
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        $resultat = move_uploaded_file($_FILES['pp']['tmp_name'], $target_file);
+        if ($resultat) echo "Transfert réussi cover";
+      }
     }
-    catch (Exception $e){
-          die('Erreur : ' . $e->getMessage());
-    }
-
-    $reponse = $bdd1->query("SELECT * FROM profil WHERE `email`='$email'");
-    $donnees = $reponse->fetch();
-
-    $id = $donnees['id'];
-
-    $target_dir = "../../src/media/profils/";
-    $target_file =  $target_dir . $id . "-pp." . $extension_upload;
-    $uploadOk = 1;
-    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-    $resultat = move_uploaded_file($_FILES['pp']['tmp_name'], $target_file);
-    if ($resultat) echo "Transfert réussi pp";
-  } else {
-    header('Location:../../inscription2.php');
-    exit();
   }
-
-
-
 ?>

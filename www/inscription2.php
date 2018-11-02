@@ -48,7 +48,7 @@
           ?>
           <input type="tel" name="tel" placeholder="Téléphone">
           <br>
-          <input type="text" name="ville" value="Ville">
+          <input type="text" name="ville" placeholder="Ville">
           <br>
           <input type="file" name="pp" id="pp">
           <br>
