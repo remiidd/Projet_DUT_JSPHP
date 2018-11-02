@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/styles.css"/>
   </head>
   <body>
+    <?php include 'bar_navigation/nonco.php' ?>
     <?php
     try {
       $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;charset=utf8', 'derayalois', 'testdebrayalois');
@@ -32,7 +33,7 @@
         <?php
       }
     ?>
-    <?php include 'bar_navigation/nonco.php'?>
+    
     <!-- CONTENU DANS CETTE DIV -->
     <div class="content">
       <div class="wrapp">
