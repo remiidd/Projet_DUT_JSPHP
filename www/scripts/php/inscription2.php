@@ -47,7 +47,7 @@
   echo $donnees['id'];
 
   $target_dir = "../../src/media/";
-  $target_file =  $target_dir . basename($_FILES["pp"]["name"]);
+  $target_file =  $target_dir . $donnees['id'];
   $uploadOk = 1;
   $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
   // Check if image file is a actual image or fake image
