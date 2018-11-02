@@ -18,12 +18,12 @@
 
   $email = new PHPMailer(TRUE);
   try{
-    $email->SMTPDebug = 2; 
+    $email->SMTPDebug = 2;
     $email->isSMTP();
     $email->SMTPAuth = true;
-    $email->SMTPSecure = 'ssl';
+    $email->SMTPSecure = 'tls';
     $email->Host = 'smtp.gmail.com';
-    $email->Port = '465';
+    $email->Port = '587';
     $email->isHTML();
     $email->Username = 'bananabook.contact@gmail.com';
     $email->Password = 'mailbanana';
