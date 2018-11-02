@@ -22,7 +22,7 @@
       echo "succes" . $donnees['id'];
       $_SESSION['idcon'] = $donnees['id'];
       echo "-session : " . $_SESSION['idcon'];
-      header("Location:../../index.php?id=$donnees['id']");
+      header("Location:../../index.php");
       exit();
     }
     else {
