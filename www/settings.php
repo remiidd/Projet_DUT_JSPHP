@@ -30,7 +30,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
       } else {
         ?>
         <script>
-          window.parent.document.title = 'Profil de <?php echo $data["prenom"]; ?>'
+          window.parent.document.title = 'Paramètres de <?php echo $data["prenom"]; ?>'
         </script>
         <?php
       }
@@ -38,9 +38,8 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
     <?php include 'bar_navigation/nonco.php'?>
     <div class="content">
       <div class="wrapp">
-
+        <h1>Paramètres généraux du compte de <?php echo $data["prenom"];?></h1>
       </div>
-
     </div>
   </body>
 </html>
