@@ -46,14 +46,14 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           <div class="cover_couche"></div>
         </div><br/>
         <h5><i class="fas fa-cog"></i> Paramètres du compte</h5>
-        <p>email</p>
-        <p>numéro de tel</p>
+        <p>Email : <?php echo $data["email"]; ?></p>
+        <p>Numéro de telephone : <?php echo "+33".$data["numerotel"]; ?></p>
         <hr>
         <h5><i class="fas fa-cog"></i>Informations personnelles du profil</h5>
         <p>Photo de profil</p>
         <p>Photo de couverture</p>
         <p>date de naissance</p>
-        <p>Ville</p>
+        <p>Ville : <?php $data["ville"]; ?></p>
         <p>Emploi</p>
         <p>Etudes</p>
       </div>
