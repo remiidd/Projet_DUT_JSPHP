@@ -40,7 +40,7 @@
     $naissance = $_SESSION['naissance'];
     $ville = $_POST['ville'];
     $password = $_SESSION['password'];
-    /*
+
     try{
       $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
     }
@@ -61,20 +61,14 @@
       'ville' => $ville,
       'photo_profil' => "",
       'photo_couv' => ""
-    ));*/
+    ));
+
+    $reponse = $bdd->query("SELECT * FROM profil WHERE `email`='$email'");
+    $donnees = $reponse->fetch();
+
+    $id = $donnees['id'];
 
     if($existpp || $existcover){
-      try{
-        $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
-      }
-      catch (Exception $e){
-            die('Erreur : ' . $e->getMessage());
-      }
-
-      $reponse = $bdd->query("SELECT * FROM profil WHERE `email`='$email'");
-      $donnees = $reponse->fetch();
-
-      $id = $donnees['id'];
       $target_dir = "../../src/media/profils/";
 
       if ($existpp) {
@@ -98,5 +92,8 @@
         }
       }
     }
+    $_SESSION["idcon"] == $id;
+    header("Location:../../profil.php?id=$id");
+    exit();
   }
 ?>
