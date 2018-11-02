@@ -32,11 +32,11 @@
     $email->Body = 'test';
     $email->addAddress('aloisguitton@orange.fr');
 
-    $mail->send();
+    $email->send();
     echo 'Message has been sent';
   } catch (Exception $e) {
       echo 'Message could not be sent.';
-      echo 'Mailer Error: ' . $mail->ErrorInfo;
+      echo 'Mailer Error: ' . $email->ErrorInfo;
   }
 
   /*$email = $_POST['email'];
