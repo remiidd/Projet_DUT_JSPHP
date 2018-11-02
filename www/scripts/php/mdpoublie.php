@@ -26,6 +26,8 @@
   $email->addAddress('aloisguitton@orange.fr');
 
   $email->send();
+
+  echo $email;
   /*$email = $_POST['email'];
 
   try{
