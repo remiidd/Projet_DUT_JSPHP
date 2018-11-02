@@ -44,7 +44,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <div class="cover" style="background-repeat: no-repeat;background-size: cover;background-position: center center;background-image:url(<?php if($data["photo_couv"]!=null) { echo $data["photo_couv"]; } else { ?>src/media/default_profil_cover.jpg<?php } ?>);">
           <h1 class="titre_param">Paramètres généraux de <?php echo $data["prenom"];?></h1>
           <div class="cover_couche"></div>
-        </div>
+        </div><br/>
         <h5>Paramètres du compte</h5>
         <p>email</p>
         <p>numéro de tel</p>
@@ -56,7 +56,6 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <p>Ville</p>
         <p>Emploi</p>
         <p>Etudes</p>
-        <i class="fas fa-bed"></i>
       </div>
     </div>
     <script src="scripts/js/animations.js"></script>
