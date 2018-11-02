@@ -21,7 +21,7 @@
   $email->SMTPAuth = true;
   $email->SMTPSecure = 'ssl';
   $email->Host = 'smtp.gmail.com';
-  $email->Port = '300';
+  $email->Port = '465';
   $email->isHTML();
   $email->Username = 'bananabook.contact@gmail.com';
   $email->Password = 'mailbanana';
