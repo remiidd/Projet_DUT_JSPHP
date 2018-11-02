@@ -47,8 +47,10 @@
 #center_inscri {
   width: 50%;
   margin-left: 25%;
-  background-color: violet;
+  background-color: #FFA07A;
   padding: 15px;
+  position: fixed;
+  height: 100%;
 }
 
 /* ====================  fin CSS Inscription ==================== */
