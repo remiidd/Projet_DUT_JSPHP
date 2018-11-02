@@ -9,6 +9,7 @@
   if (isset($_FILES['pp'])) {
     //si pp present
     $extension_uploadpp = strtolower(  substr(  strrchr($_FILES['pp']['name'], '.')  ,1)  );
+    echo $extension_uploadpp;
     if (!(in_array($extension_uploadpp,$extensions_valides))){
       $_SESSION['errorext'] = true;
       echo "pp";
