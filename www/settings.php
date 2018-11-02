@@ -45,6 +45,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           <h1 class="titre_param"> Paramètres généraux de <?php echo $data["prenom"];?></h1>
           <div class="cover_couche"></div>
         </div><br/>
+        <p class="marge"><a href="profil.php?id=<?php echo $_GET["id"]; ?>">Revenir au profil</a></p>
         <h5><i class="fas fa-cog"></i> Paramètres du compte</h5>
         <p class="marge">Email : <?php echo $data["email"]; ?></p>
         <p class="marge">Numéro de telephone : <?php echo "+33".$data["numerotel"]; ?></p>
