@@ -87,7 +87,7 @@
       if ($existcover) {
         $target_file =  $target_dir . $id . "-cover." . $extension_upload;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-        $resultat = move_uploaded_file($_FILES['pp']['tmp_name'], $target_file);
+        $resultat = move_uploaded_file($_FILES['cover']['tmp_name'], $target_file);
         if ($resultat) echo "Transfert réussi cover";
       }
     }
