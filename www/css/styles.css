@@ -63,11 +63,10 @@
 
 #img_droite{
   height: 100%;
-  float: right;
   position: fixed;
   overflow: hidden;
   object-fit: cover;
-  margin-left: -150px;
+  margin-left: 73%;
 }
 
 /* ====================  fin CSS Inscription ==================== */
