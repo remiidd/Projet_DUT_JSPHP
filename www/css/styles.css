@@ -19,6 +19,10 @@
   text-decoration: none;
 }
 
+.formbar {
+  margin-bottom: 0px;
+}
+
 #cobout{
   padding-top: 2px;
   padding-bottom: 2px;
