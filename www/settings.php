@@ -45,11 +45,11 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           <h1 class="titre_param">Paramètres généraux de <?php echo $data["prenom"];?></h1>
           <div class="cover_couche"></div>
         </div><br/>
-        <h5>Paramètres du compte</h5>
+        <h5><i class="fas fa-cog"></i>Paramètres du compte</h5>
         <p>email</p>
         <p>numéro de tel</p>
         <hr>
-        <h5>Informations personnelles du profil</h5>
+        <h5><i class="fas fa-cog"></i>Informations personnelles du profil</h5>
         <p>Photo de profil</p>
         <p>Photo de couverture</p>
         <p>date de naissance</p>
