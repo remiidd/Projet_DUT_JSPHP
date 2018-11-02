@@ -15,6 +15,11 @@
   height: 40px;
 }
 
+.navbar-brand > a {
+  color: white;
+  text-decoration: none;
+}
+
 #cobout{
   padding-top: 2px;
   padding-bottom: 2px;
