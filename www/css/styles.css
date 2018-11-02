@@ -73,10 +73,6 @@
   color: white;
 }
 
-#formSexe2 > label {
-  color: white;
-}
-
 /* ====================  fin CSS Inscription ==================== */
 
 /* ====================  CSS PAGE Principale ==================== */
@@ -264,6 +260,9 @@
 }
 .marge{
   margin-left: 30px;
+}
+.coverset {
+  border-bottom-right-radius: 10%;
 }
 
 
