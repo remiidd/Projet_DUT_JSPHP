@@ -11,7 +11,8 @@
     $extension_uploadpp = strtolower(  substr(  strrchr($_FILES['pp']['name'], '.')  ,1)  );
     if (!(in_array($extension_uploadpp,$extensions_valides))){
       $_SESSION['errorext'] = true;
-      header('Location:../../inscription2.php');
+      echo "pp";
+      //header('Location:../../inscription2.php');
       exit();
     }
     else {
