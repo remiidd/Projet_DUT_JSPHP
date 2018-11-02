@@ -69,6 +69,10 @@
   margin-left: 73%;
 }
 
+#inscription2 > label {
+  color: white;
+}
+
 /* ====================  fin CSS Inscription ==================== */
 
 /* ====================  CSS PAGE Principale ==================== */
