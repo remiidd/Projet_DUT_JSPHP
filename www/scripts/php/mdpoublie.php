@@ -10,9 +10,9 @@
   require '../../PHPMailer/src/PHPMailer.php';
 
   /* SMTP class, needed if you want to use SMTP. */
-  /*require '../../PHPMailer/src/SMTP.php';
+  require '../../PHPMailer/src/SMTP.php';
 
-  $email = new PHPMailer(TRUE);
+  /*$email = new PHPMailer(TRUE);
   $email->isSMTP();
   $email->SMTPAuth = true;
   $email->SMTPSecure = 'ssl';
