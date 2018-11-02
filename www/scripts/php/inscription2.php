@@ -44,9 +44,10 @@
   $reponse = $bdd1->query("SELECT * FROM profil WHERE `email`='$email'");
   $donnees = $reponse->fetch();
 
-  echo $donnees['id'];
+  $id = $donnees['id'];
+  echo $id;
 
-  $target_dir = "../../src/media/profils";
+  $target_dir = "../../src/media/profils/";
   $target_file =  $target_dir . basename($_FILES["pp"]["name"]);
   $uploadOk = 1;
   $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
