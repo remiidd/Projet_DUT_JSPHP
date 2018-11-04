@@ -72,7 +72,7 @@
           echo 'Mailer Error: ' . $mail->ErrorInfo;
       }
 
-      header("Location:../../mdpoublie.php");
+      header("Location:../../index.php");
       exit();
 
     }
