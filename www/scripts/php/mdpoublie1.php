@@ -72,18 +72,12 @@
         echo 'Mailer Error: ' . $mail->ErrorInfo;
       }
 
-
-
-
-
-      echo "redirection";
-
       header("Location:../../index.php");
       exit();
 
     }
     else {
-      echo "aucun utilisateur trouvé";
+      echo "Aucun utilisateur trouvé";
     }
 
   } else {
