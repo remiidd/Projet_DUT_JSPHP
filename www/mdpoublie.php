@@ -14,7 +14,7 @@
             <p>
               <label>Email</label>
               </br>
-              <input type="email" name="email">
+              <input type="email" name="email" required>
             </p>
             <input type="submit" value="Envoyé un mail de recupération">
           </form>
