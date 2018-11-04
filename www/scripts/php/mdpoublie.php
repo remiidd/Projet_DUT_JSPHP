@@ -61,10 +61,7 @@
     echo $email . " : " . $emailbase;
 
     if ($emailbase == $email) {
-      echo "ici";
-    }
-    else {
-      echo "nop";
+      echo $donnees['id'];
     }
   }
 ?>
