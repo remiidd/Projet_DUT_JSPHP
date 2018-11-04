@@ -24,7 +24,7 @@
     }
   }
 
-  if ($mailok != "") {
+  if ($mailok !== "") {
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
 
