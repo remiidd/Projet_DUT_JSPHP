@@ -1,6 +1,4 @@
 <?php
-
-  echo "avt boucle";
   /*use PHPMailer\PHPMailer\PHPMailer;
   use PHPMailer\PHPMailer\Exception;
 
@@ -38,9 +36,11 @@
     echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 }
-*//*
-  $email = $_POST['email'];
+*/
 
+  echo "avt boucle";
+  $email = $_POST['email'];
+  /*
   try{
     $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
   }
