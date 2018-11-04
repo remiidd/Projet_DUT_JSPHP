@@ -38,39 +38,44 @@
 
       $mail = new PHPMailer(TRUE);
 
-      try{
-        $mail->CharSet = 'UTF-8';
-        $mail->SMTPDebug = 2;
-        $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPAuth = true;
-        $mail->Username = 'bananabook.contact@gmail.com';
-        $mail->Password = 'mailbanana';
-        $mail->SMTPSecure = 'tls';
-        $mail->Port = 587;
 
-        $mail->setFrom('bananabook.contact@gmail.com', 'BananaBook');
-        $mail->addAddress($mailok);
+      $mail->CharSet = 'UTF-8';
+      $mail->SMTPDebug = 2;
+      $mail->isSMTP();
+      $mail->Host = 'smtp.gmail.com';
+      $mail->SMTPAuth = true;
+      $mail->Username = 'bananabook.contact@gmail.com';
+      $mail->Password = 'mailbanana';
+      $mail->SMTPSecure = 'tls';
+      $mail->Port = 587;
 
-        $mail->isHTML(true);
-        $mail->Subject = 'Reinitialisation de votre mot de passe';
-        $mail->Body    = "Bonjour $prenom, </br>
-          Est-ce que tu aimes les bananes ? </br>
-          Pour reinitialiser votre mot de passe, veuillez cliquer sur le lien ci-dessous : </br>
-          <a href=\"http://nunes.aloisguitton.com/scripts/php/mdpoublie.php?code=$code\">nunes.aloisguitton.comscripts/php/mdpoublie.php?code=$code</a></br></br></br>
-          <cite>Cet email a ete envoye automatiquement depuis <a href=\"http://nunes.aloisguitton.com\">BananaBook</a>. Ne pas repondre </cite>";
-        $mail->AltBody = "Bonjour $prenom,
-          Est-ce que tu aimes les bananes ?
-          Pour reinitialiser votre mot de passe, veuillez cliquer sur le lien ci-apres :
-          nunes.aloisguitton.comscripts/php/mdpoublie.php?code=$code<
-          Cet email a ete envoye automatiquement depuis BananaBook. Ne pas repondre";
+      $mail->setFrom('bananabook.contact@gmail.com', 'BananaBook');
+      $mail->addAddress($mailok);
 
-        $mail->send();
+      $mail->isHTML(true);
+      $mail->Subject = 'Reinitialisation de votre mot de passe';
+      $mail->Body    = "Bonjour $prenom, </br>
+        Est-ce que tu aimes les bananes ? </br>
+        Pour reinitialiser votre mot de passe, veuillez cliquer sur le lien ci-dessous : </br>
+        <a href=\"http://nunes.aloisguitton.com/scripts/php/mdpoublie.php?code=$code\">nunes.aloisguitton.comscripts/php/mdpoublie.php?code=$code</a></br></br></br>
+        <cite>Cet email a ete envoye automatiquement depuis <a href=\"http://nunes.aloisguitton.com\">BananaBook</a>. Ne pas repondre </cite>";
+      $mail->AltBody = "Bonjour $prenom,
+        Est-ce que tu aimes les bananes ?
+        Pour reinitialiser votre mot de passe, veuillez cliquer sur le lien ci-apres :
+        nunes.aloisguitton.comscripts/php/mdpoublie.php?code=$code<
+        Cet email a ete envoye automatiquement depuis BananaBook. Ne pas repondre";
+
+      if($mail->send()){
         echo 'Message has been sent';
-      } catch (Exception $e) {
-          echo 'Message could not be sent.';
-          echo 'Mailer Error: ' . $mail->ErrorInfo;
       }
+      else {
+        echo 'Message could not be sent.';
+        echo 'Mailer Error: ' . $mail->ErrorInfo;
+      }
+
+
+
+
 
       echo "redirection";
 
