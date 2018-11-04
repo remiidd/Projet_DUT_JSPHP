@@ -57,8 +57,8 @@
   //test si id == OK
   while ($donnees = $reponse->fetch())
   {
-    $emailbase = $donnees['email']
+    $emailbase = $donnees['email'];
     echo $email . " : " . $emailbase;
-    
+
   }
 ?>
