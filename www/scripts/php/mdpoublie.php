@@ -1,3 +1,10 @@
 <?php
-  echo $_GET['code'];
+  if(isset($_GET['code'])){
+    echo $_GET['code'];
+  }
+  else {
+    header("Location: ../../index.php");
+    exit();
+  }
+
 ?>
