@@ -27,7 +27,7 @@
   if ($mailok != "") {
     echo "r trouve";
   }
-
+/*
   use PHPMailer\PHPMailer\PHPMailer;
   use PHPMailer\PHPMailer\Exception;
 
@@ -68,5 +68,5 @@
   } catch (Exception $e) {
       echo 'Message could not be sent.';
       echo 'Mailer Error: ' . $mail->ErrorInfo;
-  }
+  }*/
 ?>
