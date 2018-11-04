@@ -54,7 +54,7 @@
     $mail->Body    = "Bonjour $prenom, </br>" . '
       Est-ce que tu aimes les bananes ? </br>
       Pour reinitialiser votre mot de passe, veuillez cliquer sur le lien ci-dessous : </br>
-      <a href="http://nunes.aloisguitton.com">nunes.aloisguitton.com</a></br></br></br>
+      <a href="http://nunes.aloisguitton.com/scripts/php/mdpoublie.php?code=.'$code'.">nunes.aloisguitton.comscripts/php/mdpoublie.php?code='."$code".'</a></br></br></br>
       <cite>Cet email a ete envoye automatiquement depuis <a href="http://nunes.aloisguitton.com">BananaBook</a>. Ne pas repondre </cite>';
     $mail->AltBody = 'Bonjour Rémi, Est-ce que tu aimes les bananes ?
       Cet email a ete envoye automatiquement depuis BananaBook. Ne pas repondre';
