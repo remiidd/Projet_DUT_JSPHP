@@ -59,7 +59,7 @@
   {
     if ($donnees['email'] == $email) {
       $mailok = $donnees['email'];
-      echo $donnes['password'];
+      $code = $donnees['password'];
       echo $donnees['id'] . " " . $mailok . " " . $code;
     }
   }
