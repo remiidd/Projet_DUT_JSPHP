@@ -1,5 +1,30 @@
 <?php
-  /*use PHPMailer\PHPMailer\PHPMailer;
+  /*
+*/
+
+  $email = $_POST['email'];
+
+  try{
+    $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
+  }
+  catch (Exception $e){
+        die('Erreur : ' . $e->getMessage());
+  }
+
+  //variables
+  $reponse = $bdd->query('SELECT * FROM profil');
+
+  //test si mail == OK
+  while ($donnees = $reponse->fetch())
+  {
+    if ($donnees['email'] == $email) {
+      $mailok = $donnees['email'];
+      $code = $donnees['password'];
+      echo $donnees['id'] . " " . $mailok . " " . $code;
+    }
+  }
+
+  use PHPMailer\PHPMailer\PHPMailer;
   use PHPMailer\PHPMailer\Exception;
 
   require '../../PHPMailer-master/src/Exception.php';
@@ -9,6 +34,7 @@
   require '../../PHPMailer-master/src/SMTP.php';
 
   $mail = new PHPMailer(TRUE);
+
   try{
     $mail->SMTPDebug = 2;
     $mail->isSMTP();
@@ -20,7 +46,7 @@
     $mail->Port = 587;
 
     $mail->setFrom('bananabook.contact@gmail.com', 'BananaBook');
-    $mail->addAddress('pro@debrayremi.fr');
+    $mail->addAddress($mailok);
 
     $mail->isHTML(true);
     $mail->Subject = 'Vive les bananes';
@@ -36,31 +62,4 @@
     echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 }
-*/
-
-  echo "avt boucle";
-  $email = $_POST['email'];
-
-  echo $email;
-
-  try{
-    $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
-  }
-  catch (Exception $e){
-        die('Erreur : ' . $e->getMessage());
-  }
-
-  //variables
-  $reponse = $bdd->query('SELECT * FROM profil');
-
-  echo "apres rep";
-  //test si id == OK
-  while ($donnees = $reponse->fetch())
-  {
-    if ($donnees['email'] == $email) {
-      $mailok = $donnees['email'];
-      $code = $donnees['password'];
-      echo $donnees['id'] . " " . $mailok . " " . $code;
-    }
-  }
 ?>
