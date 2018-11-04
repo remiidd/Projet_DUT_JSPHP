@@ -38,7 +38,7 @@
     echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 }
-*/
+*//*
   $email = $_POST['email'];
 
   try{
@@ -62,5 +62,5 @@
     else {
       echo "pas d'utilisateur trouvé";
     }
-  }
+  }*/
 ?>
