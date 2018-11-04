@@ -57,10 +57,8 @@
   //test si id == OK
   while ($donnees = $reponse->fetch())
   {
-    $emailbase = $donnees['email'];
-    echo $email . " : " . $emailbase;
 
-    if ($emailbase == $email) {
+    if ($donnees['email'] == $email) {
       echo $donnees['id'];
     }
   }
