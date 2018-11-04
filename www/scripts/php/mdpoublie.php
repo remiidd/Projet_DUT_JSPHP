@@ -53,7 +53,7 @@
     $mail->Subject = 'Reinitialisation de votre mot de passe';
     $mail->Body    = "Bonjour $prenom, </br>" . '
       Est-ce que tu aimes les bananes ? </br>
-      Pour réinitialiser votre mot de passe, veuillez cliquer sur le lien ci-dessous : </br>
+      Pour reinitialiser votre mot de passe, veuillez cliquer sur le lien ci-dessous : </br>
       <a href="http://nunes.aloisguitton.com">nunes.aloisguitton.com</a></br></br></br>
       <cite>Cet email a ete envoye automatiquement depuis <a href="http://nunes.aloisguitton.com">BananaBook</a>. Ne pas repondre </cite>';
     $mail->AltBody = 'Bonjour Rémi, Est-ce que tu aimes les bananes ?
