@@ -1,5 +1,14 @@
 <?php
 
+  use PHPMailer\PHPMailer\PHPMailer;
+  use PHPMailer\PHPMailer\Exception;
+
+  require '../../PHPMailer-master/src/Exception.php';
+
+  require '../../PHPMailer-master/src/PHPMailer.php';
+
+  require '../../PHPMailer-master/src/SMTP.php';
+
   if (isset($_POST['email'])) {
     $email = $_POST['email'];
     $mailok = "";
@@ -39,14 +48,7 @@
     exit();
   }
 
-  use PHPMailer\PHPMailer\PHPMailer;
-  use PHPMailer\PHPMailer\Exception;
 
-  require '../../PHPMailer-master/src/Exception.php';
-
-  require '../../PHPMailer-master/src/PHPMailer.php';
-
-  require '../../PHPMailer-master/src/SMTP.php';
 
   $mail = new PHPMailer(TRUE);
 
