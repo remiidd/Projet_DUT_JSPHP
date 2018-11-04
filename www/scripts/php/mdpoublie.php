@@ -49,6 +49,8 @@
   //variables
   $reponse = $bdd->query('SELECT * FROM profil');
 
+  echo "avt boucle";
+
   //test si id == OK
   while ($donnees = $reponse->fetch())
   {
