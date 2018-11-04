@@ -29,7 +29,7 @@
 
     //Recipients
     $mail->setFrom('bananabook.contact@gmail.com', 'BananaBook');
-    $mail->addAddress('aloisguitton@orange.fr');     // Add a recipient
+    $mail->addAddress('pro@debrayremi.fr');     // Add a recipient
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
