@@ -53,17 +53,18 @@
   //variables
   $reponse = $bdd->query('SELECT * FROM profil');
 
-  echo "apres rep";/*
+  echo "apres rep";
   //test si id == OK
   while ($donnees = $reponse->fetch())
   {
-    if($donnees['email'] == $email){
+    echo $donnes['email'];
+    /*if($donnees['email'] == $email){
       $id = $donnees['id'];
       $code = $donnees['password'];
       echo $id . "   " . $email . "   " . $code:
     }
     else {
       echo "pas d'utilisateur trouvé";
-    }
-  }*/
+    }*/
+  }
 ?>
