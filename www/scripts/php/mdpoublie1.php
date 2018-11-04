@@ -64,13 +64,14 @@
 
         $mail->send();
         echo 'Message has been sent';
-        header("Location:../../index.php");
-        exit();
       } catch (Exception $e) {
           echo 'Message could not be sent.';
           echo 'Mailer Error: ' . $mail->ErrorInfo;
       }
 
+      header("Location:../../mdpoublie.php");
+      exit();
+      
     }
     else {
       echo "aucun utilisateur trouvé";
