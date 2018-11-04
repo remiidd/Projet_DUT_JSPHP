@@ -10,7 +10,7 @@
     <div class="content">
       <div id="mdpoublié">
         <center>
-          <form class="form_mdpo" action="scripts/php/mdpoublie.php" method="post">
+          <form class="form_mdpo" action="scripts/php/mdpoublie1.php" method="post">
             <p>
               <label>Email</label>
               </br>
