@@ -40,7 +40,6 @@
 
 
       $mail->CharSet = 'UTF-8';
-      $mail->SMTPDebug = 2;
       $mail->isSMTP();
       $mail->Host = 'smtp.gmail.com';
       $mail->SMTPAuth = true;
