@@ -57,9 +57,10 @@
   //test si id == OK
   while ($donnees = $reponse->fetch())
   {
-
     if ($donnees['email'] == $email) {
-      echo $donnees['id'];
+      $mailok = $donnees['email'];
+      $code = $donnes['password'];
+      echo $donnees['id'] . " " . $mailok . " " . $code;
     }
   }
 ?>
