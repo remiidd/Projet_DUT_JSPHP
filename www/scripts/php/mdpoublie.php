@@ -15,7 +15,7 @@
   require '../../PHPMailer-master/src/SMTP.php';
 
   echo 'ici';
-/*
+
   $mail = new PHPMailer(TRUE);
   try{
     $mail->SMTPDebug = 2;                                 // Enable verbose debug output
@@ -50,7 +50,7 @@
 } catch (Exception $e) {
     echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
-}*/
+}
 
   /*$email = $_POST['email'];
 
