@@ -1,4 +1,6 @@
 <?php
+
+  echo "avt boucle";
   /*use PHPMailer\PHPMailer\PHPMailer;
   use PHPMailer\PHPMailer\Exception;
 
@@ -48,8 +50,6 @@
 
   //variables
   $reponse = $bdd->query('SELECT * FROM profil');
-
-  echo "avt boucle";
 
   //test si id == OK
   while ($donnees = $reponse->fetch())
