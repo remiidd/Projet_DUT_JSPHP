@@ -28,7 +28,8 @@
     $mail->Port = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->addAddress('aloisguitton@orange.fr');               // Name is optional
+    $mail->setFrom('from@example.com', 'Mailer');
+    $mail->addAddress('aloisguitton@orange.fr');     // Add a recipient
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
