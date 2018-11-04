@@ -53,7 +53,7 @@
   //variables
   $reponse = $bdd->query('SELECT * FROM profil');
 
-  echo "apres rep";
+  echo "apres rep";/*
   //test si id == OK
   while ($donnees = $reponse->fetch())
   {
