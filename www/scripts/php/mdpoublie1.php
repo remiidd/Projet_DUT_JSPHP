@@ -72,6 +72,8 @@
           echo 'Mailer Error: ' . $mail->ErrorInfo;
       }
 
+      echo "redirection";
+
       header("Location:../../index.php");
       exit();
 
