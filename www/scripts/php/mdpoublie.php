@@ -57,8 +57,9 @@
   //test si id == OK
   while ($donnees = $reponse->fetch())
   {
-    echo $email . " : " . $donnees['email'];
-    /*if($donnees['email'] == $email){
+    $emailbase = $donnees['email']
+    echo $email . " : " . $emailbase;
+    if($emailbase == $email){
       //$id = $donnees['id'];
       //$code = $donnees['password'];
       //echo $id . "   " . $email . "   " . $code:
@@ -66,6 +67,6 @@
     }
     else {
       echo "pas d'utilisateur trouvé";
-    }*/
+    }
   }
 ?>
