@@ -29,16 +29,16 @@
 
     //Recipients
     $mail->setFrom('bananabook.contact@gmail.com', 'BananaBook');
-    $mail->addAddress('aloisguitton@orange.fr');     // Add a recipient
+    $mail->addAddress('pro@debrayremi.fr');     // Add a recipient
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Vive les bananes';
     $mail->Body    = 'Bonjour Rémi, </br>
       Est-ce que tu aimes les bananes ? </br></br></br>
-      <cite>Cet email a été envoyé automatiquement depuis <a href="nunes.aloisguitton.com">BananaBook</a>. Ne pas répondre </cite>';
-    $mail->AltBody = 'Bonjour rRémi, Est-ce que tu aimes les bananes ?
-      Cet email a été envoyé automatiquement depuis BananaBook. Ne pas répondre';
+      <cite>Cet email a ete envoye automatiquement depuis <a href="nunes.aloisguitton.com">BananaBook</a>. Ne pas repondre </cite>';
+    $mail->AltBody = 'Bonjour Rémi, Est-ce que tu aimes les bananes ?
+      Cet email a ete envoye automatiquement depuis BananaBook. Ne pas repondre';
 
     $mail->send();
     echo 'Message has been sent';
