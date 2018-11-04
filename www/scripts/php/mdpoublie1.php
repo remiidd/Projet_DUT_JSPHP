@@ -31,7 +31,7 @@
     else {
       echo "aucun utilisateur trouvé";
     }
-  /*
+
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
 
@@ -72,7 +72,7 @@
     } catch (Exception $e) {
         echo 'Message could not be sent.';
         echo 'Mailer Error: ' . $mail->ErrorInfo;
-    }*/
+    }
   } else {
     header("Location:../../mdpoublie.php");
     exit();
