@@ -59,14 +59,6 @@
   {
     $emailbase = $donnees['email']
     echo $email . " : " . $emailbase;
-    if($emailbase == $email){
-      //$id = $donnees['id'];
-      //$code = $donnees['password'];
-      //echo $id . "   " . $email . "   " . $code:
-      //echo "mail : " . $donnees['email'];
-    }
-    else {
-      echo "pas d'utilisateur trouvé";
-    }
+    
   }
 ?>
