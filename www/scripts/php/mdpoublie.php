@@ -35,10 +35,6 @@
     $mail->addCC('cc@example.com');
     $mail->addBCC('bcc@example.com');
 
-    //Attachments
-    $mail->addAttachment('like.php');         // Add attachments
-    $mail->addAttachment('like.php', 'new.php');    // Optional name
-
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Here is the subject';
