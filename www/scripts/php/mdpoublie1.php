@@ -27,6 +27,9 @@
   if ($mailok != "") {
     echo "Trouve";
   }
+  else {
+    echo "aucun utilisateur trouvé";
+  }
 /*
   use PHPMailer\PHPMailer\PHPMailer;
   use PHPMailer\PHPMailer\Exception;
