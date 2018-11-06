@@ -268,8 +268,8 @@
 .coverset {
   border-bottom-right-radius: 30px;
 }
-.modif {
-  color: #007bff;
+.ligne {
+  display: inline-block;
 }
 
 
