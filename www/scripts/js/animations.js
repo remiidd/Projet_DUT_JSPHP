@@ -4,7 +4,7 @@ $(document).ready(function(){
     top:'120px',
     opacity:'1'
   },"slow");
-  $(".modif").click(function(){
+  $(".modif_info_bouton").click(function(){
     $(".txt_modif_email").toggle();
   });
 });
