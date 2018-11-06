@@ -269,7 +269,7 @@
   border-bottom-right-radius: 30px;
 }
 .form_modif_info {
-  display: inline-block;
+  position: relative;
 }
 
 
