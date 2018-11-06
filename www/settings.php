@@ -50,7 +50,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <ul>
           <li><p class="marge">Email : <?php echo $data["email"]; ?></p></li>
           <li class="txt_modif_email">salut</li>
-          <li><a class="modif"><i class="fas fa-pencil-alt"></i> Modifier</a><li>
+          <li><a class="modif"><i class="fas fa-pencil-alt"></i> Modifier</a></li>
         </ul>
         <p class="marge">Numéro de telephone : <?php echo "+33".$data["numerotel"]; ?></p>
         <hr>
