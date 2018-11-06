@@ -7,5 +7,5 @@ $(document).ready(function(){
 });
 
 function modif() {
-  $
+  $(".txt_modif_email").toggle();
 }
