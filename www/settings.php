@@ -47,7 +47,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         </div><br/>
         <p class="marge"><a href="profil.php?id=<?php echo $_GET["id"]; ?>">Revenir au profil</a></p>
         <h5><i class="fas fa-cog"></i> Paramètres du compte</h5>
-        <p class="ligne marge">Email : <?php echo $data["email"]; ?> <i class="txt_modif_email"><form onclick=""="modif()"><input type="text" name="email"/><input type="submit" value="modifier"/></form></i> <a class="modif"><i class="fas fa-pencil-alt"></i> Modifier</a></p>
+        <p class="ligne marge">Email : <?php echo $data["email"]; ?> <i class="txt_modif_email"><form onclick="modif()"><input type="text" name="email"/><input type="submit" value="modifier"/></form></i> <a class="modif"><i class="fas fa-pencil-alt"></i> Modifier</a></p>
         <p class="marge">Numéro de telephone : <?php echo "+33".$data["numerotel"]; ?></p>
         <hr>
         <h5><i class="fas fa-cog"></i> Informations personnelles du profil</h5>
