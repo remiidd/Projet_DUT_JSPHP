@@ -12,6 +12,8 @@
   if (isset($_POST['email'])) {
     $email = $_POST['email'];
     $mailok = "";
+    $id = "";
+    $code = "";
 
     try{
       $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
@@ -27,14 +29,22 @@
     while ($donnees = $reponse->fetch())
     {
       if ($donnees['email'] == $email) {
+        $id = $donnees['id'];
         $mailok = $donnees['email'];
-        $code = $donnees['password'];
+        $code = md5($donnees['password'] . $mailok);
         $prenom = $donnees['prenom'];
-        echo $donnees['id'] . " " . $mailok . " " . $code;
+        echo  $id . " " . $mailok . " " . $code;
       }
     }
 
     if ($mailok != "") {
+
+      $req = $bdd->prepare('INSERT INTO `mdpoublie`(`utilisateur`, `chaine_id`)
+        VALUES (:utilisateur, :chaine_id)');
+      $req->execute(array(
+        'utilisateur' => $id,
+        'chaine_id' => $code
+      ));
 
       $mail = new PHPMailer(TRUE);
 

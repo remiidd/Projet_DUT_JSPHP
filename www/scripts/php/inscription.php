@@ -17,7 +17,7 @@
   $mdp = md5($_POST['mdp']);
 
 
-  //test si id == OK
+  //test si mail existe 
   while ($donnees = $reponse->fetch())
   {
     if($donnees['email'] == $email){
