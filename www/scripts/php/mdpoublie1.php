@@ -1,6 +1,4 @@
 <?php
-
-  echo "oi";
   use PHPMailer\PHPMailer\PHPMailer;
   use PHPMailer\PHPMailer\Exception;
 
@@ -32,14 +30,13 @@
       if ($donnees['email'] == $email) {
         $id = $donnees['id'];
         $mailok = $donnees['email'];
-        $code = md5($donnees['password'] . $mailok);
+        $code = generateRandomString();
         $prenom = $donnees['prenom'];
 
       }
     }
 
-    echo  $id . " " . $mailok . " " . $code;
-/*
+
     if ($mailok != "") {
 
       $req = $bdd->prepare('INSERT INTO `mdpoublie`(`utilisateur`, `chaine_id`)
@@ -96,19 +93,19 @@
   } else {
     header("Location:../../mdpoublie.php");
     exit();
-  }*/
+  }
 
-  /*function generateRandomString() {
+  function generateRandomString() {
     $caract = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $caract_long = strlen($caract);
     $randomString = '';
-    for ($i = 0; $i < 10; $i++) {
-        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    for ($i = 0; $i < 20; $i++) {
+        $randomString .= $caract[rand(0, $caract_long - 1)];
     }
-    return $randomString;
+    return md5($randomString);
   }
 
-*/
+
 
 
 
