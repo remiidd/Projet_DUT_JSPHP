@@ -1,9 +1,9 @@
 <?php
   if(isset($_GET['code'])){
 
-    $id = ""
+    $id = "";
 
-    echo "ici";/*
+    echo "ici";
 
     try{
       $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
@@ -25,14 +25,14 @@
 
     if ($id != "") {
       // chaine connu
-    //  include("../html/resetmdp.php");
+      include("../html/resetmdp.php");
     }
     else {
       //chaine non-reconnue
       header("Location: ../../index.php");
       exit();
     }
-*/
+
   }
   else {
     header("Location: ../../index.php");
