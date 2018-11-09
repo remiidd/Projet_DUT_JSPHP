@@ -19,6 +19,8 @@
       }
     }
 
+    echo "id : " . $id;
+
     if ($id != "") {
       // chaine connu
       include("../html/resetmdp.php");
