@@ -12,9 +12,7 @@
 
   $bdd->exec("UPDATE `profil` SET `password` = '$password' WHERE `id` = $id");
 
-  echo "ok";
-
   $bdd->exec("DELETE FROM `mdpoublie` WHERE `chaine_id` = $id");
 
-
+  echo "ok";
 ?>
