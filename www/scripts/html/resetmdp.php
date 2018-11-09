@@ -12,7 +12,7 @@
         <center>
           <form class="form_mdpo" action="scripts/php/resetmdp.php" method="post">
             <p>
-              <a id="mailerrorr">L'email utilisé existe deja</a>
+              <a id="passerrorr">Les mots de passe ne correspondent pas</a>
               <br>
               <input id="mdpr" required class="inscriform" type="password" name="mdp" placeholder="Mot de passe">
               </br>
