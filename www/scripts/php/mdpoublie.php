@@ -17,7 +17,7 @@
     while ($donnees = $reponse->fetch())
     {
       if ($donnees['chaine_id'] == $_GET['code']) {
-        $id = $donnees['id'];
+        $id = $donnees['utilisateur'];
       }
     }
 
