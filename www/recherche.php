@@ -6,7 +6,7 @@
     <?php include 'scripts/html/head.html'; ?>
   </head>
   <body>
-    <?php include 'bar_navigation/nonco'?>
+    <?php include 'bar_navigation/nonco.php'?>
     <div class="content">
       <h1>Recherche</h1>
     </div>
