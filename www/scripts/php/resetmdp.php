@@ -1,5 +1,5 @@
 <?php
   session_start();
-  echo $_SESSION['id'];
+  echo $_SESSION['idmdpo'];
   echo $_POST['mdp'];
 ?>
