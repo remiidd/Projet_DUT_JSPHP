@@ -21,16 +21,14 @@
       }
     }
 
-    echo "id : " . $id;
-
     if ($id != "") {
       // chaine connu
       include("../html/resetmdp.php");
     }
     else {
       //chaine non-reconnue
-      //header("Location: ../../index.php");
-      //exit();
+      header("Location: ../../index.php");
+      exit();
     }
 
   }
