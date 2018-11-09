@@ -8,10 +8,10 @@
   catch (Exception $e){
         die('Erreur : ' . $e->getMessage());
   }
+
+  $bdd->exec("UPDATE `profil` SET `password` = '$password' WHERE `id` = $_SESSION['idmdpo']");
+
   echo "ok";
-
-  //$bdd->exec("UPDATE `profil` SET `password` = '$password' WHERE `id` = $_SESSION['idmdpo']");
-
   //$bdd->exec("DELETE FROM `mdpoublie` WHERE `chaine_id` = $_SESSION['idmdpo']");
 
 
