@@ -33,9 +33,11 @@
         $mailok = $donnees['email'];
         $code = md5($donnees['password'] . $mailok);
         $prenom = $donnees['prenom'];
-        echo  $id . " " . $mailok . " " . $code;
+
       }
     }
+
+    echo  $id . " " . $mailok . " " . $code;
 /*
     if ($mailok != "") {
 
