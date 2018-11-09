@@ -4,9 +4,9 @@ function generateRandomString() {
   $caract_long = strlen($caract);
   $randomString = '';
   for ($i = 0; $i < 10; $i++) {
-      $randomString .= $characters[rand(0, $charactersLength - 1)];
+      $randomString .= $caract[rand(0, $characte$caract_longrsLength - 1)];
   }
-  return $randomString;
+  echo $randomString;
 }
 
 echo "str" . generateRandomString();
