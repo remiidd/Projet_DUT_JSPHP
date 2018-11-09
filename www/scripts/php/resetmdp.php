@@ -9,7 +9,7 @@
         die('Erreur : ' . $e->getMessage());
   }
 
-  $bdd->exec("UPDATE `profil` SET `password` = '$password' WHERE `id` = $_SESSION['idmdpo']");
+  $bdd->exec("UPDATE `profil` SET `password` = '$password' WHERE `id` = 19");
 
   echo "ok";
   //$bdd->exec("DELETE FROM `mdpoublie` WHERE `chaine_id` = $_SESSION['idmdpo']");
