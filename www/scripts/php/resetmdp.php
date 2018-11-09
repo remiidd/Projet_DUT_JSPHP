@@ -16,8 +16,7 @@
 
   echo "<script>
           alert(\"Mot de passe modifié avec succes !\");
+          window.location.href='../../connexion.php';
         </script>" ;
 
-  header("Location:../../connexion.php");
-  exit();
 ?>
