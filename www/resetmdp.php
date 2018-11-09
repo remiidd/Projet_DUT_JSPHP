@@ -1,4 +1,5 @@
 <?php
+  session_start();
   if(isset($_GET['code'])){
 
     $id = "";
@@ -16,6 +17,7 @@
     {
       if ($donnees['chaine_id'] == $_GET['code']) {
         $id = $donnees['utilisateur'];
+        $_SESSION['idmdpo'] = $id;
       }
     }
 
@@ -64,5 +66,4 @@
     header("Location: ../../index.php");
     exit();
   }
-
 ?>
