@@ -31,7 +31,7 @@
       if ($donnees['email'] == $email) {
         $id = $donnees['id'];
         $mailok = $donnees['email'];
-        $code = md5($donnees['password'] . $mailok);
+        $code = generateRandomString(); /*md5($donnees['password'] . $mailok);*/
         $prenom = $donnees['prenom'];
         echo  $id . " " . $mailok . " " . $code;
       }
@@ -93,6 +93,16 @@
   } else {
     header("Location:../../mdpoublie.php");
     exit();
+  }
+
+  function generateRandomString() {
+    $caract = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $caract_long = strlen($caract);
+    $randomString = '';
+    for ($i = 0; $i < 10; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
   }
 
 
