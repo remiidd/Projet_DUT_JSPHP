@@ -17,4 +17,7 @@
   echo "<script>
           alert("Mot de passe modifié avec succes !");
         </script>" ;
+
+  header("Location:../../connexion.php");
+  exit();
 ?>
