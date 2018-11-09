@@ -36,11 +36,11 @@
               <center>
                 <form class="form_mdpo" action="scripts/php/resetmdp.php" method="post">
                   <p>
-                    <a id="passerrorr">Le s mots de passe ne correspondent pas</a>
+                    <a id="passerrorr">Les mots de passe ne correspondent pas</a>
                     <br>
-                    <input id="mdpr" required class="inscriform" type="password" name="mdp" placeholder="Mot de passe">
+                    <input id="mdpr" required class="resetform" type="password" name="mdp" placeholder="Mot de passe">
                     </br>
-                    <input id="mdpr1" required class="inscriform" type="password" name="mdprepeat" placeholder="Retapper votre mot de passe">
+                    <input id="mdpr1" required class="resetform" type="password" name="mdprepeat" placeholder="Retapper votre mot de passe">
                     </br>
                   </p>
                   <input type="submit" value="Changer mon mot de passe">
