@@ -21,7 +21,7 @@
 
     if ($id != "") {
       // chaine connu
-      include("../html/resetmdp");
+      include("../html/resetmdp.php");
     }
     else {
       //chaine non-reconnue
