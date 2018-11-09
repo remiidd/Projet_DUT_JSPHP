@@ -23,7 +23,7 @@
 
     if ($id != "") {
       // chaine connu
-      include("../html/resetmdp.php");
+    //  include("../html/resetmdp.php");
     }
     else {
       //chaine non-reconnue
