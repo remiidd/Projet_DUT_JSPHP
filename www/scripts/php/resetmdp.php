@@ -14,5 +14,7 @@
 
   $bdd->exec("DELETE FROM `mdpoublie` WHERE `utilisateur` = $id");
 
-  echo "ok";
+  echo "<script>
+          alert("Mot de passe modifié avec succes !");
+        </script>" ;
 ?>
