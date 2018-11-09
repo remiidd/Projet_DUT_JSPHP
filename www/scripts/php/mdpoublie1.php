@@ -71,7 +71,7 @@
       $mail->AltBody = "Bonjour $prenom,
         Est-ce que tu aimes les bananes ?
         Pour reinitialiser votre mot de passe, veuillez cliquer sur le lien ci-apres :
-        nunes.aloisguitton.comscripts/php/mdpoublie.php?code=$code<
+        nunes.aloisguitton.com/reset.php?code=$code<
         Cet email a ete envoye automatiquement depuis BananaBook. Ne pas repondre";
 
       if($mail->send()){
