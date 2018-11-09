@@ -26,7 +26,7 @@
       exit();
     }
     else {
-      echo "pas succes";
+      echo "pas succes" . $tel;
     }
   }
 
