@@ -9,5 +9,5 @@ function generateRandomString() {
   return $randomString;
 }
 
-echo generateRandomString();
+echo "str" . generateRandomString();
 ?>
