@@ -1,6 +1,6 @@
 <?php
   if(isset($_GET['code'])){
-
+/*
     $id = ""
 
     try{
@@ -30,7 +30,7 @@
       header("Location: ../../index.php");
       exit();
     }
-
+*/
   }
   else {
     header("Location: ../../index.php");
