@@ -22,11 +22,8 @@
           die('Erreur : ' . $e->getMessage());
     }
 
-    echo "avt boucle";
-
     //variables
     $reponse = $bdd->query('SELECT * FROM profil');
-
 
     //test si mail == OK
     while ($donnees = $reponse->fetch())
@@ -34,12 +31,12 @@
       if ($donnees['email'] == $email) {
         $id = $donnees['id'];
         $mailok = $donnees['email'];
-        //$code = generateRandomString(); /*md5($donnees['password'] . $mailok);*/
+        $code = md5($donnees['password'] . $mailok);
         $prenom = $donnees['prenom'];
         echo  $id . " " . $mailok . " " . $code;
       }
     }
-/*
+
     if ($mailok != "") {
 
       $req = $bdd->prepare('INSERT INTO `mdpoublie`(`utilisateur`, `chaine_id`)
@@ -97,8 +94,8 @@
     header("Location:../../mdpoublie.php");
     exit();
   }
-*/
-  function generateRandomString() {
+
+  /*function generateRandomString() {
     $caract = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $caract_long = strlen($caract);
     $randomString = '';
@@ -108,7 +105,7 @@
     return $randomString;
   }
 
-
+*/
 
 
 
