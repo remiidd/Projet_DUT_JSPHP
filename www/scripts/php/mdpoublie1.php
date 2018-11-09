@@ -22,17 +22,19 @@
           die('Erreur : ' . $e->getMessage());
     }
 
+    echo "avt boucle";
+
     //variables
     $reponse = $bdd->query('SELECT * FROM profil');
 
-    echo "avt boucle";
+
     //test si mail == OK
     while ($donnees = $reponse->fetch())
     {
       if ($donnees['email'] == $email) {
         $id = $donnees['id'];
         $mailok = $donnees['email'];
-        $code = generateRandomString(); /*md5($donnees['password'] . $mailok);*/
+        //$code = generateRandomString(); /*md5($donnees['password'] . $mailok);*/
         $prenom = $donnees['prenom'];
         echo  $id . " " . $mailok . " " . $code;
       }
