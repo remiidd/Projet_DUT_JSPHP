@@ -25,6 +25,7 @@
     //variables
     $reponse = $bdd->query('SELECT * FROM profil');
 
+    echo "avt boucle";
     //test si mail == OK
     while ($donnees = $reponse->fetch())
     {
