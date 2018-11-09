@@ -66,12 +66,12 @@
       $mail->Body    = "Bonjour $prenom, </br>
         Est-ce que tu aimes les bananes ? </br>
         Pour réinitialiser votre mot de passe, veuillez cliquer sur le lien ci-dessous : </br>
-        <a href=\"http://nunes.aloisguitton.com/reset.php?code=$code\">nunes.aloisguitton.comscripts/php/mdpoublie.php?code=$code</a></br></br></br>
+        <a href=\"http://nunes.aloisguitton.com/resetmdp.php?code=$code\">nunes.aloisguitton.com/resetmdp.php?code=$code</a></br></br></br>
         <cite>Cet email a été envoyé automatiquement depuis <a href=\"http://nunes.aloisguitton.com\">BananaBook</a>. Ne pas répondre.</cite>";
       $mail->AltBody = "Bonjour $prenom,
         Est-ce que tu aimes les bananes ?
         Pour reinitialiser votre mot de passe, veuillez cliquer sur le lien ci-apres :
-        nunes.aloisguitton.com/reset.php?code=$code<
+        nunes.aloisguitton.com/resetmdp.php?code=$code<
         Cet email a ete envoye automatiquement depuis BananaBook. Ne pas repondre";
 
       if($mail->send()){
