@@ -13,6 +13,7 @@
   $reponse = $bdd->query('SELECT * FROM profil');
   $util = $_POST['id'];
   $mdp = md5($_POST['mdp']);
+  $tel = $chaine = substr($util,1);
 
 
   //test si id == OK
