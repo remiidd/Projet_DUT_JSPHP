@@ -36,7 +36,7 @@
         echo  $id . " " . $mailok . " " . $code;
       }
     }
-
+/*
     if ($mailok != "") {
 
       $req = $bdd->prepare('INSERT INTO `mdpoublie`(`utilisateur`, `chaine_id`)
@@ -93,7 +93,7 @@
   } else {
     header("Location:../../mdpoublie.php");
     exit();
-  }
+  }*/
 
   /*function generateRandomString() {
     $caract = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
