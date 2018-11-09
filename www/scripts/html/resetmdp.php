@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Réinitialiser votre mot de passe</title>
-    <?php  include 'scripts/html/head.html';?>
+    <?php  include 'head.html';?>
   </head>
   <body>
-    <?php include 'bar_navigation/connexion.php'; ?>
+    <?php include '../../bar_navigation/connexion.php'; ?>
     <div class="content">
       <div id="mdpoublié">
         <center>
