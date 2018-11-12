@@ -1,4 +1,5 @@
 $(".txt_modif_email").hide();
+$(".txt_modif_num").hide();
 
 $(document).ready(function(){
   $(".titre_param").animate({
