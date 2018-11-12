@@ -7,4 +7,7 @@ $(document).ready(function(){
   $(".modif_info_bouton").click(function(){
     $(".txt_modif_email").toggle();
   });
+  $(".modif_info_bouton").click(function(){
+    $(".txt_modif_tel").toggle();
+  });
 });
