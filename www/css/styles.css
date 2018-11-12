@@ -284,6 +284,9 @@
 .coverset {
   border-bottom-right-radius: 30px;
 }
+.txt_modif_email {
+  display:none;
+}
 .txt_modif_tel {
   display:none;
 }
