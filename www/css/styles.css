@@ -290,6 +290,9 @@
 .txt_modif_tel {
   display:none;
 }
+.modif_info_bouton_tel {
+  cursor: pointer;
+}
 
 
 
