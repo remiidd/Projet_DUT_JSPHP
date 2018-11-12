@@ -51,7 +51,10 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <?php if(isset($_POST["email"])){
           $req = $bdd->query('UPDATE profil SET email=\''.$_POST["email"].'\' WHERE id=\''.$_GET["id"].'\'');
         } ?>
-        <p class="marge">Numéro de telephone : <?php echo "+33".$data["numerotel"]; ?></p>
+        <p class="marge">Numéro de telephone : <?php echo "+33".$data["numerotel"]; ?> <a class="modif_info_bouton"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_email"><form action="" method="post"><input type="tel" name="numerotel"/><input id="inscriBout" type="submit" value="Valider" onclick="modif()"/></form></i></p>
+        <?php if(isset($_POST["numerotel"])){
+          $req = $bdd->query('UPDATE profil SET numerotel=\''.$_POST["numerotel"].'\' WHERE id=\''.$_GET["id"].'\'');
+        } ?>
         <hr>
         <h5><i class="fas fa-cog"></i> Informations personnelles du profil</h5>
         <p class="marge">Photo de profil :</p>
