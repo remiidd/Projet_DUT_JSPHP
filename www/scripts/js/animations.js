@@ -16,4 +16,7 @@ $(document).ready(function(){
   $(".modif_info_bouton_naissance").click(function(){
     $(".txt_modif_naissance").toggle();
   });
+  $(".modif_info_bouton_emploi").click(function(){
+    $(".txt_modif_emploi").toggle();
+  });
 });
