@@ -1,5 +1,5 @@
 $(".txt_modif_email").hide();
-$(".txt_modif_num").hide();
+//$(".txt_modif_num").hide();
 
 $(document).ready(function(){
   $(".titre_param").animate({
@@ -11,9 +11,9 @@ $(document).ready(function(){
   $(".modif_info_bouton_email").click(function(){
     $(".txt_modif_email").toggle();
   });
-  $(".modif_info_bouton_num").click(function(){
-    $(".txt_modif_num").toggle();
-  });
+  //$(".modif_info_bouton_num").click(function(){
+    //$(".txt_modif_num").toggle();
+  //});
 
 
 });
