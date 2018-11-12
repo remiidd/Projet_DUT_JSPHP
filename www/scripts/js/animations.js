@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $(".cache").hide();
+  $(".txt_modif_email").hide();
 
   $(".titre_param").animate({
     top:'120px',
