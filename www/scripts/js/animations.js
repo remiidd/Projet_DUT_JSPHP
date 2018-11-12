@@ -7,7 +7,12 @@ $(document).ready(function(){
   },"slow");
 
 
-  $(".modif_info_bouton-email").click(function(){
+  $(".modif_info_bouton_email").click(function(){
     $(".txt_modif_email").toggle();
   });
+  $(".modif_info_bouton_num").click(function(){
+    $(".txt_modif_num").toggle();
+  });
+
+
 });
