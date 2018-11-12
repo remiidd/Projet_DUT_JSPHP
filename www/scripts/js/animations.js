@@ -1,7 +1,7 @@
-$(".txt_modif_email").hide();
-$(".txt_modif_num").hide();
-
 $(document).ready(function(){
+  $(".txt_modif_email").hide();
+  $(".txt_modif_num").hide();
+  
   $(".titre_param").animate({
     top:'120px',
     opacity:'1'
