@@ -293,6 +293,9 @@
 .txt_modif_ville {
   display:none;
 }
+.txt_modif_naissance {
+  display:none;
+}
 .modif_info_bouton_tel {
   cursor: pointer;
 }
@@ -300,6 +303,9 @@
   cursor: pointer;
 }
 .modif_info_bouton_ville {
+  cursor: pointer;
+}
+.modif_info_bouton_naissance {
   cursor: pointer;
 }
 
