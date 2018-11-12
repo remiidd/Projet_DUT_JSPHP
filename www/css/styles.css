@@ -292,10 +292,9 @@
 }
 .modif_info_bouton_tel {
   cursor: pointer;
-  color:#007bff ! important;
 }
-.modif_info_bouton_tel:hover {
-  text-decoration: underline ! important;
+.modif_info_bouton_email {
+  cursor: pointer;
 }
 
 
