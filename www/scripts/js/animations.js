@@ -6,8 +6,8 @@ $(document).ready(function(){
     opacity:'1'
   },"slow");
 
-  
-  $(".modif_info_bouton").click(function(){
+
+  $(".modif_info_bouton-email").click(function(){
     $(".txt_modif_email").toggle();
   });
 });
