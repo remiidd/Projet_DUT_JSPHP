@@ -42,7 +42,7 @@
           <h1 class="name"><?php echo $data["prenom"]." ".$data["nom"]; ?></h1>
         </div>
         <div id="infos">
-          <p>Habite à <strong><?php echo $data["ville"]; ?></strong><i class="fas fa-map-marker-alt"></i></p>
+          <p>Habite à <strong><?php echo $data["ville"]; ?></strong> <i class="fas fa-map-marker-alt"></i></p>
           <p>Agé de <strong><?php $today = new DateTime();$naissance = new DateTime($data["naissance"]);echo $today->diff($naissance)->format("%Y");?></strong> ans</p>
           <?php if(($today->format("%m%d"))==($naissance->format("%m%d"))) { ?><p>Bon anniversaire !</p><?php } ?>
 
