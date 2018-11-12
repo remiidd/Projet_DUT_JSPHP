@@ -290,10 +290,16 @@
 .txt_modif_tel {
   display:none;
 }
+.txt_modif_ville {
+  display:none;
+}
 .modif_info_bouton_tel {
   cursor: pointer;
 }
 .modif_info_bouton_email {
+  cursor: pointer;
+}
+.modif_info_bouton_ville {
   cursor: pointer;
 }
 
