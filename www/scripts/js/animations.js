@@ -13,4 +13,7 @@ $(document).ready(function(){
   $(".modif_info_bouton_ville").click(function(){
     $(".txt_modif_ville").toggle();
   });
+  $(".modif_info_bouton_naissance").click(function(){
+    $(".txt_modif_naissance").toggle();
+  });
 });
