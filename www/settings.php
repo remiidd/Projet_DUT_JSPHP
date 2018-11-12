@@ -47,17 +47,13 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         </div><br/>
         <p class="marge"><a href="profil.php?id=<?php echo $_GET["id"]; ?>">Revenir au profil</a></p>
         <h5><i class="fas fa-cog"></i> Paramètres du compte</h5>
-        <p class="marge">Email : <?php echo $data["email"]; ?> <a class="modif_info_bouton_email"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_email"><form action="" method="post"><input type="text" name="email"/><input id="inscriBout" type="submit" value="Valider" onclick="modif()"/></form></i></p>
+        <p class="marge">Email : <?php echo $data["email"]; ?> <a class="modif_info_bouton"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_email"><form action="" method="post"><input type="text" name="email"/><input id="inscriBout" type="submit" value="Valider" onclick="modif()"/></form></i></p>
         <?php if(isset($_POST["email"])){
           $req = $bdd->query('UPDATE profil SET email=\''.$_POST["email"].'\' WHERE id=\''.$_GET["id"].'\'');
-          $url_refresh = "Location:settings.php?id=".$_GET["id"];
-          header($url_refresh);
         } ?>
-        <p class="marge">Numéro de telephone : <?php echo "+33".$data["numerotel"]; ?> <a class="modif_info_bouton_num"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_num"><form action="" method="post"><input type="tel" name="numerotel"/><input id="inscriBout" type="submit" value="Valider" onclick="modif()"/></form></i></p>
+        <p class="marge">Numéro de telephone : <?php echo "+33".$data["numerotel"]; ?> <a class="modif_info_bouton"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_email"><form action="" method="post"><input type="tel" name="numerotel"/><input id="inscriBout" type="submit" value="Valider" onclick="modif()"/></form></i></p>
         <?php if(isset($_POST["numerotel"])){
           $req = $bdd->query('UPDATE profil SET numerotel=\''.$_POST["numerotel"].'\' WHERE id=\''.$_GET["id"].'\'');
-          $url_refresh = "Location:settings.php?id=".$_GET["id"];
-          header($url_refresh);
         } ?>
         <hr>
         <h5><i class="fas fa-cog"></i> Informations personnelles du profil</h5>
