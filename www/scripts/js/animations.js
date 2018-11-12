@@ -8,7 +8,3 @@ $(document).ready(function(){
     $(".txt_modif_email").toggle();
   });
 });
-
-function modif() {
-  alert("envoie ok");
-}
