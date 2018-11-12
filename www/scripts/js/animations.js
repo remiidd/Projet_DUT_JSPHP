@@ -10,4 +10,7 @@ $(document).ready(function(){
   $(".modif_info_bouton_tel").click(function(){
     $(".txt_modif_tel").toggle();
   });
+  $(".modif_info_bouton_ville").click(function(){
+    $(".txt_modif_ville").toggle();
+  });
 });
