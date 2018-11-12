@@ -64,7 +64,12 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <p class="marge">Photo de profil :</p>
         <p class="marge">Photo de couverture :</p>
         <p class="marge">Date de naissance : <?php $naissance = new DateTime($data["naissance"]); echo $naissance->format("d / m / Y"); ?></p>
-        <p class="marge">Ville : <?php echo $data["ville"]; ?></p>
+        <p class="marge">Ville : <?php echo $data["ville"]; ?> <a class="modif_info_bouton_ville"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_ville"><form action="" method="post"><input type="text" name="ville"/><input id="inscriBout" type="submit" value="Valider" onclick="modif()"/></form></i></p>
+        <?php if(isset($_POST["ville"])){
+          $req = $bdd->query('UPDATE profil SET ville=\''.$_POST["ville"].'\' WHERE id=\''.$_GET["id"].'\'');
+          $url_refresh = "Location:settings.php?id=".$_GET["id"];
+          header($url_refresh);
+        } ?>
         <p class="marge">Emploi :</p>
         <p class="marge">Etudes :</p>
       </div>
