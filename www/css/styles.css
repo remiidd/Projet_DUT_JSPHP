@@ -293,6 +293,9 @@
 .txt_modif_ville {
   display:none;
 }
+.txt_modif_emploi {
+  display:none;
+}
 .txt_modif_naissance {
   display:none;
 }
