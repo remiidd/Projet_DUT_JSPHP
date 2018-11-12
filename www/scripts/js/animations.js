@@ -4,10 +4,10 @@ $(document).ready(function(){
     opacity:'1'
   },"slow");
 
-  $(".modif_info_bouton").click(function(){
+  $(".modif_info_bouton_email").click(function(){
     $(".txt_modif_email").toggle();
   });
-  $(".modif_info_bouton").click(function(){
+  $(".modif_info_bouton_tel").click(function(){
     $(".txt_modif_tel").toggle();
   });
 });
