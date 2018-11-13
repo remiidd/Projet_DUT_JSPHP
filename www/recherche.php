@@ -28,6 +28,10 @@
                 $couple1 = str_replace(' ', '', $donnees['nom'] . $donnees['prenom']);
                 $couple2 = str_replace(' ', '', $donnees['prenom'] . $donnees['nom']);
                 echo $couple1 . " " . $couple2;
+
+                if(preg_match("#$user#i", "$couple1") || preg_match("#$user#i", "$couple2")){
+                  echo "trouvé";
+                }
               }
             ?>
           </div>
