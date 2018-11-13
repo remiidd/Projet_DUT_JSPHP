@@ -1,7 +1,7 @@
 <?php
   session_start();
   if(isset($_SESSION['idcon'])){
-    $user = str_replace(' ','',$_POST['recherche']);
+    $user = str_replace(' ','',$_GET['recherche']);
     ?>
       <!DOCTYPE html>
       <html lang="en" dir="ltr">
