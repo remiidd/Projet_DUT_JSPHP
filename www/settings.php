@@ -76,7 +76,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           header($url_refresh);
         } ?>
         <p class="marge">Emplois : </p>
-        <ul class="marge2x">
+        <ul class="marge3x">
           <?php $rep = $bdd->query('SELECT * FROM emploi WHERE profil=\''.$_GET['id'].'\'');
           while($emploi = $rep->fetch()) { ?>
             <li><?php echo $emploi["travail"]; ?></li>
