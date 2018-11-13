@@ -278,15 +278,6 @@
   position: relative;
   z-index: 1;
 }
-.marge{
-  margin-left: 30px;
-}
-.marge2x{
-  margin-left: 90px;
-}
-.marge3x{
-  margin-left: 90px;
-}
 .coverset {
   border-bottom-right-radius: 30px;
 }
@@ -329,4 +320,13 @@
 .no_deco_link {
   text-decoration: none;
   color: black;
+}
+.marge{
+  margin-left: 30px;
+}
+.marge2x{
+  margin-left: 90px;
+}
+.marge3x{
+  margin-left: 90px;
 }
