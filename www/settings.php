@@ -77,7 +77,8 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         } ?>
         <p class="marge">Emplois : </p>
         <ul>
-
+          <li>Emploi 1</li>
+          <li>Emploi 2</li>
         </ul>
           <p><a class="modif_info_bouton_emploi"><i class="fas fa-plus"></i> Ajouter</a><i class="txt_modif_emploi"><form action="" method="post"><input required type="text" name="emploi"/><input id="inscriBout" type="submit" value="Valider" onclick="modif()"/></form></i></p>
         <?php if(isset($_POST["emploi"])){
