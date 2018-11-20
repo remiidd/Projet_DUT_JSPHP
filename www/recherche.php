@@ -1,7 +1,11 @@
 <?php
   session_start();
   if(isset($_SESSION['idcon'])){
-    $user = str_replace(' ','',$_GET['recherche']);
+    $user = strtolower(strtr(
+    str_replace(' ','',$_GET['recherche']),
+    '@ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ',
+    'aAAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy'));
+
     ?>
       <!DOCTYPE html>
       <html lang="en" dir="ltr">
@@ -25,8 +29,16 @@
 
               while ($donnees = $reponse->fetch())
               {
-                $couple1 = str_replace(' ', '', $donnees['nom'] . $donnees['prenom']);
-                $couple2 = str_replace(' ', '', $donnees['prenom'] . $donnees['nom']);
+                $couple1 = strtolower(strtr(
+                  str_replace(' ', '', $donnees['nom'] . $donnees['prenom']),
+                  '@ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ',
+                  'aAAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy'
+                ));
+                $couple2 = strtolower(strtr(
+                  str_replace(' ', '', $donnees['prenom'] . $donnees['nom']),
+                  '@ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ',
+                  'aAAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy'
+                ));
                 echo $couple1 . " " . $couple2;
 
                 if(preg_match("#$user#i", "$couple1") || preg_match("#$user#i", "$couple2")){

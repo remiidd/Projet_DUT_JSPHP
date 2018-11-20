@@ -1,5 +1,6 @@
 <?php
   session_start();
+  $cook = false;
 
   //BASE DE DONNEE
   try{
@@ -23,10 +24,13 @@
       $_SESSION['idcon'] = $id;
       header("Location:../../profil.php?id=$id");
       exit();
+      $cook = true;
     }
-    else {
-      echo "pas succes";
-    }
+  }
+
+  if($cook == false){
+    header("Location:../../connexion.php");
+    exit();
   }
 
 
