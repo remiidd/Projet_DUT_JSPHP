@@ -1,9 +1,7 @@
 <?php
   session_start();
   if(isset($_SESSION['idcon'])){
-    $user = strtr(
-    "AloïsGuitton",
-    'àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ', 'aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY');
+    $user = iconv( 'UTF-8', 'ASCII//TRANSLIT//IGNORE', str_replace(' ','',$_GET['recherche']));
 
     ?>
       <!DOCTYPE html>
