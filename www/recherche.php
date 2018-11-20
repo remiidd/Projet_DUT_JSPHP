@@ -2,9 +2,8 @@
   session_start();
   if(isset($_SESSION['idcon'])){
     $user = strtr(
-    str_replace(' ','',$_GET['recherche']),
-    '@ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ',
-    'aAAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy');
+    (str_replace(' ','',$_GET['recherche'])),
+    'àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ', 'aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY');
 
     ?>
       <!DOCTYPE html>
