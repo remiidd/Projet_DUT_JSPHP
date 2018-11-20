@@ -2,8 +2,8 @@
   session_start();
   if(isset($_SESSION['idcon'])){
     $useracc = str_replace(' ','',$_GET['recherche']);
-    $tofind = "ÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ";
-		$replac = "AAAAAAaaaaaaOOOOOOooooooEEEEeeeeCcIIIIiiiiUUUUuuuuyNn";
+    $tofind = "é";
+		$replac = "e";
 		$user = strtr($useracc,$tofind,$replac);
 
     ?>
@@ -17,7 +17,7 @@
         <body>
           <?php include 'bar_navigation/nonco.php'?>
           <div class="content">
-            <h1>Recherche <?php echo $user ?></h1>
+            <h1>Recherche <?php echo $useracc . "           " . $user ?></h1>
             <?php
               try{
                 $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
