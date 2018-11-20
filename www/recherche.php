@@ -1,10 +1,10 @@
 <?php
   session_start();
   if(isset($_SESSION['idcon'])){
-    $user = strtolower(strtr(
+    $user = (strtr(
     str_replace(' ','',$_GET['recherche']),
     '@ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ',
-    'aAAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy'));
+    'aAAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy');
 
     ?>
       <!DOCTYPE html>
