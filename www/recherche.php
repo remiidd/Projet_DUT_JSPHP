@@ -1,7 +1,10 @@
 <?php
   session_start();
   if(isset($_SESSION['idcon'])){
-    $user = iconv( 'UTF-8', 'ASCII//TRANSLIT//IGNORE', str_replace(' ','',$_GET['recherche']));
+    $useracc = str_replace(' ','',$_GET['recherche']);
+    $tofind = "ÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ";
+		$replac = "AAAAAAaaaaaaOOOOOOooooooEEEEeeeeCcIIIIiiiiUUUUuuuuyNn";
+		$user = strtr($useracc,$tofind,$replac));
 
     ?>
       <!DOCTYPE html>
