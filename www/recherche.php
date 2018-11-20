@@ -4,7 +4,7 @@
     $useracc = str_replace(' ','',$_GET['recherche']);
     $tofind = "ÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ";
 		$replac = "AAAAAAaaaaaaOOOOOOooooooEEEEeeeeCcIIIIiiiiUUUUuuuuyNn";
-		$user = strtr($useracc,$tofind,$replac));
+		$user = strtr($useracc,$tofind,$replac);
 
     ?>
       <!DOCTYPE html>
