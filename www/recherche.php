@@ -55,7 +55,7 @@
                     <div class="rech_user">
                       <div class="rech_prof"></div>
                       <div class="rech_info">
-                        <a><?php  $donnees['nom'] . " " . $donnees['prenom']?></a>
+                        <a><?php  echo $donnees['nom'] . " " . $donnees['prenom']?></a>
                       </div>
                     </div>
                   <?php
