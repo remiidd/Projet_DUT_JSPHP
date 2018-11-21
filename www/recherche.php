@@ -1,5 +1,6 @@
 <?php
   session_start();
+  header('Content-type: text/html; charset=UTF-8');
   if(isset($_SESSION['idcon'])){
     $useracc = str_replace(' ','',$_GET['recherche']);
     $tofind = "é";
