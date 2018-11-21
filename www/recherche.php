@@ -42,7 +42,7 @@
               catch (Exception $e){
                     die('Erreur : ' . $e->getMessage());
               }
-              $reponse = $bdd->query('SELECT nom, prenom FROM profil');
+              $reponse = $bdd->query('SELECT nom, prenom, id, photo_profil FROM profil');
 
               while ($donnees = $reponse->fetch())
               {
