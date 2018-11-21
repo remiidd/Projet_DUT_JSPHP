@@ -5,7 +5,7 @@
     $useracc = str_replace(' ','',$_GET['recherche']);
     $tofind = "é";
 		$replac = "e";
-    $str = "ééé"
+    $str = "ééé";
     $str = htmlentities($str, ENT_NOQUOTES, 'UTF-8');
     $str = preg_replace('#\&amp;([A-za-z])(?:acute|cedil|circ|grave|ring|tilde|uml)\;#', '\1', $str);
     $str = preg_replace('#\&amp;([A-za-z]{2})(?:lig)\;#', '\1', $str);
