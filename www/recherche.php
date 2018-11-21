@@ -22,7 +22,7 @@
   }
 
   if(isset($_SESSION['idcon'])){
-		$user = str_to_noaccent(str_replace(' ','',$_GET['recherche']));
+		$user = strtolower(str_to_noaccent(str_replace(' ','',$_GET['recherche'])));
 
     ?>
       <!DOCTYPE html>
@@ -47,8 +47,8 @@
 
               while ($donnees = $reponse->fetch())
               {
-                $couple1 = str_to_noaccent(str_replace(' ', '', $donnees['nom'] . $donnees['prenom']));
-                $couple2 = str_to_noaccent(str_replace(' ', '', $donnees['prenom'] . $donnees['nom']));
+                $couple1 = strtolower(str_to_noaccent(str_replace(' ', '', $donnees['nom'] . $donnees['prenom'])));
+                $couple2 = strtolower(str_to_noaccent(str_replace(' ', '', $donnees['prenom'] . $donnees['nom'])));
                 echo $couple1 . " " . $couple2;
 
                 if(preg_match("#$user#i", "$couple1") || preg_match("#$user#i", "$couple2")){
