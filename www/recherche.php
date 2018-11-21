@@ -3,30 +3,26 @@
 
   function str_to_noaccent($str)
   {
-      $url = $str;
-      $url = preg_replace('#Ç#', 'C', $url);
-      $url = preg_replace('#ç#', 'c', $url);
-      $url = preg_replace('#è|é|ê|ë#', 'e', $url);
-      $url = preg_replace('#È|É|Ê|Ë#', 'E', $url);
-      $url = preg_replace('#à|á|â|ã|ä|å#', 'a', $url);
-      $url = preg_replace('#@|À|Á|Â|Ã|Ä|Å#', 'A', $url);
-      $url = preg_replace('#ì|í|î|ï#', 'i', $url);
-      $url = preg_replace('#Ì|Í|Î|Ï#', 'I', $url);
-      $url = preg_replace('#ð|ò|ó|ô|õ|ö#', 'o', $url);
-      $url = preg_replace('#Ò|Ó|Ô|Õ|Ö#', 'O', $url);
-      $url = preg_replace('#ù|ú|û|ü#', 'u', $url);
-      $url = preg_replace('#Ù|Ú|Û|Ü#', 'U', $url);
-      $url = preg_replace('#ý|ÿ#', 'y', $url);
-      $url = preg_replace('#Ý#', 'Y', $url);
+      $str = preg_replace('#Ç#', 'C', $str);
+      $str = preg_replace('#ç#', 'c', $str);
+      $str = preg_replace('#è|é|ê|ë#', 'e', $str);
+      $str = preg_replace('#È|É|Ê|Ë#', 'E', $str);
+      $str = preg_replace('#à|á|â|ã|ä|å#', 'a', $str);
+      $str = preg_replace('#@|À|Á|Â|Ã|Ä|Å#', 'A', $str);
+      $str = preg_replace('#ì|í|î|ï#', 'i', $str);
+      $str = preg_replace('#Ì|Í|Î|Ï#', 'I', $str);
+      $str = preg_replace('#ð|ò|ó|ô|õ|ö#', 'o', $str);
+      $str = preg_replace('#Ò|Ó|Ô|Õ|Ö#', 'O', $str);
+      $str = preg_replace('#ù|ú|û|ü#', 'u', $str);
+      $str = preg_replace('#Ù|Ú|Û|Ü#', 'U', $str);
+      $str = preg_replace('#ý|ÿ#', 'y', $str);
+      $str = preg_replace('#Ý#', 'Y', $str);
 
-      return ($url);
+      return ($str);
   }
 
   if(isset($_SESSION['idcon'])){
-    $useracc = str_replace(' ','',$_GET['recherche']);
-    $tofind = "é";
-		$replac = "e";
-		$user = str_to_noaccent("éééééééééé");
+		$user = str_to_noaccent(str_replace(' ','',$_GET['recherche']));
 
     ?>
       <!DOCTYPE html>
@@ -51,16 +47,8 @@
 
               while ($donnees = $reponse->fetch())
               {
-                $couple1 = strtolower(strtr(
-                  str_replace(' ', '', $donnees['nom'] . $donnees['prenom']),
-                  'ï',
-                  'i'
-                ));
-                $couple2 = strtolower(strtr(
-                  str_replace(' ', '', $donnees['prenom'] . $donnees['nom']),
-                  '@ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ',
-                  'aAAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy'
-                ));
+                $couple1 = str_to_noaccent(str_replace(' ', '', $donnees['nom'] . $donnees['prenom']));
+                $couple2 = str_to_noaccent(str_replace(' ', '', $donnees['prenom'] . $donnees['nom']));
                 echo $couple1 . " " . $couple2;
 
                 if(preg_match("#$user#i", "$couple1") || preg_match("#$user#i", "$couple2")){
