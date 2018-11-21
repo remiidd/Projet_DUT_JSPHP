@@ -31,8 +31,8 @@
               {
                 $couple1 = strtolower(strtr(
                   str_replace(' ', '', $donnees['nom'] . $donnees['prenom']),
-                  '@ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ',
-                  'aAAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy'
+                  'ï',
+                  'i'
                 ));
                 $couple2 = strtolower(strtr(
                   str_replace(' ', '', $donnees['prenom'] . $donnees['nom']),
