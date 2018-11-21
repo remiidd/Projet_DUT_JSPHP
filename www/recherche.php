@@ -1,6 +1,5 @@
 <?php
   session_start();
-
   function str_to_noaccent($str)
   {
       $str = preg_replace('#Ç#', 'C', $str);
@@ -52,7 +51,14 @@
                 echo $couple1 . " " . $couple2;
 
                 if(preg_match("#$user#i", "$couple1") || preg_match("#$user#i", "$couple2")){
-                  echo "trouvé";
+                  ?>
+                    <div class="rech_user">
+                      <div class="rech_prof"></div>
+                      <div class="rech_info">
+                        <a><?php  $donnees['nom'] . " " . $donnees['prenom']?></a>
+                      </div>
+                    </div>
+                  <?php
                 }
               }
             ?>
