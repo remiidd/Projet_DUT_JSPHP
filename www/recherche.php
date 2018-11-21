@@ -57,7 +57,7 @@
                         <img src="<?php echo $donnees['photo_profil'] ?> " class="rech_img">
                       </div>
                       <div class="rech_info">
-                        <a href="profil.php?id=<?php echo $donnees['id'] ?>"><?php  echo $donnees['nom'] . " " . $donnees['prenom']?></a>
+                        <a class="rech_nom" href="profil.php?id=<?php echo $donnees['id'] ?>"><?php  echo $donnees['nom'] . " " . $donnees['prenom']?></a>
                       </div>
                     </div>
                   <?php

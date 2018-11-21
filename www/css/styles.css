@@ -55,6 +55,17 @@
 .rech_div_img{
   overflow: hidden;
   float: left;
+  margin-right: 1%;
+}
+
+.rech_nom{
+  font-size: 1.4em;
+  color: black;
+}
+
+.rech_user{
+  background-color: #b3b3b333;
+  margin: 10px;
 }
 /* ====================  fin CSS recherche ==================== */
 
