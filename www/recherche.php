@@ -68,7 +68,7 @@
         </body>
         <script type="text/javascript">
           console.log('ici');
-          var img = document.getElementByClassName("rech_img");
+          var img = document.getElementsByClassName("rech_img");
           var taille = document.body.clientWidth / 10;
           img.style.width=taille + "px";
         </script>
