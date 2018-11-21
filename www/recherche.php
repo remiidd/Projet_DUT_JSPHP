@@ -53,7 +53,7 @@
                     <div class="rech_user">
                       <div class="rech_prof"></div>
                       <div class="rech_info">
-                        <a><?php  echo $donnees['nom'] . " " . $donnees['prenom']?></a>
+                        <a href="profil.php?id=<?php echo $donnees['id'] ?>"><?php  echo $donnees['nom'] . " " . $donnees['prenom']?></a>
                       </div>
                     </div>
                   <?php
