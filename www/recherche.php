@@ -52,7 +52,7 @@
                   $trouve = true;
                   ?>
                     <div class="rech_user">
-                      <img src="<?php echo $donnees['photo_profil'] ?>">
+                      <img src="<?php echo $donnees['photo_profil'] ?>" class="rech_img">
                       <div class="rech_info">
                         <a href="profil.php?id=<?php echo $donnees['id'] ?>"><?php  echo $donnees['nom'] . " " . $donnees['prenom']?></a>
                       </div>
@@ -66,6 +66,11 @@
             ?>
           </div>
         </body>
+        <script type="text/javascript">
+          var img = document.getElementByClassName("rech_img");
+          var taille = document.body.clientWidth / 10;
+          img.style.width=taille + "px";
+        </script>
       </html>
     <?php
   }
