@@ -29,9 +29,10 @@
         <head>
           <meta charset="utf-8">
           <title>Recherche</title>
+          <script src="script/js/recherche.js" charset="utf-8"></script>
           <?php include 'scripts/html/head.html'; ?>
         </head>
-        <body>
+        <body onresize="resize_img()" onload="resize_img()">
           <?php include 'bar_navigation/nonco.php'?>
           <div class="content">
             <h1>Recherche</h1>
@@ -52,8 +53,8 @@
                   $trouve = true;
                   ?>
                     <div class="rech_user">
-                      <div class="rech_img">
-                        <img src="<?php echo $donnees['photo_profil'] ?>">
+                      <div class="rech_div_img">
+                        <img src="<?php echo $donnees['photo_profil'] ?> " class="rech_img">
                       </div>
                       <div class="rech_info">
                         <a href="profil.php?id=<?php echo $donnees['id'] ?>"><?php  echo $donnees['nom'] . " " . $donnees['prenom']?></a>
@@ -68,15 +69,6 @@
             ?>
           </div>
         </body>
-        <script type="text/javascript">
-          console.log('ici');
-          var img = document.getElementsByClassName("rech_img");
-          var taille = document.body.clientWidth / 10;
-          for (i = 0; i < img.length; i++) {
-            img[i].style.width = taille + "px";
-            img[i].style.height = taille + "px";
-          }
-        </script>
       </html>
     <?php
   }
