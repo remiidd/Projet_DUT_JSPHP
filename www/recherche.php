@@ -22,7 +22,7 @@
 
   if(isset($_SESSION['idcon'])){
 		$user = strtolower(str_to_noaccent(str_replace(' ','',$_GET['recherche'])));
-
+    $trouve = false;
     ?>
       <!DOCTYPE html>
       <html lang="en" dir="ltr">
@@ -34,7 +34,7 @@
         <body>
           <?php include 'bar_navigation/nonco.php'?>
           <div class="content">
-            <h1>Recherche <?php echo $useracc . "           " . $user ?></h1>
+            <h1>Recherche</h1>
             <?php
               try{
                 $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
@@ -49,6 +49,7 @@
                 $couple1 = strtolower(str_to_noaccent(str_replace(' ', '', $donnees['nom'] . $donnees['prenom'])));
                 $couple2 = strtolower(str_to_noaccent(str_replace(' ', '', $donnees['prenom'] . $donnees['nom'])));
                 if(preg_match("#$user#i", "$couple1") || preg_match("#$user#i", "$couple2")){
+                  $trouve = true;
                   ?>
                     <div class="rech_user">
                       <div class="rech_prof"></div>
@@ -58,6 +59,9 @@
                     </div>
                   <?php
                 }
+              }
+              if($trouve == false){
+                echo "Aucun utilisateur trouvé";
               }
             ?>
           </div>
