@@ -70,7 +70,9 @@
           console.log('ici');
           var img = document.getElementsByClassName("rech_img");
           var taille = document.body.clientWidth / 10;
-          img.style.width=taille + "px";
+          for (i = 0; i < img.length; i++) {
+            img[i].style.width = taille + "px";
+          } 
         </script>
       </html>
     <?php
