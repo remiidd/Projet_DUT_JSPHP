@@ -52,7 +52,7 @@
                   $trouve = true;
                   ?>
                     <div class="rech_user">
-                      <div class="rech_prof"></div>
+                      <img src="<?php echo $donnees['photo_profil';] ?>"
                       <div class="rech_info">
                         <a href="profil.php?id=<?php echo $donnees['id'] ?>"><?php  echo $donnees['nom'] . " " . $donnees['prenom']?></a>
                       </div>
