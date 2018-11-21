@@ -7,6 +7,6 @@ function resize_img(){
     img[i].style.height = taille + "px";
   }
   for (i = 0; i < div.length; i++) {
-    div[i].style.height = taille + "px";
+    div[i].style.height = 1,004 * taille + "px";
   }
 }
