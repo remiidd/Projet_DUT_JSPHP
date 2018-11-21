@@ -51,6 +51,11 @@
 .rech_img{
   width: 100%;
 }
+
+.rech_div_img{
+  overflow: hidden;
+  float: left;
+}
 /* ====================  fin CSS recherche ==================== */
 
 /* ==================== CSS PAGE Inscription ==================== */
