@@ -69,7 +69,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           $url_refresh = "Location:settings.php?id=".$_GET["id"];
           header($url_refresh);
         } ?>
-        <p class="marge">Numéro de telephone : <?php echo "+33".$data["numerotel"]; ?> <a class="modif_info_bouton_tel"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_tel">
+        <p class="marge">Numéro de telephonnnne : <?php echo "+33".$data["numerotel"]; ?> <a class="modif_info_bouton_tel"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_tel">
           <form action="" method="post">
             <input required type="tel" name="numerotel"/>
             <input id="inscriBout" type="submit" value="Valider" onclick="modif()"/>
