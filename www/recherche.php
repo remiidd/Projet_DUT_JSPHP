@@ -58,7 +58,7 @@
                       </div>
                       <div class="rech_info">
                         <a class="rech_nom" href="profil.php?id=<?php echo $donnees['id'] ?>"><?php  echo $donnees['nom'] . " " . $donnees['prenom']?></a>
-                        <button type="button" name="Ajouter" value="Ajouter" formaction="scipts/php/ajouter_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $donnees['id'];?>"></button>
+                        <button type="button" name="Ajouter" formaction="scipts/php/ajouter_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $donnees['id'];?>">Ajouter</button>
                       </div>
 
                     </div>
