@@ -47,6 +47,16 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         </div><br/>
         <p class="marge"><a href="profil.php?id=<?php echo $_GET["id"]; ?>">Revenir au profil</a></p>
         <h5><i class="fas fa-cog"></i> Paramètres du compte</h5>
+        <p class="marge">Email : <?php echo $data["email"]; ?> <a class="modif_info_bouton_email"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_email">
+          <form action="" method="post">
+            <input required type="text" name="email"/>
+            <input id="inscriBout" type="submit" value="Valider" onclick="modif()"/>
+          </form></i></p>
+        <?php if(isset($_POST["email"])){
+          $req = $bdd->query('UPDATE profil SET email=\''.$_POST["email"].'\' WHERE id=\''.$_GET["id"].'\'');
+          $url_refresh = "Location:settings.php?id=".$_GET["id"];
+          header($url_refresh);
+        } ?>
         <p class="marge">Numéro de telephone : <?php echo "+33".$data["numerotel"]; ?> <a class="modif_info_bouton_tel"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_tel">
           <form action="" method="post">
             <input required type="tel" name="numerotel"/>
@@ -71,16 +81,6 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <h5><i class="fas fa-cog"></i> Informations personnelles du profil</h5>
         <p class="marge">Photo de profil :</p>
         <p class="marge">Photo de couverture :</p>
-        <p class="marge">Email : <?php echo $data["email"]; ?> <a class="modif_info_bouton_email"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_email">
-          <form action="" method="post">
-            <input required type="text" name="email"/>
-            <input id="inscriBout" type="submit" value="Valider" onclick="modif()"/>
-          </form></i></p>
-        <?php if(isset($_POST["email"])){
-          $req = $bdd->query('UPDATE profil SET email=\''.$_POST["email"].'\' WHERE id=\''.$_GET["id"].'\'');
-          $url_refresh = "Location:settings.php?id=".$_GET["id"];
-          header($url_refresh);
-        } ?>
         <p class="marge">Ville : <?php echo $data["ville"]; ?> <a class="modif_info_bouton_ville"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_ville"><form action="" method="post"><input required type="text" name="ville"/><input id="inscriBout" type="submit" value="Valider" onclick="modif()"/></form></i></p>
         <?php if(isset($_POST["ville"])){
           $req = $bdd->query('UPDATE profil SET ville=\''.$_POST["ville"].'\' WHERE id=\''.$_GET["id"].'\'');
