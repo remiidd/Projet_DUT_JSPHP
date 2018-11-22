@@ -52,7 +52,7 @@
                 if(preg_match("#$user#i", "$couple1") || preg_match("#$user#i", "$couple2")){
                   $trouve = true;
                   $id_amis = $donnees['id'];
-                  $reponse1 = $bdd->query("SELECT * FROM amis WHERE id_amis=$id_amis AND id=$_SESSION['idcon']");
+                  $reponse1 = $bdd->query("SELECT * FROM amis WHERE id_amis=$id_amis AND id=1");
 
                   ?>
                     <div class="rech_user">
