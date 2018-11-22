@@ -12,8 +12,8 @@
       $req = $bdd->prepare('INSERT INTO `amis`(`id`, `id_amis`, `statut`)
         VALUES (:id, :id_amis, : statut)');
       $req->execute(array(
-        'id' => $_GET['id'],
-        'id_amis' => $_GET['id_amis'],
+        'id' => intval($_GET['id']),
+        'id_amis' => intval($_GET['id_amis']),
         'statut' => "en attente"
       ));
 
