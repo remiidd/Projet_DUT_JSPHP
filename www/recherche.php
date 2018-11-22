@@ -54,8 +54,8 @@
                 if(preg_match("#$user#i", "$couple1") || preg_match("#$user#i", "$couple2")){
                   $trouve = true;
                   $id_amis = $donnees['id'];
-                  $reponse1 = $bdd->query("SELECT * FROM amis WHERE id_amis=$id_amis AND id=$id_user");
-
+                  $reponse1 = $bdd->query("SELECT statut FROM amis WHERE id_amis=$id_amis AND id=$id_user");
+                  echo "ici : " . $response1;
                   ?>
                     <div class="rech_user">
                       <div class="rech_div_img">
