@@ -80,6 +80,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           $url_refresh = "Location:settings.php?id=".$_GET["id"];
           $req_naissance = $bdd->query('UPDATE profil SET naissance=\''.$_POST["naissance"].'\' WHERE id=\''.$_GET["id"].'\'');
           $req_naissance->closeCursor();
+          echo "salut";
           header($url_refresh);
         } ?>
         <p class="marge">Ville : <?php echo $data["ville"]; ?> <a class="modif_info_bouton_ville"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_ville"><form action="" method="post"><input required type="text" name="ville"/><input id="inscriBout" type="submit" value="Valider" onclick="modif()"/></form></i></p>
