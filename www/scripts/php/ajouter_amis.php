@@ -9,20 +9,20 @@
       catch (Exception $e){
             die('Erreur : ' . $e->getMessage());
       }
-      $req = $bdd->prepare('INSERT INTO `amis`(`id`, `id_amis`, `status`)
-        VALUES (:id, :id_amis, : status)');
+      $req = $bdd->prepare('INSERT INTO `amis`(`id`, `id_amis`, `statut`)
+        VALUES (:id, :id_amis, : statut)');
       $req->execute(array(
         'id' => $_GET['id'],
         'id_amis' => $_GET['id_amis'],
-        'status' => "en attente"
+        'statut' => "en attente"
       ));
 
-      $req = $bdd->prepare('INSERT INTO `amis`(`id`, `id_amis`, `status`)
-        VALUES (:id, :id_amis, : status)');
+      $req = $bdd->prepare('INSERT INTO `amis`(`id`, `id_amis`, `statut`)
+        VALUES (:id, :id_amis, : statut)');
       $req->execute(array(
         'id' => $_GET['id_amis'],
         'id_amis' => $_GET['id'],
-        'status' => "demande"
+        'statut' => "demande"
       ));
     }
     else {
