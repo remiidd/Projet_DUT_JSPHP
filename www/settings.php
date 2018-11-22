@@ -115,10 +115,6 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <p class="marge">Etudes :</p>
       </div>
     </div>
-    <?php if((isset($_POST["email"])||(isset($_POST["ville"])||(isset($_POST["numerotel"])||(isset($_POST["naissance"])){
-      $url_refresh = "Location:settings.php?id=".$_GET["id"];
-      header($url_refresh);
-    }?>
     <script src="scripts/js/animations.js"></script>
   </body>
 </html>
