@@ -12,9 +12,17 @@
       $req = $bdd->prepare('INSERT INTO `amis`(`id`, `id_amis`, `statut`)
         VALUES (:id, :id_amis, :statut)');
       $req->execute(array(
-        'id' => 19,
-        'id_amis' => 1,
+        'id' => (int)$_GET['id_amis'],
+        'id_amis' => (int)$_GET['id'],
         'statut' => "en attente"
+      ));
+
+      $req = $bdd->prepare('INSERT INTO `amis`(`id`, `id_amis`, `statut`)
+        VALUES (:id, :id_amis, : statut)');
+      $req->execute(array(
+        'id' => (int)$_GET['id_amis'],
+        'id_amis' => (int)$_GET['id'],
+        'statut' => "demande"
       ));
 
       echo "fait";
