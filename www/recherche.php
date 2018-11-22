@@ -64,10 +64,6 @@
                       }
                     }
                   }
-                  else {
-                    echo "null";
-                  }
-
 
                   ?>
                     <div class="rech_user">
@@ -76,9 +72,23 @@
                       </div>
                       <div class="rech_info">
                         <a class="rech_nom" href="profil.php?id=<?php echo $donnees['id'] ?>"><?php  echo $donnees['nom'] . " " . $donnees['prenom']?></a>
-                        <form class="" action="scripts/php/ajouter_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $donnees['id'];?>" method="post">
-                          <input type="submit" name="Ajouter" value="Ajouter">
-                        </form>
+                        <?php
+                          if($stamis == true){
+                            ?>
+                            <form class="" action="scripts/php/supprimer_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $donnees['id'];?>" method="post">
+                              <input type="submit" name="Ajouter" value="Supprimer">
+                            </form>
+                            <?php
+                          }
+                          else {
+                            ?>
+                            <form class="" action="scripts/php/ajouter_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $donnees['id'];?>" method="post">
+                              <input type="submit" name="Ajouter" value="Ajouter">
+                            </form>
+                            <?php
+                          }
+                        ?>
+
 
                       </div>
 
