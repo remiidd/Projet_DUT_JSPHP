@@ -54,6 +54,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           </form></i></p>
         <?php if(isset($_POST["email"])){
           $req = $bdd->query('UPDATE profil SET email=\''.$_POST["email"].'\' WHERE id=\''.$_GET["id"].'\'');
+          $req->closeCursor();
           $url_refresh = "Location:settings.php?id=".$_GET["id"];
           header($url_refresh);
         } ?>
@@ -64,6 +65,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           </form></i></p>
         <?php if(isset($_POST["ville"])){
           $req = $bdd->query('UPDATE profil SET ville=\''.$_POST["ville"].'\' WHERE id=\''.$_GET["id"].'\'');
+          $req->closeCursor();
           $url_refresh = "Location:settings.php?id=".$_GET["id"];
           header($url_refresh);
         } ?>
@@ -74,6 +76,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           </form></i></p>
         <?php if(isset($_POST["numerotel"])){
           $req = $bdd->query('UPDATE profil SET numerotel=\''.$_POST["numerotel"].'\' WHERE id=\''.$_GET["id"].'\'');
+          $req->closeCursor();
           $url_refresh = "Location:settings.php?id=".$_GET["id"];
           header($url_refresh);
         } ?>
@@ -84,6 +87,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           </form></i></p>
         <?php if(isset($_POST["naissance"])){
           $req = $bdd->query('UPDATE profil SET naissance=\''.$_POST["naissance"].'\' WHERE id=\''.$_GET["id"].'\'');
+          $req->closeCursor();
           $url_refresh = "Location:settings.php?id=".$_GET["id"];
           header($url_refresh);
         } ?>
