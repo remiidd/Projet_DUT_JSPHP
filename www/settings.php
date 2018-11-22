@@ -54,7 +54,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           </form></i></p>
         <?php if(isset($_POST["naissance"])){
           $req = $bdd->query('UPDATE profil SET naissance=\''.$_POST["naissance"].'\' WHERE id=\''.$_GET["id"].'\'');
-          $url_refresh = "Location:index.php";
+          $url_refresh = "Location:settings.php?id=".$_GET["id"];
           header($url_refresh);
         } ?>
         <p class="marge">Numéro de telephone : <?php echo "+33".$data["numerotel"]; ?> <a class="modif_info_bouton_tel"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_tel">
