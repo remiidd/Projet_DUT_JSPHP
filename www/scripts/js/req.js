@@ -37,7 +37,7 @@ function modif_email(id_profils, email) {
   var xhr = getXMLHttpRequest();
 
 	var id_req = 0;
-  var email = encodeURIComponent(id_posts);
+  var email = encodeURIComponent(email);
   var id_profil = encodeURIComponent(id_profils);
   console.log("salut");
   try {
