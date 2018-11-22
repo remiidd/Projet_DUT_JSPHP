@@ -55,7 +55,10 @@
                   $trouve = true;
                   $id_amis = $donnees['id'];
                   $reponse1 = $bdd->query("SELECT statut FROM amis WHERE id_amis=$id_amis AND id=$id_user");
-                  echo "ici : " . $response1['statut'];
+                  while ($a = $response1->fetch()) {
+                    echo "ici : " . $a['statut'];
+                  }
+
                   ?>
                     <div class="rech_user">
                       <div class="rech_div_img">
