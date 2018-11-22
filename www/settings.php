@@ -57,6 +57,16 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           $url_refresh = "Location:settings.php?id=".$_GET["id"];
           header($url_refresh);
         } ?>
+        <p class="marge">Ville : <?php echo $data["ville"]; ?> <a class="modif_info_bouton_ville"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_ville">
+          <form action="" method="post">
+            <input required type="text" name="ville"/>
+            <input id="inscriBout" type="submit" value="Valider" onclick="modif()"/>
+          </form></i></p>
+        <?php if(isset($_POST["ville"])){
+          $req = $bdd->query('UPDATE profil SET ville=\''.$_POST["ville"].'\' WHERE id=\''.$_GET["id"].'\'');
+          $url_refresh = "Location:settings.php?id=".$_GET["id"];
+          header($url_refresh);
+        } ?>
         <p class="marge">Numéro de telephone : <?php echo "+33".$data["numerotel"]; ?> <a class="modif_info_bouton_tel"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_tel">
           <form action="" method="post">
             <input required type="tel" name="numerotel"/>
