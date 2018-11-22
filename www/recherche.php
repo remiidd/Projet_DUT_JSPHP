@@ -60,6 +60,9 @@
                       echo "ici : " . $a['statut'];
                     }
                   }
+                  else {
+                    echo "null";
+                  }
 
 
                   ?>
