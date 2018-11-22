@@ -21,6 +21,6 @@ $(document).ready(function(){
   });
 
   function modif() {
-    window.Location.reload();
+    alert("modif en cours");
   }
 });
