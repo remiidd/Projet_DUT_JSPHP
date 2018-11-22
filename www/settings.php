@@ -78,7 +78,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           </form></i></p>
         <?php if(isset($_POST["naissance"])){
           echo "post";
-          $_POST["naissance"]==null;
+          unset($_POST["naissance"]);
           $req = $bdd->query('UPDATE profil SET naissance=\''.$_POST["naissance"].'\' WHERE id=\''.$_GET["id"].'\'');
           $url_refresh = "Location:settings.php?id=".$_GET["id"];
           header($url_refresh);
