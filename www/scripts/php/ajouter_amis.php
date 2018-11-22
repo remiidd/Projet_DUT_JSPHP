@@ -17,13 +17,7 @@
         'statut' => "en attente"
       ));
 
-      $req = $bdd->prepare('INSERT INTO `amis`(`id`, `id_amis`, `statut`)
-        VALUES (:id, :id_amis, : statut)');
-      $req->execute(array(
-        'id' => $_GET['id_amis'],
-        'id_amis' => $_GET['id'],
-        'statut' => "demande"
-      ));
+      echo "fait";
     }
     else {
       header("Location: ../../index.php");
