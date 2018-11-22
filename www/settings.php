@@ -84,9 +84,9 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         </ul>
           <p class="marge"><a class="modif_info_bouton_emploi"><i class="fas fa-plus"></i> Ajouter</a><i class="txt_modif_emploi"><form action="" method="post"><input required type="text" name="emploi"/><input id="inscriBout" type="submit" value="Valider" onclick="modif()"/></form></i></p>
         <?php if(isset($_POST["emploi"])){
+          $req = $bdd->query('INSERT INTO emploi (id,travail,profil) VALUES (NULL, \''.$_POST["emploi"].'\',\''.$_GET["id"].'\')');
           $url_refresh = "Location:settings.php?id=".$_GET["id"];
           header($url_refresh);
-          $req = $bdd->query('INSERT INTO emploi (id,travail,profil) VALUES (NULL, \''.$_POST["emploi"].'\',\''.$_GET["id"].'\')');
         } ?>
         <p class="marge">Etudes :</p>
       </div>
