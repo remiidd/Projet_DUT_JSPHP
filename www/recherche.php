@@ -51,8 +51,7 @@
                 $couple2 = strtolower(str_to_noaccent(str_replace(' ', '', $donnees['prenom'] . $donnees['nom'])));
                 if(preg_match("#$user#i", "$couple1") || preg_match("#$user#i", "$couple2")){
                   $trouve = true;
-                  $id_amis = $_donnees['id'];
-                  $reponse1 = $bdd->query("SELECT * FROM amis WHERE id_amis=$id_amis AND id=$_SESSION['idcon']");
+                  $reponse1 = $bdd->query("SELECT * FROM amis WHERE id_amis=$_donnees['id'] AND id=$_SESSION['idcon']");
 
                   ?>
                     <div class="rech_user">
