@@ -69,9 +69,9 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         } ?>
         <hr>
         <h5><i class="fas fa-cog"></i> Informations personnelles du profil</h5>
-        <p class="marge">Photo de profille :</p>
+        <p class="marge">Photo de profil :</p>
         <p class="marge">Photo de couverture :</p>
-        <p class="marge">Date de naissance : <?php $naissance = new DateTime($data["naissance"]); echo $naissance->format("d / m / Y"); ?> <a class="modif_info_bouton_tel"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_tel">
+        <p class="marge">Date de naissance : <?php $naissance = new DateTime($data["naissance"]); echo $naissance->format("d / m / Y"); ?> <a class="modif_info_bouton_naissance"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_naissance">
           <form action="" method="post">
             <input required type="date" name="naissance"/>
             <input id="inscriBout" type="submit" value="Valider" onclick="modif()"/>
