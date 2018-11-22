@@ -119,6 +119,6 @@
       </div>
     </div>
     <?php $reponse->closeCursor(); ?>
-    <script src="scripts/js/liker_post.js"></script>
+    <script src="scripts/js/req.js"></script>
   </body>
 </html>
