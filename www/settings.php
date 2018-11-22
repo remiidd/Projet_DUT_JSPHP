@@ -18,6 +18,8 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/styles.css"/>
+
+    <script src="scripts/js/req.js"></script>
   </head>
   <body>
     <?php
@@ -116,6 +118,5 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
       </div>
     </div>
     <script src="scripts/js/animations.js"></script>
-    <script src="scripts/js/req.js"></script>
   </body>
 </html>
