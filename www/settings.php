@@ -48,6 +48,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <p class="marge"><a href="profil.php?id=<?php echo $_GET["id"]; ?>">Revenir au profil</a></p>
         <h5><i class="fas fa-cog"></i> Paramètres du compte</h5>
 
+
         <p class="marge">Email : <?php echo $data["email"]; ?> <a class="modif_info_bouton_email"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_email">
           <form action="" method="post">
             <input required type="text" name="email"/>
@@ -56,6 +57,8 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <?php if(isset($_POST["email"])){
           $req = $bdd->query('UPDATE profil SET email=\''.$_POST["email"].'\' WHERE id=\''.$_GET["id"].'\'');
           $req->closeCursor();
+          $url_refresh = "Location:settings.php?id=".$_GET["id"];
+          header($url_refresh);
         } ?>
         <p class="marge">Ville : <?php echo $data["ville"]; ?> <a class="modif_info_bouton_ville"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_ville">
           <form action="" method="post">
@@ -65,6 +68,8 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <?php if(isset($_POST["ville"])){
           $req = $bdd->query('UPDATE profil SET ville=\''.$_POST["ville"].'\' WHERE id=\''.$_GET["id"].'\'');
           $req->closeCursor();
+          $url_refresh = "Location:settings.php?id=".$_GET["id"];
+          header($url_refresh);
         } ?>
         <p class="marge">Numéro de telephone : <?php echo "+33".$data["numerotel"]; ?> <a class="modif_info_bouton_tel"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_tel">
           <form action="" method="post">
@@ -74,6 +79,8 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <?php if(isset($_POST["numerotel"])){
           $req = $bdd->query('UPDATE profil SET numerotel=\''.$_POST["numerotel"].'\' WHERE id=\''.$_GET["id"].'\'');
           $req->closeCursor();
+          $url_refresh = "Location:settings.php?id=".$_GET["id"];
+          header($url_refresh);
         } ?>
         <p class="marge">Date de naissance : <?php $naissance = new DateTime($data["naissance"]); echo $naissance->format("d / m / Y"); ?> <a class="modif_info_bouton_naissance"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_naissance">
           <form action="" method="post">
@@ -83,6 +90,8 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <?php if(isset($_POST["naissance"])){
           $req = $bdd->query('UPDATE profil SET naissance=\''.$_POST["naissance"].'\' WHERE id=\''.$_GET["id"].'\'');
           $req->closeCursor();
+          $url_refresh = "Location:settings.php?id=".$_GET["id"];
+          header($url_refresh);
         } ?>
         <hr>
         <h5><i class="fas fa-cog"></i> Informations personnelles du profil</h5>
@@ -108,10 +117,6 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <p class="marge">Etudes :</p>
       </div>
     </div>
-    <?php if((isset($_POST["email"])||(isset($_POST["ville"])||(isset($_POST["numerotel"])||(isset($_POST["naissance"])){
-      $url_refresh = "Location:settings.php?id=".$_GET["id"];
-      header($url_refresh);
-    }?>
     <script src="scripts/js/animations.js"></script>
   </body>
 </html>
