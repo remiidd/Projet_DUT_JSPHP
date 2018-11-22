@@ -56,7 +56,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           </form></i></p>
         <?php if(isset($_POST["email"])){
           echo "test";
-          ?><script>modif_email(<?php echo $_GET["id"]; ?>,<?php echo $_POST["email"]; ?>);</script><?php
+          ?><script src="scripts/js/req.js">modif_email(<?php echo $_GET["id"]; ?>,<?php echo $_POST["email"]; ?>);</script><?php
 
         } ?>
         <p class="marge">Date de naissance : <?php $naissance = new DateTime($data["naissance"]); echo $naissance->format("d / m / Y"); ?> <a class="modif_info_bouton_naissance"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_naissance">
