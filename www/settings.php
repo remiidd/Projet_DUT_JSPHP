@@ -77,6 +77,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
             <input id="inscriBout" type="submit" value="Valider" onclick="modif()"/>
           </form></i></p>
         <?php if(isset($_POST["naissance"])){
+          echo "post";
           $url_refresh = "Location:settings.php?id=".$_GET["id"];
           $req = $bdd->query('UPDATE profil SET naissance=\''.$_POST["naissance"].'\' WHERE id=\''.$_GET["id"].'\'');
           $req->closeCursor();
