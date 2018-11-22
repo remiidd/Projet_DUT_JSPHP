@@ -51,7 +51,8 @@
                 $couple2 = strtolower(str_to_noaccent(str_replace(' ', '', $donnees['prenom'] . $donnees['nom'])));
                 if(preg_match("#$user#i", "$couple1") || preg_match("#$user#i", "$couple2")){
                   $trouve = true;
-                  
+                  $reponse1 = $bdd->query("SELECT * FROM amis");
+                  echo "ici: " . $reponse1;
                   ?>
                     <div class="rech_user">
                       <div class="rech_div_img">
