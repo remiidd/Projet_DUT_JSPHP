@@ -52,10 +52,9 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <p class="marge">Email : <?php echo $data["email"]; ?> <a class="modif_info_bouton_email"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_email">
           <form action="" method="post">
             <input required type="text" name="email"/>
-            <input id="inscriBout" type="submit" value="Valider" onclick="modif()"/>
+            <input id="inscriBout" type="submit" value="Valider" onclick="modif_email(<?php echo $_GET["id"]; ?>,<?php echo $_POST["email"]; ?>)"/>
           </form></i></p>
         <?php if(isset($_POST["email"])){
-          ?><script>modif_email(<?php echo $_GET["id"]; ?>,<?php echo $_POST["email"]; ?>);</script><?php
           $url_refresh = "Location:settings.php?id=".$_GET["id"];
           header($url_refresh);
         } ?>
