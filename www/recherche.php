@@ -45,6 +45,8 @@
               }
               $reponse = $bdd->query('SELECT nom, prenom, id, photo_profil FROM profil');
 
+              $id_user = $_SESSION['idcon'];
+
               while ($donnees = $reponse->fetch())
               {
                 $couple1 = strtolower(str_to_noaccent(str_replace(' ', '', $donnees['nom'] . $donnees['prenom'])));
@@ -52,7 +54,7 @@
                 if(preg_match("#$user#i", "$couple1") || preg_match("#$user#i", "$couple2")){
                   $trouve = true;
                   $id_amis = $donnees['id'];
-                  $reponse1 = $bdd->query("SELECT * FROM amis WHERE id_amis=$id_amis AND id=1");
+                  $reponse1 = $bdd->query("SELECT * FROM amis WHERE id_amis=$id_amis AND id=$id_user");
 
                   ?>
                     <div class="rech_user">
