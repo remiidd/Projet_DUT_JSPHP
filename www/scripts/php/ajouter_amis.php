@@ -18,7 +18,7 @@
       ));
 
       $req = $bdd->prepare('INSERT INTO `amis`(`id`, `id_amis`, `statut`)
-        VALUES (:id, :id_amis, : statut)');
+        VALUES (:id, :id_amis, :statut)');
       $req->execute(array(
         'id' => (int)$_GET['id_amis'],
         'id_amis' => (int)$_GET['id'],
