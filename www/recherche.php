@@ -53,11 +53,15 @@
                 $couple2 = strtolower(str_to_noaccent(str_replace(' ', '', $donnees['prenom'] . $donnees['nom'])));
                 if(preg_match("#$user#i", "$couple1") || preg_match("#$user#i", "$couple2")){
                   $trouve = true;
+                  $stamis = false;
                   $id_amis = $donnees['id'];
                   $reponse1 = $bdd->query("SELECT statut FROM amis WHERE id_amis=$id_amis AND id=$id_user");
                   if ($reponse1 != null) {
                     while ($a = $reponse1->fetch()) {
                       echo "ici : " . $a['statut'];
+                      if($a['statut'] != "bloque"){
+                        $stamis = true;
+                      }
                     }
                   }
                   else {
