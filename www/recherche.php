@@ -58,7 +58,6 @@
                   $reponse1 = $bdd->query("SELECT statut FROM amis WHERE id_amis=$id_amis AND id=$id_user");
                   if ($reponse1 != null) {
                     while ($a = $reponse1->fetch()) {
-                      echo "ici : " . $a['statut'];
                       if($a['statut'] != "bloque"){
                         $stamis = true;
                       }
