@@ -78,7 +78,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           header($url_refresh);
         } ?>
         <hr>
-        <!-- <h5><i class="fas fa-cog"></i> Informations personnelles du profil</h5>-->
+        <h5><i class="fas fa-cog"></i> Informations personnelles du profil</h5>
         <p class="marge">Photo de profil :</p>
         <p class="marge">Photo de couverture :</p>
         <p class="marge">Ville : <?php echo $data["ville"]; ?> <a class="modif_info_bouton_ville"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_ville"><form action="" method="post"><input required type="text" name="ville"/><input id="inscriBout" type="submit" value="Valider" onclick="modif()"/></form></i></p>
