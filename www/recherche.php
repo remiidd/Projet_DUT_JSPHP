@@ -58,7 +58,10 @@
                       </div>
                       <div class="rech_info">
                         <a class="rech_nom" href="profil.php?id=<?php echo $donnees['id'] ?>"><?php  echo $donnees['nom'] . " " . $donnees['prenom']?></a>
-                        <button type="button" name="Ajouter" formaction="scipts/php/ajouter_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $donnees['id'];?>">Ajouter</button>
+                        <form class="" action="scipts/php/ajouter_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $donnees['id'];?>" method="post">
+                          <input type="submit" name="Ajouter" value="Ajouter">
+                        </form>
+
                       </div>
 
                     </div>
