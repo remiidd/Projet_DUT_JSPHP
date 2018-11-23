@@ -19,7 +19,7 @@
               <div class="message"></div>
               <div class="zone_message">
                 <form class="" action="index.html" method="post">
-                  <textarea name="message" rows="100%" cols="80%"></textarea>
+                  <textarea name="message"></textarea>
                 </form>
               </div>
             </div>
