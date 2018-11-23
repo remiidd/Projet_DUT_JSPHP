@@ -1,4 +1,4 @@
-function resize_his(){
+function resize_msg(){
   var his = document.getElementsByClassName("historique");
   var div = document.getElementsByClassName("discution");
   var taille = document.body.clientHeight - 53;
