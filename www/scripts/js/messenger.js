@@ -1,8 +1,8 @@
 function resize_msg(){
   var his = document.getElementsByClassName("historique");
   var div = document.getElementsByClassName("discution");
-  var taille = window.innertHeight - 53;
-  console.log(document.body.clientHeight);
+  var taille = window.innerHeight - 53;
+  console.log(window.innerHeight);
   for (i = 0; i < div.length; i++) {
     div[i].style.height = taille + "px";
   }
