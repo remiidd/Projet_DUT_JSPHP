@@ -361,15 +361,18 @@
 }
 
 .message{
-  height: 85%;
+  height: 90%;
   background-color: grey;
 }
 
 .zone_message{
   background-color: blue;
+  height: 10%;
 }
 
-
+.message_area{
+  width: 70%;
+}
 
 
 /* ====================  FIN CSS PAGE messagerie ==================== */
