@@ -16,7 +16,11 @@
           <div class="content">
             <div class="historique"></div>
             <div class="discution">
-              <div class="message"></div>
+              <div class="message">
+                <div id="talkbubble">
+
+                </div>
+              </div>
               <div class="zone_message">
                 <form class="" action="index.html" method="post">
                   <textarea class="message_area" name="message"></textarea>
