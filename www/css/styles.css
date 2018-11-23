@@ -376,7 +376,10 @@
 
 .envoie_msg{
   width: 20%;
-  height: 80%;
+  height: 7%;
+  position: absolute;
+  right: 5%;
+  margin-top: 1.5%;
 }
 
 
