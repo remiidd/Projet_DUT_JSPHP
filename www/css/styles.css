@@ -393,16 +393,34 @@
 }
 
 #talkbubble:before {
-  content: "";
-  position: absolute;
-  right: 100%;
-  top: 26px;
-  width: 0;
-  height: 0;
-  border-top:
-  13px solid transparent;
-  border-right: 26px solid red;
-  border-bottom: 13px solid transparent; }
+  content:"";
+  position:absolute;
+  bottom:-20px; /* value = - border-top-width - border-bottom-width */
+  left:60px; /* controls horizontal position */
+  border:0;
+  border-right-width:30px; /* vary this value to change the angle of the vertex */
+  border-bottom-width:20px; /* vary this value to change the height of the triangle. must be equal to the corresponding value in :after */
+  border-style:solid;
+  border-color:transparent #c81e2b;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+}
+
+#talkbubble:after{
+  content:"";
+  position:absolute;
+  bottom:-20px; /* value = - border-top-width - border-bottom-width */
+  left:80px; /* value = (:before's left) + (:before's border-right/left-width)  - (:after's border-right/left-width) */
+  border:0;
+  border-right-width:10px; /* vary this value to change the angle of the vertex */
+  border-bottom-width:20px; /* vary this value to change the height of the triangle. must be equal to the corresponding value in :before */
+  border-style:solid;
+  border-color:transparent #fff;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+}
 
 /* ====================  FIN CSS PAGE messagerie ==================== */
 
