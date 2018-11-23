@@ -392,19 +392,12 @@
   border-radius: 10px;
 }
 
-#talkbubble:before {
+#talkbubble:after {
   content:"";
-  position:absolute;
-  bottom:-20px; /* value = - border-top-width - border-bottom-width */
-  left:60px; /* controls horizontal position */
-  border:0;
-  border-right-width:30px; /* vary this value to change the angle of the vertex */
-  border-bottom-width:20px; /* vary this value to change the height of the triangle. must be equal to the corresponding value in :after */
-  border-style:solid;
-  border-color:transparent #c81e2b;
-  /* reduce the damage in FF3.0 */
-  display:block;
-  width:0;
+  border-left:20px solid transparent;
+  border-right:20px solid transparent;
+  border-top: 20px solid #139ee0;
+  position: absolute;
 }
 
 
