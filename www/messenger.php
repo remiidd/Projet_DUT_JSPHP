@@ -11,7 +11,7 @@
           <script src="scripts/js/recherche.js" charset="utf-8"></script>
           <?php include 'scripts/html/head.html'; ?>
         </head>
-        <body>
+        <body onresize="resize_img()" onload="resize_img()">
           <?php include 'bar_navigation/nonco.php'?>
           <div class="content">
             <div class="historique"></div>
@@ -25,6 +25,7 @@
             </div>
           </div>
         </body>
+        <script src="scripts/js/messenger.js" charset="utf-8"></script>
       </html>
     <?php
   }
