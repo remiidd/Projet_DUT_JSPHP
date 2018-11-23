@@ -17,7 +17,11 @@
             <div class="historique"></div>
             <div class="discution">
               <div class="message"></div>
-              <div class="zone_message"></div>
+              <div class="zone_message">
+                <form class="" action="index.html" method="post">
+                  <textarea name="message" rows="100%" cols="80%"></textarea>
+                </form>
+              </div>
             </div>
           </div>
         </body>
