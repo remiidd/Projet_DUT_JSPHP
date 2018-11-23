@@ -20,6 +20,7 @@
               <div class="zone_message">
                 <form class="" action="index.html" method="post">
                   <textarea class="message_area" name="message"></textarea>
+                  <button type="submit" class="envoie_msg" name="button"></button>
                 </form>
               </div>
             </div>
