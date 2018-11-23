@@ -1,4 +1,4 @@
-function resize_img(){
+function resize_msg(){
   var img = document.getElementsByClassName("rech_div_img");
   var div = document.getElementsByClassName("rech_user");
   var taille = document.body.clientWidth / 10;

@@ -11,7 +11,7 @@
           <script src="scripts/js/messenger.js" charset="utf-8"></script>
           <?php include 'scripts/html/head.html'; ?>
         </head>
-        <body onresize="resize_img()" onload="resize_img()">
+        <body onresize="resize_msg()" onload="resize_msg()">
           <?php include 'bar_navigation/nonco.php'?>
           <div class="content">
             <div class="historique"></div>
