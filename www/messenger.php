@@ -17,7 +17,7 @@
             <div class="historique"></div>
             <div class="discution">
               <div class="message">
-                <div id="talkbubble">
+                <div id="bulle-ami">
 
                 </div>
               </div>

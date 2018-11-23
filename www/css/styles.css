@@ -382,23 +382,16 @@
   margin-top: 1.5%;
 }
 
- #talkbubble {
+ #bulle-ami {
   width: 120px;
   height: 80px;
-  background: red;
+  background: blue;
   position: relative;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
-#talkbubble:after {
-  content:"";
-  border-left:20px solid transparent;
-  border-right:20px solid transparent;
-  border-top: 20px solid #139ee0;
-  position: absolute;
-}
 
 
 /* ====================  FIN CSS PAGE messagerie ==================== */
