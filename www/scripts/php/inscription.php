@@ -17,7 +17,7 @@
   $mdp = md5($_POST['mdp']);
 
 
-  //test si mail existe 
+  //test si mail existe
   while ($donnees = $reponse->fetch())
   {
     if($donnees['email'] == $email){
@@ -37,7 +37,7 @@
   }
   else {
     $_SESSION['exist'] = true;
-    header('Location:../../index.php');
+    header('Location: /');
     exit();
   }
 ?>
