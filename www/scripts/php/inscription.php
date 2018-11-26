@@ -37,7 +37,7 @@
   }
   else {
     $_SESSION['exist'] = true;
-    header('Location: /');
+    header('Location: /accueil');
     exit();
   }
 ?>
