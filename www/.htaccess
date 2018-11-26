@@ -1,6 +1,6 @@
 Options +FollowSymlinks
 RewriteEngine  on
-RewriteRule "$" "/index.php" [L]
+RewriteRule "accueil$" "/index.php" [L]
 RewriteRule "connexion$" "/connexion.php" [L]
 RewriteRule "profil-([0-9]+)$" "profil.php?id=$1" [L]
 RewriteRule "inscription-suite$" "inscription2.php" [L]
