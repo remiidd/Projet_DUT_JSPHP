@@ -32,7 +32,7 @@
     $_SESSION['password'] = md5($_POST['mdp']);
     $_SESSION['naissance'] = $_POST['naissance'];
     $_SESSION['sexe'] = $_POST['sexe'];
-    header('Location:../../inscription2.php');
+    header('Location: inscription-suite');
     exit();
   }
   else {
