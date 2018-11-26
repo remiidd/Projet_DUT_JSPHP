@@ -1,2 +1,3 @@
 Options +FollowSymlinks
+RewriteEngine  on
 RewriteRule    "^/foo\.html$" "/bar.html" [PT]
