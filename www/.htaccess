@@ -1,4 +1,4 @@
 Options +FollowSymlinks
 RewriteEngine  on
 RewriteRule "connexion$" "/connexion.php" [L]
-RewriteRule "profil/([0-9]+)$" "profil.php?id=19" [L]
+RewriteRule "profil/([0-9]+)$" "/profil.php?id=19" [L]
