@@ -29,7 +29,7 @@
   }
 
   if($cook == false){
-    header("Location:../../connexion.php");
+    header("Location:../../connexion");
     exit();
   }
 
