@@ -95,7 +95,7 @@
       }
     }
     $_SESSION["idcon"] = $id;
-    header("Location:../../test.php?id=qsd");
+    header("Location:../../profil.php?id=" . $id);
     exit();
   }
 ?>
