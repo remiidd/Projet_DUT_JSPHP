@@ -95,7 +95,7 @@
         }
       }
     }
-    header("Location:../../profil.php?id=$id");
+    header("Location:../../test.php?id=$id");
     exit();
   }
 ?>
