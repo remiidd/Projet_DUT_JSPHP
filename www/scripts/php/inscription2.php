@@ -94,9 +94,8 @@
         }
       }
     }
-    session_destroy();
     $_SESSION["idcon"] = $id;
-    header("Location:../../profil.php?id=$id");
+    header("Location:../../test.php");
     exit();
   }
 ?>
