@@ -69,6 +69,7 @@
     $donnees = $reponse->fetch();
 
     $id = $donnees['id'];
+    $_SESSION['idcon'] == $id;
 
     if($existpp || $existcover){
       $target_dir = "../../src/media/profils/";
@@ -94,7 +95,6 @@
         }
       }
     }
-    $_SESSION['idcon'] == $id;
     header("Location:../../profil.php?id=$id");
     exit();
   }
