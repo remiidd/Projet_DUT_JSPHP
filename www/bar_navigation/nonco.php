@@ -1,5 +1,4 @@
 <?php
-  session_start();
   if (isset($_SESSION['idcon'])){
     ?>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
