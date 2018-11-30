@@ -105,7 +105,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <ul class="marge3x">
           <?php $rep = $bdd->query('SELECT * FROM emploi WHERE profil=\''.$_GET['id'].'\'');
           while($emploi = $rep->fetch()) { ?>
-            <li><?php echo $emploi["travail"]; ?> <a class="suppr_taff" href="" onclick=""><i class="fas fa-trash"></i></a></li>
+            <li><?php echo $emploi["travail"]; ?> <a class="suppr_taff modif_infos_boutons" href="" onclick=""><i class="fas fa-trash"></i></a></li>
           <?php } ?>
         </ul>
           <p class="marge"><a class="modif_info_bouton_emploi modif_infos_boutons"><i class="fas fa-plus"></i> Ajouter</a><i class="txt_modif_emploi">
