@@ -8,7 +8,7 @@
 
   if ($_FILES['pp']['name'] != "") {
     //si pp present
-    $extension_uploadpp = strtolower(substr(strrchr($_FILES['pp']['name'], '.')  ,1)  );
+    $extension_uploadpp = strtolower(  substr(  strrchr($_FILES['pp']['name'], '.')  ,1)  );
     echo $_FILES['pp']['name'];
     if (!(in_array($extension_uploadpp,$extensions_valides))){
       $_SESSION['errorext'] = true;
@@ -23,7 +23,7 @@
 
   if ($_FILES['cover']['name'] != "") {
     //si cover present
-    $extension_uploadcover = strtolower(substr(strrchr($_FILES['cover']['name'], '.')  ,1)  );
+    $extension_uploadcover = strtolower(  substr(  strrchr($_FILES['cover']['name'], '.')  ,1)  );
     if (!(in_array($extension_uploadcover,$extensions_valides))){
       $_SESSION['errorext'] = true;
       header('Location:/inscription-suite');
@@ -50,7 +50,7 @@
     catch (Exception $e){
           die('Erreur : ' . $e->getMessage());
     }
-/*
+
     $req = $bdd->prepare('INSERT INTO `profil`(`id`, `nom`, `prenom`, `email`, `password`, `numerotel`, `naissance`, `ville`, `sexe`, `photo_profil`, `photo_couv`)
       VALUES (:id, :nom, :prenom, :email, :password, :numerotel, :naissance, :ville, :sexe, :photo_profil, :photo_couv)');
     $req->execute(array(
@@ -71,21 +71,21 @@
     $donnees = $reponse->fetch();
 
     $id = $donnees['id'];
-    */
+
     if($existpp || $existcover){
       $target_dir = "../../src/media/profils/";
 
       if ($existpp) {
-        $target_file =  $target_dir . "a-pp." . $extension_uploadpp;
+        $target_file =  $target_dir . $id . "-pp." . $extension_uploadpp;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         $resultat = move_uploaded_file($_FILES['pp']['tmp_name'], $target_file);
-        /*if ($resultat){
+        if ($resultat){
           $targetForBddpp = "src/media/profils/" . $id . "-pp." . $extension_uploadpp;
           $bdd->exec("UPDATE `profil` SET `photo_profil` = '$targetForBddpp' WHERE `id` = $id");
-        }*/
-        echo "pp ok";
+        }
+
       }
-/*
+
       if ($existcover) {
         $target_file =  $target_dir . $id . "-cover." . $extension_uploadcover;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -94,10 +94,10 @@
           $targetForBddcover = "src/media/profils/" . $id . "-cover." . $extension_uploadpp;
           $bdd->exec("UPDATE `profil` SET `photo_couv` = '$targetForBddcover' WHERE `id` = $id");
         }
-      }*/
+      }
     }
-  /*  $_SESSION["idcon"] = $id;
+    $_SESSION["idcon"] = $id;
     header("Location:/profil-" . $id);
-    exit();*/
+    exit();
   }
 ?>
