@@ -107,7 +107,9 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           <?php
           $extensions_valides = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
           if($_FILES['pp']['name'] != "") {
-            echo "salut";
+            $extension_uploadpp = strtolower(substr(strrchr($_FILES['pp']['name'],'.'),1));
+            echo $_FILES['pp']['name'];
+            
           }
           ?>
         <p class="marge">Photo de couverture :</p>
