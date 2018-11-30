@@ -308,7 +308,7 @@
   resize: none;
   overflow:hidden;
 }
-#tableau_infos_perso td {
+#tableau_infos_perso {
   margin-left: 100px;
 }
 /* ====================  FIN CSS PAGE DE PROFIL ==================== */
