@@ -82,7 +82,7 @@
         echo 'Mailer Error: ' . $mail->ErrorInfo;
       }
 
-      header("Location: accueil");
+      header("Location:/accueil");
       exit();
 
     }
@@ -91,7 +91,7 @@
     }
 
   } else {
-    header("Location: mot_de_passe_oublie");
+    header("Location:/mot_de_passe_oublie");
     exit();
   }
 
