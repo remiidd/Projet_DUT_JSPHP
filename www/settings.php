@@ -115,7 +115,9 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
               $target_file =  $target_dir.$_GET["id"]."-pp.".$extension_uploadpp;
               $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
               $resultat = move_uploaded_file($_FILES['pp']['tmp_name'],$target_file);
-              
+              if($resultat){
+                echo "salut";
+              }
 
             }
             $url_refresh = "Location:parametres-".$_GET["id"];
