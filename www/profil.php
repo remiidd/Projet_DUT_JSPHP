@@ -43,7 +43,7 @@
         </div>
         <div id="infos">
           <?php
-          $rep = $bdd->query('SELECT * FROM emploi WHERE profil=\''.$_GET['id'].'\'');
+          $rep = $bdd->query('SELECT * FROM emploi WHERE profil=\''.$_GET['id'].'\' ORDER BY DESC');
           $emploi = $rep->fetch(); ?>
           <table id="tableau_infos_perso">
             <tr>
