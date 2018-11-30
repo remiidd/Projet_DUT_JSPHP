@@ -15,7 +15,7 @@
           <div class="navbar-nav mr-auto"></div>
           <div class="navbar-nav my-2 my-lg-0">
             <li class="nav-item active">
-              <form class="nav-link"  method="post" action="php/recherche.php">
+              <form class="nav-link"  method="post" action="scripts/php/pre-recherche.php">
                 <div class="search-box">
                   <input class="rechin" type="text" name="recherche" placeholder="Rechercher"/>
                   <i class="fas fa-search" ></i>
