@@ -69,15 +69,13 @@
   font-weight: bold;
 }
 
-.search-box {
-  margin-top: -8px;
-}
 .search-box:hover > .rechin{
   width: 240px;
   padding: 0 6px;
   border-style: solid;
   border-color: white;
   border-width: 1px;
+  margin-top: -8px;
   border-radius: 25px;
   color: white;
   text-decoration: none;
