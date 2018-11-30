@@ -53,18 +53,33 @@
   transition: 0.5s;
 }
 
-#rechin{
-  border-radius: 20px;
-  padding-left: 3px;
+.search-box:hover > .rechin{
+  width: 240px;
+  padding: 0 6px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  border-radius: 25px;
+  color: white;
+  text-decoration: none;
 }
 
 #rechbut{
-  border-style: solid;
+  display: none;
+  transition: 2s;
+}
+.search-box:hover > #rechbut{
+  /*border-style: solid;
   border-color: #00bc009c;
   border-radius: 20px;
   background-color: #4196e0;
   color: black;
-  text-decoration: none;
+  text-decoration: none;*/
+  display: inline-block;
+  background-color: transparent;
+  height: 20px;
+  margin-left: -20px;
+  border-color: transparent;
 }
 
 /* ====================  fin CSS menu ==================== */
