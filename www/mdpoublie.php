@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  if(isset($_SESSION['idcon'])){
+    $id = $_SESSION['idcon'];
+    header("Location:profil-$id");
+    exit();
+  }
+  else {?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -23,3 +31,4 @@
     </div>
   </body>
 </html>
+<?php } ?>
