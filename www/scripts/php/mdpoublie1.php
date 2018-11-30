@@ -62,7 +62,7 @@
       $mail->addAddress($mailok);
 
       $mail->isHTML(true);
-      $mail->Subject = 'Reinitialisation de votre mot de passe';
+      $mail->Subject = 'Réinitialisation de votre mot de passe';
       $mail->Body    = "Bonjour $prenom, </br>
         Est-ce que tu aimes les bananes ? </br>
         Pour réinitialiser votre mot de passe, veuillez cliquer sur le lien ci-dessous : </br>
