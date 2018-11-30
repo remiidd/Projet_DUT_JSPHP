@@ -104,6 +104,9 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
             <input required type="file" name="pp"/>
             <input id="inscriBout" type="submit" value="Valider" onclick="modif()"/>
           </form></i></p>
+          <?php
+          
+          ?>
         <p class="marge">Photo de couverture :</p>
         <p class="marge">Emplois : </p>
         <ul class="marge3x">
