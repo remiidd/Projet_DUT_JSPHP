@@ -13,7 +13,7 @@
     if (!(in_array($extension_uploadpp,$extensions_valides))){
       $_SESSION['errorext'] = true;
       echo "pp";
-      header('Location: inscription-suite');
+      header('Location:/inscription-suite');
       exit();
     }
     else {
@@ -26,7 +26,7 @@
     $extension_uploadcover = strtolower(  substr(  strrchr($_FILES['cover']['name'], '.')  ,1)  );
     if (!(in_array($extension_uploadcover,$extensions_valides))){
       $_SESSION['errorext'] = true;
-      header('Location: inscription-suite');
+      header('Location:/inscription-suite');
       exit();
     }
     else {
@@ -95,7 +95,7 @@
       }
     }
     $_SESSION["idcon"] = $id;
-    header("Location: profil-" . $id);
+    header("Location:/profil-" . $id);
     exit();
   }
 ?>
