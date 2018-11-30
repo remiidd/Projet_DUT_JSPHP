@@ -53,6 +53,21 @@
   transition: 0.5s;
 }
 
+.rechin{
+  margin-right: 5px;
+  border: none;
+  outline: none;
+  float: left;
+  back
+  padding: 0;
+  color: white;
+  background-color: transparent;
+  font-size: 16px;
+  transition: 0.4s;
+  width: 0px;
+  font-weight: bold;
+}
+
 .search-box:hover > .rechin{
   width: 240px;
   padding: 0 6px;
@@ -326,9 +341,6 @@
 }
 #tableau_infos_perso {
   border-spacing: 20px;
-}
-#tableau_infos_perso td{
-  border: 1px solid white;
 }
 /* ====================  FIN CSS PAGE DE PROFIL ==================== */
 
