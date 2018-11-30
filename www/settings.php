@@ -119,6 +119,22 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
             header($url_refresh);
           } ?>
         <p class="marge">Etudes :</p>
+        <ul class="marge3x">
+          <?php $rep = $bdd->query('SELECT * FROM etude WHERE profil=\''.$_GET['id'].'\'');
+          while($etude = $rep->fetch()) { ?>
+            <li><?php echo $etude["etablissement"]; ?> <a class="suppr_etude modif_infos_boutons" onclick="suppr_etude(<?php echo $etude["id"] ?>,this)"><i class="fas fa-trash"></i></a></li>
+          <?php } ?>
+        </ul>
+          <p class="marge"><a class="modif_info_bouton_etude modif_infos_boutons"><i class="fas fa-plus"></i> Ajouter</a><i class="txt_modif_etude">
+            <form action="" method="post">
+              <input required type="text" name="etude"/>
+              <input id="inscriBout" type="submit" value="Valider" onclick="modif()"/>
+            </form></i></p>
+          <?php if(isset($_POST["etude"])){
+            $req = $bdd->query('INSERT INTO etude (id,etablissement,profil) VALUES (NULL, \''.$_POST["etude"].'\',\''.$_GET["id"].'\')');
+            $url_refresh = "Location:settings.php?id=".$_GET["id"];
+            header($url_refresh);
+          } ?>
       </div>
     </div>
     <script src="scripts/js/animations.js"></script>
