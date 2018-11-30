@@ -106,6 +106,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           </form></i></p>
           <?php
           $extensions_valides = array('jpg','jpeg','gif','png');
+          echo "TOMBER LA CHEMISE";
           if($_FILES['pp']['name']!="") {
             echo "SALUT MEC";
             $extension_uploadpp = strtolower(substr(strrchr($_FILES['pp']['name'],'.'),1));
