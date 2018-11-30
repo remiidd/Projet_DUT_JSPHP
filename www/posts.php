@@ -25,7 +25,7 @@
       $reponse = $bdd->query('SELECT * FROM posts WHERE id=\''.$_GET['id'].'\'');
       $data = $reponse->fetch();
       if($data["contenu"]==null) {
-        header('Location:index.php');
+        header('Location: accueil');
       } else {
         ?>
         <script>
