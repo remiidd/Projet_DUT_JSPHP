@@ -113,7 +113,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
             if(in_array($extension_uploadpp,$extensions_valides)){
               //TOUT EST OK
               $target_dir = "../../src/media/profils/";
-              $target_file =  $target_dir.$_GET["id"]."-ppA.".$extension_uploadpp;
+              $target_file =  $target_dir.$_GET["id"]."-pp.".$extension_uploadpp;
               $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
               $resultat = move_uploaded_file($_FILES['pp']['tmp_name'],$target_file);
             }
