@@ -50,7 +50,7 @@
     catch (Exception $e){
           die('Erreur : ' . $e->getMessage());
     }
-
+/*
     $req = $bdd->prepare('INSERT INTO `profil`(`id`, `nom`, `prenom`, `email`, `password`, `numerotel`, `naissance`, `ville`, `sexe`, `photo_profil`, `photo_couv`)
       VALUES (:id, :nom, :prenom, :email, :password, :numerotel, :naissance, :ville, :sexe, :photo_profil, :photo_couv)');
     $req->execute(array(
@@ -71,7 +71,7 @@
     $donnees = $reponse->fetch();
 
     $id = $donnees['id'];
-
+    */
     if($existpp || $existcover){
       $target_dir = "../../src/media/profils/";
 
@@ -79,13 +79,13 @@
         $target_file =  $target_dir . $id . "-pp." . $extension_uploadpp;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         $resultat = move_uploaded_file($_FILES['pp']['tmp_name'], $target_file);
-        if ($resultat){
+        /*if ($resultat){
           $targetForBddpp = "src/media/profils/" . $id . "-pp." . $extension_uploadpp;
           $bdd->exec("UPDATE `profil` SET `photo_profil` = '$targetForBddpp' WHERE `id` = $id");
-        }
-
+        }*/
+        echo "pp ok";
       }
-
+/*
       if ($existcover) {
         $target_file =  $target_dir . $id . "-cover." . $extension_uploadcover;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -94,7 +94,7 @@
           $targetForBddcover = "src/media/profils/" . $id . "-cover." . $extension_uploadpp;
           $bdd->exec("UPDATE `profil` SET `photo_couv` = '$targetForBddcover' WHERE `id` = $id");
         }
-      }
+      }*/
     }
     $_SESSION["idcon"] = $id;
     header("Location:/profil-" . $id);
