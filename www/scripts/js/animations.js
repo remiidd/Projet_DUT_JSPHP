@@ -20,7 +20,7 @@ $(document).ready(function(){
     $(".txt_modif_emploi").toggle();
   });
   $(".modif_info_bouton_etude").click(function(){
-    $(".txt_modif_emploi").toggle();
+    $(".txt_modif_etude").toggle();
   });
 
 
