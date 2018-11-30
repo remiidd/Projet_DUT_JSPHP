@@ -89,6 +89,11 @@
   text-decoration: none;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1; /* Firefox */
+}
+
 #rechbut{
   display: none;
   transition: 2s;
