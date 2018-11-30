@@ -42,10 +42,13 @@
           <h1 class="name"><?php echo $data["prenom"]." ".$data["nom"]; ?></h1>
         </div>
         <div id="infos">
+          <?php
+          $reponse = $bdd->query('SELECT * FROM emploi WHERE profil=\''.$_GET['id'].'\' ORDER BY DESC');
+          $emploi = $reponse->fetch(); ?>
           <table id="tableau_infos_perso">
             <tr>
               <td><p>Habite à <strong><?php echo $data["ville"]; ?></strong> <i class="fas fa-map-marker-alt"></i></p></td>
-              <td>Travail</td>
+              <td><p>Travail à <strong><?php echo $emploi["travail"];?></strong></td>
             </tr>
             <tr>
               <td><p>Agé de <strong><?php $today = new DateTime();$naissance = new DateTime($data["naissance"]);echo $today->diff($naissance)->format("%Y");?></strong> ans</p>
