@@ -18,6 +18,7 @@
     }
     else {
       $existpp = true;
+      echo $existpp;
     }
   }
 
@@ -33,7 +34,7 @@
       $existcover = true;
     }
   }
-
+/*
   if($_SESSION['errorext'] == false){
     $nom = $_SESSION['nom'];
     $prenom = $_SESSION['prenom'];
@@ -96,8 +97,8 @@
         }
       }
     }
-    $_SESSION["idcon"] = $id;
-    header("Location:/profil-" . $id);
-    exit();
+    $_SESSION["idcon"] = $id;*/
+  //  header("Location:/profil-" . $id);
+  //  exit();
   }
 ?>
