@@ -38,6 +38,7 @@
     $nom = $_SESSION['nom'];
     $prenom = $_SESSION['prenom'];
     $email = $_SESSION['email'];
+    $sexe = $_SESSION['sexe'];
     $num = $_POST['tel'];
     $naissance = $_SESSION['naissance'];
     $ville = $_POST['ville'];
@@ -50,8 +51,8 @@
           die('Erreur : ' . $e->getMessage());
     }
 
-    $req = $bdd->prepare('INSERT INTO `profil`(`id`, `nom`, `prenom`, `email`, `password`, `numerotel`, `naissance`, `ville`, `photo_profil`, `photo_couv`)
-      VALUES (:id, :nom, :prenom, :email, :password, :numerotel, :naissance, :ville, :photo_profil, :photo_couv)');
+    $req = $bdd->prepare('INSERT INTO `profil`(`id`, `nom`, `prenom`, `email`, `password`, `numerotel`, `naissance`, `ville`, `sexe`, `photo_profil`, `photo_couv`)
+      VALUES (:id, :nom, :prenom, :email, :password, :numerotel, :naissance, :ville, :sexe, :photo_profil, :photo_couv)');
     $req->execute(array(
       'id' => NULL,
       'nom' => $nom,
@@ -61,6 +62,7 @@
       'numerotel' => $num,
       'naissance' => $naissance,
       'ville' => $ville,
+      'sexe' => $sexe,
       'photo_profil' => "",
       'photo_couv' => ""
     ));
