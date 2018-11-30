@@ -55,7 +55,7 @@
             <tr>
               <td><p>Agé de <strong><?php $today = new DateTime();$naissance = new DateTime($data["naissance"]);echo $today->diff($naissance)->format("%Y");?></strong> ans</p>
               <?php if(($today->format("%m%d"))==($naissance->format("%m%d"))) { ?><p>Bon anniversaire !</p><?php } ?></td>
-              <td>Etude</td>
+              <td><p>Etudie à <strong><?php echo $etude["etablissement"]; ?></strong></p></td>
             </tr>
           </table>
         <?php if($_SESSION["idcon"]==$_GET["id"]){ ?>
