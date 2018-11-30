@@ -321,19 +321,7 @@
 .txt_modif_naissance {
   display:none;
 }
-.modif_info_bouton_tel {
-  cursor: pointer;
-}
-.modif_info_bouton_email {
-  cursor: pointer;
-}
-.modif_info_bouton_ville {
-  cursor: pointer;
-}
-.modif_info_bouton_naissance {
-  cursor: pointer;
-}
-.modif_info_bouton_emploi {
+.modif_infos_boutons {
   cursor: pointer;
 }
 
