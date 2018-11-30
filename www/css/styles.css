@@ -44,6 +44,15 @@
   transition: 0.1s;
 }
 
+.nav-link {
+  color: rgba(0, 0, 0, 1) !important;
+}
+
+.nav-link:hover{
+  color: rgba(255, 255, 255, 1) !important;
+  transition: 0.5s;
+}
+
 #rechin{
   border-radius: 20px;
   padding-left: 3px;
@@ -300,7 +309,7 @@
   overflow:hidden;
 }
 #tableau_infos_perso td {
-  border-spacing: 10px;
+  margin-left: 100px;
 }
 /* ====================  FIN CSS PAGE DE PROFIL ==================== */
 
