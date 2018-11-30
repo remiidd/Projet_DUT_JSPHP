@@ -24,17 +24,17 @@
         'statut' => "demande"
       ));
 
-      header("Location: accueil");
+      header("Location:/accueil");
       exit();
 
     }
     else {
-      header("Location: accueil");
+      header("Location:/accueil");
       exit();
     }
   }
   else {
-    header("Location: accueil");
+    header("Location:/accueil");
     exit();
   }
 ?>
