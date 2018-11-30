@@ -99,7 +99,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         } ?>
         <hr>
         <h5><i class="fas fa-cog"></i> Informations personnelles du profil</h5>
-        <p class="marge">Photo de profil :</p>
+        <p class="marge">Photo de profil : <?php if($data["photo_profil"]==""){echo "Photo de profil par défaut";} else {echo $data["photo_profil"];} ?></p>
         <p class="marge">Photo de couverture :</p>
         <p class="marge">Emplois : </p>
         <ul class="marge3x">
