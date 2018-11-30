@@ -42,7 +42,7 @@ function suppr_emploi(id,element) {
   }catch(error) {
     alert(error);
   }
-
+	element.parentNode.parentNode.removeChild(element.parentNode);
 
 
 }
