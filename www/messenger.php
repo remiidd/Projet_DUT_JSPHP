@@ -18,7 +18,14 @@
             <div class="discution">
               <div class="message">
                 <div class="bulle-ami"></div>
-
+                <div class="bulle-moi"></div>
+                <div class="bulle-ami"></div>
+                <div class="bulle-ami"></div>
+                <div class="bulle-moi"></div>
+                <div class="bulle-moi"></div>
+                <div class="bulle-moi"></div>
+                <div class="bulle-ami"></div>
+                <div class="bulle-moi"></div>
               </div>
               <div class="zone_message">
                 <form class="" action="index.html" method="post">
