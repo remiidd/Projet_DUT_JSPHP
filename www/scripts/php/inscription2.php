@@ -18,13 +18,12 @@
     }
     else {
       $existpp = true;
-      echo $existpp;
     }
-/*  }
+  }
 
   if ($_FILES['cover']['name'] != "") {
     //si cover present
-    $extension_uploadcover = strtolower(  substr(  strrchr($_FILES['cover']['name'], '.')  ,1)  );
+    $extension_uploadcover = strtolower(substr(strrchr($_FILES['cover']['name'], '.')  ,1)  );
     if (!(in_array($extension_uploadcover,$extensions_valides))){
       $_SESSION['errorext'] = true;
       header('Location:/inscription-suite');
@@ -33,8 +32,8 @@
     else {
       $existcover = true;
     }
-  }*/
-/*
+  }
+
   if($_SESSION['errorext'] == false){
     $nom = $_SESSION['nom'];
     $prenom = $_SESSION['prenom'];
@@ -97,8 +96,8 @@
         }
       }
     }
-    $_SESSION["idcon"] = $id;*/
-  //  header("Location:/profil-" . $id);
-  //  exit();
+    $_SESSION["idcon"] = $id;
+    header("Location:/profil-" . $id);
+    exit();
   }
 ?>
