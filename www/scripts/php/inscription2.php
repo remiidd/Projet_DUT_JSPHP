@@ -96,8 +96,8 @@
         }
       }*/
     }
-    $_SESSION["idcon"] = $id;
+  /*  $_SESSION["idcon"] = $id;
     header("Location:/profil-" . $id);
-    exit();
+    exit();*/
   }
 ?>
