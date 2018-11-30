@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php session_start();
 if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
-  header("Location: index.php");
+  header("Location: accueil");
 }
 ?>
 <html lang="fr">
@@ -31,7 +31,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
       $reponse = $bdd->query('SELECT * FROM profil WHERE id=\''.$_GET['id'].'\'');
       $data = $reponse->fetch();
       if($data["prenom"]==null) {
-        header('Location:index.php');
+        header('Location: accueil');
       } else {
         ?>
         <script>
@@ -42,7 +42,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
     ?>
     <?php include 'bar_navigation/nonco.php'?>
     <?php if(isset($_POST["numerotel"])||isset($_POST["emploi"])){
-      $url_refresh = "Location:settings.php?id=".$_GET["id"];
+      $url_refresh = "Location: parametres-".$_GET["id"];
       header($url_refresh);
     } ?>
     <div class="content">
