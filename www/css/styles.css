@@ -46,6 +46,7 @@
 
 .nav-link {
   color: rgba(0, 0, 0, 1) !important;
+  height: 32px;
 }
 
 .nav-link:hover{
