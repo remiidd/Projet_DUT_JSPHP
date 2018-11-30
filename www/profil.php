@@ -44,7 +44,9 @@
         <div id="infos">
           <?php
           $rep = $bdd->query('SELECT * FROM emploi WHERE profil=\''.$_GET['id'].'\' ORDER BY id DESC');
-          $emploi = $rep->fetch(); ?>
+          $emploi = $rep->fetch();
+          $rep = $bdd->query('SELECT * FROM etude WHERE profil=\''.$_GET['id'].'\' ORDER BY id DESC');
+          $etude = $rep->fetch(); ?>
           <table id="tableau_infos_perso">
             <tr>
               <td><p>Habite à <strong><?php echo $data["ville"]; ?></strong> <i class="fas fa-map-marker-alt"></i></p></td>
