@@ -342,6 +342,9 @@
 #tableau_infos_perso {
   border-spacing: 20px;
 }
+#tableau_infos_perso td{
+  border: 1px solid white;
+}
 /* ====================  FIN CSS PAGE DE PROFIL ==================== */
 
 /* ====================  CSS PAGE DE Parametres ==================== */
