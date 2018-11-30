@@ -8,7 +8,7 @@
 
   if ($_FILES['pp']['name'] != "") {
     //si pp present
-    $extension_uploadpp = strtolower(  substr(  strrchr($_FILES['pp']['name'], '.')  ,1)  );
+    $extension_uploadpp = strtolower(substr(strrchr($_FILES['pp']['name'], '.')  ,1)  );
     echo $_FILES['pp']['name'];
     if (!(in_array($extension_uploadpp,$extensions_valides))){
       $_SESSION['errorext'] = true;
@@ -20,7 +20,7 @@
       $existpp = true;
       echo $existpp;
     }
-  }
+/*  }
 
   if ($_FILES['cover']['name'] != "") {
     //si cover present
@@ -33,7 +33,7 @@
     else {
       $existcover = true;
     }
-  }
+  }*/
 /*
   if($_SESSION['errorext'] == false){
     $nom = $_SESSION['nom'];
