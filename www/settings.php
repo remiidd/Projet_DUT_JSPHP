@@ -105,8 +105,9 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
             <input id="inscriBout" type="submit" value="Valider" onclick="modif()"/>
           </form></i></p>
           <?php
-          $extensions_valides = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
+          $extensions_valides = array('jpg','jpeg','gif','png');
           if($_FILES['pp']['name']!="") {
+            echo "SALUT MEC";
             $extension_uploadpp = strtolower(substr(strrchr($_FILES['pp']['name'],'.'),1));
             echo $_FILES['pp']['name'];
             if(in_array($extension_uploadpp,$extensions_valides)){
