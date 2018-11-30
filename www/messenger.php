@@ -28,11 +28,7 @@
 
                   while ($donnees = $reponse->fetch())
                   {
-                    if ($donnees['id_exp'] == $_SESSION['idcon']) {
-                      echo "<div class=\"bulle-moi\">
-                              <p>$donnees['message']</p>
-                            </div><br>";
-                    }
+                    
                   }
                  ?>
 
