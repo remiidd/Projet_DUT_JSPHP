@@ -57,13 +57,13 @@
     }
     else {
       //chaine non-reconnue
-      header("Location: ../../index.php");
+      header("Location: accueil");
       exit();
     }
 
   }
   else {
-    header("Location: ../../index.php");
+    header("Location: accueil");
     exit();
   }
 ?>
