@@ -44,6 +44,20 @@
   transition: 0.1s;
 }
 
+#rechin{
+  border-radius: 20px;
+  padding-left: 3px;
+}
+
+#rechbut{
+  border-style: solid;
+  border-color: #00bc009c;
+  border-radius: 20px;
+  background-color: #4196e0;
+  color: black;
+  text-decoration: none;
+}
+
 /* ====================  fin CSS menu ==================== */
 
 /* ==================== CSS PAGE Recherche ==================== */
