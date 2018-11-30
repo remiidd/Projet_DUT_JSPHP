@@ -51,7 +51,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <h5><i class="fas fa-cog"></i> Paramètres du compte</h5>
         <p class="marge">Email : <?php echo $data["email"]; ?> <a class="modif_info_bouton_email"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_email">
           <form action="" method="post">
-            <input required type="text" name="ville"/>
+            <input required type="text" name="email"/>
             <input id="inscriBout" type="submit" value="Valider" onclick="modif()"/>
           </form></i></p>
         <?php if(isset($_POST["ville"])){
