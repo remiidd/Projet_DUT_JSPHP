@@ -42,10 +42,17 @@
           <h1 class="name"><?php echo $data["prenom"]." ".$data["nom"]; ?></h1>
         </div>
         <div id="infos">
-          <p>Habite à <strong><?php echo $data["ville"]; ?></strong> <i class="fas fa-map-marker-alt"></i></p>
-          <p>Agé de <strong><?php $today = new DateTime();$naissance = new DateTime($data["naissance"]);echo $today->diff($naissance)->format("%Y");?></strong> ans</p>
-          <?php if(($today->format("%m%d"))==($naissance->format("%m%d"))) { ?><p>Bon anniversaire !</p><?php } ?>
-
+          <table>
+            <tr>
+              <td><p>Habite à <strong><?php echo $data["ville"]; ?></strong> <i class="fas fa-map-marker-alt"></i></p></td>
+              <td>Travail</td>
+            </tr>
+            <tr>
+              <td><p>Agé de <strong><?php $today = new DateTime();$naissance = new DateTime($data["naissance"]);echo $today->diff($naissance)->format("%Y");?></strong> ans</p>
+              <?php if(($today->format("%m%d"))==($naissance->format("%m%d"))) { ?><p>Bon anniversaire !</p><?php } ?></td>
+              <td>Etude</td>
+            </tr>
+          </table>
         <?php if($_SESSION["idcon"]==$_GET["id"]){ ?>
           <p><a href="settings.php?id=<?php echo $_SESSION["idcon"]; ?>">Modifier vos informations personnelles</a></p>
           </div>
