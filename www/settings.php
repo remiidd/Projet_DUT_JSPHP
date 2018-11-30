@@ -109,7 +109,14 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           if($_FILES['pp']['name'] != "") {
             $extension_uploadpp = strtolower(substr(strrchr($_FILES['pp']['name'],'.'),1));
             echo $_FILES['pp']['name'];
-            
+            if(in_array($extension_uploadpp,$extensions_valides)){
+              //TOUT EST OK
+              $target_dir = "../../src/media/profils/";
+              $target_file =  $target_dir.$_GET["id"]."-pp.".$extension_uploadpp;
+
+            }
+            $url_refresh = "Location:parametres-".$_GET["id"];
+            header($url_refresh);
           }
           ?>
         <p class="marge">Photo de couverture :</p>
