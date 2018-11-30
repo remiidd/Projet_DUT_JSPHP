@@ -447,11 +447,20 @@
   margin-top: 1.5%;
 }
 
+.bulle-ami > p {
+  margin-bottom: 0;
+}
+
+.bulle-moi > p {
+  margin-bottom: 0;
+}
+
  .bulle-ami {
   width: 70%;
   height: 80px;
   float: left;
   background: blue;
+  padding: 10px;
   position: relative;
   margin-left: 5px;
   margin-bottom: 10px;
@@ -466,6 +475,7 @@
  background: blue;
  position: relative;
  margin-right: 5px;
+ padding: 10px;
  float: right;
  margin-bottom: 10px;
  border-top-left-radius: 20px;
