@@ -107,7 +107,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           <?php
           $extensions_valides = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
           if($_FILES['pp']['name'] != "") {
-            $extension_uploadpp = strtolower(  substr(  strrchr($_FILES['pp']['name'], '.')  ,1)  );
+            $extension_uploadpp = strtolower(substr(strrchr($_FILES['pp']['name'],'.'),1));
             echo $_FILES['pp']['name'];
             if(in_array($extension_uploadpp,$extensions_valides)){
               //TOUT EST OK
