@@ -19,6 +19,9 @@ $(document).ready(function(){
   $(".modif_info_bouton_emploi").click(function(){
     $(".txt_modif_emploi").toggle();
   });
+  $(".modif_info_bouton_etude").click(function(){
+    $(".txt_modif_emploi").toggle();
+  });
 
 
 });
