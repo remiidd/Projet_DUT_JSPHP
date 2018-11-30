@@ -457,7 +457,6 @@
 
  .bulle-ami {
   width: 70%;
-  height: 80px;
   float: left;
   background: blue;
   padding: 10px;
@@ -471,7 +470,6 @@
 
 .bulle-moi {
  width: 70%;
- height: 80px;
  background: blue;
  position: relative;
  margin-right: 5px;
