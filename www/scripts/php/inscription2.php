@@ -13,7 +13,7 @@
     if (!(in_array($extension_uploadpp,$extensions_valides))){
       $_SESSION['errorext'] = true;
       echo "pp";
-      //header('Location:../../inscription2.php');
+      header('Location: inscription-suite');
       exit();
     }
     else {
