@@ -37,6 +37,12 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="navbar-nav mr-auto"></div>
         <div class="navbar-nav my-2 my-lg-0">
+          <li class="nav-item active">
+            <form class="nav-link"  method="post" action="">
+              <input id="rechin" type="text" name="recherche" placeholder="Rechercher"/>
+              <input id="rechbut" type="submit" value="Recherche"/>
+            </form>
+          </li>
           <form class="formbar" method="post" action="connexion.php">
             <input id="cobout" type="submit" value="Connexion"/>
           </form>
