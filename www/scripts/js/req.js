@@ -43,6 +43,17 @@ function suppr_emploi(id,element) {
     alert(error);
   }
 	element.parentNode.parentNode.removeChild(element.parentNode);
+}
 
+function suppr_etude(id,element) {
+  var xhr = getXMLHttpRequest();
 
+  var id = encodeURIComponent(id);
+  try {
+    xhr.open("GET", "scripts/php/suppr_etude.php?id="+id,true);
+    xhr.send(null);
+  }catch(error) {
+    alert(error);
+  }
+	element.parentNode.parentNode.removeChild(element.parentNode);
 }
