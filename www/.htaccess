@@ -1,7 +1,8 @@
 Options +FollowSymlinks
 RewriteEngine  on
-RewriteRule "accueil$" "/index.php" [L]
 RewriteRule "connexion$" "/connexion.php" [L]
-RewriteRule "profil-([0-9]+)$" "profil.php?id=$1" [L]
+RewriteRule "accueil$" "/index.php" [L]
 RewriteRule "inscription-suite$" "inscription2.php" [L]
+RewriteRule "mot_de_passe_oublie$" "mdpoublie.php" [L]
+RewriteRule "profil-([0-9]+)$" "profil.php?id=$1" [L]
 RewriteRule "recherche-([0-9a-zA-Z]+)$" "recherche.php?recherche=$1" [L]
