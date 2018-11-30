@@ -32,7 +32,7 @@ function liker_post(id_posts, id_profils) {
   }
 }
 
-function suppr_emploi(id) {
+function suppr_emploi(id,element) {
   var xhr = getXMLHttpRequest();
 
   var id = encodeURIComponent(id);
@@ -42,4 +42,7 @@ function suppr_emploi(id) {
   }catch(error) {
     alert(error);
   }
+
+
+
 }
