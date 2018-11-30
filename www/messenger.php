@@ -24,7 +24,7 @@
                   catch (Exception $e){
                         die('Erreur : ' . $e->getMessage());
                   }
-                  $reponse = $bdd->query("SELECT id_exp, id_dest, message FROM message WHERE id_exp="."$_SESSION['idcon']"." OR id_dest="."$_SESSION['idcon']"." order by id DESC LIMIT 15");
+                  $reponse = $bdd->query("SELECT id_exp, id_dest, message FROM message WHERE id_exp=19 OR id_dest=19 order by id DESC LIMIT 15");
 
 
                  ?>
