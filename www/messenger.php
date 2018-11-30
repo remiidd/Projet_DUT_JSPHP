@@ -18,15 +18,22 @@
             <div class="discution">
               <div class="message">
                 <?php
+                  $moi = $_SESSION['idcon'];
                   try{
                     $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
                   }
                   catch (Exception $e){
                         die('Erreur : ' . $e->getMessage());
                   }
-                  $reponse = $bdd->query("SELECT id_exp, id_dest, message FROM message WHERE id_exp=19 OR id_dest=19 order by id DESC LIMIT 15");
+                  $reponse = $bdd->query("SELECT id_exp, id_dest, message FROM message WHERE id_exp=$moi OR id_dest=$moi order by id DESC LIMIT 15");
 
-
+                  while ($donnees = $reponse->fetch()){
+                    if ($donnees['id_exp'] == $_SESSION['idcon']) {
+                      echo "<div class=\"bulle-moi\">
+                              <p>$donnees['message']</p>
+                            </div><br>";
+                    }
+                  }
                  ?>
 
                 <div class="bulle-moi"></div><br>
