@@ -23,7 +23,7 @@ $(document).ready(function(){
     $(".txt_modif_etude").toggle();
   });
   $(".modif_info_bouton_pp").click(function(){
-    $(".txt_modif_etude").toggle();
+    $(".txt_modif_pp").toggle();
   });
 
 
