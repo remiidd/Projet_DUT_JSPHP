@@ -107,21 +107,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           <?php
           $extensions_valides = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
           if($_FILES['pp']['name'] != "") {
-            $extension_uploadpp = strtolower(substr(strrchr($_FILES['pp']['name'],'.'),1));
-            echo $_FILES['pp']['name'];
-            if(in_array($extension_uploadpp,$extensions_valides)){
-              //TOUT EST OK
-              $target_dir = "../../src/media/profils/";
-              $target_file =  $target_dir.$_GET["id"]."-pp.".$extension_uploadpp;
-              $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-              $resultat = move_uploaded_file($_FILES['pp']['tmp_name'],$target_file);
-              if($resultat){
-                $targetForBddpp = "src/media/profils/".$_GET["id"]."-pp.".$extension_uploadpp;
-                $bdd->exec("UPDATE `profil` SET `photo_profil` = '$targetForBddpp' WHERE `id` = $_GET["id"]");
-              }
-            }
-            $url_refresh = "Location:parametres-".$_GET["id"];
-            header($url_refresh);
+            echo "salut";
           }
           ?>
         <p class="marge">Photo de couverture :</p>
