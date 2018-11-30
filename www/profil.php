@@ -42,7 +42,7 @@
           <h1 class="name"><?php echo $data["prenom"]." ".$data["nom"]; ?></h1>
         </div>
         <div id="infos">
-          <table>
+          <table id="tableau_infos_perso">
             <tr>
               <td><p>Habite à <strong><?php echo $data["ville"]; ?></strong> <i class="fas fa-map-marker-alt"></i></p></td>
               <td>Travail</td>
