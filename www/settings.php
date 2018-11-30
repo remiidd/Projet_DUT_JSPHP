@@ -53,7 +53,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         </div><br/>
         <p class="marge"><a href="profil.php?id=<?php echo $_GET["id"]; ?>">Revenir au profil</a></p>
         <h5><i class="fas fa-cog"></i> Paramètres du compte</h5>
-        <p class="marge">Email : <?php echo $data["email"]; ?> <a class="modif_info_bouton_email"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_email">
+        <p class="marge">Email : <?php echo $data["email"]; ?> <a class="modif_info_bouton_email modif_infos_boutons"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_email">
           <form action="" method="post">
             <input required type="text" name="email"/>
             <input id="inscriBout" type="submit" value="Valider" onclick="modif()"/>
@@ -75,7 +75,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           $url_refresh = "Location:settings.php?id=".$_GET["id"];
           header($url_refresh);
         } ?>
-        <p class="marge">Ville : <?php echo $data["ville"]; ?> <a class="modif_info_bouton_ville"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_ville">
+        <p class="marge">Ville : <?php echo $data["ville"]; ?> <a class="modif_info_bouton_ville modif_infos_boutons"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_ville">
           <form action="" method="post">
             <input required type="text" name="ville"/>
             <input id="inscriBout" type="submit" value="Valider" onclick="modif()"/>
@@ -86,7 +86,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           $url_refresh = "Location:settings.php?id=".$_GET["id"];
           header($url_refresh);
         } ?>
-        <p class="marge">Numéro de telephonne : <?php echo "+33".$data["numerotel"]; ?> <a class="modif_info_bouton_tel"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_tel">
+        <p class="marge">Numéro de telephonne : <?php echo "+33".$data["numerotel"]; ?> <a class="modif_info_bouton_tel modif_infos_boutons"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_tel">
           <form action="" method="post">
             <input required type="tel" name="numerotel"/>
             <input id="inscriBout" type="submit" value="Valider" onclick="modif()"/>
@@ -108,7 +108,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
             <li><?php echo $emploi["travail"]; ?> <a class="suppr_taff" href="" onclick=""><i class="fas fa-trash"></i></a></li>
           <?php } ?>
         </ul>
-          <p class="marge"><a class="modif_info_bouton_emploi"><i class="fas fa-plus"></i> Ajouter</a><i class="txt_modif_emploi">
+          <p class="marge"><a class="modif_info_bouton_emploi modif_infos_boutons"><i class="fas fa-plus"></i> Ajouter</a><i class="txt_modif_emploi">
             <form action="" method="post">
               <input required type="text" name="emploi"/>
               <input id="inscriBout" type="submit" value="Valider" onclick="modif()"/>
