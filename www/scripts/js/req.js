@@ -37,7 +37,7 @@ function suppr_emploi(id) {
 
   var id = encodeURIComponent(id);
   try {
-    xhr.open("GET", "scripts/php/like.php?id="+id,true);
+    xhr.open("GET", "scripts/php/suppr_emploi.php?id="+id,true);
     xhr.send(null);
   }catch(error) {
     alert(error);
