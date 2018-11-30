@@ -69,6 +69,14 @@
   font-weight: bold;
 }
 
+.fa-search{
+  margin-top: 8px;
+}
+
+.search-box{
+  margin-top: -8px;
+  height: 32px;
+}
 .search-box:hover > .rechin{
   width: 240px;
   padding: 0 6px;
@@ -76,7 +84,6 @@
   border-color: white;
   border-width: 1px;
   height: 32px;
-  margin-top: -8px;
   border-radius: 25px;
   color: white;
   text-decoration: none;
