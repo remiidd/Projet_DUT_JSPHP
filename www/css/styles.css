@@ -434,6 +434,8 @@
 
 .message_area{
   width: 70%;
+  position: absolute;
+  height: 10%;
 }
 
 .envoie_msg{
