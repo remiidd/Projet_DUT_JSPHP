@@ -1,7 +1,7 @@
 <?php session_start();
   if(isset($_SESSION['idcon'])){
     $id = $_SESSION['idcon'];
-    header("Location:../../profil.php?id=$id");
+    header("Location:profil-$id");
     exit();
   }
   else {?>
