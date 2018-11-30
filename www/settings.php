@@ -100,7 +100,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
         <hr>
         <h5><i class="fas fa-cog"></i> Informations personnelles du profil</h5>
         <p class="marge">Photo de profil <a class="modif_info_bouton_pp modif_infos_boutons"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_pp">
-          <form action="" method="post">
+          <form action="" method="post" enctype="multipart/form-data">
             <input required type="file" name="pp"/>
             <input id="inscriBout" type="submit" value="Valider" onclick="modif()"/>
           </form></i></p>
