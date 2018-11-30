@@ -41,7 +41,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
       }
     ?>
     <?php include 'bar_navigation/nonco.php'?>
-    <?php if(isset($_POST["numerotel"])||isset($_POST["emploi"])){
+    <?php if(isset($_POST["numerotel"])||isset($_POST["emploi"])||isset($_POST["etude"])){
       $url_refresh = "Location: parametres-".$_GET["id"];
       header($url_refresh);
     } ?>
