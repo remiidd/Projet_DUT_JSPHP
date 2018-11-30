@@ -33,7 +33,7 @@
       }
     ?>
 
-    <!-- CONTENU DANS CETTE DIV -->
+    <!-- CONTENU DANS CETTE DIV  https://www.google.fr/maps/place/Nantes-->
     <div class="content">
       <div class="wrapp">
         <div id="presentation">
