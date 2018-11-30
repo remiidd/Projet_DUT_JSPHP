@@ -68,6 +68,7 @@
   display: none;
   transition: 2s;
 }
+
 .search-box:hover > #rechbut{
   /*border-style: solid;
   border-color: #00bc009c;
