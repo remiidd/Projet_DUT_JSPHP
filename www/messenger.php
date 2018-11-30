@@ -31,12 +31,12 @@
                     if ($donnees['id_exp'] == $_SESSION['idcon']) {
                       echo "<div class=\"bulle-moi\">
                               <p>".$donnees['message']."</p>
-                            </div><br>";
+                            </div>";
                     }
                     else{
                       echo "<div class=\"bulle-ami\">
                               <p>".$donnees['message']."</p>
-                            </div><br>";
+                            </div>";
                     }
                   }
                  ?>
