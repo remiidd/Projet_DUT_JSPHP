@@ -318,6 +318,9 @@
 .txt_modif_emploi {
   display:none;
 }
+.txt_modif_etude {
+  display:none;
+}
 .txt_modif_naissance {
   display:none;
 }
