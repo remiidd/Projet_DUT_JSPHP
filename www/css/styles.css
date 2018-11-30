@@ -324,7 +324,7 @@
   overflow:hidden;
 }
 #tableau_infos_perso {
-  margin-left: 100px;
+  border-spacing: 20px;
 }
 /* ====================  FIN CSS PAGE DE PROFIL ==================== */
 
