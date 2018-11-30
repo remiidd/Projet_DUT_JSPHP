@@ -33,6 +33,11 @@
                               <p>".$donnees['message']."</p>
                             </div><br>";
                     }
+                    else{
+                      echo "<div class=\"bulle-ami\">
+                              <p>".$donnees['message']."</p>
+                            </div><br>";
+                    }
                   }
                  ?>
 
