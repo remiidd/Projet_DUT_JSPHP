@@ -8,11 +8,10 @@
 
   if ($_FILES['pp']['name'] != "") {
     //si pp present
-    $extension_uploadpp = strtolower(  substr(  strrchr($_FILES['pp']['name'], '.')  ,1)  );
+    $extension_uploadpp = strtolower(substr(strrchr($_FILES['pp']['name'], '.')  ,1)  );
     echo $_FILES['pp']['name'];
     if (!(in_array($extension_uploadpp,$extensions_valides))){
       $_SESSION['errorext'] = true;
-      echo "pp";
       header('Location:/inscription-suite');
       exit();
     }
@@ -23,7 +22,7 @@
 
   if ($_FILES['cover']['name'] != "") {
     //si cover present
-    $extension_uploadcover = strtolower(  substr(  strrchr($_FILES['cover']['name'], '.')  ,1)  );
+    $extension_uploadcover = strtolower(substr(strrchr($_FILES['cover']['name'], '.')  ,1)  );
     if (!(in_array($extension_uploadcover,$extensions_valides))){
       $_SESSION['errorext'] = true;
       header('Location:/inscription-suite');
@@ -91,7 +90,7 @@
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
         $resultat = move_uploaded_file($_FILES['cover']['tmp_name'], $target_file);
         if ($resultat){
-          $targetForBddcover = "src/media/profils/" . $id . "-cover." . $extension_uploadpp;
+          $targetForBddcover = "src/media/profils/" . $id . "-cover." . $extension_uploadcover;
           $bdd->exec("UPDATE `profil` SET `photo_couv` = '$targetForBddcover' WHERE `id` = $id");
         }
       }
