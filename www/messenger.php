@@ -27,8 +27,8 @@
                   }
                   $reponse = $bdd->query("SELECT id_exp, id_dest, message FROM message WHERE id_exp=19 OR id_dest=19 order by id DESC LIMIT 15");
 
-                  while ($donnees = $reponse->fetch()){
-                    
+                  while($donnees = $reponse->fetch()){
+
                   }
                  ?>
 
