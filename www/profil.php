@@ -23,7 +23,7 @@
       $reponse = $bdd->query('SELECT * FROM profil WHERE id=\''.$_GET['id'].'\'');
       $data = $reponse->fetch();
       if($data["prenom"]==null) {
-        header('Location:index.php');
+        header('Location: accueil');
       } else {
         ?>
         <script>
