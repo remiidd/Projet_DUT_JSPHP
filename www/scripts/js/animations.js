@@ -20,5 +20,5 @@ $(document).ready(function(){
     $(".txt_modif_emploi").toggle();
   });
 
-  function modif() {}
+
 });
