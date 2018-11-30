@@ -94,7 +94,7 @@
                 'photo' => "",
                 'profil' => $_GET["id"]
               ));
-              $url_refresh = "Location:profil.php?id=".$_GET["id"];
+              $url_refresh = "Location:profil".$_GET["id"];
               header($url_refresh);
           ?>
         </div><?php } ?>
