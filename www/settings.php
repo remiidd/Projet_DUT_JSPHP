@@ -106,9 +106,10 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           </form></i></p>
           <?php
           $extensions_valides = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
-          if ($_FILES['pp']['name'] != "") {
+          if($_FILES['pp']['name'] != "") {
             echo "salut";
             
+          }
           ?>
         <p class="marge">Photo de couverture :</p>
         <p class="marge">Emplois : </p>
