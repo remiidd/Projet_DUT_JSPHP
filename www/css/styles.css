@@ -339,11 +339,8 @@
   resize: none;
   overflow:hidden;
 }
-#tableau_infos_perso {
-  border-spacing: 20px 0px;
-}
 #tableau_infos_perso td{
-  border: 1px solid black;
+  padding-left: 30px;
 }
 /* ====================  FIN CSS PAGE DE PROFIL ==================== */
 
