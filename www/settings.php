@@ -48,16 +48,17 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           <div class="cover_couche"></div>
         </div><br/>
         <p class="marge"><a href="profil.php?id=<?php echo $_GET["id"]; ?>">Revenir au profil</a></p>
-        <h5><i class="fas fa-cog"></i> Paramètres du comptee</h5>
-        <p class="marge">Email : <?php echo $data["email"]; ?> <a class="modif_info_bouton_email"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_email">
+        <h5><i class="fas fa-cog"></i> Paramètres du compte</h5>
+        <p class="marge">Email : <?php echo $data["email"]); ?> <a class="modif_info_bouton_email"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_email">
           <form action="" method="post">
             <input required type="text" name="email"/>
             <input id="inscriBout" type="submit" value="Valider" onclick="modif()"/>
           </form></i></p>
-        <?php if(isset($_POST["email"])){
-          echo "test";
-          ?><script src="scripts/js/req.js">modif_email(<?php echo $_GET["id"]; ?>,<?php echo $_POST["email"]; ?>);</script><?php
-
+        <?php if(isset($_POST["naissance"])){
+          $req = $bdd->query('UPDATE profil SET email=\''.$_POST["email"].'\' WHERE id=\''.$_GET["id"].'\'');
+          $req->closeCursor();
+          $url_refresh = "Location:settings.php?id=".$_GET["id"];
+          header($url_refresh);
         } ?>
         <p class="marge">Date de naissance : <?php $naissance = new DateTime($data["naissance"]); echo $naissance->format("d / m / Y"); ?> <a class="modif_info_bouton_naissance"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_naissance">
           <form action="" method="post">
