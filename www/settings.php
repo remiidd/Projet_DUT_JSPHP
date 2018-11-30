@@ -120,6 +120,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
                 $bdd->exec("UPDATE `profil` SET `photo_profil` = '$targetForBddpp' WHERE `id` = $_GET["id"]");
               }
             }
+            header("Location:/profil-" . $_GET["id"]);
           }
           ?>
         <p class="marge">Photo de couverture :</p>
