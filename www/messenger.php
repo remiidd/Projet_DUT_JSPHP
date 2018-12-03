@@ -31,7 +31,6 @@
                                         ORDER BY MAX(message.id) DESC ");
                 $histo[] = "";
                 while ($donnees = $reponse->fetch()){
-                  echo $donnees['id_message'] . $donnees['nom'];
                   $id = intval($donnees['id_message']);
                   $histo[$id]=$donnees['nom'];
                 }
