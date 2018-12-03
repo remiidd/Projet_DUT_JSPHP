@@ -31,7 +31,7 @@
                                         ORDER BY MAX(message.id) DESC ");
                 $insto[] = "";
                 while ($donnees = $reponse->fetch()){
-                  echo $donnees['id_message'];
+                  echo $donnees['id_message'] . $donnees['profil.nom'];
                   $id = intval($donnees['id_message']);
                   $insto[$id]=$donnees['profil.nom'];
                 }
