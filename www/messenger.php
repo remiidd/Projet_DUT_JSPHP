@@ -28,7 +28,7 @@
                                         LEFT JOIN message ON profil.id = message.id_exp
                                         WHERE message IS NOT NULL AND message.id_dest=\"$moi\"
                                         GROUP BY profil.id
-                                        ORDER BY MAX(message.id) DESC ");
+                                        ORDER BY MAX(message.id) ASC ");
                 $histo[] = "";
                 while ($donnees = $reponse->fetch()){
                   $id = intval($donnees['id_message']);
