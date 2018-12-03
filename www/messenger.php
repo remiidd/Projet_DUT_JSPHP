@@ -34,7 +34,7 @@
                   $id = intval($donnees['id_message']);
                   $insto[$id]=$donnees['profil.nom'];
                 }
-
+                echo "ici";
                 echo $insto[6];
               ?>
             </div>
