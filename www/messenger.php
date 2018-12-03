@@ -14,11 +14,34 @@
         <body onresize="resize_msg()" onload="resize_msg()">
           <?php include 'bar_navigation/nonco.php'?>
           <div class="content">
-            <div class="historique"></div>
+            <div class="historique">
+              <?php
+              $moi = $_SESSION['idcon'];
+                try{
+                  $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
+                }
+                catch (Exception $e){
+                      die('Erreur : ' . $e->getMessage());
+                }
+                $reponse = $bdd->query("SELECT DISTINCT(profil.id), profil.nom, profil.prenom, MAX(message.id) as id_message
+                                        FROM profil
+                                        LEFT JOIN message ON profil.id = message.id_exp
+                                        WHERE message IS NOT NULL AND message.id_dest=\"$moi\"
+                                        GROUP BY profil.id
+                                        ORDER BY MAX(message.id) DESC ");
+                $insto[] = "";
+                while ($donnees = $reponse->fetch()){
+                  $id = intval($donnees['id_message']);
+                  $insto[$id]=$donnees['profil.nom'];
+                }
+
+                echo $insto[6];
+              ?>
+            </div>
             <div class="discution">
               <div class="message">
                 <?php
-                  $moi = $_SESSION['idcon'];
+                /*  $moi = $_SESSION['idcon'];
                   try{
                     $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
                   }
@@ -38,7 +61,7 @@
                               <p>".$donnees['message']."</p>
                             </div>";
                     }
-                  }
+                  }*/
                  ?>
               </div>
               <div class="zone_message">
