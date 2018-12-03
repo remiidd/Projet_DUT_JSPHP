@@ -35,7 +35,7 @@
                   $id = intval($donnees['id_message']);
                   $histo[$id]=$donnees['nom'];
                 }
-
+                echo sizeof($histo);
                 for($i = 0; $i<sizeof($histo); $i++){
                   if(isset($histo[$i])){
                     echo $histo[$i];
