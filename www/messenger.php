@@ -29,14 +29,20 @@
                                         WHERE message IS NOT NULL AND message.id_dest=\"$moi\"
                                         GROUP BY profil.id
                                         ORDER BY MAX(message.id) DESC ");
-                $insto[] = "";
+                $histo[] = "";
                 while ($donnees = $reponse->fetch()){
                   echo $donnees['id_message'] . $donnees['nom'];
                   $id = intval($donnees['id_message']);
-                  $insto[$id]=$donnees['nom'];
+                  $histo[$id]=$donnees['nom'];
+                }
+
+                for($i = 0; i<$histo.length; i++){
+                  if(isset($histo[$i])){
+                    echo $histo[$i];
+                  }
                 }
                 echo "ici";
-                echo $insto[6];
+                echo $histo[6];
               ?>
             </div>
             <div class="discution">
