@@ -33,7 +33,7 @@
                   $id = intval($donnees['id_message']);
                   $histo[$id]=array($donnes['id'], $donnees['nom']);
                 }
-                echo array_pop(array_keys($histo));
+                echo $histo[7][1];
                 /*for($i = array_pop(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
                   if(isset($histo[$i])){
                     echo $histo[$i][0];
