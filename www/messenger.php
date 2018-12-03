@@ -31,15 +31,13 @@
                                         ORDER BY MAX(message.id) ASC ");
                 while ($donnees = $reponse->fetch()){
                   $id = intval($donnees['id_message']);
-                  $histo[$id]=$donnees['nom'];
+                  $histo[$id]=array($donnes['id'], $donnees['nom']);
                 }
                 for($i = array_pop(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
                   if(isset($histo[$i])){
                     echo $histo[$i];
                   }
                 }
-                echo "ici";
-                echo $histo[6];
               ?>
             </div>
             <div class="discution">
