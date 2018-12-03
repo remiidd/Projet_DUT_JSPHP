@@ -34,14 +34,11 @@
                   $id = intval($donnees['id_message']);
                   $histo[$id]=$donnees['nom'];
                 }
-                echo array_shift(array_keys($histo));
                 for($i = array_pop(array_keys($histo)); $i>0; $i--){
                   if(isset($histo[$i])){
                     echo $histo[$i];
                   }
                 }
-                echo "ici";
-                echo $histo[6];
               ?>
             </div>
             <div class="discution">
