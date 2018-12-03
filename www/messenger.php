@@ -33,7 +33,7 @@
                 while ($donnees = $reponse->fetch()){
                   echo $donnees['id_message'] . $donnees['nom'];
                   $id = intval($donnees['id_message']);
-                  $insto[$id]=$donnees['profil.nom'];
+                  $insto[$id]=$donnees['nom'];
                 }
                 echo "ici";
                 echo $insto[6];
