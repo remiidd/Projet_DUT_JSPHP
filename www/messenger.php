@@ -29,7 +29,6 @@
                                         WHERE message IS NOT NULL AND message.id_dest=\"$moi\"
                                         GROUP BY profil.id
                                         ORDER BY MAX(message.id) ASC ");
-                $histo[] = "";
                 while ($donnees = $reponse->fetch()){
                   $id = intval($donnees['id_message']);
                   $histo[$id]=$donnees['nom'];
