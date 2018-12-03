@@ -36,8 +36,10 @@
                   $histo[$id]=$donnees['nom'];
                 }
 
-                for($i = 0; $i<sizeof($histo); i++){
-                  
+                for($i = 0; $i<sizeof($histo); $i++){
+                  if(isset($histo[$i])){
+                    echo $histo[$i];
+                  }
                 }
                 echo "ici";
                 echo $histo[6];
