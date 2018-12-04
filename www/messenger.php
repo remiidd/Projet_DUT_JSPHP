@@ -7,8 +7,7 @@
       <html lang="en" dir="ltr">
         <head>
           <meta charset="utf-8">
-          <title>Recherche</title>
-          <script src="scripts/js/messenger.js" charset="utf-8"></script>
+          <title>Messenger</title>
           <?php include 'scripts/html/head.html'; ?>
         </head>
         <body onresize="resize_msg()" onload="resize_msg()">
