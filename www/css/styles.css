@@ -426,6 +426,14 @@
   padding: 3px;
 }
 
+.histo_perso_selection{
+  background-color: grey;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-top: 3px;
+  padding: 3px;
+}
+
 .histo_perso_href {
   text-decoration: none;
   color: black;
