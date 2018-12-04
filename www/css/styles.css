@@ -426,7 +426,7 @@
   padding: 3px;
 }
 
-.histo_perso > a {
+.histo_perso_href {
   text-decoration: none;
   color: black;
 }
