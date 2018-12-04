@@ -482,8 +482,9 @@
 }
 
 .zone_message{
-  background-color: blue;
-  height: 10%;
+  background-color: #bfbfbf;
+  height: 9%;
+  margin: 0.5%;
 }
 
 .message_area{
