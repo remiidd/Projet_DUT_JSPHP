@@ -38,6 +38,17 @@
   transition: 0.4s;
 }
 
+.fa-user {
+  margin-top: 8px;
+  margin-right: 20px;
+  margin-left: 15px;
+}
+
+.fa-user:hover{
+  color: white;
+  transition: 0.4s;
+}
+
 #cobout{
   padding-top: 2px;
   padding-bottom: 2px;
