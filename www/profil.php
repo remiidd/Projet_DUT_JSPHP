@@ -135,7 +135,7 @@
                           if($contenu[0]==md5("share")){
                             ?>
                               <div class="partage">
-                                <?php echo $post_share["contenu"]; echo "link"; ?>
+                                <?php echo $post_share["contenu"]."<br/>link"; ?>
                               </div>
                             <?php
                           } else {
