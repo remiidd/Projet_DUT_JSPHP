@@ -430,6 +430,12 @@
   text-decoration: none;
   color: black;
 }
+
+.histo_perso_href:hover {
+  text-decoration: none;
+  color: black;
+}
+
 .discution{
   position: absolute;
   left: 20%;
