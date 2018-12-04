@@ -1,13 +1,8 @@
 <?php
   session_start();
-  $mess = "";
   if(isset($_SESSION['amis_conv'])){
     $moi = $_SESSION['idcon'];
     $lui = $_SESSION['amis_conv'];
-
-    $mess += "<div class=\"bulle-ami\">
-            <p>azeaze</p>
-          </div>";
 
     $mess = "<div class=\"bulle-ami\">
             <p>zefef</p>
