@@ -25,7 +25,7 @@ function charger(){
 
         charger(); // on relance la fonction
 
-    }, 5000); // on exécute le chargement toutes les 5 secondes
+    }, 3000); // on exécute le chargement toutes les 5 secondes
 
 }
 
