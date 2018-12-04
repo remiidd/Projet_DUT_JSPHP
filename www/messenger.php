@@ -84,7 +84,7 @@
               ?>
             </div>
             <div class="discution">
-              <div class="message">
+              <div id="message">
                 <?php
                   if(isset($_SESSION['amis_conv'])){
                     $moi = $_SESSION['idcon'];
