@@ -395,6 +395,9 @@
 .txt_modif_naissance {
   display:none;
 }
+.txt_modif_cover {
+  display:none;
+}
 .modif_infos_boutons {
   cursor: pointer;
 }
