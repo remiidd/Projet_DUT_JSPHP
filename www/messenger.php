@@ -47,7 +47,7 @@
                                         GROUP BY profil.id
                                         ORDER BY MAX(message.id) ASC ");
                 while ($donnees = $reponse->fetch()){
-                  foreach($tableau as $key => $val){
+                  foreach($histo as $key => $val){
                       if( isSet($val[0]) && $val[0] == $donnees['id'] )
                         echo $key;
                     }
