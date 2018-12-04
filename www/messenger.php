@@ -125,6 +125,10 @@
                   <?php
                 }
                 else {
+                  ?>
+                  <div class="zone_message">
+                  </div>
+                  <?php
                 }
               ?>
 
