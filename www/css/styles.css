@@ -455,7 +455,7 @@
   background-color: red;
 }
 
-.message{
+#message{
   height: 90%;
   background-color: grey;
   overflow-y: scroll;
