@@ -487,7 +487,7 @@
 }
 
 .message_area{
-  width: 70%;
+  width: 80%;
   position: absolute;
   height: 9%;
   margin: 0.5%;
@@ -495,11 +495,11 @@
 }
 
 .envoie_msg{
-  width: 20%;
-  height: 7%;
+  width: 10%;
+  height: 4%;
   position: absolute;
   right: 5%;
-  margin-top: 1.5%;
+  margin-top: 3%;
 }
 
 .bulle-ami > p {
