@@ -13,8 +13,8 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav mr-auto">
-            <a href="/profil-<?php  echo $donnees['id']?>"></a>
-            <i class="fas fa-user"></i>
+            <a href="/profil-<?php  echo $donnees['id']?>"><i class="fas fa-user"></i></a>
+
           </div>
           <div class="navbar-nav my-2 my-lg-0">
             <li class="nav-item active">
