@@ -25,6 +25,9 @@ $(document).ready(function(){
   $(".modif_info_bouton_pp").click(function(){
     $(".txt_modif_pp").toggle();
   });
+  $(".modif_info_bouton_cover").click(function(){
+    $(".txt_modif_cover").toggle();
+  });
 
 
 });
