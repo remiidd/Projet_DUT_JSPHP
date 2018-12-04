@@ -1,6 +1,6 @@
 <?php
   session_start();
-  $mess = "messagfe : ";
+  $mess = "";
   if(isset($_SESSION['amis_conv'])){
     $moi = $_SESSION['idcon'];
     $lui = $_SESSION['amis_conv'];
