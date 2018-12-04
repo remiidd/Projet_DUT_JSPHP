@@ -121,7 +121,13 @@
                 if($contenu[0]==md5("share")){
                   ?>
                     <div class="partage"><!-- ICI C4EST PARIS -->
-                      
+                      <?php
+                        $reponse = $bdd->query('SELECT * FROM posts WHERE id=\''.$contenu[1].'\'');
+                        $post_share = $reponse->fetch();
+                        $reponse = $bdd->query('SELECT * FROM profil WHERE id=\''.$post_share["profil"].'\'');
+                        $profil_share = $reponse->fetch();
+                      ?>
+
                     </div><!-- ICI C4EST PARIS -->
                   <?php
                 } else {
