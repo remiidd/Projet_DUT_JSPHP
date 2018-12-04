@@ -25,7 +25,7 @@ if(($id_post!=null)&&($id_profil!=null)&&($id_post!=0)&&($id_profil!=0)) {
     'noms' => $data["prenom"]." ".$data["nom"],
     'contenu' => $content,
     'photo' => "",
-    'profil' => $_GET["id_profil"]
+    'profil' => $id_profil
   ));
   //UPDATE `derayalois`.`posts` SET `nb_like` = '1' WHERE `posts`.`id` = 3;
   $req = $bdd->query('UPDATE posts SET nb_share=nb_share+1 WHERE id=\''.$id_post.'\'');
