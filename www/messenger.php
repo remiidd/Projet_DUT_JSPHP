@@ -49,7 +49,6 @@
                 while ($donnees = $reponse->fetch()){
                   foreach($histo as $key => $val){
                     if( isSet($val[0]) && $val[0] == $donnees['id'] ){
-                      echo $key;
                       if($key<$donnees['id_message']){
                         unset($histo[$key]);
                         $id = intval($donnees['id_message']);
