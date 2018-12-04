@@ -13,6 +13,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav mr-auto">
+            <a href="/profil-<?php  echo $donnees['id']?>"></a>
             <i class="fas fa-user"></i>
           </div>
           <div class="navbar-nav my-2 my-lg-0">
