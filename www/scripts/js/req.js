@@ -32,10 +32,17 @@ function liker_post(id_posts, id_profils) {
   }
 }
 
-function share_post() {
+function share_post(id_posts, id_profils) {
 	var xhr = getXMLHttpRequest();
 
-	
+	var id_post = encodeURIComponent(id_posts);
+  var id_profil = encodeURIComponent(id_profils);
+	try {
+    xhr.open("GET", "scripts/php/share.php?id_post="+id_post+"&id_profil="+id_profil,true);
+    xhr.send(null);
+  }catch(error) {
+    alert(error);
+  }
 }
 
 function suppr_emploi(id,element) {
