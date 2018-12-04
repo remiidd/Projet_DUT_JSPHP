@@ -437,6 +437,7 @@
   background-color: white;
   height: 10%;
 }
+
 .envoie_msg{
   padding-top: 2px;
   padding-bottom: 2px;
@@ -498,7 +499,7 @@
 }
 
 .zone_message{
-  background-color: #ffb900;
+  background-color: #ffa07a;
   height: 10%;
 }
 
