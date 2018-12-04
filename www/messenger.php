@@ -34,12 +34,6 @@
                   $histo[$id]=array($donnees['id'], $donnees['nom']);
                 }
 
-                for($i = array_pop(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
-                  if(isset($histo[$i])){
-                    echo $histo[$i][1];
-                  }
-                }
-
                 $reponse = $bdd->query("SELECT DISTINCT(profil.id), profil.nom, profil.prenom, MAX(message.id) as id_message
                                         FROM profil
                                         LEFT JOIN message ON profil.id = message.id_dest
