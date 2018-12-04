@@ -139,7 +139,7 @@
                               </div>
                             <?php
                           } else {
-                            echo $feed["contenu"];
+                            echo $post_share["contenu"];
                           } ?></p><br>
                       </div>
                     </div><!-- ICI C4EST PARIS -->
