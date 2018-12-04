@@ -11,38 +11,17 @@ function resize_msg(){
   }
 }
 
-function getXMLHttpRequest() {
-	var xhr = null;
-
-	if (window.XMLHttpRequest || window.ActiveXObject) {
-		if (window.ActiveXObject) {
-			try {
-				xhr = new ActiveXObject("Msxml2.XMLHTTP");
-			} catch(e) {
-				xhr = new ActiveXObject("Microsoft.XMLHTTP");
-			}
-		} else {
-			xhr = new XMLHttpRequest();
-		}
-	} else {
-		alert("Votre navigateur ne supporte pas l'objet XMLHTTPRequest");
-		return null;
-	}
-
-	return xhr;
-}
-
 function charger(){
 
     setTimeout( function(){
-        var xhr = getXMLHttpRequest();
-
-        try {
-          xhr.open("GET", "scripts/php/charger.php",true);
-          xhr.send(null);
-        }catch(error) {
-          alert(error);
-        }
+        // on lance une requête AJAX
+        $.ajax({
+            url : "scripts/php/charger.php",
+            type : GET,
+            success : function(html){
+                $('#messages').prepend(html); // on veut ajouter les nouveaux messages au début du bloc #messages
+            }
+        });
 
         charger(); // on relance la fonction
 
