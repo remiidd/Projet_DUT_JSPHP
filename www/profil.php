@@ -127,7 +127,21 @@
                         $res = $bdd->query('SELECT * FROM profil WHERE id=\''.$post_share["profil"].'\'');
                         $profil_share = $reponse->fetch();
                       ?>
-
+                      <div><hr>
+                        <h5><img class="pp_posts" src="<?php if($profil_share["photo_profil"]!=null) { echo $profil_share["photo_profil"]; } else { ?>src/media/default_profil_pp.jpg<?php } ?>" alt="Default profil cover"/><?php echo " ".$post_share["nom_createur"]; ?></h5><p>
+                          <i><?php $d_publi = new DateTime($post_share["date_publication"]); echo "Le ".$d_publi->format("d/m/Y") ?></i></p><br>
+                          <p><?php
+                          $contenu = explode(".",$post_share["contenu"]);
+                          if($contenu[0]==md5("share")){
+                            ?>
+                              <div class="partage">
+                                <?php echo $post_share["contenu"]."<br/>link"; ?>
+                              </div>
+                            <?php
+                          } else {
+                            echo $post_share["contenu"];
+                          } ?></p><br>
+                      </div>
                     </div><!-- ICI C4EST PARIS -->
                   <?php
                 } else {
