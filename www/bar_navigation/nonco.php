@@ -12,7 +12,9 @@
 
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div class="navbar-nav mr-auto"></div>
+          <div class="navbar-nav mr-auto">
+            <i class="fas fa-user"></i>
+          </div>
           <div class="navbar-nav my-2 my-lg-0">
             <li class="nav-item active">
               <form class="nav-link"  method="post" action="scripts/php/pre-recherche.php">
