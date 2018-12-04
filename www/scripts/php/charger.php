@@ -25,5 +25,5 @@
     }
   }
 
-  echo "ici";
+  echo $mess;
  ?>
