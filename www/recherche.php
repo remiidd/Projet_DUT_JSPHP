@@ -67,7 +67,12 @@
                   ?>
                     <div class="rech_user">
                       <div class="rech_div_img">
-                        <img src="<?php echo $donnees['photo_profil'] ?> " class="rech_img">
+                        <img src="<?php
+                          if ($donnees['photo_profil']!=NULL) {
+                            echo $donnees['photo_profil'] ;
+                          }
+
+                        ?>" class="rech_img">
                       </div>
                       <div class="rech_info">
                         <a class="rech_nom" href="profil.php?id=<?php echo $donnees['id'] ?>"><?php  echo $donnees['nom'] . " " . $donnees['prenom']?></a>
