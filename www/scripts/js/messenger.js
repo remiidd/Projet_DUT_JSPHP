@@ -38,7 +38,12 @@ function charger(){
         var xhr = getXMLHttpRequest();
 
         try {
-          xhr.open("GET", "scripts/php/charger.php",true);
+          xhr.open("GET",
+          "scripts/php/charger.php",
+          true,
+          success : function(html){
+                $('#message').prepend(html);
+            });
           xhr.send(null);
         }catch(error) {
           alert(error);
