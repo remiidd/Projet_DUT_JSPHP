@@ -10,7 +10,7 @@
     catch (Exception $e){
           die('Erreur : ' . $e->getMessage());
     }
-    $reponse = $bdd->query("SELECT id_exp, id_dest, message FROM message WHERE id_exp=".$moi." AND id_dest=".$lui." OR id_dest=".$moi." AND id_exp=".$lui." order by id ASC LIMIT 15");
+    $reponse = $bdd->query("SELECT id_exp, id_dest, message FROM message WHERE id_exp=".$moi." AND id_dest=".$lui." OR id_dest=".$moi." AND id_exp=".$lui." order by id");
 
     while ($donnees = $reponse->fetch()){
       if ($donnees['id_exp'] == $_SESSION['idcon']) {
