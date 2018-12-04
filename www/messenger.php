@@ -126,7 +126,7 @@
                 }
                 else {
                   ?>
-                  <div class="zone_message">
+                  <div class="pas_d_amis">
                   </div>
                   <?php
                 }
