@@ -485,6 +485,10 @@
   padding: 3px;
 }
 
+.histo_perso_selection:hover{
+  background-color: #ff8f63;
+}
+
 .histo_perso_href {
   text-decoration: none;
   color: black;
