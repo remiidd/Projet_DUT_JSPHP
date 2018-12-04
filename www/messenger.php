@@ -51,7 +51,9 @@
                     if( isSet($val[0]) && $val[0] == $donnees['id'] ){
                       echo $key;
                       if($key<$donnees['id_message']){
-                        echo "nouveau plus grand";
+                        unset($histo[$key]);
+                        $id = intval($donnees['id_message']);
+                        $histo[$id]=array($donnees['id'], $donnees['nom']);
                       }
                     }
                   }
