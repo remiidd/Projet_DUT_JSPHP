@@ -33,11 +33,32 @@
                   $id = intval($donnees['id_message']);
                   $histo[$id]=array($donnees['id'], $donnees['nom']);
                 }
+
                 for($i = array_pop(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
                   if(isset($histo[$i])){
                     echo $histo[$i][1];
                   }
                 }
+
+                $reponse = $bdd->query("SELECT DISTINCT(profil.id), profil.nom, profil.prenom, MAX(message.id) as id_message
+                                        FROM profil
+                                        LEFT JOIN message ON profil.id = message.id_dest
+                                        WHERE message IS NOT NULL AND message.id_exp=\"$moi\"
+                                        GROUP BY profil.id
+                                        ORDER BY MAX(message.id) ASC ");
+                while ($donnees = $reponse->fetch()){
+                  foreach($tableau as $key => $val){
+                      if( isSet($val[0]) && $val[0] == $donnees['id'] )
+                        echo $key;
+                    }
+                }
+
+                for($i = array_pop(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
+                  if(isset($histo[$i])){
+                    echo $histo[$i][1];
+                  }
+                }
+
               ?>
             </div>
             <div class="discution">
