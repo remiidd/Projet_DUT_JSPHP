@@ -441,6 +441,10 @@
   padding: 3px;
 }
 
+.histo_perso:hover{
+  background-color: #bfbfbf;
+}
+
 .histo_perso_selection{
   background-color: grey;
   margin-left: 2.5%;
