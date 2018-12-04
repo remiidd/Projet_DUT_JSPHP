@@ -113,16 +113,14 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
             if(in_array($extension_uploadpp,$extensions_valides)){
               //TOUT EST OK
               if($data["photo_profil"]!="") {
-                echo "il a deja : ".$data["photo_profil"];
-              } else {
-                echo "il a pas";
+                unlink($data["photo_profil"]);
               }
-              $req = $bdd->query('UPDATE profil SET numerotel=\''.$_POST["numerotel"].'\' WHERE id=\''.$_GET["id"].'\'');
-              $req->closeCursor();
               $target_dir = "src/media/profils/";
               $target_file =  $target_dir.$_GET["id"]."-pp.".$extension_uploadpp;
               $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
               $resultat = move_uploaded_file($_FILES['pp']['tmp_name'],$target_file);
+              $req = $bdd->query('UPDATE profil SET photo_profil=\''.$target_file.'\' WHERE id=\''.$_GET["id"].'\'');
+              $req->closeCursor();
             }
             $url_refresh = "Location:parametres-".$_GET["id"];
             header($url_refresh);
