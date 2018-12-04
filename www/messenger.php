@@ -61,13 +61,13 @@
                       }
                       else{
                         ?>
-                          <div class="histo_perso">
+                          <div class="histo_perso" href="scripts/php/messenger.php?amis=" <?php echo $histo[$i][0] ?>>
                         <?php
                       }
                     }
                     else {
                       ?>
-                        <div class="histo_perso">
+                        <div class="histo_perso" href="scripts/php/messenger.php?amis=" <?php echo $histo[$i][0] ?>>
                       <?php
                     }
                           echo $histo[$i][1];
