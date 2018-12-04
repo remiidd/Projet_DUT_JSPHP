@@ -14,18 +14,17 @@ function resize_msg(){
 function charger(){
 
     setTimeout( function(){
-        // on lance une requête AJAX
         $.ajax({
             url : "scripts/php/charger.php",
             type : "GET",
             success : function(html){
-                $('#message').html(html); // on veut ajouter les nouveaux messages au début du bloc #messages
+                $('#message').html(html);
             }
         });
 
-        charger(); // on relance la fonction
+        charger();
 
-    }, 3000); // on exécute le chargement toutes les 5 secondes
+    }, 3000);
 
 }
 
