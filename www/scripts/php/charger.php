@@ -9,7 +9,7 @@
             <p>azeaze</p>
           </div>";
 
-    $mess += "<div class=\"bulle-ami\">
+    $mess = "<div class=\"bulle-ami\">
             <p>zefef</p>
           </div>";
     /*try{
