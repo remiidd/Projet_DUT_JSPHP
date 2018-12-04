@@ -53,9 +53,23 @@
 
                 for($i = array_pop(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
                   if(isset($histo[$i])){
-                    ?>
-                      <div class="histo_perso">
+                    if(isset($_SESSION['amis_conv'])){
+                      if($histo[$i] == $_SESSION['amis_conv']){
+                        ?>
+                          <div class="histo_perso_selection">
                         <?php
+                      }
+                      else{
+                        ?>
+                          <div class="histo_perso">
+                        <?php
+                      }
+                    }
+                    else {
+                      ?>
+                        <div class="histo_perso">
+                      <?php
+                    }
                           echo $histo[$i][1];
                         ?>
                       </div>
