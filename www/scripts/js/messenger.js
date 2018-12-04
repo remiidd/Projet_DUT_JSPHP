@@ -16,7 +16,7 @@ function charger(){
     setTimeout( function(){
         // on lance une requête AJAX
         $.ajax({
-            url : "scripts/php/charger.php",
+            url : "ajax/scripts/php/charger.php",
             type : GET,
             success : function(html){
                 $('#message').prepend(html); // on veut ajouter les nouveaux messages au début du bloc #messages
