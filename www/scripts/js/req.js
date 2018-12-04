@@ -32,6 +32,12 @@ function liker_post(id_posts, id_profils) {
   }
 }
 
+function share_post() {
+	var xhr = getXMLHttpRequest();
+
+	
+}
+
 function suppr_emploi(id,element) {
   var xhr = getXMLHttpRequest();
 
