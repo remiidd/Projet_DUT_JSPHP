@@ -135,7 +135,15 @@
                           if($contenu[0]==md5("share")){
                             ?>
                               <div class="partage">
-                                <?php echo $post_share["contenu"]."<br/>link"; ?>
+                                <?php
+                                  $req = $bdd->query('SELECT * FROM posts WHERE id=\''.$post_share[1].'\'');
+                                  $post_share2 = $req->fetch();
+                                  $req = $bdd->query('SELECT * FROM profil WHERE id=\''.$post_share2["profil"].'\'');
+                                  $profil_share2 = $req->fetch();
+                                ?>
+                                <h5><img class="pp_posts" src="<?php if($profil_share2["photo_profil"]!=null) { echo $profil_share2["photo_profil"]; } else { ?>src/media/default_profil_pp.jpg<?php } ?>" alt="Default profil cover"/><?php echo " ".$post_share2["nom_createur"]; ?></h5><p>
+                                  <i><?php $d_publi = new DateTime($post_share2["date_publication"]); echo "Le ".$d_publi->format("d/m/Y") ?></i></p><br>
+                                <a href="<?php echo "http://nunes.aloisguitton.com/posts.php?id=".$contenu[1]; ?>">Liens vers la publication de <?php echo $post_share2["nom_createur"]; ?></a>
                               </div>
                             <?php
                           } else {
