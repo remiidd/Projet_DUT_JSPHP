@@ -119,7 +119,31 @@
                 <p><?php
                 $contenu = explode(".",$feed["contenu"]);
                 if($contenu[0]==md5("share")){
+                  ?>
+                    <div class="partage"><!-- ICI C4EST PARIS -->
+                      <?php
+                        $reponse = $bdd->query('SELECT * FROM posts WHERE id=\''.$contenu[1].'\'');
+                        $post_share = $reponse->fetch();
+                        $reponse = $bdd->query('SELECT * FROM profil WHERE id=\''.$post_share["profil"].'\'');
+                        $profil_share = $reponse->fetch();
+                      ?>
+                      <div><hr>
+                        <h5><img class="pp_posts" src="<?php if($data["photo_profil"]!=null) { echo $data["photo_profil"]; } else { ?>src/media/default_profil_pp.jpg<?php } ?>" alt="Default profil cover"/><?php echo " ".$feed["nom_createur"]; ?></h5><p>
+                          <i><?php $d_publi = new DateTime($feed["date_publication"]); echo "Le ".$d_publi->format("d/m/Y") ?></i></p><br>
+                          <p><?php
+                          $contenu = explode(".",$feed["contenu"]);
+                          if($contenu[0]==md5("share")){
+                            ?>
+                              <div class="partage">
 
+                              </div>
+                            <?php
+                          } else {
+                            echo $feed["contenu"];
+                          } ?></p><br>
+                      </div>
+                    </div><!-- ICI C4EST PARIS -->
+                  <?php
                 } else {
                   echo $feed["contenu"];
                 } ?></p><br>
