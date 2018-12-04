@@ -17,7 +17,7 @@ function charger(){
         // on lance une requête AJAX
         $.ajax({
             url : "ajax/scripts/php/charger.php",
-            type : GET,
+            type : "POST",
             success : function(html){
                 $('#messages').prepend(html); // on veut ajouter les nouveaux messages au début du bloc #messages
             }
