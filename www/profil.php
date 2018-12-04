@@ -49,8 +49,8 @@
           $etude = $rep->fetch(); ?>
           <table id="tableau_infos_perso">
             <tr>
-              <td><p>Habite à <strong><?php if($data["ville"]!=""){ echo $data["ville"]; ?></strong> <a href="https://www.google.fr/maps/place/<?php echo $data["ville"];?>" class="no_deco_link modif_infos_boutons"><i class="fas fa-map-marker-alt"></i></a></p><?php } ?></td>
-              <td><p>Travail à <strong><?php echo $emploi["travail"];?></strong></td>
+              <td><?php if($data["ville"]!=""){ ?><p>Habite à <strong><?php echo $data["ville"]; ?></strong> <a href="https://www.google.fr/maps/place/<?php echo $data["ville"];?>" class="no_deco_link modif_infos_boutons"><i class="fas fa-map-marker-alt"></i></a></p><?php } ?></td>
+              <td><?php if($emploi["travail"]!=""){ ?><p>Travail à <strong><?php echo $emploi["travail"];?></strong><?php } ?></td>
             </tr>
             <tr>
               <td><p>Agé de <strong><?php $today = new DateTime();$naissance = new DateTime($data["naissance"]);echo $today->diff($naissance)->format("%Y");?></strong> ans</p>
