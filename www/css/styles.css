@@ -537,6 +537,12 @@
   text-decoration: none;
   color: black;
 }
+
+.no_deco_link:hover {
+  text-decoration: none;
+  color: black;
+}
+
 .marge{
   margin-left: 30px;
 }
