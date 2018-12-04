@@ -14,7 +14,6 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav mr-auto"></div>
           <div class="navbar-nav my-2 my-lg-0">
-            <i class="fas fa-comments"></i>
             <li class="nav-item active">
               <form class="nav-link"  method="post" action="scripts/php/pre-recherche.php">
                 <div class="search-box">
@@ -24,6 +23,7 @@
                 </div>
               </form>
             </li>
+            <i class="fas fa-comments"></i>
             <form class="formbar" method="post" action="../scripts/php/deconnexion.php">
               <input id="cobout" type="submit" value="Déconnexion"/>
             </form>
