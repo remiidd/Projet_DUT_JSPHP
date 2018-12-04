@@ -3,7 +3,7 @@
 
   function set_amis($amis){
     echo $amis;
-    //$_SESSION('amis_conv') = $amis;
+    $_SESSION('amis_conv') = $amis;
     //echo $amis;
 //header("Location: /messenger");
 //    exit();
