@@ -123,7 +123,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
             header($url_refresh);
           }
           ?>
-        <p class="marge">Photo de profil <a class="modif_info_bouton_cover modif_infos_boutons"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_cover">
+        <p class="marge">Photo de couverture <a class="modif_info_bouton_cover modif_infos_boutons"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_cover">
         <form action="" method="post" enctype="multipart/form-data">
           <input required type="file" name="cover"/>
           <input id="inscriBout" type="submit" value="Valider" onclick="modif()"/>
