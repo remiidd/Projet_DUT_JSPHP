@@ -71,9 +71,9 @@
                           if ($donnees['photo_profil']!=NULL) {
                             echo $donnees['photo_profil'] ;
                           }
-                          else {
+                          /*else {
                             echo "src/media/default_profil_picture.jpg";
-                          }
+                          }*/
 
                         ?>" class="rech_img">
                       </div>
