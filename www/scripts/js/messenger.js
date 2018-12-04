@@ -19,7 +19,7 @@ function charger(){
             url : "scripts/php/charger.php",
             type : "GET",
             success : function(html){
-                $('#message').innerHTML(html); // on veut ajouter les nouveaux messages au début du bloc #messages
+                $('#message').text(html); // on veut ajouter les nouveaux messages au début du bloc #messages
             }
         });
 
