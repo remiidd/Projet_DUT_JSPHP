@@ -426,6 +426,10 @@
   padding: 3px;
 }
 
+.histo_perso > a {
+  text-decoration: none;
+  color: black;
+}
 .discution{
   position: absolute;
   left: 20%;
