@@ -41,7 +41,7 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
       }
     ?>
     <?php include 'bar_navigation/nonco.php'?>
-    <?php if(isset($_POST["numerotel"])||isset($_POST["emploi"])||isset($_POST["etude"])||isset($_POST["ville"])){
+    <?php if(isset($_POST["numerotel"])||isset($_POST["emploi"])||isset($_POST["etude"])||isset($_POST["ville"])||isset($_FILE["pp"])){
       $url_refresh = "Location: parametres-".$_GET["id"];
       header($url_refresh);
     } ?>
@@ -109,7 +109,6 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
           if($_FILES['pp']['name']!="") {
             $extension_uploadpp = strtolower(substr(strrchr($_FILES['pp']['name'],'.'),1));
             if(in_array($extension_uploadpp,$extensions_valides)){
-              //TOUT EST OK
               if($data["photo_profil"]!="") {
                 unlink($data["photo_profil"]);
               }
