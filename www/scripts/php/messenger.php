@@ -6,7 +6,7 @@
 
   function set_amis($amis){
     $_SESSION('amis_conv') = $amis;
-  //  header("Location: /messenger");
-  //  exit();
+    header("Location: /messenger");
+    exit();
   }
 ?>
