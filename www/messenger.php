@@ -31,7 +31,7 @@
                                         ORDER BY MAX(message.id) ASC ");
                 while ($donnees = $reponse->fetch()){
                   $id = intval($donnees['id_message']);
-                  $histo[$id]=array($donnees['id'], $donnees['prenom'] . $donnees['nom']);
+                  $histo[$id]=array($donnees['id'], $donnees['prenom'] ." " . $donnees['nom']);
                 }
 
                 $reponse = $bdd->query("SELECT DISTINCT(profil.id), profil.nom, profil.prenom, MAX(message.id) as id_message
@@ -46,7 +46,7 @@
                       if($key<$donnees['id_message']){
                         unset($histo[$key]);
                         $id = intval($donnees['id_message']);
-                        $histo[$id]=array($donnees['id'], $donnees['prenom'] . $donnees['nom']);
+                        $histo[$id]=array($donnees['id'], $donnees['prenom'] . " " . $donnees['nom']);
                       }
                     }
                   }
