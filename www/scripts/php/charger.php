@@ -1,17 +1,10 @@
 <?php
   session_start();
+  $mess = "";
   if(isset($_SESSION['amis_conv'])){
     $moi = $_SESSION['idcon'];
     $lui = $_SESSION['amis_conv'];
-
-    $mess = "<div class=\"bulle-ami\">
-            <p>zefef</p>
-          </div>";
-
-    $mess .= "<div class=\"bulle-ami\">
-            <p>zefef</p>
-          </div>";
-    /*try{
+    try{
       $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
     }
     catch (Exception $e){
@@ -21,16 +14,16 @@
 
     while ($donnees = $reponse->fetch()){
       if ($donnees['id_exp'] == $_SESSION['idcon']) {
-        $mess += "<div class=\"bulle-moi\">
+        $mess .= "<div class=\"bulle-moi\">
                 <p>".$donnees['message']."</p>
               </div>";
       }
       else{
-        $mess += "<div class=\"bulle-ami\">
+        $mess .= "<div class=\"bulle-ami\">
                 <p>".$donnees['message']."</p>
               </div>";
       }
-    }*/
+    }
   }
 
   echo $mess;
