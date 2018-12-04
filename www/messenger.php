@@ -54,7 +54,7 @@
                 for($i = array_pop(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
                   if(isset($histo[$i])){
                     ?>
-                      <a href="scripts/php/messenger.php?amis=<?php echo $histo[$i][0]?>">
+                      <a class="histo_perso_href" href="scripts/php/messenger.php?amis=<?php echo $histo[$i][0]?>">
                     <?php
                     if(isset($_SESSION['amis_conv'])){
                       if($histo[$i][0] == $_SESSION['amis_conv']){
