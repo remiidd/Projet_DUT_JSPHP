@@ -123,9 +123,9 @@
                     <div class="partage"><!-- ICI C4EST PARIS -->
                       <?php
                         $res = $bdd->query('SELECT * FROM posts WHERE id=\''.$contenu[1].'\'');
-                        $post_share = $reponse->fetch();
+                        $post_share = $res->fetch();
                         $res = $bdd->query('SELECT * FROM profil WHERE id=\''.$post_share["profil"].'\'');
-                        $profil_share = $reponse->fetch();
+                        $profil_share = $res->fetch();
                       ?>
                       <div><hr>
                         <h5><img class="pp_posts" src="<?php if($profil_share["photo_profil"]!=null) { echo $profil_share["photo_profil"]; } else { ?>src/media/default_profil_pp.jpg<?php } ?>" alt="Default profil cover"/><?php echo " ".$post_share["nom_createur"]; ?></h5><p>
