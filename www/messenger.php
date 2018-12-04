@@ -114,7 +114,7 @@
                  ?>
               </div>
               <div class="zone_message">
-                <form class="" action="index.html" method="post">
+                <form class="" action="scripts/php/send_message.php" method="post">
                   <textarea class="message_area" name="message"></textarea>
                   <button type="submit" class="envoie_msg" name="button"></button>
                 </form>
