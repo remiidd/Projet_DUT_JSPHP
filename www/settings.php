@@ -123,7 +123,30 @@ if((!isset($_SESSION["idcon"]))||($_SESSION["idcon"]!=$_GET["id"])){
             header($url_refresh);
           }
           ?>
-        <p class="marge">Photo de couverture :</p>
+        <p class="marge">Photo de profil <a class="modif_info_bouton_cover modif_infos_boutons"><i class="fas fa-pencil-alt"></i> Modifier</a><i class="txt_modif_cover">
+        <form action="" method="post" enctype="multipart/form-data">
+          <input required type="file" name="cover"/>
+          <input id="inscriBout" type="submit" value="Valider" onclick="modif()"/>
+        </form></i></p>
+        <?php
+        $extensions_valides = array('jpg','jpeg','gif','png');
+        if($_FILES['cover']['name']!="") {
+          $extension_uploadpp = strtolower(substr(strrchr($_FILES['cover']['name'],'.'),1));
+          if(in_array($extension_uploadpp,$extensions_valides)){
+            if($data["photo_couv"]!="") {
+              unlink($data["photo_couv"]);
+            }
+            $target_dir = "src/media/profils/";
+            $target_file =  $target_dir.$_GET["id"]."-cover.".$extension_uploadpp;
+            $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+            $resultat = move_uploaded_file($_FILES['cover']['tmp_name'],$target_file);
+            $req = $bdd->query('UPDATE profil SET photo_couv=\''.$target_file.'\' WHERE id=\''.$_GET["id"].'\'');
+            $req->closeCursor();
+          }
+          $url_refresh = "Location:parametres-".$_GET["id"];
+          header($url_refresh);
+        }
+        ?>
         <p class="marge">Emplois : </p>
         <ul class="marge3x">
           <?php $rep = $bdd->query('SELECT * FROM emploi WHERE profil=\''.$_GET['id'].'\'');
