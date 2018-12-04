@@ -14,6 +14,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav mr-auto"></div>
           <div class="navbar-nav my-2 my-lg-0">
+            <i class="fas fa-comments"></i>
             <li class="nav-item active">
               <form class="nav-link"  method="post" action="scripts/php/pre-recherche.php">
                 <div class="search-box">
