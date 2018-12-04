@@ -415,6 +415,13 @@
   background-color: pink;
 }
 
+.histo_perso{
+  background-color: lightgrey;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-top: 3px;
+}
+
 .discution{
   position: absolute;
   left: 20%;
