@@ -22,7 +22,6 @@
                   <i class="fas fa-search" ></i>
                   <input id="rechbut" type="submit" value=""/>
                 </div>
-
               </form>
             </li>
             <form class="formbar" method="post" action="../scripts/php/deconnexion.php">
