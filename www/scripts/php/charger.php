@@ -4,7 +4,15 @@
   if(isset($_SESSION['amis_conv'])){
     $moi = $_SESSION['idcon'];
     $lui = $_SESSION['amis_conv'];
-    try{
+
+    $mess += "<div class=\"bulle-ami\">
+            <p>azeaze</p>
+          </div>";
+
+    $mess += "<div class=\"bulle-ami\">
+            <p>zefef</p>
+          </div>";
+    /*try{
       $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
     }
     catch (Exception $e){
@@ -23,7 +31,7 @@
                 <p>".$donnees['message']."</p>
               </div>";
       }
-    }
+    }*/
   }
 
   echo $mess;
