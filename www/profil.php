@@ -128,14 +128,14 @@
                         $profil_share = $reponse->fetch();
                       ?>
                       <div><hr>
-                        <h5><img class="pp_posts" src="<?php if($data["photo_profil"]!=null) { echo $data["photo_profil"]; } else { ?>src/media/default_profil_pp.jpg<?php } ?>" alt="Default profil cover"/><?php echo " ".$feed["nom_createur"]; ?></h5><p>
-                          <i><?php $d_publi = new DateTime($feed["date_publication"]); echo "Le ".$d_publi->format("d/m/Y") ?></i></p><br>
+                        <h5><img class="pp_posts" src="<?php if($profil_share["photo_profil"]!=null) { echo $profil_share["photo_profil"]; } else { ?>src/media/default_profil_pp.jpg<?php } ?>" alt="Default profil cover"/><?php echo " ".$post_share["nom_createur"]; ?></h5><p>
+                          <i><?php $d_publi = new DateTime($post_share["date_publication"]); echo "Le ".$d_publi->format("d/m/Y") ?></i></p><br>
                           <p><?php
-                          $contenu = explode(".",$feed["contenu"]);
+                          $contenu = explode(".",$post_share["contenu"]);
                           if($contenu[0]==md5("share")){
                             ?>
                               <div class="partage">
-
+                                <?php ?>
                               </div>
                             <?php
                           } else {
