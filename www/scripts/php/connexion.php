@@ -29,7 +29,7 @@
   }
 
   if($cook == false){
-    header("Location:/accueil");
+    header("Location:/connexion");
     exit();
   }
 
