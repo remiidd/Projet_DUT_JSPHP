@@ -20,7 +20,7 @@
         <center>
           <form class="form_connexion" action="scripts/php/connexion.php" method="post">
             <p>
-              <?php 
+              <?php
                 if(isset($_GET['err'])){
                   ?>
                     <p id="error_connexion">Identifiants incorrects</p>
@@ -29,7 +29,7 @@
               ?>
               <label>Identifiant</label>
               </br>
-              <?php 
+              <?php
                 if(isset($_GET['err'])){
                   ?>
                     <input type="text" name="id" value="<?php echo $_GET['user']?>">
@@ -47,7 +47,7 @@
               </br>
               <input type="password" name="mdp">
             </p>
-            <input type="submit" value="Connexion" id="coBout"> 
+            <input type="submit" value="Connexion" id="connexionBout">
           </form>
           <p>
             <a href="mdpoublie.php?">Mot de passe oublié ?</a>
@@ -61,5 +61,5 @@
   </body>
 </html>
 <?php
-  } 
+  }
 ?>
