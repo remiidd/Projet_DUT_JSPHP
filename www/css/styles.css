@@ -131,6 +131,27 @@
 
 /* ====================  fin CSS menu ==================== */
 
+/* ====================  CSS connexion ==================== */
+
+#error_connexion{
+  color: red;
+  font-weight: bold;
+}
+
+#coBout{
+  margin-top: 15px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 12px 0px;
+  color: white;
+  background-color: #FFA07A;
+  border-color: white;
+  border-style: dotted;
+}
+/* ====================  fin CSS connexion ==================== */
+
 /* ==================== CSS PAGE Recherche ==================== */
 
 .rech_img{

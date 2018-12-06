@@ -29,7 +29,7 @@
   }
 
   if($cook == false){
-    header("Location:/connexion");
+    header("Location:/connexion-$util-error");
     exit();
   }
 
