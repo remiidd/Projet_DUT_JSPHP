@@ -116,7 +116,6 @@
           <hr>
         </div>
       </div>
-      <p>salut</p>
     <script src="scripts/js/comments.js"></script>
   </body>
 </html>
