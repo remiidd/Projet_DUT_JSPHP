@@ -42,7 +42,7 @@
                                           else { ?>src/media/default_profil_picture.jpg<?php } ?>" alt="Default profil picture"/>
             <a class="no_deco_link" href="<?php echo "profil.php?id=".$feed["profil"]; ?>">
               <?php echo " ".$feed["nom_createur"]; ?>
-        </a></h5>
+        a</a></h5>
         <i><?php $d_publi = new DateTime($feed["date_publication"]); echo "Publié le ".$d_publi->format("d/m/Y");?></i>
         <p><?php
         $contenu = explode(".",$feed["contenu"]);
