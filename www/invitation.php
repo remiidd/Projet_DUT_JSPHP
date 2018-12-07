@@ -12,7 +12,7 @@
           <?php include 'scripts/html/head.html'; ?>
         </head>
         <body>
-          <?php include 'bar_navigation/nonco.php'?>
+          <?php include 'bar_navigation/nonco.php'; ?>
           <div class="content">
             <?php
               try{
