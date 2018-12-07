@@ -98,7 +98,7 @@
               <p id="nb_caract_string"><i id="nb_caract">0</i> / 100 caractères maximum <input id="inscriBout" type="submit" name="bouton_posts" value="Bananez !"/></p>
             </form>
             <script src="scripts/js/caractere_max_com.js"></script>
-          </div><?php }
+          </div><?php
             if(isset($_POST["textarea_posts"])) {
               $message = htmlentities($_POST["textarea_posts"]);
               $req = $bdd->prepare('INSERT INTO posts(id, nom_createur, date_publication, contenu, photo, profil, nb_com, nb_like, nb_share)
@@ -111,7 +111,8 @@
               ));
               $url_refresh = "Location:profil".$_GET["id"];
               header($url_refresh);
-          } ?>
+          }
+        } ?>
         tout il faudrait tout oublier<hr>
         </div>
       </div>
