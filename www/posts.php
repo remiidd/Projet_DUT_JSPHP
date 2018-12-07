@@ -35,7 +35,7 @@
       $profil = $reponse->fetch();
     ?>
     <?php include 'bar_navigation/nonco.php' ?>
-    <?php if(isset($_POST["numerotel"])){
+    <?php if(isset($_POST["textarea_posts"])){
       $url_refresh = "Location:posts.php?id=".$_GET["id"];
       header($url_refresh);
     } ?>
