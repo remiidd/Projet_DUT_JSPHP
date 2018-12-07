@@ -12,14 +12,7 @@
     }
     $reponse = $bdd->query('SELECT * FROM commentaire
                             WHERE id_post=\''.$post.'\'');
-    while($com = $rep->fetch()){
-      $req = $bdd->query('SELECT * FROM profil WHERE id=\''.$com["id_profil"].'\'');
-      $profil_du_com = $req->fetch();
-
-       $mess .= "<div>
-              <p>".$com["nom_createur"]." commentes : ".$com["text_com"]."</p>
-            </div>";
-      }
+    
   }
 
   echo $mess;
