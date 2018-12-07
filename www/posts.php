@@ -113,12 +113,11 @@
               header($url_refresh);
           }
         } ?>
-        tout il faudrait tout oublier<hr>
+        <hr>
         </div>
       </div>
+      <p>salut</p>
     </div>
-
-
     <script src="scripts/js/comments.js"></script>
   </body>
 </html>
