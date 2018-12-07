@@ -35,6 +35,10 @@
       $profil = $reponse->fetch();
     ?>
     <?php include 'bar_navigation/nonco.php' ?>
+    <?php if(isset($_POST["numerotel"])){
+      $url_refresh = "Location:posts.php?id=".$_GET["id"];
+      header($url_refresh);
+    } ?>
     <div class="content">
       <div class="wrapp">
         <h5><img class="pp_posts_max" src="<?php if($profil["photo_profil"]!=null) {
