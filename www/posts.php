@@ -38,11 +38,13 @@
     ?>
     <?php include 'bar_navigation/nonco.php' ?>
     <div class="content">
-      <h5><img class="pp_posts_max" src="<?php if($profil["photo_profil"]!=null) { echo $profil["photo_profil"]; } else { ?>src/media/default_profil_cover.jpg<?php } ?>" alt="Default profil picture"/><a class="no_deco_link" href="<?php echo "profil.php?id=".$data["profil"]; ?>"><?php echo " ".$data["nom_createur"]; ?></a></h5>
-      <i><?php $d_publi = new DateTime($data["date_publication"]); echo "Publié le ".$d_publi->format("d/m/Y");?></i>
-      <p><?php echo $data["contenu"]; ?></p>
-      <hr>
-      <p>Commentaires</p>
+      <div class="wrapp">
+        <h5><img class="pp_posts_max" src="<?php if($profil["photo_profil"]!=null) { echo $profil["photo_profil"]; } else { ?>src/media/default_profil_cover.jpg<?php } ?>" alt="Default profil picture"/><a class="no_deco_link" href="<?php echo "profil.php?id=".$data["profil"]; ?>"><?php echo " ".$data["nom_createur"]; ?></a></h5>
+        <i><?php $d_publi = new DateTime($data["date_publication"]); echo "Publié le ".$d_publi->format("d/m/Y");?></i>
+        <p><?php echo $data["contenu"]; ?></p>
+        <hr>
+        <p>Commentaires</p>
+      </div>
     </div>
 
 
