@@ -41,8 +41,6 @@
       <div class="wrapp">
         <h5><img class="pp_posts_max" src="<?php if($profil["photo_profil"]!=null) { echo $profil["photo_profil"]; } else { ?>src/media/default_profil_cover.jpg<?php } ?>" alt="Default profil picture"/><a class="no_deco_link" href="<?php echo "profil.php?id=".$feed["profil"]; ?>"><?php echo " ".$feed["nom_createur"]; ?></a></h5>
         <i><?php $d_publi = new DateTime($feed["date_publication"]); echo "Publié le ".$d_publi->format("d/m/Y");?></i>
-        <p><?php echo $feed["contenu"]; ?></p>
-        <hr>
         <p><?php
         $contenu = explode(".",$feed["contenu"]);
         if($contenu[0]==md5("share")){
@@ -82,6 +80,8 @@
         } else {
           echo $feed["contenu"];
         } ?></p>
+        <hr>
+        <p>Commentaires</p>
       </div>
     </div>
 
