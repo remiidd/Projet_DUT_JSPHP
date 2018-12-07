@@ -12,9 +12,12 @@
     }
     $req = $bdd->query("UPDATE amis SET statut=\"amis\" WHERE (id=$moi AND id_amis=$lui) OR (id_amis=$moi AND id=$lui)");
     echo $moi ." ".$lui;
+
+    header("Location: profil-$lui");
+    exit();
   }
   else {
-    header("Location: profil-$lui");
+    header("Location: accueil");
     exit();
   }
 ?>
