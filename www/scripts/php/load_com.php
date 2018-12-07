@@ -1,18 +1,25 @@
 <?php
   session_start();
   $mess = "";
-  if(isset($_SESSION['amis_conv'])){//VERIF
+  if(isset($_GET['id'])){//VERIF
     $moi = $_SESSION['idcon'];
-    $lui = $_SESSION['amis_conv'];
+    $post = $_GET['id'];
     try{
       $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
     }
     catch (Exception $e){
           die('Erreur : ' . $e->getMessage());
     }
-    $reponse = $bdd->query("SELECT id_exp, id_dest, message FROM message WHERE id_exp=".$moi." AND id_dest=".$lui." OR id_dest=".$moi." AND id_exp=".$lui." order by id");
+    $reponse = $bdd->query('SELECT * FROM commentaire
+                            WHERE id_post=\''.$post.'\'');
+    while($com = $rep->fetch()){
+      $req = $bdd->query('SELECT * FROM profil WHERE id=\''.$com["id_profil"].'\'');
+      $profil_du_com = $req->fetch();
 
-    //WHILE
+       echo "<div>
+              <p>".$com["nom_createur"]." commentes : ".$com["text_com"]."</p>
+            </div>"
+      }
   }
 
   echo $mess;
