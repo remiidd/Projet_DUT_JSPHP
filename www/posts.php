@@ -112,7 +112,7 @@
               $url_refresh = "Location:profil".$_GET["id"];
               header($url_refresh);
           } ?>
-        <hr>
+        tout il faudrait tout oublier<hr>
         </div>
       </div>
     </div>
