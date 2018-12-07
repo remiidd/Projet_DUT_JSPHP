@@ -18,7 +18,7 @@
 
        echo "<div>
               <p>".$com["nom_createur"]." commentes : ".$com["text_com"]."</p>
-            </div>"
+            </div>";
       }
   }
 
