@@ -92,7 +92,33 @@
         <hr>
         <p>Commentaires</p>
         <hr>
+        <?php if($_SESSION["idcon"]!=""){ ?>
+          <p><a href="settings.php?id=<?php echo $_SESSION["idcon"]; ?>">Modifier vos informations personnelles</a></p>
+          </div>
+          <div class="envoyer_post">
+            <form class="form_envoyer_post" method="POST">
+              <textarea id="areapost" name="textarea_posts" rows="8" cols="130" placeholder="Commentez ce post"></textarea><br/>
+              <p id="nb_caract_string"><i id="nb_caract">0</i> / 500 caractères maximum</p><input id="inscriBout" type="submit" name="bouton_posts" value="Bananez !"/>
+            </form>
+            <script src="scripts/js/caractere_max.js"></script>
+          <?php
+        } else {?> </div> <?php }
+            if(isset($_POST["textarea_posts"])) {
+              $message = htmlentities($_POST["textarea_posts"]);
 
+              $today = new DateTime();
+              $req = $bdd->prepare('INSERT INTO posts(id, nom_createur, date_publication, contenu, photo, profil, nb_com, nb_like, nb_share)
+                                    VALUES(NULL, :noms, CURRENT_DATE(), :contenu, :photo, :profil,\'0\',\'0\',\'0\')');
+              $req->execute(array(
+                'noms' => $data["prenom"]." ".$data["nom"],
+                'contenu' => $message,
+                'photo' => "",
+                'profil' => $_GET["id"]
+              ));
+              $url_refresh = "Location:profil".$_GET["id"];
+              header($url_refresh);
+          ?>
+        </div><?php } ?>
       </div>
     </div>
 
