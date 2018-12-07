@@ -128,8 +128,11 @@
           <?php
           $rep = $bdd->query('SELECT * FROM commentaire WHERE id_post=\''.$_GET["id"].'\'');
           while($com = $rep->fetch()){
-             echo $com["text_com"]?>
-<br>
+            $rep = $bdd->query('SELECT * FROM profil WHERE id=\''.$com["id_profil"].'\'');
+             ?>
+             <div>
+               <?php echo $com["nom_createur"]." réponds : ".$com["text_com"];?>
+             </div>
             <?php
           }
            ?>
