@@ -111,8 +111,9 @@
               ));
               $url_refresh = "Location:profil".$_GET["id"];
               header($url_refresh);
-          ?>
-        </div><?php } ?>
+          } ?>
+        <hr>
+        </div>
       </div>
     </div>
 
