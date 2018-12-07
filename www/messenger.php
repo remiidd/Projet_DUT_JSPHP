@@ -4,7 +4,7 @@
   if(isset($_SESSION['idcon'])){
     ?>
       <!DOCTYPE html>
-      <html lang="en" dir="ltr">
+      <html lang="fr" dir="ltr">
         <head>
           <meta charset="utf-8">
           <title>Messenger</title>
