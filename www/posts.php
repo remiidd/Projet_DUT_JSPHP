@@ -23,25 +23,25 @@
       die('Erreur :'.$e->getMessage());
     }
       $reponse = $bdd->query('SELECT * FROM posts WHERE id=\''.$_GET['id'].'\'');
-      $data = $reponse->fetch();
-      if($data["contenu"]==null) {
+      $feed = $reponse->fetch();
+      if($feed["contenu"]==null) {
         header('Location: accueil');
       } else {
         ?>
         <script>
-          window.parent.document.title = 'Post de <?php echo $data["nom_createur"]; ?>'
+          window.parent.document.title = 'Post de <?php echo $feed["nom_createur"]; ?>'
         </script>
         <?php
       }
-      $reponse = $bdd->query('SELECT * FROM profil WHERE id=\''.$data['profil'].'\'');
+      $reponse = $bdd->query('SELECT * FROM profil WHERE id=\''.$feed['profil'].'\'');
       $profil = $reponse->fetch();
     ?>
     <?php include 'bar_navigation/nonco.php' ?>
     <div class="content">
       <div class="wrapp">
-        <h5><img class="pp_posts_max" src="<?php if($profil["photo_profil"]!=null) { echo $profil["photo_profil"]; } else { ?>src/media/default_profil_cover.jpg<?php } ?>" alt="Default profil picture"/><a class="no_deco_link" href="<?php echo "profil.php?id=".$data["profil"]; ?>"><?php echo " ".$data["nom_createur"]; ?></a></h5>
-        <i><?php $d_publi = new DateTime($data["date_publication"]); echo "Publié le ".$d_publi->format("d/m/Y");?></i>
-        <p><?php echo $data["contenu"]; ?></p>
+        <h5><img class="pp_posts_max" src="<?php if($profil["photo_profil"]!=null) { echo $profil["photo_profil"]; } else { ?>src/media/default_profil_cover.jpg<?php } ?>" alt="Default profil picture"/><a class="no_deco_link" href="<?php echo "profil.php?id=".$feed["profil"]; ?>"><?php echo " ".$feed["nom_createur"]; ?></a></h5>
+        <i><?php $d_publi = new DateTime($feed["date_publication"]); echo "Publié le ".$d_publi->format("d/m/Y");?></i>
+        <p><?php echo $feed["contenu"]; ?></p>
         <hr>
         <p><?php
         $contenu = explode(".",$feed["contenu"]);
