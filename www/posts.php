@@ -76,7 +76,7 @@
             </div>
           <?php
         } else {
-          echo $feed["contenu"];
+          echo "<br />".$feed["contenu"];
         } ?></p><?php if($_SESSION["idcon"]!=""){ ?><br/>
         <ul class="barre_posts">
           <?php
