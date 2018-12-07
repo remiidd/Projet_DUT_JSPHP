@@ -79,7 +79,7 @@
           <?php
         } else {
           echo $feed["contenu"];
-        } ?></p><br/>
+        } ?></p><?php if($_SESSION["idcon"]!=""){ ?><br/>
         <ul class="barre_posts">
           <?php
           $okk = false;
@@ -90,6 +90,7 @@
           <li class="elements_barre_posts"><a href="posts.php?id=<?php echo $feed["id"]; ?>"><?php echo $feed["nb_com"];?> Commentaires <i class="far fa-comments"></i></a></li>
           <li class="elements_barre_posts"><a href="" onclick="share_post(<?php echo $feed["id"].",".$_SESSION["idcon"]; ?>)"><?php echo $feed["nb_share"];?> Shares <i class="fas fa-share"></i></a></li>
         </ul>
+      <?php } ?>
         <hr>
         <p>Commentaires</p>
       </div>
