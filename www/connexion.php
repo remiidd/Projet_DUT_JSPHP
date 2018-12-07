@@ -21,7 +21,7 @@
           <form class="form_connexion" action="scripts/php/connexion.php" method="post">
             <p>
               <?php
-                if(isset($_GET['err'])){
+                if(isset($_GET['user'])){
                   ?>
                     <p id="error_connexion">Identifiants incorrects</p>
                   <?php
