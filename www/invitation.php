@@ -39,8 +39,8 @@
                   </div>
                   <div class="rech_info">
                     <a class="rech_nom" href="profil.php?id=<?php echo $donnees['id'] ?>"><?php  echo $donnees['nom'] . " " . $donnees['prenom']?></a>
-                    <form class="" action="scripts/php/supprimer_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $donnees['id'];?>" method="post">
-                      <input type="submit" name="Ajouter" value="Supprimer">
+                    <form class="" action="scripts/php/accepter_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $donnees['id'];?>" method="post">
+                      <input type="submit" name="Accepter" value="Accepter la demande">
                     </form>
                   </div>
 
