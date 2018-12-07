@@ -131,7 +131,7 @@
             $rep = $bdd->query('SELECT * FROM profil WHERE id=\''.$com["id_profil"].'\'');
              ?>
              <div>
-               <?php echo $com["nom_createur"]." réponds : ".$com["text_com"];?>
+               <?php echo $com["nom_createur"]." commentes : ".$com["text_com"];?>
              </div>
             <?php
           }
