@@ -1,7 +1,7 @@
 <?php
   session_start();
   $mess = "";
-  if(isset($_SESSION['amis_conv'])){
+  if(isset($_SESSION['amis_conv'])){//VERIF
     $moi = $_SESSION['idcon'];
     $lui = $_SESSION['amis_conv'];
     try{
@@ -12,18 +12,7 @@
     }
     $reponse = $bdd->query("SELECT id_exp, id_dest, message FROM message WHERE id_exp=".$moi." AND id_dest=".$lui." OR id_dest=".$moi." AND id_exp=".$lui." order by id");
 
-    while ($donnees = $reponse->fetch()){
-      if ($donnees['id_exp'] == $_SESSION['idcon']) {
-        $mess .= "<div class=\"bulle-moi\">
-                <p>".$donnees['message']."</p>
-              </div>";
-      }
-      else{
-        $mess .= "<div class=\"bulle-ami\">
-                <p>".$donnees['message']."</p>
-              </div>";
-      }
-    }
+    //WHILE
   }
 
   echo $mess;
