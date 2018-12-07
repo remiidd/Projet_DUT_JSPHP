@@ -1,0 +1,40 @@
+<?php
+  session_start();
+
+  if(isset($_SESSION['idcon'])){
+    $moi=$_SESSION['idcon'];
+    ?>
+      <!DOCTYPE html>
+      <html lang="en" dir="ltr">
+        <head>
+          <meta charset="utf-8">
+          <title>Invitation</title>
+          <?php include 'scripts/html/head.html'; ?>
+        </head>
+        <body>
+          <?php include 'bar_navigation/nonco.php'?>
+          <div class="content">
+            <?php
+              try{
+                $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
+              }
+              catch (Exception $e){
+                    die('Erreur : ' . $e->getMessage());
+              }
+              $reponse = $bdd->query('SELECT * FROM `profil` LEFT JOIN amis ON profil.id=amis.id_amis WHERE amis.id='.$user.'AND amis.statut="demande"');
+
+              while($donnees=$reponse->fetch()){
+                ?>
+
+                <?php
+              }
+            ?>
+        </body>
+      </html>
+    <?php
+  }
+  else {
+    header("Location: accueil");
+    exit();
+  }
+?>
