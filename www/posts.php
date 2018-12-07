@@ -106,13 +106,14 @@
           </div><?php
             if(isset($_POST["textarea_posts"])) {
               $message = htmlentities($_POST["textarea_posts"]);
-              $reponse = $bdd->query('SELECT * FROM profil WHERE id=\''..'\'');
+              $reponse = $bdd->query('SELECT * FROM profil WHERE id=\''.$_SESSION["idcon"].'\'');
+              $profil_sender = $reponse->fetch();
               $req = $bdd->prepare('INSERT INTO commentaire(id, id_post, text_com, nom_createur)
                                     VALUES(NULL, :idpost,  :contenu, :createur, :id_profil)');
               $req->execute(array(
                 'idpost' => $_GET["id"],
                 'contenu' => $message,
-                'createur' =>,
+                'createur' => $profil_sender["prenom"]." ".$profil_sender["nom"],
                 'id_profil' => $_SESSION["idcon"]
               ));
               $url_refresh = "Location:profil".$_GET["id"];
