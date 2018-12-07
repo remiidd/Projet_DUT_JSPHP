@@ -30,7 +30,7 @@
               <label>Identifiant</label>
               </br>
               <?php
-                if(isset($_GET['err'])){
+                if(isset($_GET['user'])){
                   ?>
                     <input type="text" name="id" value="<?php echo $_GET['user']?>">
                   <?php
