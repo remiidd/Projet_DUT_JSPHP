@@ -113,7 +113,7 @@
               header($url_refresh);
           }
         } ?>
-        <hr>
+          <hr>
         </div>
       </div>
       <p>salut</p>
