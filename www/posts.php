@@ -117,6 +117,6 @@
         </div>
       </div>
       <p>salut</p>
-    <script src="scripts/js/commentss.js"></script>
+    <script src="scripts/js/comments.js"></script>
   </body>
 </html>
