@@ -92,11 +92,11 @@
         <hr>
         <p>Commentaires</p>
         <hr>
-        
+
       </div>
     </div>
 
 
-
+    <script src="scripts/js/comments.js"></script>
   </body>
 </html>
