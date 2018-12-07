@@ -107,12 +107,11 @@
             if(isset($_POST["textarea_posts"])) {
               $message = htmlentities($_POST["textarea_posts"]);
               $req = $bdd->prepare('INSERT INTO commentaire(id, id_post, text_com, nom_createur)
-                                    VALUES(NULL, :idpost,  :contenu, :createur)');
+                                    VALUES(NULL, :idpost,  :contenu, :createur, :id_profil)');
               $req->execute(array(
-                'idpost' => $data["prenom"]." ".$data["nom"],
+                'idpost' => $_GET["id"],
                 'contenu' => $message,
-                'photo' => "",
-                'profil' => $_GET["id"]
+                'createur' =>
               ));
               $url_refresh = "Location:profil".$_GET["id"];
               header($url_refresh);
