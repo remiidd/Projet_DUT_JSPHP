@@ -9,7 +9,7 @@
     catch (Exception $e){
           die('Erreur : ' . $e->getMessage());
     }
-    
+    echo "fait";
   else {
     header("Location: accueil");
     exit();
