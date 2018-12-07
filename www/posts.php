@@ -93,7 +93,6 @@
         <p>Commentaires</p>
         <hr>
         <?php if($_SESSION["idcon"]!=""){ ?>
-          </div>
           <div class="envoyer_post">
             <form class="form_envoyer_post" method="POST">
               <textarea id="areapost" name="textarea_posts" rows="8" cols="130" placeholder="Commentez ce post"></textarea><br/>
