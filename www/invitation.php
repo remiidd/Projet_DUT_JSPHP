@@ -12,7 +12,7 @@
           <?php include 'scripts/html/head.html'; ?>
         </head>
         <body>
-          <?php include 'bar_navigation/nonco.php'; ?>
+          <?php include 'bar_navigation/nonco.php';?>
           <div class="content">
             <?php
               try{
@@ -25,7 +25,26 @@
 
               while($donnees=$reponse->fetch()){
                 ?>
+                <div class="rech_user">
+                  <div class="rech_div_img">
+                    <img src="<?php
+                      if ($donnees['photo_profil']!=NULL) {
+                        echo $donnees['photo_profil'] ;
+                      }
+                      /*else {
+                        echo "src/media/default_profil_picture.jpg";
+                      }*/
 
+                    ?>" class="rech_img">
+                  </div>
+                  <div class="rech_info">
+                    <a class="rech_nom" href="profil.php?id=<?php echo $donnees['id'] ?>"><?php  echo $donnees['nom'] . " " . $donnees['prenom']?></a>
+                    <form class="" action="scripts/php/supprimer_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $donnees['id'];?>" method="post">
+                      <input type="submit" name="Ajouter" value="Supprimer">
+                    </form>
+                  </div>
+
+                </div>
                 <?php
               }
             ?>
