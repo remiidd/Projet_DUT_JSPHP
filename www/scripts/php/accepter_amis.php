@@ -11,7 +11,7 @@
           die('Erreur : ' . $e->getMessage());
     }
     $req = $bdd->query("UPDATE amis SET statut=\"amis\" WHERE (id=$moi AND id_amis=$lui) 0R (id_amis=$moi AND id=$moi)");
-
+    echo $moi ." ".$lui;
   }
   else {
     header("Location: accueil");
