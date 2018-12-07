@@ -125,6 +125,7 @@
           }
         } ?>
           <hr>
+          <div id="message">
           <?php
           $rep = $bdd->query('SELECT * FROM commentaire WHERE id_post=\''.$_GET["id"].'\'');
           while($com = $rep->fetch()){
@@ -137,6 +138,7 @@
             <?php
           }
            ?>
+         </div>
         </div>
       </div>
     <script src="scripts/js/comments.js"></script>
