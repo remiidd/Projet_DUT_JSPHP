@@ -37,7 +37,12 @@
     <?php include 'bar_navigation/nonco.php' ?>
     <div class="content">
       <div class="wrapp">
-        <h5><img class="pp_posts_max" src="<?php if($profil["photo_profil"]!=null) { echo $profil["photo_profil"]; } else { ?>src/media/default_profil_picture.jpg<?php } ?>" alt="Default profil picture"/><a class="no_deco_link" href="<?php echo "profil.php?id=".$feed["profil"]; ?>"><?php echo " ".$feed["nom_createur"]; ?></a></h5>
+        <h5><img class="pp_posts_max" src="<?php if($profil["photo_profil"]!=null) {
+                                          echo $profil["photo_profil"]; }
+                                          else { ?>src/media/default_profil_picture.jpg<?php } ?>" alt="Default profil picture"/>
+            <a class="no_deco_link" href="<?php echo "profil.php?id=".$feed["profil"]; ?>">
+              <?php echo " ".$feed["nom_createur"]; ?>
+        </a></h5>
         <i><?php $d_publi = new DateTime($feed["date_publication"]); echo "Publié le ".$d_publi->format("d/m/Y");?></i>
         <p><?php
         $contenu = explode(".",$feed["contenu"]);
@@ -101,7 +106,7 @@
           </div><?php
             if(isset($_POST["textarea_posts"])) {
               $message = htmlentities($_POST["textarea_posts"]);
-              $req = $bdd->prepare('INSERT INTO posts(id, nom_createur, date_publication, contenu, photo, profil, nb_com, nb_like, nb_share)
+              $req = $bdd->prepare('INSERT INTO commentaire(id, id_post, text_com, nom_createur, photo, profil, nb_com, nb_like, nb_share)
                                     VALUES(NULL, :noms, CURRENT_DATE(), :contenu, :photo, :profil,\'0\',\'0\',\'0\')');
               $req->execute(array(
                 'noms' => $data["prenom"]." ".$data["nom"],
