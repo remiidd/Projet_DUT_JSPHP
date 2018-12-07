@@ -105,7 +105,8 @@
               $message = htmlentities($_POST["textarea_posts"]);
 
               $today = new DateTime();
-              $req = $bdd->prepare('INSERT INTO posts(id, nom_createur, date_publication, contenu, photo, profil, nb_com, nb_like, nb_share) VALUES(NULL, :noms, CURRENT_DATE(), :contenu, :photo, :profil,\'0\',\'0\',\'0\')');
+              $req = $bdd->prepare('INSERT INTO posts(id, nom_createur, date_publication, contenu, photo, profil, nb_com, nb_like, nb_share)
+                                    VALUES(NULL, :noms, CURRENT_DATE(), :contenu, :photo, :profil,\'0\',\'0\',\'0\')');
               $req->execute(array(
                 'noms' => $data["prenom"]." ".$data["nom"],
                 'contenu' => $message,
@@ -117,7 +118,10 @@
           ?>
         </div><?php } ?>
         <div class="feed_profil">
-          <?php $reponse = $bdd->query('SELECT * FROM posts WHERE profil=\''.$_GET['id'].'\' ORDER BY id DESC');
+          <?php $reponse = $bdd->query('SELECT *
+                                        FROM posts
+                                        WHERE profil=\''.$_GET['id'].'\'
+                                        ORDER BY id DESC');
           while($feed = $reponse->fetch()) {
             ?><div><hr>
               <h5><a class="no_deco_link" href="<?php echo "profil-".$feed["profil"]; ?>"><img class="pp_posts" src="<?php if($data["photo_profil"]!=null) { echo $data["photo_profil"]; } else { ?>src/media/default_profil_picture.jpg<?php } ?>" alt="Default profil cover"/><?php echo " ".$feed["nom_createur"]; ?></h5></a><p>
