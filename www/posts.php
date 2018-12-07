@@ -113,7 +113,7 @@
               $url_refresh = "Location:profil".$_GET["id"];
               header($url_refresh);
           ?>
-        </div><?php }} ?>
+        </div><?php } ?>
       </div>
     </div>
 
