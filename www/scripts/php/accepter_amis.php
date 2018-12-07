@@ -1,5 +1,5 @@
 <?php
-  if(isset($_SESSION['idcon']) && isset($_GET['id'])){
+  if(isset($_SESSION['idcon']) & isset($_GET['id'])){
     $moi = $_SESSION['idcon'];
     $lui = $_GET['id'];
     try{
