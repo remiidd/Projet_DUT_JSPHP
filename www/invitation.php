@@ -21,7 +21,7 @@
               catch (Exception $e){
                     die('Erreur : ' . $e->getMessage());
               }
-              $reponse = $bdd->query('SELECT * FROM `profil` LEFT JOIN amis ON profil.id=amis.id_amis WHERE amis.id='.$user.' AND amis.statut="demande"');
+              $reponse = $bdd->query('SELECT * FROM `profil` LEFT JOIN amis ON profil.id=amis.id_amis WHERE amis.id='.$moi.' AND amis.statut="demande"');
 
               while($donnees=$reponse->fetch()){
                 echo $donnees['nom']
