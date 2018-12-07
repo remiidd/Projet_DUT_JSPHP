@@ -104,7 +104,7 @@
           <div class="envoyer_post">
             <form class="form_envoyer_post" method="POST">
               <textarea id="areapost" name="textarea_posts" rows="2" cols="70" placeholder="Commentez ce post"></textarea><br/>
-              <p id="nb_caract_string"><i id="nb_caract">0</i> / 100 caractères maximum <input id="inscriBout" onclick="" type="submit" name="bouton_posts" value="Bananez !"/></p>
+              <p id="nb_caract_string"><i id="nb_caract">0</i> / 100 caractères maximum <input id="inscriBout" type="submit" name="bouton_posts" value="Bananez !"/></p>
             </form>
             <script src="scripts/js/caractere_max_com.js"></script>
           </div><?php
