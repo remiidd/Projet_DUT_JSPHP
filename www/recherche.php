@@ -78,7 +78,7 @@
                         ?>" class="rech_img">
                       </div>
                       <div class="rech_info">
-                        <a class="rech_nom" href="profil.php?id=<?php echo $donnees['id'] ?>"><?php $donnees['prenom'] . " " .  echo $donnees['nom']?></a>
+                        <a class="rech_nom" href="profil.php?id=<?php echo $donnees['id'] ?>"><?php echo $donnees['prenom'] . " " .  $donnees['nom']?></a>
                         <?php
                           if($stamis == true){
                             ?>
