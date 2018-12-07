@@ -98,7 +98,7 @@
               <textarea id="areapost" name="textarea_posts" rows="3" cols="70" placeholder="Commentez ce post"></textarea><br/>
               <p id="nb_caract_string"><i id="nb_caract">0</i> / 500 caractères maximum</p><input id="inscriBout" type="submit" name="bouton_posts" value="Bananez !"/>
             </form>
-            <script src="scripts/js/caractere_max.js"></script>
+            <script src="scripts/js/caractere_max_com.js"></script>
           <?php
         } else {?> </div> <?php }
             if(isset($_POST["textarea_posts"])) {
