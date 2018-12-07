@@ -91,6 +91,8 @@
       <?php } ?>
         <hr>
         <p>Commentaires</p>
+        <hr>
+        
       </div>
     </div>
 
