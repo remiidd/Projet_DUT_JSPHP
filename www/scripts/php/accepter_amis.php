@@ -14,7 +14,7 @@
     echo $moi ." ".$lui;
   }
   else {
-    header("Location: accueil");
+    header("Location: profil-$lui");
     exit();
   }
 ?>
