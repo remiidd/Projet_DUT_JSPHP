@@ -106,10 +106,10 @@
           </div><?php
             if(isset($_POST["textarea_posts"])) {
               $message = htmlentities($_POST["textarea_posts"]);
-              $req = $bdd->prepare('INSERT INTO commentaire(id, id_post, text_com, nom_createur, photo, profil, nb_com, nb_like, nb_share)
-                                    VALUES(NULL, :noms, CURRENT_DATE(), :contenu, :photo, :profil,\'0\',\'0\',\'0\')');
+              $req = $bdd->prepare('INSERT INTO commentaire(id, id_post, text_com, nom_createur)
+                                    VALUES(NULL, :idpost,  :contenu, :createur)');
               $req->execute(array(
-                'noms' => $data["prenom"]." ".$data["nom"],
+                'idpost' => $data["prenom"]." ".$data["nom"],
                 'contenu' => $message,
                 'photo' => "",
                 'profil' => $_GET["id"]
