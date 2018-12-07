@@ -91,7 +91,6 @@
       <?php } ?>
         <hr>
         <p>Commentaires</p>
-        <hr>
         <?php if($_SESSION["idcon"]!=""){ ?>
           <div class="envoyer_post">
             <form class="form_envoyer_post" method="POST">
@@ -114,7 +113,7 @@
               $url_refresh = "Location:profil".$_GET["id"];
               header($url_refresh);
           ?>
-        </div><?php } ?>
+        </div><?php }} ?>
       </div>
     </div>
 
