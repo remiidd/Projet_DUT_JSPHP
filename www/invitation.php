@@ -9,6 +9,7 @@
         <head>
           <meta charset="utf-8">
           <title>Invitation</title>
+          <script src="scripts/js/recherche.js" charset="utf-8"></script>
           <?php include 'scripts/html/head.html'; ?>
         </head>
         <body>
