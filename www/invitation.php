@@ -24,8 +24,9 @@
               $reponse = $bdd->query('SELECT * FROM `profil` LEFT JOIN amis ON profil.id=amis.id_amis WHERE amis.id=1 AND amis.statut="demande"');
 
               while($donnees=$reponse->fetch()){
-                echo $donnees['nom'];
-                /*
+                echo $donnees['nom']
+
+                ?>
                 <div class="rech_user">
                   <div class="rech_div_img">
                     <img src="<?php
@@ -37,20 +38,7 @@
                       }
                     ?>" class="rech_img">
                   </div>
-                  <div class="rech_info">
-                    <a class="rech_nom" href="profil.php?id=<?php echo $donnees['id'] ?>"><?php  echo $donnees['nom'] . " " . $donnees['prenom']?></a>
-                    <?php
-                      if($stamis == true){
-                        ?>
-                        <form class="" action="scripts/php/valider_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $donnees['id'];?>" method="post">
-                          <input type="submit" name="Ajouter" value="Confirmer la demande">
-                        </form>
-                        <?php
-                      }
-                    ?>
 
-
-                  </div>
 
                 </div>
                 <?php*/
