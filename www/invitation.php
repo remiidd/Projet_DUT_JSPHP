@@ -36,20 +36,7 @@
                       }*/
                     ?>" class="rech_img">
                   </div>
-                  <div class="rech_info">
-                    <a class="rech_nom" href="profil.php?id=<?php echo $donnees['id'] ?>"><?php  echo $donnees['nom'] . " " . $donnees['prenom']?></a>
-                    <?php
-                      if($stamis == true){
-                        ?>
-                        <form class="" action="scripts/php/valider_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $donnees['id'];?>" method="post">
-                          <input type="submit" name="Ajouter" value="Confirmer la demande">
-                        </form>
-                        <?php
-                      }
-                    ?>
-
-
-                  </div>
+                
 
                 </div>
                 <?php
