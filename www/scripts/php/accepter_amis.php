@@ -10,7 +10,7 @@
     catch (Exception $e){
           die('Erreur : ' . $e->getMessage());
     }
-    $req = $bdd->query("";
+    $req = $bdd->query("");
 
   }
   else {
