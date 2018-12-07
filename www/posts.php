@@ -116,8 +116,6 @@
                 'createur' => $profil_sender["prenom"]." ".$profil_sender["nom"],
                 'id_profil' => $_SESSION["idcon"]
               ));
-              $url_refresh = "Location:profil".$_GET["id"];
-              header($url_refresh);
           }
         } ?>
           <hr>
