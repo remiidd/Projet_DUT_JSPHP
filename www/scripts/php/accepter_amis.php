@@ -10,7 +10,7 @@
     catch (Exception $e){
           die('Erreur : ' . $e->getMessage());
     }
-    $req = $bdd->query("UPDATE amis SET statut=\"amis\" WHERE id=1 AND id_amis = 12";
+    $req = $bdd->query("UPDATE amis SET statut=\"amis\" WHERE id=1 AND id_amis=12";
 
   }
   else {
