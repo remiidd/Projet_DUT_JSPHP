@@ -6,9 +6,8 @@ function resize_msg(){
     div[i].style.height = taille + "px";
   }
 
-  for (i = 0; i < his.length; i++) {
-    his[i].style.height = taille + "px";
-  }
+  his.style.height = taille + "px";
+
 }
 
 function charger(){
