@@ -66,6 +66,10 @@
                 }
 
                 if($nouv_conv == true){
+                  $reponse = $bdd->query("SELECT profil.nom, profil.prenom
+                                          FROM profil
+                                          WHERE id=$_SESSION['nv_conv']");
+                  echo $reponse['nom'];
                   ?>
                     <a class="histo_perso_href" href="scripts/php/messenger.php?amis=<?php echo $_SESSION['nv_conv']?>">
                       <div class="histo_perso_selection">
