@@ -79,8 +79,8 @@
                         </div>
                       </a>
                     <?php
-                    unset($_SESSION['nv_conv']);
                   }
+                  unset($_SESSION['nv_conv']);
                 }
 
 
