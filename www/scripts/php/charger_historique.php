@@ -18,7 +18,6 @@
   while ($donnees = $reponse->fetch()){
     $id = intval($donnees['id_message']);
     $histo[$id]=array($donnees['id'], $donnees['prenom'] ." " . $donnees['nom']);
-    $mess .= $donnees['prenom'];
   }
 
   $reponse = $bdd->query("SELECT DISTINCT(profil.id), profil.nom, profil.prenom, MAX(message.id) as id_message
@@ -38,8 +37,32 @@
       }
     }
   }
-  $mess .= "coic";
+  for($i = array_pop(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
+    if(isset($histo[$i])){
+      $mess .= '<a class="histo_perso_href" href="scripts/php/messenger.php?amis='.$histo[$i][0].'">'
+      if(isset($_SESSION['amis_conv'])){
+        if($histo[$i][0] == $_SESSION['amis_conv']){
 
+            $mess.= '<div class="histo_perso_selection">';
+
+        }
+        else{
+
+            $mess.='<div class="histo_perso" href="scripts/php/messenger.php?amis='.$histo[$i][0].'">';
+
+        }
+      }
+      else {
+
+            $mess.='<div class="histo_perso" href="scripts/php/messenger.php?amis='.$histo[$i][0].'">';
+
+      }
+            $mess.=$histo[$i][1];
+
+          $mess.='</div>
+        </a>';
+    }
+  }
   echo $mess;
 
 ?>
