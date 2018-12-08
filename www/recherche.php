@@ -96,6 +96,9 @@
                           }
                         ?>
 
+                        <form class="" action="scripts/php/nouveau_message.php?id_amis=<?php echo $donnees['id'];?>" method="post">
+                          <input type="submit" name="Ajouter" value="Ajouter">
+                        </form>
 
                       </div>
 
