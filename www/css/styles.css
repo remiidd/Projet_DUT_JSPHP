@@ -458,7 +458,7 @@
 
 /* ====================  CSS PAGE messagerie ==================== */
 
-.historique{
+#historique{
   position: absolute;
   left: 0px;
   width: 20%;
