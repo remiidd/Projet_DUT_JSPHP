@@ -46,6 +46,7 @@
                       if($key<$donnees['id_message']){
                         unset($histo[$key]);
                         $id = intval($donnees['id_message']);
+                        echo $id;
                         $histo[$id]=array($donnees['id'], $donnees['prenom'] . " " . $donnees['nom']);
                       }
                     }
