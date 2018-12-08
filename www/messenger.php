@@ -51,7 +51,9 @@
                   }
                 }
 
-                
+                for($i = max(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
+                  
+                }
 
                 for($i = max(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
                   if(isset($histo[$i])){
