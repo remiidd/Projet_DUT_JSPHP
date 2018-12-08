@@ -2,7 +2,7 @@
   session_start();
 
   if(isset($_SESSION['idcon'])){
-    $nouv_conv = false;
+    $nouv_conv = true;
     ?>
       <!DOCTYPE html>
       <html lang="fr" dir="ltr">
@@ -57,9 +57,9 @@
                   if(isset($_SESSION['nv_conv'])){
                     if($histo[$i][0] == $_SESSION['nv_conv']){
                       $_SESSION['amis_conv'] = $_SESSION['nv_conv'];
+                      $nouv_conv = false;
                     }
                     else {
-                      $nouv_conv = true;
                       $_SESSION['amis_conv'] = $_SESSION['nv_conv'];
                     }
                   }
