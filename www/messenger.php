@@ -53,8 +53,10 @@
 
                 for($i = max(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
                   //fonctionne pas
-                  if(isset($_SESSION['nv_conv']){
-                    
+                  if(isset($_SESSION['nv_conv'])){
+                    if($histo[$i][0] == $_SESSION['nv_conv']){
+                      $_SESSION['amis_conv'] = $_SESSION['nv_conv'];
+                    }
                   }
                 }
 
