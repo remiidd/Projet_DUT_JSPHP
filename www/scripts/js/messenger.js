@@ -39,7 +39,7 @@ function charger_historique(){
             }
         });
         charger_historique();
-    }, 3000);
+    }, 10000);
 
 }
 
