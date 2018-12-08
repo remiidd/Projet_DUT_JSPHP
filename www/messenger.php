@@ -52,10 +52,8 @@
                   }
                 }
 
-                echo $histo[29][1];
-
                 for($i = array_pop(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
-                  echo $i;
+                  echo $histo[29][1];
                   if(isset($histo[$i])){
                     ?>
                       <a class="histo_perso_href" href="scripts/php/messenger.php?amis=<?php echo $histo[$i][0]?>">
