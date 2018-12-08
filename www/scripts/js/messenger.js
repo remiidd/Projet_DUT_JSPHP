@@ -28,4 +28,20 @@ function charger(){
 
 }
 
+function charger_historique(){
+
+    setTimeout( function(){
+        $.ajax({
+            url : "scripts/php/charger_historique.php",
+            type : "GET",
+            success : function(html){
+                $('#message').html(html);
+            }
+        });
+        charger_historique();
+    }, 3000);
+
+}
+
+charger_historique();
 charger();
