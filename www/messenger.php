@@ -48,9 +48,9 @@
                         $id = intval($donnees['id_message']);
                         $histo[$id]=array($donnees['id'], $donnees['prenom'] . " " . $donnees['nom']);
                       }
-                    }
-                    else {
-                      echo $donnees['id_message'] . " ";
+                      else {
+                        echo $donnees['id_message'] . " ";
+                      }
                     }
                   }
                 }
