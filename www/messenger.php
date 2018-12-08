@@ -2,6 +2,7 @@
   session_start();
 
   if(isset($_SESSION['idcon'])){
+    $nouv_conv = false;
     ?>
       <!DOCTYPE html>
       <html lang="fr" dir="ltr">
@@ -58,16 +59,21 @@
                       $_SESSION['amis_conv'] = $_SESSION['nv_conv'];
                     }
                     else {
-                      ?>
-                        <a class="histo_perso_href" href="scripts/php/messenger.php?amis=<?php echo $_SESSION['nv_conv']?>">
-                          <div class="histo_perso_selection">
-                            ICI
-                          </div>
-                        </a>
-                      <?php
+                      $nouv_conv = true
                     }
                   }
                 }
+
+                if($nouv_conv == true){
+                  ?>
+                    <a class="histo_perso_href" href="scripts/php/messenger.php?amis=<?php echo $_SESSION['nv_conv']?>">
+                      <div class="histo_perso_selection">
+                        ICI
+                      </div>
+                    </a>
+                  <?php
+                }
+
 
                 for($i = max(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
                   if(isset($histo[$i])){
