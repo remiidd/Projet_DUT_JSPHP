@@ -70,7 +70,8 @@
                   $reponse = $bdd->query("SELECT profil.nom, profil.prenom
                                           FROM profil
                                           WHERE id=$id_nouveau");
-                  
+                  $donnees = $reponse->fetch();
+                  $id = $donnees['nom'];
                   ?>
                     <a class="histo_perso_href" href="scripts/php/messenger.php?amis=<?php echo $_SESSION['nv_conv']?>">
                       <div class="histo_perso_selection">
