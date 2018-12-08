@@ -17,7 +17,7 @@
   while ($donnees = $reponse->fetch()){
     $id = intval($donnees['id_message']);
     $histo[$id]=array($donnees['id'], $donnees['prenom'] ." " . $donnees['nom']);
-    $mess .= $donnees['prenom'] ." " . $donnees['nom'];
+    $mess .= $donnees['prenom'];
   }
 
   $reponse = $bdd->query("SELECT DISTINCT(profil.id), profil.nom, profil.prenom, MAX(message.id) as id_message
