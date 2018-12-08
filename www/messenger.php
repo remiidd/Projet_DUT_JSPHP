@@ -13,7 +13,7 @@
         <body onresize="resize_msg()" onload="resize_msg()">
           <?php include 'bar_navigation/nonco.php'?>
           <div class="content">
-            <div class="historique">
+            <div id="historique">
               <?php
               $moi = $_SESSION['idcon'];
                 try{
