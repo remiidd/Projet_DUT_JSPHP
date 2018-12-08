@@ -60,6 +60,7 @@
                     }
                     else {
                       $nouv_conv = true;
+                      $_SESSION['amis_conv'] = $_SESSION['nv_conv'];
                     }
                   }
                 }
