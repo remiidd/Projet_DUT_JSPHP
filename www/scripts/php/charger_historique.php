@@ -1,4 +1,5 @@
 <?php
+  session_start();
   $moi = $_SESSION['idcon'];
   $mess ="" . $moi;
 
