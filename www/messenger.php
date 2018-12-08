@@ -70,7 +70,15 @@
                                           FROM profil
                                           WHERE id=$id_nouveau");
                   $donnees = $reponse->fetch();
-
+                  ?>
+                    <a class="histo_perso_href" href="scripts/php/messenger.php?amis=<?php echo $_SESSION['nv_conv']?>">
+                      <div class="histo_perso_selection">
+                        <?php
+                          echo $donnees['prenom'] . " " . $donnees['nom'];
+                        ?>
+                      </div>
+                    </a>
+                  <?php
                 }
 
                 for($i = max(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
