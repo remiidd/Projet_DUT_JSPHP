@@ -57,6 +57,11 @@
                     if($histo[$i][0] == $_SESSION['nv_conv']){
                       $_SESSION['amis_conv'] = $_SESSION['nv_conv'];
                     }
+                    else {
+                      ?>
+                        <a class="histo_perso_href" href="scripts/php/messenger.php?amis=<?php echo $histo[$i][0]?>">
+                      <?php
+                    }
                   }
                 }
 
