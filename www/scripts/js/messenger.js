@@ -1,5 +1,5 @@
 function resize_msg(){
-  var his = document.getElementsByID("historique");
+  var his = document.getElementsById("historique");
   var div = document.getElementsByClassName("discution");
   var taille = window.innerHeight - 56;
   for (i = 0; i < div.length; i++) {
