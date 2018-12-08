@@ -69,6 +69,7 @@
                   $reponse = $bdd->query("SELECT profil.nom, profil.prenom
                                           FROM profil
                                           WHERE id=$id_nouveau");
+                  $donnees = $reponse->fetch();
                   
                 }
 
