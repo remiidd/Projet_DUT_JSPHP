@@ -59,7 +59,7 @@
                     }
                     else {
                       ?>
-                        <a class="histo_perso_href" href="scripts/php/messenger.php?amis=<?php echo $histo[$i][0]?>">
+                        <a class="histo_perso_href" href="scripts/php/messenger.php?amis=<?php echo $_SESSION['nv_conv']?>">
                       <?php
                     }
                   }
