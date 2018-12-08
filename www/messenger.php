@@ -59,7 +59,7 @@
                       $_SESSION['amis_conv'] = $_SESSION['nv_conv'];
                     }
                     else {
-                      $nouv_conv = true
+                      $nouv_conv = true;
                     }
                   }
                 }
@@ -73,7 +73,6 @@
                     </a>
                   <?php
                 }
-
 
                 for($i = max(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
                   if(isset($histo[$i])){
