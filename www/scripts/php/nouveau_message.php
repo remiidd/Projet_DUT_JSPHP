@@ -1,4 +1,6 @@
 <?php
   session_start();
-  echo $_GET['id_amis'];
+  $_SESSION['nv_conv'] = $_GET['id_amis'];
+  header("Location : /messenger");
+  exit();
 ?>
