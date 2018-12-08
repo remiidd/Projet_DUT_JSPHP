@@ -35,7 +35,7 @@ function charger_historique(){
             url : "scripts/php/charger_historique.php",
             type : "GET",
             success : function(html){
-                $('#message').html(html);
+                $('#historique').html(html);
             }
         });
         charger_historique();
