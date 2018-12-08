@@ -85,6 +85,7 @@
 
 
                 for($i = max(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
+                  echo $i;
                   if(isset($histo[$i])){
                     ?>
                       <a class="histo_perso_href" href="scripts/php/messenger.php?amis=<?php echo $histo[$i][0]?>">
