@@ -52,6 +52,8 @@
                   }
                 }
 
+                echo $histo[28][1]
+
                 for($i = array_pop(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
                   echo $i;
                   if(isset($histo[$i])){
