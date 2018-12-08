@@ -52,7 +52,7 @@
                   }
                 }
 
-                echo $histo[28][1];
+                echo $histo[29][1];
 
                 for($i = array_pop(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
                   echo $i;
