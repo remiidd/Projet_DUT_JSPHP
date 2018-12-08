@@ -39,7 +39,7 @@
 
   for($i = array_pop(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
     if(isset($histo[$i])){
-      $mess .= "zdze"
+      $mess .= "zdze";
 
   }
 
