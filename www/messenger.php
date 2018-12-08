@@ -52,6 +52,14 @@
                 }
 
                 for($i = max(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
+                  if(isset($_SESSION['nv_conv']){
+                    if($histo[$i][0] == $_SESSION['nv_conv']){
+                      $_SESSION['amis_conv'] = $_SESSION['nv_conv'];
+                    }
+                  }
+                }
+
+                for($i = max(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
                   if(isset($histo[$i])){
                     ?>
                       <a class="histo_perso_href" href="scripts/php/messenger.php?amis=<?php echo $histo[$i][0]?>">
