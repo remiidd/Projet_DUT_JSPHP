@@ -17,6 +17,7 @@
   while ($donnees = $reponse->fetch()){
     $id = intval($donnees['id_message']);
     $histo[$id]=array($donnees['id'], $donnees['prenom'] ." " . $donnees['nom']);
+    $mess .= $donnees['prenom'] ." " . $donnees['nom'];
   }
 
   $reponse = $bdd->query("SELECT DISTINCT(profil.id), profil.nom, profil.prenom, MAX(message.id) as id_message
@@ -35,9 +36,6 @@
         }
       }
     }
-  }
-  for($i = array_pop(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
-    $mess .= "coucou";
   }
   $mess .= "coic";
 
