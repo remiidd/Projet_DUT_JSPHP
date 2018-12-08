@@ -85,7 +85,7 @@
                   unset($_SESSION['nv_conv']);
                 }
 
-
+                echo max(array_keys($histo));
                 for($i = max(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
                   echo $i;
                   if(isset($histo[$i])){
