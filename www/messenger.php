@@ -64,13 +64,13 @@
                   }
                 }
 
-                if($nouv_conv == true){
+                if($nouv_conv == false){
                   $id_nouveau = $_SESSION['nv_conv'];
                   $reponse = $bdd->query("SELECT profil.nom, profil.prenom
                                           FROM profil
                                           WHERE id=$id_nouveau");
                   $donnees = $reponse->fetch();
-                  
+
                 }
 
                 for($i = max(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
