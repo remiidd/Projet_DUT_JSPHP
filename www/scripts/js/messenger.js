@@ -42,5 +42,5 @@ function charger_historique(){
 
 }
 
-charger_historique();
+//charger_historique();
 charger();
