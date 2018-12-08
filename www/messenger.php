@@ -64,10 +64,6 @@
                   }
                 }
 
-                if(isset($_SESSION['nv_conv'])){
-                  unset($_SESSION['nv_conv']);
-                }
-
                 if($nouv_conv == true){
                   $id_nouveau = $_SESSION['nv_conv'];
                   $reponse = $bdd->query("SELECT profil.nom, profil.prenom
@@ -83,6 +79,7 @@
                       </div>
                     </a>
                   <?php
+                  unset($_SESSION['nv_conv']);
                 }
 
                 for($i = max(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
