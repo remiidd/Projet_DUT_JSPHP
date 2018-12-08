@@ -41,7 +41,7 @@
     if(isset($histo[$i])){
       $mess .= '<a class="histo_perso_href" href="scripts/php/messenger.php?amis='.$histo[$i][0].'">';
     }
-    $mess .= $i;
+    
   }
   echo $mess;
 
