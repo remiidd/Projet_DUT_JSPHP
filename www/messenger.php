@@ -74,9 +74,7 @@
                   }*/
                 }
 
-                foreach($histo as $key => $value){
-                  echo $key . " " . $histo[$key][0] . " ";
-                }
+                
 
                 if(isset($_SESSION['nv_conv'])){
                   for($i = max(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
