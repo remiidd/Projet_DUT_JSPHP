@@ -42,6 +42,10 @@
                                         ORDER BY MAX(message.id) ASC ");
                 while ($donnees = $reponse->fetch()){
                   echo $donnees['nom'] . " " . $donnees['id'];
+
+                  foreach($histo as $value){
+                    echo $value;
+                  }
                   /*foreach($histo as $key => $val){
                     if( isSet($val[0]) && $val[0] == $donnees['id'] ){
                       if($key<$donnees['id_message']){
