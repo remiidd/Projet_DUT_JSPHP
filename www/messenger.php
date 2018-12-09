@@ -50,7 +50,12 @@
                       if($key < $donnees['id_message']){
                         echo " nouveau plus grand ";
                         unset($histo[$key]);
+                        $id = intval($donnees['id_message']);
+                        $histo[$id]=array($donnees['id'], $donnees['prenom'] . " " . $donnees['nom']);
                       }
+                    }
+                    else {
+                      echo "existe pas";
                     }
                   }
                   echo " | " . $donnees['id'] . " </br>";
