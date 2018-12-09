@@ -61,7 +61,7 @@
                 }
 
                 if(isset($_SESSION['nv_conv'])){
-                  for($i = max(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
+                /*  for($i = max(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
                       if($histo[$i][0] == $_SESSION['nv_conv']){
                         $_SESSION['amis_conv'] = $_SESSION['nv_conv'];
                         $nouv_conv = false;
@@ -69,7 +69,7 @@
                       else {
                         $_SESSION['amis_conv'] = $_SESSION['nv_conv'];
                       }
-                  }
+                  }*/
 
                   if($nouv_conv == true){
                     $id_nouveau = $_SESSION['nv_conv'];
@@ -90,7 +90,7 @@
                   unset($_SESSION['nv_conv']);
                 }
 
-                
+
 
 
               ?>
