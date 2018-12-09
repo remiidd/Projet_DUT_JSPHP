@@ -3,7 +3,7 @@
 
   if(isset($_SESSION['idcon'])){
     $nouv_conv = true;
-    $histo = array("", "");
+    $histo = array();
     ?>
       <!DOCTYPE html>
       <html lang="fr" dir="ltr">
