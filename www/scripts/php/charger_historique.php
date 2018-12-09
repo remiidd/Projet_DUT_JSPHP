@@ -81,7 +81,7 @@
 
         if(isset($histo[$i])){
           $mess.='<a class="histo_perso_href" href="scripts/php/messenger.php?amis='.$histo[$i][0].'">';
-          /*if(isset($_SESSION['amis_conv'])){
+          if(isset($_SESSION['amis_conv'])){
             if($histo[$i][0] == $_SESSION['amis_conv']){
                 $mess.='<div class="histo_perso_selection">';
             }
@@ -93,7 +93,7 @@
               $mess.='<div class="histo_perso" href="scripts/php/messenger.php?amis=' . $histo[$i][0] . '">';
           }
             $mess.=$histo[$i][1];
-            $mess.='</div></a>';*/
+            $mess.='</div></a>';
         }
       }
     }
