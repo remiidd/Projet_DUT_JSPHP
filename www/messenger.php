@@ -41,7 +41,8 @@
                                         GROUP BY profil.id
                                         ORDER BY MAX(message.id) ASC ");
                 while ($donnees = $reponse->fetch()){
-                  foreach($histo as $key => $val){
+                  echo $donnees['profil.nom'];
+                  /*foreach($histo as $key => $val){
                     if( isSet($val[0]) && $val[0] == $donnees['id'] ){
                       if($key<$donnees['id_message']){
                         unset($histo[$key]);
@@ -49,7 +50,7 @@
                         $histo[$id]=array($donnees['id'], $donnees['prenom'] . " " . $donnees['nom']);
                       }
                     }
-                  }
+                  }*/
                 }
 
 
