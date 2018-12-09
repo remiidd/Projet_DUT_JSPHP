@@ -75,6 +75,7 @@
 
 
                   if($nouv_conv == true){
+                    $_SESSION['amis_conv'] = $_SESSION['nv_conv'];
                     $id_nouveau = $_SESSION['nv_conv'];
                     $reponse = $bdd->query("SELECT profil.nom, profil.prenom
                                             FROM profil
