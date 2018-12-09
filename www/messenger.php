@@ -47,6 +47,9 @@
                     echo $key . " " . $histo[$key][0] . " ";
                     if($histo[$key][0] == $donnees['id']){
                       echo "true" . $donnees['id_message'] . " | ";
+                      if($key < $donnees['id_message']){
+                        echo " nouveau plus grand ";
+                      }
                     }
                   }
                   echo " | " . $donnees['id'] . " </br>";
