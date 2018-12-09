@@ -76,7 +76,7 @@
       unset($_SESSION['nv_conv']);
     }
 
-    if(isset($histo)){
+    /*if(isset($histo)){
       for($i = max(array_keys($histo)) + 1; $i>=array_shift(array_keys($histo)); $i--){
 
         if(isset($histo[$i])){
@@ -97,7 +97,7 @@
             </a>':
         }
       }
-    }
+    }*/
 
     echo $mess;
   ?>
