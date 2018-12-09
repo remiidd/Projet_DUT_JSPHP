@@ -46,7 +46,7 @@
                   foreach($histo as $key => $value){
                     echo $key . " " . $histo[$key][0] . " ";
                     if($histo[$key][0] == $donnees['id']){
-                      echo "true";
+                      echo "true" . $donnees['id_message'] . " | ";
                     }
                   }
                   echo " | " . $donnees['id'] . " </br>";
