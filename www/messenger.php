@@ -41,7 +41,6 @@
                                         GROUP BY profil.id
                                         ORDER BY MAX(message.id) ASC ");
 
-                //erreur ici, si jai suelemnt envoyé des message et pas recu alors histo vide donc foreach erreur
                 while ($donnees = $reponse->fetch()){
                   $existe = false;
                   foreach($histo as $key => $value){
