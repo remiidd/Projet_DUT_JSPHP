@@ -43,9 +43,11 @@
 
 
                 while ($donnees = $reponse->fetch()){
+                  $existe = false;
                   foreach($histo as $key => $value){
                     echo $key . " " . $histo[$key][0] . " ";
                     if($histo[$key][0] == $donnees['id']){
+                      $existe = true;
                       echo "true" . $donnees['id_message'] . " | ";
                       if($key < $donnees['id_message']){
                         echo " nouveau plus grand ";
@@ -54,11 +56,11 @@
                         $histo[$id]=array($donnees['id'], $donnees['prenom'] . " " . $donnees['nom']);
                       }
                     }
-                    else {
-                      echo "existe pas";
-                    }
                   }
                   echo " | " . $donnees['id'] . " </br>";
+                  if($existe == false){
+                    echo "existe pas";
+                  }
                   /*foreach($histo as $key => $val){
                     if( isSet($val[0]) && $val[0] == $donnees['id'] ){
                       if($key<$donnees['id_message']){
