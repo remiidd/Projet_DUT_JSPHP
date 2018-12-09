@@ -40,12 +40,15 @@
                                         WHERE message IS NOT NULL AND message.id_exp=\"$moi\"
                                         GROUP BY profil.id
                                         ORDER BY MAX(message.id) ASC ");
+
+                foreach($histo as $value){
+                  echo $value[0] . " ";
+                }
+
                 while ($donnees = $reponse->fetch()){
                   //echo $donnees['nom'] . " " . $donnees['id'];
 
-                  foreach($histo as $value){
-                    echo $value[0] . " ";
-                  }
+
                   /*foreach($histo as $key => $val){
                     if( isSet($val[0]) && $val[0] == $donnees['id'] ){
                       if($key<$donnees['id_message']){
