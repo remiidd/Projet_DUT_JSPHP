@@ -44,7 +44,7 @@
                   echo $donnees['nom'] . " " . $donnees['id'];
 
                   foreach($histo as $value){
-                    echo $value;
+                    echo $value[0];
                   }
                   /*foreach($histo as $key => $val){
                     if( isSet($val[0]) && $val[0] == $donnees['id'] ){
