@@ -41,7 +41,7 @@
                                         GROUP BY profil.id
                                         ORDER BY MAX(message.id) ASC ");
 
-                foreach($histo as key => $value){
+                foreach($histo as $key => $value){
                   echo $key;
                 }
                 while ($donnees = $reponse->fetch()){
