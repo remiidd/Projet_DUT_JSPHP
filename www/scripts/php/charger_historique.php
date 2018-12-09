@@ -79,9 +79,9 @@
     if(isset($histo)){
       for($i = max(array_keys($histo)) + 1; $i>=array_shift(array_keys($histo)); $i--){
 
-        /*if(isset($histo[$i])){
+        if(isset($histo[$i])){
           $mess.='<a class="histo_perso_href" href="scripts/php/messenger.php?amis='.echo $histo[$i][0].'">';
-          if(isset($_SESSION['amis_conv'])){
+          /*if(isset($_SESSION['amis_conv'])){
             if($histo[$i][0] == $_SESSION['amis_conv']){
                 $mess.='<div class="histo_perso_selection">';
             }
@@ -93,8 +93,8 @@
               $mess.='<div class="histo_perso" href="scripts/php/messenger.php?amis=' . $histo[$i][0] . '">';
           }
             $mess.=$histo[$i][1];
-            $mess.='</div></a>';
-        }*/
+            $mess.='</div></a>';*/
+        }
       }
     }
 
