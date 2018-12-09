@@ -45,6 +45,9 @@
                 while ($donnees = $reponse->fetch()){
                   foreach($histo as $key => $value){
                     echo $key . " " . $histo[$key][0] . " ";
+                    if($histo[$key][0] == $donnees['id']){
+                      echo "true";
+                    }
                   }
                   echo " | " . $donnees['id'] . " </br>";
                   /*foreach($histo as $key => $val){
