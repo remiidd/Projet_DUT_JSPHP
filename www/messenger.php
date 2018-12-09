@@ -91,7 +91,6 @@
                       </a>
                     <?php
                   }
-                  unset($_SESSION['nv_conv']);
                 }
 
                 if(isset($histo)){
