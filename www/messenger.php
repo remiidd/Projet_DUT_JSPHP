@@ -41,7 +41,7 @@
                                         GROUP BY profil.id
                                         ORDER BY MAX(message.id) ASC ");
 
-
+                //erreur ici, si jai suelemnt envoyé des message et pas recu alors histo vide donc foreach erreur
                 while ($donnees = $reponse->fetch()){
                   $existe = false;
                   foreach($histo as $key => $value){
@@ -58,6 +58,10 @@
                     $id = intval($donnees['id_message']);
                     $histo[$id]=array($donnees['id'], $donnees['prenom'] . " " . $donnees['nom']);
                   }
+                }
+
+                if(!(isset($histo)) && isset($_SESSION['amis_conv'])){
+                  $_SESSION['nv_conv'] = $_SESSION['amis_conv'];
                 }
 
                 if(isset($_SESSION['nv_conv'])){
