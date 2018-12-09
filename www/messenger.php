@@ -156,6 +156,7 @@
                               </div>";
                       }
                     }
+                    $req = $bdd->query("UPDATE `message` SET `vu`=1 WHERE `id_exp`=".$lui." AND `id_dest`=".$moi);
                   }
 
                  ?>
