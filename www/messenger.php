@@ -156,7 +156,6 @@
                               </div>";
                       }
                     }
-                    echo $moi . $lui;
                     $bdd->exec("UPDATE message SET vu=1 WHERE id_exp=".$lui." AND id_dest=".$moi);
                   }
 
