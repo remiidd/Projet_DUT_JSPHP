@@ -47,7 +47,7 @@
                   foreach($histo as $value){
                     echo $value[0] . " ";
                   }
-                  echo $donnees['id'] . " </br>";
+                  echo " | " . $donnees['id'] . " </br>";
                   /*foreach($histo as $key => $val){
                     if( isSet($val[0]) && $val[0] == $donnees['id'] ){
                       if($key<$donnees['id_message']){
