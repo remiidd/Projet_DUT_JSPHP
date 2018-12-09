@@ -43,7 +43,6 @@
 
 
                 while ($donnees = $reponse->fetch()){
-
                   foreach($histo as $key => $value){
                     echo $key . " " . $histo[$key][0];
                   }
