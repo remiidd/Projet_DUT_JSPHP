@@ -45,7 +45,6 @@
                 while ($donnees = $reponse->fetch()){
                   $existe = false;
                   foreach($histo as $key => $value){
-                    
                     if($histo[$key][0] == $donnees['id']){
                       $existe = true;
                       if($key < $donnees['id_message']){
