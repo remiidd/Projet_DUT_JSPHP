@@ -44,7 +44,7 @@
 
                 while ($donnees = $reponse->fetch()){
                   foreach($histo as $key => $value){
-                    echo $key . " " . $histo[$key][0];
+                    echo $key . " " . $histo[$key][0] . " ";
                   }
                   echo " | " . $donnees['id'] . " </br>";
                   /*foreach($histo as $key => $val){
