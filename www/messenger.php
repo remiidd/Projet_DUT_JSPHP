@@ -42,7 +42,7 @@
                                         ORDER BY MAX(message.id) ASC ");
 
                 foreach($histo as $key => $value){
-                  echo $key;
+                  echo $key . " " . $histo[$key][0];
                 }
                 while ($donnees = $reponse->fetch()){
 
