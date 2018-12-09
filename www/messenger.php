@@ -57,7 +57,6 @@
                       }
                     }
                   }
-                  echo " | " . $donnees['id'] . " </br>";
                   if($existe == false){
                     $id = intval($donnees['id_message']);
                     $histo[$id]=array($donnees['id'], $donnees['prenom'] . " " . $donnees['nom']);
