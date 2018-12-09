@@ -41,15 +41,12 @@
                                         GROUP BY profil.id
                                         ORDER BY MAX(message.id) ASC ");
 
-
+                foreach($histo as key => $value){
+                  echo $key;
+                }
                 while ($donnees = $reponse->fetch()){
 
-                  foreach($histo as $value){
-                    echo $value[0] . " " ;
-                    if($value[0] == $donnees['id']){
-                      echo "true";
-                    }
-                  }
+
                   echo " | " . $donnees['id'] . " </br>";
                   /*foreach($histo as $key => $val){
                     if( isSet($val[0]) && $val[0] == $donnees['id'] ){
