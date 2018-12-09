@@ -48,7 +48,6 @@
                     echo $key . " " . $histo[$key][0] . " ";
                     if($histo[$key][0] == $donnees['id']){
                       $existe = true;
-                      
                       if($key < $donnees['id_message']){
                         unset($histo[$key]);
                         $id = intval($donnees['id_message']);
