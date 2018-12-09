@@ -63,18 +63,7 @@
                     $id = intval($donnees['id_message']);
                     $histo[$id]=array($donnees['id'], $donnees['prenom'] . " " . $donnees['nom']);
                   }
-                  /*foreach($histo as $key => $val){
-                    if( isSet($val[0]) && $val[0] == $donnees['id'] ){
-                      if($key<$donnees['id_message']){
-                        unset($histo[$key]);
-                        $id = intval($donnees['id_message']);
-                        $histo[$id]=array($donnees['id'], $donnees['prenom'] . " " . $donnees['nom']);
-                      }
-                    }
-                  }*/
                 }
-
-                
 
                 if(isset($_SESSION['nv_conv'])){
                   for($i = max(array_keys($histo)); $i>=array_shift(array_keys($histo)); $i--){
