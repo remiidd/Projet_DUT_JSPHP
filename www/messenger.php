@@ -3,7 +3,6 @@
 
   if(isset($_SESSION['idcon'])){
     $nouv_conv = true;
-    $histo = array();
     ?>
       <!DOCTYPE html>
       <html lang="fr" dir="ltr">
@@ -91,37 +90,39 @@
                   unset($_SESSION['nv_conv']);
                 }
 
+                if(isset($histo)){
+                  for($i = max(array_keys($histo)) + 1; $i>=array_shift(array_keys($histo)); $i--){
 
-                for($i = max(array_keys($histo)) + 1; $i>=array_shift(array_keys($histo)); $i--){
-
-                  if(isset($histo[$i])){
-                    ?>
-                      <a class="histo_perso_href" href="scripts/php/messenger.php?amis=<?php echo $histo[$i][0]?>">
-                    <?php
-                    if(isset($_SESSION['amis_conv'])){
-                      if($histo[$i][0] == $_SESSION['amis_conv']){
-                        ?>
-                          <div class="histo_perso_selection">
-                        <?php
+                    if(isset($histo[$i])){
+                      ?>
+                        <a class="histo_perso_href" href="scripts/php/messenger.php?amis=<?php echo $histo[$i][0]?>">
+                      <?php
+                      if(isset($_SESSION['amis_conv'])){
+                        if($histo[$i][0] == $_SESSION['amis_conv']){
+                          ?>
+                            <div class="histo_perso_selection">
+                          <?php
+                        }
+                        else{
+                          ?>
+                            <div class="histo_perso" href="scripts/php/messenger.php?amis=<?php echo $histo[$i][0]?>">
+                          <?php
+                        }
                       }
-                      else{
+                      else {
                         ?>
                           <div class="histo_perso" href="scripts/php/messenger.php?amis=<?php echo $histo[$i][0]?>">
                         <?php
                       }
-                    }
-                    else {
-                      ?>
-                        <div class="histo_perso" href="scripts/php/messenger.php?amis=<?php echo $histo[$i][0]?>">
+                            echo $histo[$i][1];
+                          ?>
+                          </div>
+                        </a>
                       <?php
                     }
-                          echo $histo[$i][1];
-                        ?>
-                        </div>
-                      </a>
-                    <?php
                   }
                 }
+
 
               ?>
             </div>
