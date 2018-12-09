@@ -38,7 +38,7 @@ function charger_historique(){
             }
         });
         charger_historique();
-    }, 10000);
+    }, 3000);
 
 }
 
