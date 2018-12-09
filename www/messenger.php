@@ -60,6 +60,8 @@
                   echo " | " . $donnees['id'] . " </br>";
                   if($existe == false){
                     echo "existe pas";
+                    $id = intval($donnees['id_message']);
+                    $histo[$id]=array($donnees['id'], $donnees['prenom'] . " " . $donnees['nom']);
                   }
                   /*foreach($histo as $key => $val){
                     if( isSet($val[0]) && $val[0] == $donnees['id'] ){
