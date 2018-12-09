@@ -99,7 +99,7 @@
                     if(isset($histo[$i])){
                       ?>
                         <a class="histo_perso_href" href="scripts/php/messenger.php?amis=<?php echo $histo[$i][0]?>">
-                          <span id="notification_count">3</span>
+
                       <?php
                       if(isset($_SESSION['amis_conv'])){
                         if($histo[$i][0] == $_SESSION['amis_conv']){
@@ -120,6 +120,7 @@
                       }
                             echo $histo[$i][1];
                           ?>
+                            <span id="notification_count">3</span>
                           </div>
                         </a>
                       <?php
