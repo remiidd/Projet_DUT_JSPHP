@@ -49,6 +49,7 @@
                       echo "true" . $donnees['id_message'] . " | ";
                       if($key < $donnees['id_message']){
                         echo " nouveau plus grand ";
+                        unset($histo[$key]);
                       }
                     }
                   }
