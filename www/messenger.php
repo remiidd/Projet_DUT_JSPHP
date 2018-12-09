@@ -67,9 +67,6 @@
                           $_SESSION['amis_conv'] = $_SESSION['nv_conv'];
                           $nouv_conv = false;
                         }
-                        else {
-                          $_SESSION['amis_conv'] = $_SESSION['nv_conv'];
-                        }
                     }
                   }
 
