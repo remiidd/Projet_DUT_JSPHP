@@ -465,6 +465,12 @@
   background-color: #ffb900;
 }
 
+.notification_count{
+  float: right;
+  font-weight: bold;
+  color: white;
+}
+
 .pas_d_amis{
   background-color: white;
   height: 10%;
