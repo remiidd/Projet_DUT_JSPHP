@@ -127,7 +127,7 @@
                             $donnees = $reponse->fetch();
                             if($donnees['notif']!= 0){
                               ?>
-                                <span id="notification_count"><?php echo $donnees['notif']; ?></span>
+                                <span class="notification_count"><?php echo $donnees['notif']; ?></span>
                               <?php
                             }
                               ?>
