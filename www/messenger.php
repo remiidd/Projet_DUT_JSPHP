@@ -124,8 +124,8 @@
                             $reponse = $bdd->query("SELECT COUNT(*) as notif
                                                     FROM message
                                                     WHERE id_exp=$moi AND id_dest=$lui");
-                          //  $donnees = $reponse->fetch();
-                          //  echo $donnees['notif'];
+                            $donnees = $reponse->fetch();
+                            echo $donnees['notif'];
                           ?>
                             <span id="notification_count">3</span>
                           </div>
