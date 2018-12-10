@@ -93,6 +93,15 @@
               $mess.='<div class="histo_perso" href="scripts/php/messenger.php?amis=' . $histo[$i][0] . '">';
           }
             $mess.=$histo[$i][1];
+            $moi = $_SESSION['idcon'];
+            $lui = $histo[$i][0];
+            $reponse = $bdd->query("SELECT COUNT(*) as notif
+                                    FROM message
+                                    WHERE id_exp=$lui AND id_dest=$moi AND vu=0");
+            $donnees = $reponse->fetch();
+            if($donnees['notif']!= 0){
+              $mess .='<span class="notification_count">'.$donnees['notif'].'</span>';
+            }
             $mess.='</div></a>';
         }
       }
