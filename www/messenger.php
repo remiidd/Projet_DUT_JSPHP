@@ -125,9 +125,12 @@
                                                     FROM message
                                                     WHERE id_exp=$lui AND id_dest=$moi AND vu=0");
                             $donnees = $reponse->fetch();
-                            echo $donnees['notif'];
-                          ?>
-                            <span id="notification_count">3</span>
+                            if($donnees['notif']!= 0){
+                              ?>
+                                <span id="notification_count"><?php echo $donnees['notif']; ?></span>
+                              <?php
+                            }
+                              ?>
                           </div>
                         </a>
                       <?php
