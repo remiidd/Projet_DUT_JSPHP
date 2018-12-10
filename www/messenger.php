@@ -123,7 +123,7 @@
                             $lui = $histo[$i][0];
                             $reponse = $bdd->query("SELECT COUNT(*) as notif
                                                     FROM message
-                                                    WHERE id_exp=$moi AND id_dest=$lui AND vu=0");
+                                                    WHERE id_exp=$lui AND id_dest=$moi AND vu=0");
                             $donnees = $reponse->fetch();
                             echo $donnees['notif'];
                           ?>
