@@ -119,10 +119,10 @@
                         <?php
                       }
                             echo $histo[$i][1];
-                            $reponse = $bdd->query("SELECT COUNT(*) as notif
-                                                    FROM message
-                                                    WHERE id_exp=".$histo[$i][1]."AND id_dest =".$_SESSION['idcon']);
-                            $donnees = $reponse->fetch();
+                          //  $reponse = $bdd->query("SELECT COUNT(*) as notif
+                          //                          FROM message
+                          //                          WHERE id_exp=".$histo[$i][1]."AND id_dest =".$_SESSION['idcon']);
+                          //  $donnees = $reponse->fetch();
                           //  echo $donnees['notif'];
                           ?>
                             <span id="notification_count">3</span>
