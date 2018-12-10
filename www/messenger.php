@@ -119,7 +119,6 @@
                         <?php
                       }
                             echo $histo[$i][1];
-                            echo $i;
                             $moi = $_SESSION['idcon'];
                             $lui = $histo[$i][0];
                             $reponse = $bdd->query("SELECT COUNT(*) as notif
