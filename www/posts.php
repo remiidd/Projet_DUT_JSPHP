@@ -132,7 +132,7 @@
             $req = $bdd->query('SELECT * FROM profil WHERE id=\''.$com["id_profil"].'\'');
             $profil_du_com = $req->fetch();
              ?>
-             <div>
+             <div>salut
                <?php echo $com["nom_createur"]." commentes : ".$com["text_com"];?>
              </div>
             <?php
