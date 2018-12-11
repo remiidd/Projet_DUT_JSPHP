@@ -76,6 +76,7 @@
         </div>
       </div>
     </nav>
+    <script src="scripts/js/notif.js"></script>
     <?php
   }
 ?>
