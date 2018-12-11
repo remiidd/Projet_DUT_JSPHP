@@ -9,4 +9,6 @@ function verif_bar() {
   }, 3000);
 }
 
-verif_bar();
+document.addEventListener('scroll', function() {
+  verif_bar();
+});
