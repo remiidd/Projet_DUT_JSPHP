@@ -32,7 +32,7 @@
               }
           });
 
-          charger();
+          charger_com();
 
       }, 3000);
 
