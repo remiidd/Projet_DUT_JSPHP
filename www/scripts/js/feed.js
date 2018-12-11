@@ -9,6 +9,9 @@ function verif_bar() {
          console.log("en bas");
       }
   }, 3000);
+
+  verif_bar();
+  
 }
 
 verif_bar();
