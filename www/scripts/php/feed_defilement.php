@@ -15,6 +15,7 @@ $nb_post = $bdd->query('SELECT COUNT(*)
                         FROM posts
                         WHERE profil IN ('.$liste_amis.')');
 $nb_post = $nb_post->fetch();
+echo $nb_post;
 $reponse = $bdd->query('SELECT *
                         FROM posts
                         WHERE profil IN ('.$liste_amis.')
