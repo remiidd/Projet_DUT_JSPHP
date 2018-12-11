@@ -15,7 +15,7 @@ $nb_post = $bdd->query('SELECT COUNT(*)
                         FROM posts
                         WHERE profil IN ('.$liste_amis.')');
 $nb_post = $nb_post->fetch();
-if($nb_post["COUNT(*)"]<1) {
+if($nb_post["COUNT(*)"]<5) {
   header("Location : feed.php");
 }
 $reponse = $bdd->query('SELECT *
