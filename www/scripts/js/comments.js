@@ -21,8 +21,6 @@
 	  return f;
   }
 
-  charger_com();
-
   function charger_com(){
       var id_post = recup_id_post();
       var url_com = "scripts/php/load_com.php?id="+id_post["id"];
@@ -42,3 +40,5 @@
       }, 3000);
 
   }
+
+  charger_com();
