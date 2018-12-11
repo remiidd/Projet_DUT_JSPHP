@@ -77,7 +77,7 @@
     }
 
     if(isset($histo)){
-      for($i = max(array_keys($histo)) + 1; $i>=array_shift(array_keys($histo)); $i--){
+      for($i = max(array_keys($histo)) + 1; $i>=0; $i--){
 
         if(isset($histo[$i])){
           $mess.='<a class="histo_perso_href" href="scripts/php/messenger.php?amis='.$histo[$i][0].'">';
