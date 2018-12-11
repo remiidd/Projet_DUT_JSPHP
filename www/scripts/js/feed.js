@@ -1,6 +1,3 @@
-console.log("test");
-
-
 function verif_bar() {
   setTimeout( function(){
       console.log("salut");
@@ -11,7 +8,7 @@ function verif_bar() {
   }, 3000);
 
   verif_bar();
-  
+
 }
 
 verif_bar();
