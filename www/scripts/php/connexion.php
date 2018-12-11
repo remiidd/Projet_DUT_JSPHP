@@ -20,11 +20,20 @@
   while ($donnees = $reponse->fetch())
   {
     if(($donnees['password'] == $mdp && $donnees['email'] == $util) || ($donnees['password'] == $mdp && $donnees['numerotel'] == $util)){
-      $id = $donnees['id'];
-      $_SESSION['idcon'] = $id;
-      header("Location:/profil-$id");
-      exit();
-      $cook = true;
+      if($donnees['verif_email'] == NULL){
+        $id = $donnees['id'];
+        $_SESSION['idcon'] = $id;
+        header("Location:/profil-$id");
+        exit();
+        $cook = true;
+      }
+      else {
+        echo "<script>
+                alert(\"Votre compte n'a pas été validé. Nous t'avons envoyé un email\");
+                window.location.href='/';
+              </script>" ;
+      }
+
     }
   }
 
