@@ -19,10 +19,12 @@ function emailexiste(){
 function regemail(){
   var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if (re.test(email.value)) {
-    console.log("ok");
+    document.getElementById('mailinvalide').style.display = "inline";
+    document.getElementById('inscriBout').setAttribute("disabled");
   }
   else {
-    console.log("pas ok");
+    document.getElementById('mailinvalide').style.display = "none";
+    document.getElementById('inscriBout').setAttribute("disabled", "");
   }
 }
 
