@@ -1,5 +1,4 @@
 <?php
-  session_start();
   if (isset($_SESSION['idcon'])){
     ?>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -30,16 +29,7 @@
             </li>
             <a class="no_deco_link" href="/messenger">
               <i class="fas fa-comments"></i>
-              <?php/*
-                $moi = $_SESSION['idcon'];
-                $reponse = $bdd->query("SELECT COUNT(*) as notif
-                                        FROM message
-                                        WHERE id_dest=$moi AND vu=0");
-                $donnees = $reponse->fetch();
-                if($donnees['notif']!= 0){
-              ?>
-                <span id="notification_count_menu"><?php echo $donnees['notif']; ?></span>
-              <?php }*/?>
+              <span id="notification_count_menu">test</span>
             </a>
             <form class="formbar" method="post" action="../scripts/php/deconnexion.php">
               <input id="cobout" type="submit" value="Déconnexion"/>
