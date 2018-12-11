@@ -5,9 +5,10 @@ function verif_bar() {
       if(bottom == 0) {
          console.log("en bas");
       }
-  }, 3000);
 
-  verif_bar();
+      verif_bar();
+
+  }, 3000);
 
 }
 
