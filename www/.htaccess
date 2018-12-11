@@ -2,7 +2,7 @@ Options +FollowSymlinks
 RewriteEngine  on
 RewriteRule "connexion$" "/connexion.php" [L]
 RewriteRule "connexion-(.+)$" "/connexion.php?user=$1" [L]
-RewriteRule "accueil$" "/index.php" [L]
+RewriteRule "accueil$" "/feed.php" [L]
 RewriteRule "inscription-suite$" "/inscription2.php" [L]
 RewriteRule "mot_de_passe_oublie$" "/mdpoublie.php" [L]
 RewriteRule "messenger$" "/messenger.php" [L]
