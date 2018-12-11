@@ -28,7 +28,8 @@
               </form>
             </li>
             <a class="no_deco_link" href="/messenger">
-              <i class="fas fa-comments"><span id="notification_count_menu">test</span></i>
+              <i class="fas fa-comments"></i>
+              <span id="notification_count_menu">test</span>
             </a>
             <form class="formbar" method="post" action="../scripts/php/deconnexion.php">
               <input id="cobout" type="submit" value="Déconnexion"/>
