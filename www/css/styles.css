@@ -27,8 +27,19 @@
   border-radius: 12px;
   padding: 0.2px 3px 0.2px 3px;
   font-size: 0.6em;
-
 }
+
+#notification_count_menu_invit{
+  position: absolute;
+  top: 28px;
+  right: 145px;
+  color: white;
+  background: red;
+  border-radius: 12px;
+  padding: 0.2px 3px 0.2px 3px;
+  font-size: 0.6em;
+}
+
 .navbar-brand > a {
   color: white;
   text-decoration: none;
