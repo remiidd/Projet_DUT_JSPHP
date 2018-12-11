@@ -44,7 +44,7 @@
           $res2 = $bdd->query('SELECT * from profil WHERE id=\''.$amitie["id_amis"].'\'');
           $ami = $res2->fetch();
           ?>
-          <div><p><?php echo $ami["prenom"]; ?></p></div>
+          <div><a href="profil-<?php echo $ami["id"]; ?>"><p><?php echo $ami["prenom"]." ".$ami["nom"]; ?></p></a></div>
           <?php
         } ?>
       </div>
