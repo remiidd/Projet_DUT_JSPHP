@@ -7,8 +7,7 @@
         die('Erreur : ' . $e->getMessage());
   }
   $reponse = $bdd->query("SELECT id FROM profil WHERE verif_email=".$code);
-  $donnees = $reponse->fetch();
-  echo $donnees['id'];
+  
   //$bdd->exec("UPDATE profil SET verif_email=NULL WHERE verif_email=".$code);
 
 
