@@ -78,7 +78,7 @@
     $mail->addAddress($email);
 
     $mail->isHTML(true);
-    $mail->Subject = 'Réinitialisation de votre mot de passe';
+    $mail->Subject = 'Validation de votre compte';
     $mail->Body    = "Bonjour $prenom, </br>
       Est-ce que tu aimes les bananes ? </br>
       Pour valider ton compter il suffit de bananer ce lien : </br>
