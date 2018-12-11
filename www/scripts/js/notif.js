@@ -33,4 +33,4 @@ function notif_invitation(){
 }
 
 notif_messenger();
-//notif_invitation();
+notif_invitation();
