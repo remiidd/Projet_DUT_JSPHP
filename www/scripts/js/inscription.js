@@ -12,6 +12,11 @@ function emailexiste(){
   document.getElementById('mailerror').style.display = "inline";
 }
 
+function regemail(){
+  var email = document.getElementById('email');
+  console.log(email.value);
+}
+
 function pass_match(){
   if(mdp.value != mdp1.value){
     document.getElementById('passerror').style.display = "inline";

@@ -28,7 +28,7 @@
             </div>
           </div>
           <div class="inscridiv">
-            <input required class="inscriform" type="email" name="email" placeholder="Email">
+            <input id="email" required class="inscriform" type="email" name="email" placeholder="Email">
             </br>
             <a id="passerror">Les mots de passe ne correspondent pas</a>
             <a id="mailerror">L'email utilisé existe deja</a>
