@@ -14,4 +14,5 @@
   if($donnees['nb_demande']!= 0){
     $mess.="<span id=\"notification_count_menu_invit\">".$donnees['nb_demande']."</span>";
   }
+  echo $mess;
 ?>
