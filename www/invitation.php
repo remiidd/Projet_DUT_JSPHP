@@ -24,7 +24,11 @@
 
           $donnees=$reponse->fetch();
           if($donnees['nb_demande'] == 0){
-
+            ?>
+              <div class="content">
+                <h2>Vous n'avez aucune invitation</h2>
+              </div>
+            <?php
           }
           else {
           ?>
