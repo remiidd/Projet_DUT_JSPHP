@@ -1,6 +1,15 @@
 <?php
   session_start();
 
+  use PHPMailer\PHPMailer\PHPMailer;
+  use PHPMailer\PHPMailer\Exception;
+
+  require '../../PHPMailer-master/src/Exception.php';
+
+  require '../../PHPMailer-master/src/PHPMailer.php';
+
+  require '../../PHPMailer-master/src/SMTP.php';
+
   $_SESSION['errorext'] = false;
   $existpp = false;
   $existcover = false;
@@ -71,6 +80,47 @@
 
     $id = $donnees['id'];
 
+    //envoie de mail ici
+    $code = generateRandomString();
+
+    $mail = new PHPMailer(TRUE);
+
+
+    $mail->CharSet = 'UTF-8';
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'bananabook.contact@gmail.com';
+    $mail->Password = 'mailbanana';
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
+
+    $mail->setFrom('bananabook.contact@gmail.com', 'BananaBook');
+    $mail->addAddress($email);
+
+    $mail->isHTML(true);
+    $mail->Subject = 'Réinitialisation de votre mot de passe';
+    $mail->Body    = "Bonjour $prenom, </br>
+      Est-ce que tu aimes les bananes ? </br>
+      Pour valider ton compter il suffit de bananer ce lien : </br>
+      <a href=\"http://nunes.aloisguitton.com/valider_mon_compte-$code\">nunes.aloisguitton.com/valider_mon_compte-$code</a></br></br></br>
+      <cite>Cet email a été envoyé automatiquement depuis <a href=\"http://nunes.aloisguitton.com\">BananaBook</a>. Ne pas répondre.</cite>";
+    $mail->AltBody = "Bonjour $prenom,
+      Est-ce que tu aimes les bananes ?
+      Pour reinitialiser votre mot de passe, veuillez cliquer sur le lien ci-apres :
+      nunes.aloisguitton.com/valider_mon_compte-$code<
+      Cet email a ete envoye automatiquement depuis BananaBook. Ne pas repondre";
+
+    if($mail->send()){
+      echo 'Message has been sent';
+    }
+    else {
+      echo 'Message could not be sent.';
+      echo 'Mailer Error: ' . $mail->ErrorInfo;
+    }
+
+    //ajout des images sur le serveur
+
     if($existpp || $existcover){
       $target_dir = "../../src/media/profils/";
 
@@ -98,5 +148,15 @@
     $_SESSION["idcon"] = $id;
     header("Location:/profil-" . $id);
     exit();
+  }
+
+  function generateRandomString() {
+    $caract = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $caract_long = strlen($caract);
+    $randomString = '';
+    for ($i = 0; $i < 20; $i++) {
+        $randomString .= $caract[rand(0, $caract_long - 1)];
+    }
+    return md5($randomString);
   }
 ?>
