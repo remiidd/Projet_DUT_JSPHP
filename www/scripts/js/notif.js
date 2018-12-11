@@ -22,7 +22,7 @@ function notif_invitation(){
             url : "scripts/php/notif_invitation.php",
             type : "GET",
             success : function(html){
-                $('#notification_count_menu_invit').html(html);
+                $('#invitation_i').html(html);
             }
         });
 

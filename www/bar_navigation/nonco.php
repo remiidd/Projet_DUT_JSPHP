@@ -28,7 +28,7 @@
                 </div>
               </form>
             </li>
-            <a class="no_deco_link" href="/invitation">
+            <a id="invitation_i" class="no_deco_link" href="/invitation">
               <i class="fas fa-user-friends"></i>
               <?php
               try{
