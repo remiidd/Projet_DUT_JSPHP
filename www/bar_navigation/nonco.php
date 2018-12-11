@@ -42,9 +42,10 @@
                                       FROM message
                                       WHERE id_dest=$moi AND vu=0");
               $donnees = $reponse->fetch();
-
+              if($donnees['notif']!= 0){
               ?>
-              <span id="notification_count_menu">test</span>
+                <span id="notification_count_menu">test</span>
+              <?php } ?>
             </a>
             <form class="formbar" method="post" action="../scripts/php/deconnexion.php">
               <input id="cobout" type="submit" value="Déconnexion"/>
