@@ -9,8 +9,8 @@
   $reponse = $bdd->query("SELECT id FROM profil WHERE verif_email='$code'");
   $donnees = $reponse->fetch();
   $id = $donnees['id'];
-  $bdd->exec("UPDATE profil SET verif_email=NULL WHERE verif_email=$id");
-  $reponse = $bdd->query("SELECT verif_email FROM profil WHERE verif_email=$id");
+  $bdd->exec("UPDATE profil SET verif_email=NULL WHERE id=$id");
+  $reponse = $bdd->query("SELECT verif_email FROM profil WHERE id=$id");
   $donnees = $reponse->fetch();
   if ($donnees['verif_email'] == NULL) {
     echo "ok";
