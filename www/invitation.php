@@ -13,15 +13,23 @@
           <?php include 'scripts/html/head.html'; ?>
         </head>
         <body onresize="resize_img()" onload="resize_img()">
-          <?php include 'bar_navigation/nonco.php';?>
+          <?php include 'bar_navigation/nonco.php';
+          try{
+            $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
+          }
+          catch (Exception $e){
+                die('Erreur : ' . $e->getMessage());
+          }
+          $reponse = $bdd->query("SELECT COUNT(*) as nb_demande FROM amis WHERE `id`=$moi AND statut=\"demande\"");
+
+          $donnees=$reponse->fetch();
+          if($donnees['nb_demande'] == 0){
+
+          }
+          else {
+          ?>
           <div class="content">
             <?php
-              try{
-                $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
-              }
-              catch (Exception $e){
-                    die('Erreur : ' . $e->getMessage());
-              }
               $reponse = $bdd->query("SELECT profil.id, profil.nom, profil.prenom FROM `profil` LEFT JOIN amis ON profil.id=amis.id_amis WHERE amis.id=$moi AND amis.statut=\"demande\"");
 
               while($donnees=$reponse->fetch()){
@@ -49,6 +57,8 @@
                 <?php
               }
             ?>
+            </div>
+          <?php } ?>
         </body>
       </html>
     <?php
