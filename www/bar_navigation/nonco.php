@@ -28,6 +28,9 @@
                 </div>
               </form>
             </li>
+            <a href="/invitation">
+              <i class="fas fa-user-friends"></i>
+            </a>
             <a class="no_deco_link" href="/messenger">
               <i class="fas fa-comments"></i>
               <?php
@@ -46,9 +49,6 @@
               ?>
                 <span id="notification_count_menu"><?php echo $donnees['notif']; ?></span>
               <?php } ?>
-            </a>
-            <a href="/invitation">
-              <i class="fas fa-user-friends"></i>
             </a>
             <form class="formbar" method="post" action="../scripts/php/deconnexion.php">
               <input id="cobout" type="submit" value="Déconnexion"/>
