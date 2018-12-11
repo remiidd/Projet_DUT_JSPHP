@@ -6,7 +6,7 @@ try {
 } ?>
 <?php $reponse = $bdd->query('SELECT *
                               FROM posts
-                              WHERE profil=\''.$_GET['id'].'\'
+                              WHERE profil=\'1\'
                               ORDER BY id DESC');
 while($feed = $reponse->fetch()) {
   ?><div><hr>
