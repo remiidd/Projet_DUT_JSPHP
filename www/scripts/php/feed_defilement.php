@@ -9,7 +9,7 @@ try {
                               WHERE profil=\'1\'
                               ORDER BY id DESC');
 while($feed = $reponse->fetch()) {
-  $profil_feed = $bdd->query('SELECT * FROM profil WHERE id=\''.$post_share["profil"].'\'');
+  $profil_feed = $bdd->query('SELECT * FROM profil WHERE id=\''.$feed["id"].'\'');
   $data = $profil_feed->fetch();
   ?><div><hr>
     <h5><a class="no_deco_link" href="<?php echo "profil-".$feed["profil"]; ?>"><img class="pp_posts" src="<?php if($data["photo_profil"]!=null) { echo $data["photo_profil"]; } else { ?>src/media/default_profil_picture.jpg<?php } ?>" alt="Default profil cover"/><?php echo " ".$feed["nom_createur"]; ?></h5></a><p>
