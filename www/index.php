@@ -30,8 +30,9 @@
           <div class="inscridiv">
             <input id="email" required class="inscriform" type="email" name="email" placeholder="Email">
             </br>
-            <a id="passerror">Les mots de passe ne correspondent pas</a>
+            <a id="mailinvalide">Adresse Email invalide</a>
             <a id="mailerror">L'email utilisé existe deja</a>
+            <a id="passerror">Les mots de passe ne correspondent pas</a>
             <input id="mdp" required class="inscriform" type="password" name="mdp" placeholder="Mot de passe">
             </br>
             <input id="mdp1" required class="inscriform" type="password" name="mdprepeat" placeholder="Retapper votre mot de passe">
