@@ -6,9 +6,10 @@ try {
 }
 //SELECT * FROM `posts` WHERE profil IN('1','19')
 $req = $bdd->query('SELECT id_amis FROM amis WHERE id=\''.$_SESSION["idcon"].'\'');
-$liste_amis = "";
+$add = $req->fetch();
+$liste_amis = "\'";
 while($add = $req->fetch()) {
-
+  $liste_amis = $liste_amis.
 }
 $reponse = $bdd->query('SELECT *
                               FROM posts
