@@ -13,7 +13,6 @@
                           WHERE id_dest=$moi AND vu=0");
   $donnees = $reponse->fetch();
   if($donnees['notif']!= 0){
-    $mess.='<span id="notification_count_menu">'.$donnees['notif'].'</span>';
+    echo $donnees['notif'];
   }
-  echo $mess;
 ?>
