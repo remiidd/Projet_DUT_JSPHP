@@ -30,6 +30,20 @@
             </li>
             <a class="no_deco_link" href="/invitation">
               <i class="fas fa-user-friends"></i>
+              <?php
+              try{
+                $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
+              }
+              catch (Exception $e){
+                    die('Erreur : ' . $e->getMessage());
+              }
+              $moi = $_SESSION['idcon'];
+              $reponse = $bdd->query("SELECT COUNT(*) as nb_demande FROM amis WHERE `id`=$moi AND statut=\"demande\"");
+              $donnees = $reponse->fetch();
+              if($donnees['nb_demande']!= 0){
+              ?>
+                <span id="notification_count_menu_invit"><?php echo $donnees['nb_demande']; ?></span>
+              <?php } ?>
             </a>
             <a class="no_deco_link" href="/messenger">
               <i class="fas fa-comments"></i>
