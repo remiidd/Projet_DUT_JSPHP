@@ -1,4 +1,8 @@
 <?php session_start(); ?>
+<? if(!isset($_SESSION["idcon"])){
+  header("Location: accueil");
+}
+?>
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
