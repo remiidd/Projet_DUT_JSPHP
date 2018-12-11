@@ -60,7 +60,7 @@
       </div>
       <img id="gauche" src="src/media/index.jpg" alt="">
     </div>
-    <br/><a href="profil.php?id=1">Profil de Utili Le Test</a>
+    <br/>
   </body>
   <script src="scripts/js/inscription.js"></script>
   <?php
