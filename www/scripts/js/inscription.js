@@ -8,13 +8,13 @@ mdp.addEventListener("input", function (e){
 mdp1.addEventListener("input", function (e){
   pass_match();
 });
-email.addEventListener("input", function(e)){
+email.addEventListener("input", function(e){
   regemail();
 }
 
 function emailexiste(){
   document.getElementById('mailerror').style.display = "inline";
-}
+});
 
 function regemail(){
   console.log(email.value);
