@@ -7,7 +7,7 @@ try {
 <?php $reponse = $bdd->query('SELECT *
                               FROM posts
                               WHERE profil=\'1\'
-                              ORDER BY id DESC');
+                              LIMIT 3');
 while($feed = $reponse->fetch()) {
   $profil_feed = $bdd->query('SELECT * FROM profil WHERE id=\''.$feed["profil"].'\'');
   $data = $profil_feed->fetch();
