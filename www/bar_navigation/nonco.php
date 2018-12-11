@@ -38,7 +38,10 @@
                     die('Erreur : ' . $e->getMessage());
               }
               $moi = $_SESSION['idcon'];
-              
+              $reponse = $bdd->query("SELECT COUNT(*) as notif
+                                      FROM message
+                                      WHERE id_dest=$moi AND vu=0");
+              $donnees = $reponse->fetch();
 
               ?>
               <span id="notification_count_menu">test</span>
