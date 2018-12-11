@@ -1,4 +1,3 @@
-document.ready( function () {
   /* function getParameterByName(name) {
     name = name.replace(/[[]/, [).replace(/[]]/, ]);
     var regexS = [?&] + name + =([^&#]*);
@@ -37,5 +36,3 @@ document.ready( function () {
       }, 3000);
 
   }
-
-});
