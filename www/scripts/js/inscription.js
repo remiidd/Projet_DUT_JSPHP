@@ -23,7 +23,7 @@ function regemail(){
     document.getElementById('inscriBout').setAttribute("disabled");
   }
   else {
-    document.getElementById('mailinvalide').style.display = "none";
+    document.getElementById('mailinvalide').style.display = "inline";
     document.getElementById('inscriBout').setAttribute("disabled", "");
   }
 }
