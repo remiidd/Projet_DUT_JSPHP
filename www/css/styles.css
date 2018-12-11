@@ -347,6 +347,10 @@
   display: none;
 }
 
+#mailinvalide{
+  color: red;
+  display: none;
+}
 
 .inscridiv{
   margin-top: 10px;
