@@ -14,7 +14,7 @@ while($add = $req->fetch()) {
 echo $liste_amis;
 $reponse = $bdd->query('SELECT *
                               FROM posts
-                              WHERE profil=\'1\'
+                              WHERE profil IN ('.$liste_amis.')
                               LIMIT 5');
 while($feed = $reponse->fetch()) {
   $profil_feed = $bdd->query('SELECT * FROM profil WHERE id=\''.$feed["profil"].'\'');
