@@ -1,11 +1,11 @@
 function verif_bar() {
+  var bottom = $(document).height() - $(window).height() - $(window).scrollTop();
   setTimeout(function(){
-      console.log("salut");
-      console.log($(document).height() - $(window).height() - $(window).scrollTop());
-      if(($(document).height() - $(window).height() - $(window).scrollTop()) == 0) {
+      console.log(bottom);
+      if(bottom == 0) {
          console.log("en bas");
       }
-  }, 1000);
+  }, 3000);
 
   verif_bar();
 
