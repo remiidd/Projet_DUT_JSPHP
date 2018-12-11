@@ -24,7 +24,7 @@
       var id_post = recup_id_post();
       var url_com = "scripts/php/load_com.php?id="+id_post;
       console.log(url_com);
-      console.log(id_post);
+      console.log(id_post[0]);
       setTimeout( function(){
           $.ajax({
               url : url_com,
