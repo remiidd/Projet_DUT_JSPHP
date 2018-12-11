@@ -31,4 +31,5 @@
       </div>
     </div>
   </body>
+  <script src="scripts/js/req.js"></script>
 </html>
