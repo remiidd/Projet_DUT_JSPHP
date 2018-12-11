@@ -20,6 +20,7 @@
       <div class="wrapp">
         <h3>Bananafeed</h3>
         <hr>
+        <?php include "scripts/php/feed_defilement.php"; ?>
       </div>
     </div>
   </body>
