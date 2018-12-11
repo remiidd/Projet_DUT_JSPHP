@@ -1,7 +1,3 @@
-
-
-
-
 setTimeout( function(){
     console.log("salut");
     console.log((this.scrollTop + this.clientHeight - this.scrollHeight));
