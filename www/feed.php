@@ -16,5 +16,8 @@
   </head>
   <body>
     <?php include 'bar_navigation/nonco.php' ?>
+    <div class="content">
+
+    </div>
   </body>
 </html>
