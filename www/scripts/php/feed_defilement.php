@@ -5,11 +5,11 @@ try {
   die('Erreur :'.$e->getMessage());
 }
 //SELECT * FROM `posts` WHERE profil IN('1','19')
-$req = $bdd->query('SELECT id_amis FROM amis WHERE id=\''.$_SESSION["idcon"].'\'');
+$req = $bdd->query('SELECT * FROM amis WHERE id=\''.$_SESSION["idcon"].'\'');
 $add = $req->fetch();
-$liste_amis = "\'";
+$liste_amis = "\'".$add["id_amis"]."\'";
 while($add = $req->fetch()) {
-  $liste_amis = $liste_amis.
+  $liste_amis = $liste_amis.",\'".$add["id_amis"]."\'"
 }
 $reponse = $bdd->query('SELECT *
                               FROM posts
