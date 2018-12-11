@@ -5,17 +5,17 @@ try {
   die('Erreur :'.$e->getMessage());
 }
 //SELECT * FROM `posts` WHERE profil IN('1','19')
-$req = $bdd->query('SELECT * FROM amis WHERE id=\''.$_SESSION["idcon"].'\'');
+$req = $bdd->query('SELECT * FROM amis WHERE statut=\'amis\' AND id=\''.$_SESSION["idcon"].'\'');
 $add = $req->fetch();
 $liste_amis = "'".$add["id_amis"]."'";
 while($add = $req->fetch()) {
   $liste_amis = $liste_amis.",'".$add["id_amis"]."'";
 }
-$nb_post = $bdd->query('SELECT COUNT(*)
+$nb_post = $bdd->query('SELECT COUNT(*) AS nb
                         FROM posts
                         WHERE profil IN ('.$liste_amis.')');
 $nb_post = $nb_post->fetch();
-if($nb_post["COUNT(*)"]<4) {
+if($nb_post["nb"]<5) {
   header("Location : feed.php?posts=b2fd072fb38fdf47de83bafccbd8ef70");
 }
 $reponse = $bdd->query('SELECT *
