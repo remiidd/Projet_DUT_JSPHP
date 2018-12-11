@@ -15,12 +15,12 @@
     while ($donnees = $reponse->fetch()){
       if ($donnees['id_exp'] == $_SESSION['idcon']) {
         $mess .= "<div class=\"bulle-moi\">
-                <p>".$donnees['message']."</p>
+                <p>".htmlentities($donnees['message'])."</p>
               </div>";
       }
       else{
         $mess .= "<div class=\"bulle-ami\">
-                <p>".$donnees['message']."</p>
+                <p>".htmlentities($donnees['message'])."</p>
               </div>";
       }
     }
