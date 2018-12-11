@@ -152,9 +152,6 @@
             alert(\"Un email t'a été envoyé pour confirmer ton comtpe\");
             window.location.href='/';
           </script>" ;
-
-    header("Location:/");
-    exit();
   }
 
   function generateRandomString() {
