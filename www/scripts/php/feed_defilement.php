@@ -3,8 +3,14 @@ try {
   $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;charset=utf8', 'derayalois', 'testdebrayalois');
 } catch (\Exception $e) {
   die('Erreur :'.$e->getMessage());
-} ?>
-<?php $reponse = $bdd->query('SELECT *
+}
+//SELECT * FROM `posts` WHERE profil IN('1','19')
+$req = $bdd->query('SELECT id_amis FROM amis WHERE id=\''.$_SESSION["idcon"].'\'');
+$liste_amis = "";
+while($add = $req->fetch()) {
+
+}
+$reponse = $bdd->query('SELECT *
                               FROM posts
                               WHERE profil=\'1\'
                               LIMIT 5');
