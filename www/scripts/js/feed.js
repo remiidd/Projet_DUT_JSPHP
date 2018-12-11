@@ -1,13 +1,10 @@
 function verif_bar() {
   console.log("salut");
   var bottom = $(document).height() - $(window).height() - $(window).scrollTop();
-  setTimeout(function(){
-      console.log(bottom);
-      if(bottom == 0) {
-         console.log("en bas");
-      }
-      verif_bar();
-  }, 3000);
+    console.log(bottom);
+    if(bottom == 0) {
+        console.log("en bas");
+    }
 }
 
 document.addEventListener('scroll', function() {
