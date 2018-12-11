@@ -137,9 +137,6 @@
                     }
                   }
                 }
-
-
-
               ?>
             </div>
             <div class="discution">
@@ -159,12 +156,12 @@
                     while ($donnees = $reponse->fetch()){
                       if ($donnees['id_exp'] == $_SESSION['idcon']) {
                         echo "<div class=\"bulle-moi\">
-                                <p>".$donnees['message']."</p>
+                                <p>".htmlentities($donnees['message'])."</p>
                               </div>";
                       }
                       else{
                         echo "<div class=\"bulle-ami\">
-                                <p>".$donnees['message']."</p>
+                                <p>".htmlentities($donnees['message'])."</p>
                               </div>";
                       }
                     }
