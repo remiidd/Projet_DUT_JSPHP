@@ -15,4 +15,4 @@ function notif_messenger(){
 
 }
 
-notif_messenger();
+//notif_messenger();
