@@ -95,7 +95,7 @@
 
                 if(isset($histo)){
                   echo array_shift(array_keys($histo));
-                  for($i = max(array_keys($histo)) + 1; $i>=array_shift(array_keys($histo)); $i--){
+                  for($i = max(array_keys($histo)) + 1; $i>=0; $i--){
 
                     if(isset($histo[$i])){
                       ?>
