@@ -61,7 +61,7 @@
               $donnees = $reponse->fetch();
               if($donnees['notif']!= 0){
               ?>
-                <span id="notification_count_menu"><?php echo $donnees['notif']; ?></span>
+
               <?php } ?>
             </a>
             <form class="formbar" method="post" action="../scripts/php/deconnexion.php">
