@@ -1,4 +1,5 @@
 function verif_bar() {
+  console.log("salut");
   var bottom = $(document).height() - $(window).height() - $(window).scrollTop();
   setTimeout(function(){
       console.log(bottom);
