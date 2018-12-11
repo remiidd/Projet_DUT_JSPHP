@@ -10,11 +10,11 @@ mdp1.addEventListener("input", function (e){
 });
 email.addEventListener("input", function(e){
   regemail();
-}
+});
 
 function emailexiste(){
   document.getElementById('mailerror').style.display = "inline";
-});
+}
 
 function regemail(){
   console.log(email.value);
