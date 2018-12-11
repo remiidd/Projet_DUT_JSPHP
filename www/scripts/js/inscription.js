@@ -18,7 +18,7 @@ function emailexiste(){
 
 function regemail(){
   var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  if (re.testemail.value)) {
+  if (re.test(email.value)) {
     console.log("ok");
   }
   else {
