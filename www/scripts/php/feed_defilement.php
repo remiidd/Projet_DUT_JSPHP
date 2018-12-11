@@ -18,7 +18,7 @@ while($feed = $reponse->fetch()) {
       $contenu = explode(".",$feed["contenu"]);
       if($contenu[0]==md5("share")){
         ?>
-          <div class="partage"><!-- ICI C4EST PARIS -->
+          <div class="partage">
             <?php
               $res = $bdd->query('SELECT * FROM posts WHERE id=\''.$contenu[1].'\'');
               $post_share = $res->fetch();
@@ -48,7 +48,7 @@ while($feed = $reponse->fetch()) {
                   echo $post_share["contenu"];
                 } ?></p><br>
             </div>
-          </div><!-- ICI C4EST PARIS -->
+          </div>
         <?php
       } else {
         echo $feed["contenu"];
