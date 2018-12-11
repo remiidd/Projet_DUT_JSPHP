@@ -17,7 +17,8 @@
   <body>
     <?php include 'bar_navigation/nonco.php' ?>
     <div class="content">
-
+      <h3>Bananafeed</h3>
+      <hr>
     </div>
   </body>
 </html>
