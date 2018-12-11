@@ -59,27 +59,6 @@
           die('Erreur : ' . $e->getMessage());
     }
 
-    $req = $bdd->prepare('INSERT INTO `profil`(`id`, `nom`, `prenom`, `email`, `password`, `numerotel`, `naissance`, `ville`, `sexe`, `photo_profil`, `photo_couv`)
-      VALUES (:id, :nom, :prenom, :email, :password, :numerotel, :naissance, :ville, :sexe, :photo_profil, :photo_couv)');
-    $req->execute(array(
-      'id' => NULL,
-      'nom' => $nom,
-      'prenom' => $prenom,
-      'email' => $email,
-      'password' => $password,
-      'numerotel' => $num,
-      'naissance' => $naissance,
-      'ville' => $ville,
-      'sexe' => $sexe,
-      'photo_profil' => "",
-      'photo_couv' => ""
-    ));
-
-    $reponse = $bdd->query("SELECT * FROM profil WHERE `email`='$email'");
-    $donnees = $reponse->fetch();
-
-    $id = $donnees['id'];
-
     //envoie de mail ici
     $code = generateRandomString();
 
@@ -118,6 +97,30 @@
       echo 'Message could not be sent.';
       echo 'Mailer Error: ' . $mail->ErrorInfo;
     }
+
+    //ajout de l'utilisateur en base de profil
+
+    $req = $bdd->prepare('INSERT INTO `profil`(`id`, `verif_email`, `nom`, `prenom`, `email`, `password`, `numerotel`, `naissance`, `ville`, `sexe`, `photo_profil`, `photo_couv`)
+      VALUES (:id, :verif_email, :nom, :prenom, :email, :password, :numerotel, :naissance, :ville, :sexe, :photo_profil, :photo_couv)');
+    $req->execute(array(
+      'id' => NULL,
+      'verif_email' => $code,
+      'nom' => $nom,
+      'prenom' => $prenom,
+      'email' => $email,
+      'password' => $password,
+      'numerotel' => $num,
+      'naissance' => $naissance,
+      'ville' => $ville,
+      'sexe' => $sexe,
+      'photo_profil' => "",
+      'photo_couv' => ""
+    ));
+
+    $reponse = $bdd->query("SELECT * FROM profil WHERE `email`='$email'");
+    $donnees = $reponse->fetch();
+
+    $id = $donnees['id'];
 
     //ajout des images sur le serveur
 
