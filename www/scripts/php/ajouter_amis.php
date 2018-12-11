@@ -24,7 +24,7 @@
         'statut' => "demande"
       ));
       $amis = $_GET['id_amis'];
-      header("Location:/$amis");
+      header("Location:/profil-$amis");
       exit();
 
     }
