@@ -43,9 +43,14 @@
               if($donnees['nb_demande']!= 0){
               ?>
                 <span id="notification_count_menu_invit"><?php echo $donnees['nb_demande']; ?></span>
-              <?php } ?>
+              <?php
+              }
+              else {
+                ?>
+
+              <?php}?>
             </a>
-            <a class="no_deco_link" href="/messenger">
+            <a id="message_i" class="no_deco_link" href="/messenger">
               <i class="fas fa-comments"></i>
               <?php
               try{
