@@ -35,8 +35,6 @@
       </div>
     </div>
   </body>
-  <script src="scripts/js/feed.js">
-
-  </script>
+  <script src="scripts/js/feed.js"></script>
   <script src="scripts/js/req.js"></script>
 </html>
