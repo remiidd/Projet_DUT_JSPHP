@@ -7,7 +7,7 @@
         die('Erreur : ' . $e->getMessage());
   }
 
-  $bdd->exec("UPDATE profil SET verif_email=1 WHERE verif_email=$code");
+  $bdd->exec("UPDATE profil SET verif_email="" WHERE verif_email=$code");
 
   echo "<script>
           alert(\"Votre compte à été validé, tu peux te connecter\");
