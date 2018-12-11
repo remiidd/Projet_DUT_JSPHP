@@ -14,6 +14,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav mr-auto">
             <a class="no_deco_link" href="/profil-<?php  echo $_SESSION['idcon']?>">
+              <span id="notification_count_menu">test</span>
               <i class="fas fa-user"></i>
             </a>
           </div>
