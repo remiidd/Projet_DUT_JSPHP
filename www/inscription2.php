@@ -81,7 +81,7 @@
           <label>Photo de couverture : </label>
           <input type="file" name="cover" id="pp">
           <br>
-          <input type="submit" name="inscri" value="S'inscrire">
+          <input type="submit" name="inscri" value="M'envoyer un mail pour confirmer mon inscription">
         </form>
       </center>
     </div>
