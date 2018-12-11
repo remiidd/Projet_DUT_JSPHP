@@ -1,5 +1,6 @@
 var mdp = document.getElementById('mdp');
 var mdp1 = document.getElementById('mdp1');
+var email = document.getElementById('email');
 
 mdp.addEventListener("input", function (e){
   pass_match();
@@ -7,13 +8,15 @@ mdp.addEventListener("input", function (e){
 mdp1.addEventListener("input", function (e){
   pass_match();
 });
+email.addEventListener("input", function(e)){
+  regarder();
+}
 
 function emailexiste(){
   document.getElementById('mailerror').style.display = "inline";
 }
 
 function regemail(){
-  var email = document.getElementById('email');
   console.log(email.value);
 }
 
