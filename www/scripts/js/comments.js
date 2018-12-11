@@ -22,7 +22,7 @@ document.ready(function(){
   }
 
   function charger(){
-      var id_post = getParameterByName(id);
+      var id_post = recup_id_post();
       setTimeout( function(){
           $.ajax({
               url : "scripts/php/load_com.php?id="+id_post,
