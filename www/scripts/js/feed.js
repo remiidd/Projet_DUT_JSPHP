@@ -1,6 +1,5 @@
 console.log("test");
 
-verif_bar();
 
 function verif_bar() {
   setTimeout( function(){
@@ -11,3 +10,5 @@ function verif_bar() {
       }
   }, 3000);
 }
+
+verif_bar();
