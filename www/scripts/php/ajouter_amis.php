@@ -15,7 +15,7 @@
         'id_amis' => (int)$_GET['id_amis'],
         'statut' => "en attente"
       ));
- 
+
       $req = $bdd->prepare('INSERT INTO `amis`(`id`, `id_amis`, `statut`)
         VALUES (:id, :id_amis, :statut)');
       $req->execute(array(
@@ -23,8 +23,8 @@
         'id_amis' => (int)$_GET['id'],
         'statut' => "demande"
       ));
-
-      header("Location:/$_GET['id_amis']");
+      $amis = $_GET['id_amis'];
+      header("Location:/$amis");
       exit();
 
     }
