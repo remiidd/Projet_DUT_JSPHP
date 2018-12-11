@@ -11,6 +11,9 @@ $liste_amis = "'".$add["id_amis"]."'";
 while($add = $req->fetch()) {
   $liste_amis = $liste_amis.",'".$add["id_amis"]."'";
 }
+$reponse = $bdd->query('SELECT COUNT(*)
+                        FROM posts
+                        WHERE profil IN ('.$liste_amis.')');
 $reponse = $bdd->query('SELECT *
                         FROM posts
                         WHERE profil IN ('.$liste_amis.')
