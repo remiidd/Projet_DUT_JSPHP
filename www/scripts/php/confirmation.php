@@ -8,9 +8,13 @@
   }
   $reponse = $bdd->query("SELECT id FROM profil WHERE verif_email='$code'");
   $donnees = $reponse->fetch();
-  echo $donnees['id'];
-  //$bdd->exec("UPDATE profil SET verif_email=NULL WHERE verif_email=".$code);
-
+  $id = $donnees['id'];
+  $bdd->exec("UPDATE profil SET verif_email=NULL WHERE verif_email=$id");
+  $reponse = $bdd->query("SELECT verif_email FROM profil WHERE verif_email=$id");
+  $donnees = $reponse->fetch();
+  if ($donnees['verif_email'] == NULL) {
+    echo "ok";
+  }
 
 /*  echo "<script>
           alert(\"Votre compte à été validé, tu peux te connecter\");
