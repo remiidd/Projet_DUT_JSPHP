@@ -9,7 +9,7 @@ mdp1.addEventListener("input", function (e){
   pass_match();
 });
 email.addEventListener("input", function(e)){
-  regarder();
+  regemail();
 }
 
 function emailexiste(){
