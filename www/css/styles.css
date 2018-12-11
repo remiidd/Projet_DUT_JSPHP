@@ -345,6 +345,7 @@
 #mailerror{
   color: red;
   display: none;
+  font-weight: bold;
 }
 
 #mailinvalide{
