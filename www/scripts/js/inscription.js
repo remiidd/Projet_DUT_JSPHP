@@ -17,7 +17,15 @@ function emailexiste(){
 }
 
 function regemail(){
-  console.log(email.value);
+  var re = /^(([^<>()[]\.,;:s@"]+(.[^<>()[]\.,;:s@"]+)*)|(
+".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA
+-Z-0-9]+.)+[a-zA-Z]{2,}))$/igm;
+  if (re.test($email.value)) {
+    console.log("ok");
+  }
+  else {
+    console.log("pas ok");
+  }
 }
 
 function pass_match(){
