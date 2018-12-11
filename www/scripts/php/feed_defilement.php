@@ -11,11 +11,11 @@ $liste_amis = "'".$add["id_amis"]."'";
 while($add = $req->fetch()) {
   $liste_amis = $liste_amis.",'".$add["id_amis"]."'";
 }
-$nb_post = $bdd->query('SELECT COUNT(*) AS nb
+$nb_post = $bdd->query('SELECT COUNT(*)
                         FROM posts
                         WHERE profil IN ('.$liste_amis.')');
 $nb_post = $nb_post->fetch();
-if($nb_post["nb"]<5) {
+if($nb_post["COUNT(*)"]<5) {
   header("Location : feed.php?posts=b2fd072fb38fdf47de83bafccbd8ef70");
 }
 $reponse = $bdd->query('SELECT *
