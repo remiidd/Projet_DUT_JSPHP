@@ -5,7 +5,7 @@ function notif_messenger(){
             url : "scripts/php/notif_messenger.php",
             type : "GET",
             success : function(html){
-                $('#message_i').html(html);
+                $('#messenger_i').html(html);
             }
         });
 
