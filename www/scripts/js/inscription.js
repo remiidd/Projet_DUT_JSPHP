@@ -20,7 +20,7 @@ function regemail(){
   var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if (re.test(email.value)) {
     document.getElementById('mailinvalide').style.display = "none";
-    document.getElementById('inscriBout').setAttribute("disabled");
+    document.getElementById('inscriBout').removeAttribute("disabled");
   }
   else {
     document.getElementById('mailinvalide').style.display = "inline";
