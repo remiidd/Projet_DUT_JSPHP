@@ -14,7 +14,6 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav mr-auto">
             <a class="no_deco_link" href="/profil-<?php  echo $_SESSION['idcon']?>">
-              <span id="notification_count_menu">test</span>
               <i class="fas fa-user"></i>
             </a>
           </div>
@@ -28,7 +27,10 @@
                 </div>
               </form>
             </li>
-            <a class="no_deco_link" href="/messenger"><i class="fas fa-comments"></i></a>
+            <a class="no_deco_link" href="/messenger">
+              <span id="notification_count_menu">test</span>
+              <i class="fas fa-comments"></i>
+            </a>
             <form class="formbar" method="post" action="../scripts/php/deconnexion.php">
               <input id="cobout" type="submit" value="Déconnexion"/>
             </form>
