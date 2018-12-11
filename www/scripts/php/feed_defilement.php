@@ -77,45 +77,7 @@ while($feed = $reponse->fetch()) {
 <div><hr>
   <h5><a class="no_deco_link" href="/accueil"><img class="pp_posts" src="src/media/sponso.gif" alt="Sponsophoto"/> Sponsorisé</h5></a><p>
     <i><?php $d_publi = new DateTime(); echo "Le ".$d_publi->format("d/m/Y") ?></i></p><br>
-    <p><?php
-    $contenu = explode(".",$feed["contenu"]);
-    if($contenu[0]==md5("share")){
-      ?>
-        <div class="partage">
-          <?php
-            $res = $bdd->query('SELECT * FROM posts WHERE id=\''.$contenu[1].'\'');
-            $post_share = $res->fetch();
-            $res = $bdd->query('SELECT * FROM profil WHERE id=\''.$post_share["profil"].'\'');
-            $profil_share = $res->fetch();
-          ?>
-          <div><hr>
-            <h5><a class="no_deco_link" href="<?php echo "profil-".$post_share["profil"]; ?>"><img class="pp_posts" src="<?php if($profil_share["photo_profil"]!=null) { echo $profil_share["photo_profil"]; } else { ?>src/media/default_profil_picture.jpg<?php } ?>" alt="Default profil cover"/><?php echo " ".$post_share["nom_createur"]; ?></h5></a><p>
-              <i><?php $d_publi = new DateTime($post_share["date_publication"]); echo "Le ".$d_publi->format("d/m/Y") ?></i></p><br>
-              <p><?php
-              $contenu2 = explode(".",$post_share["contenu"]);
-              if($contenu2[0]==md5("share")){
-                ?>
-                  <div class="partage">
-                    <?php
-                      $req = $bdd->query('SELECT * FROM posts WHERE id=\''.$contenu2[1].'\'');
-                      $post_share2 = $req->fetch();
-                      $req = $bdd->query('SELECT * FROM profil WHERE id=\''.$post_share2["profil"].'\'');
-                      $profil_share2 = $req->fetch();
-                    ?>
-                    <h5><a class="no_deco_link" href="<?php echo "profil-".$post_share2["profil"]; ?>"><img class="pp_posts" src="<?php if($profil_share2["photo_profil"]!=null) { echo $profil_share2["photo_profil"]; } else { ?>src/media/default_profil_picture.jpg<?php } ?>" alt="Default profil cover"/><?php echo " ".$post_share2["nom_createur"]; ?></h5></a><p>
-                      <i><?php $d_publi = new DateTime($post_share2["date_publication"]); echo "Le ".$d_publi->format("d/m/Y") ?></i></p><br>
-                    <a href="<?php echo "posts.php?id=".$contenu2[1]; ?>">Liens vers la publication de <?php echo $post_share2["nom_createur"]; ?></a>
-                  </div>
-                <?php
-              } else {
-                echo $post_share["contenu"];
-              } ?></p><br>
-          </div>
-        </div>
-      <?php
-    } else {
-      echo $feed["contenu"];
-    } ?></p><br>
+    <p>Contenu sponsorisé</p><br>
   <ul class="barre_posts">
     <?php
     $okk = false;
