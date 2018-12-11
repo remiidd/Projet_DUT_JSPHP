@@ -66,7 +66,7 @@
             </tr>
           </table>
         <?php if($_SESSION["idcon"]==$_GET["id"]){ ?>
-          <p><a href="settings.php?id=<?php echo $_SESSION["idcon"]; ?>">Modifier vos informations personnelles</a></p>
+          <p><a href="settings-<?php echo $_SESSION["idcon"]; ?>">Modifier vos informations personnelles</a></p>
           </div>
           <div class="envoyer_post">
             <form class="form_envoyer_post" method="POST">
