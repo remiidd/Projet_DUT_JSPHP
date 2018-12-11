@@ -94,7 +94,7 @@
                 }
 
                 if(isset($histo)){
-                  for($i = max(array_keys($histo)) + 1; $i>=0; $i--){
+                  for($i = max(array_keys($histo)) + 1; $i>=min(array_keys($histo)); $i--){
 
                     if(isset($histo[$i])){
                       ?>
