@@ -41,8 +41,12 @@
         <hr>
         <?php $res = $bdd->query('SELECT * from amis WHERE id=\''.$_GET['id'].'\'');
         while($amitie = $res->fetch()) {
-          
-        }
+          $res2 = $bdd->query('SELECT * from profil WHERE id=\''.$amitie["id_amis"].'\'');
+          $ami = $res2->fetch();
+          ?>
+          <div><p><?php echo $ami["prenom"]; ?></p></div>
+          <?php
+        } ?>
       </div>
     </div>
   </body>
