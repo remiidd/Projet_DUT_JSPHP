@@ -149,7 +149,7 @@
       }
     }
     echo "<script>
-            alert(\"Un email t'a été envoyé pour confirmer ton comtpe\");
+            alert(\"Un email t'a été envoyé pour confirmer ton compte\");
             window.location.href='/';
           </script>" ;
   }
