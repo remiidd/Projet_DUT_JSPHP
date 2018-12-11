@@ -76,7 +76,7 @@ while($feed = $reponse->fetch()) {
 
 <div><hr>
   <h5><a class="no_deco_link" href="/accueil"><img class="pp_posts" src="src/media/sponso.gif" alt="Sponsophoto"/> Sponsorisé</h5></a><p>
-    <i><?php $d_publi = new DateTime($feed["date_publication"]); echo "Le ".$d_publi->format("d/m/Y") ?></i></p><br>
+    <i><?php $d_publi = new DateTime(); echo "Le ".$d_publi->format("d/m/Y") ?></i></p><br>
     <p><?php
     $contenu = explode(".",$feed["contenu"]);
     if($contenu[0]==md5("share")){
