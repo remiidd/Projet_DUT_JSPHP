@@ -13,7 +13,4 @@
   if($donnees['notif']!= 0){
     echo $donnees['notif'];
   }
-  else {
-    echo "";
-  }
 ?>
