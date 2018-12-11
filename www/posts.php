@@ -122,6 +122,7 @@
                 'createur' => $profil_sender["prenom"]." ".$profil_sender["nom"],
                 'id_profil' => $_SESSION["idcon"]
               ));
+              $req2 = $bdd->query('UPDATE posts SET nb_com=nb_com+1 WHERE id=\''.$_GET["id"].'\'');
               $url_refresh = "Location:posts.php?id=".$_GET["id"];
               header($url_refresh);
           }
