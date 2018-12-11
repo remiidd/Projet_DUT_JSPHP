@@ -52,6 +52,7 @@
             </form>
           </div>
         </div>
+        <script src="scripts/js/notif.js"></script>
       </nav>
     <?php
   }
@@ -75,7 +76,6 @@
           </form>
         </div>
       </div>
-      <script src="scripts/js/notif.js"></script>
     </nav>
     <?php
   }
