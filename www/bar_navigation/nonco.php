@@ -75,8 +75,8 @@
           </form>
         </div>
       </div>
+      <script src="scripts/js/notif.js"></script>
     </nav>
-    <script src="scripts/js/notif.js"></script>
     <?php
   }
 ?>
