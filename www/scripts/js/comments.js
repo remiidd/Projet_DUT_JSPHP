@@ -23,6 +23,7 @@
   function charger_com(){
       var id_post = recup_id_post();
       var url_com = "scripts/php/load_com.php?id="+id_post;
+      console.log(url_com);
       setTimeout( function(){
           $.ajax({
               url : url_com,
