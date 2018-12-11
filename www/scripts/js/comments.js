@@ -13,12 +13,12 @@ document.ready(function(){
 
   function recup_id_post() {
     var t = location.search.substring(1).split('&');
-    var f = [];
-    for (var i=0; i<t.length; i++) {
-    var x = t[ i ].split('=');
-      f[x[0]]=f[1];
+	  var f = [];
+	  for (var i=0; i<t.length; i++){
+		    var x = t[ i ].split('=');
+		      f[x[0]]=x[1];
     }
-    return f;
+	  return f;
   }
 
   function charger(){
