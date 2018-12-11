@@ -32,6 +32,7 @@
                 alert(\"Votre compte n'a pas été validé. Nous t'avons envoyé un email\");
                 window.location.href='/';
               </script>" ;
+        $cook = true;
       }
 
     }
