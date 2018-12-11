@@ -12,6 +12,6 @@
                           WHERE id_dest=$moi AND vu=0");
   $donnees = $reponse->fetch();
   if($donnees['notif']!= 0){
-    echo $donnees['notif'];
+    echo "848";
   }
 ?>
