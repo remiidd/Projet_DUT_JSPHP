@@ -65,17 +65,3 @@ while($feed = $reponse->fetch()) {
     </ul>
   </div><?php
 } ?><hr>
-
-
-
-
-
-
-
-
-
-<div><hr>
-  <h5><a class="no_deco_link" href="/accueil"><img class="pp_posts" src="src/media/sponso.gif" alt="Sponsophoto"/> Sponsorisé</h5></a><p>
-    <p>Contenu sponsorisé</p><br>
-</div><?php
-} ?><hr>
