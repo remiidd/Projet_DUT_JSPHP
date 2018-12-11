@@ -68,4 +68,15 @@ while($feed = $reponse->fetch()) {
 <div>
   <h5><a class="no_deco_link" href="/accueil"><img class="pp_posts" src="src/media/sponso.gif" alt="Sponsophoto"/> Sponsorisé</h5></a><p>
     <p>Contenu sponsorisé</p><br>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- feed -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2486327099541957"
+     data-ad-slot="8857745645"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </div><hr>
