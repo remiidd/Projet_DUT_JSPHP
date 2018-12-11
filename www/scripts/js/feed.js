@@ -4,7 +4,8 @@ console.log("test");
 function verif_bar() {
   setTimeout( function(){
       console.log("salut");
-      console.log((this.scrollTop + this.clientHeight - this.scrollHeight));
+      b = $('body');
+      console.log((b.scrollTop() + b.clientHeight() - b.scrollHeight()));
       if ((this.scrollTop + this.clientHeight - this.scrollHeight) == 0) {
          console.log("en bas");
       }
