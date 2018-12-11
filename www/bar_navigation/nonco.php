@@ -50,7 +50,7 @@
 
               <?php}?>
             </a>
-            <a id="message_i" class="no_deco_link" href="/messenger">
+            <a class="no_deco_link" href="/messenger">
               <i class="fas fa-comments"></i>
               <?php
               try{
