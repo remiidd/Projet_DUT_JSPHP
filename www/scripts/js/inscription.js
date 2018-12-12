@@ -15,13 +15,11 @@ email.addEventListener("input", function(e){
 
 prenom.addEventListener("input", function(e){
   var re = /^[a-zA-Z]+$/;
-  if (re.test(email.value)) {
-    document.getElementById('mailinvalide').style.display = "none";
-    document.getElementById('inscriBout').removeAttribute("disabled");
+  if (re.test(prenom.value)) {
+    console.log("ok");
   }
   else {
-    document.getElementById('mailinvalide').style.display = "inline";
-    document.getElementById('inscriBout').setAttribute("disabled", "");
+    console.log("pas ok");
   }
 });
 
