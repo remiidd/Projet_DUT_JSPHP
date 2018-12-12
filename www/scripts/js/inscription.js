@@ -20,13 +20,13 @@ prenom.addEventListener("input", function(e){
     console.log("ok");
     prenom.style.borderColor = "none";
     prenom.style.borderStyle = "inset";
-    prenom.style.borderWidth = "3px";
+    prenom.style.borderWidth = "2px";
   }
   else {
     console.log("pas ok");
     prenom.style.borderColor = "red";
     prenom.style.borderStyle = "solid";
-    prenom.style.borderWidth = "3px";
+    prenom.style.borderWidth = "4px";
   }
 });
 
