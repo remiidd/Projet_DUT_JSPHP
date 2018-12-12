@@ -1,6 +1,6 @@
 var rech = document.getElementById('rechin');
 
-reh.addEventListener("input", function(e){
+rech.addEventListener("input", function(e){
   console.log(rech.value);
 });
 
