@@ -19,10 +19,11 @@
 
 <div class="suggestion_prof">
   <ul>
-    <?php while($idprofil = $reponse->fetch()){ 
+    <?php while($idprofil = $reponse->fetch()){
       $req = $bdd->query('SELECT * FROM profil where id=\''.$idprofil["profil"].'\'');
+      $profil = $req->fetch();
       ?>
-      <li><?php echo $pr ?></li>
+      <li><?php echo $profil["prenom"]." ".$profil["nom"]; ?></li>
     <?php } ?>
   </ul>
 </div>
