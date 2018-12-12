@@ -1,9 +1,3 @@
-$( document ).ready(function() {
-    console.log("ici");
-    var testee = document.getElementById('rechin_id');
-    console.log(testee.value);
-});
-
 function resize_img(){
   var img = document.getElementsByClassName("rech_div_img");
   var div = document.getElementsByClassName("rech_user");
