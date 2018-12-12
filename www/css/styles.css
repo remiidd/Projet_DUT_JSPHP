@@ -108,7 +108,7 @@
 }
 
 .nav-link:hover > #rechin_id{
-  color: rgba(255, 255, 255, 1);
+  border-color: white;
   transition: 0.5s;
 }
 
