@@ -1,9 +1,5 @@
 var testee = document.getElementById('rechin_id');
-
-testee.addEventListener("input", function(e){
-  console.log(document.getElementsByClassName('rechin').value);
-});
-
+console.log(testee.value);
 function resize_img(){
   var img = document.getElementsByClassName("rech_div_img");
   var div = document.getElementsByClassName("rech_user");
