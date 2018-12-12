@@ -1,9 +1,9 @@
 console.log("test");
 if(!($(document).height() > $(window).height())) {
     // scrollbar
-    console.log("present");
+    console.log("pas present");
 } else {
-  console.log("pas present");
+  console.log(" present");
 }
 
 function verif_bar() {
