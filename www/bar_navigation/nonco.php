@@ -2,6 +2,7 @@
   session_start();
   if (isset($_SESSION['idcon'])){
     ?>
+    <script src="/scripts/js/recherche.js"></script>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="navbar-brand">
           <a href="/accueil" >BananaBook 🍌</a>
