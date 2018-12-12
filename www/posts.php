@@ -136,7 +136,7 @@
             $profil_du_com = $req->fetch();
              ?>
              <div>
-               <?php echo $com["nom_createur"]." commentes : ".$com["text_com"];?>
+               <?php echo $com["nom_createur"]." commente : ".$com["text_com"];?>
              </div>
             <?php
           }
