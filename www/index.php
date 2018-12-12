@@ -21,7 +21,7 @@
           <h1>Inscription</h1>
           <div id="nomprenom_insci">
             <div id="prenom_insci">
-              <input required class="inscriform" type="text" name="prenom" placeholder="Prénom">
+              <input required id="prenom_input" class="inscriform" type="text" name="prenom" placeholder="Prénom">
             </div>
             <div id="nom_insci">
               <input required class="inscriform" type="text" name="nom" placeholder="Nom">
@@ -47,7 +47,7 @@
             </div>
           </div>
           <div id="condigene">
-            En cliquant sur s'inscrire, vous accepter les thermes du contract.
+            En cliquant sur s'inscrire, vous acceptez les termes du contrat.
               Vous donnez l'accès à toutes vos informations personnelles. BananaBook
               sera en droit de revendre vos informations personelles ainsi que vos
               photos. Vous donnez aussi accès à BananaBook de lire vos messages, de regarder
