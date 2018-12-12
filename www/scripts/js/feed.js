@@ -1,7 +1,8 @@
+console.log(sessionId);
 function verif_bar() {
   var bottom = $(document).height() - $(window).height() - $(window).scrollTop();
     if(bottom == 0) {
-      var urll = ;
+      var urll = "scripts/php/load_feed.php?id="+id_post["id"];
       $.ajax({
           url : urll,
           type : "GET",
@@ -9,7 +10,6 @@ function verif_bar() {
               $('.wrapp').append(html);
           }
       });
-      $('.wrapp').append('<?php if($_GET["feed"]!=100){ include "scripts/php/feed_defilement.php"; } ?>');
     }
 }
 
