@@ -2,6 +2,7 @@ var mdp = document.getElementById('mdp');
 var mdp1 = document.getElementById('mdp1');
 var email = document.getElementById('email');
 var prenom = document.getElementById("prenom_input");
+var nom = document.getElementById("nom_input");
 
 mdp.addEventListener("input", function (e){
   pass_match();
@@ -16,6 +17,16 @@ email.addEventListener("input", function(e){
 prenom.addEventListener("input", function(e){
   var re = /^[a-zA-Z]+$/;
   if (re.test(prenom.value)) {
+    console.log("ok");
+  }
+  else {
+    console.log("pas ok");
+  }
+});
+
+nom.addEventListener("input", function(e){
+  var re = /^[a-zA-Z]+$/;
+  if (re.test(nom.value)) {
     console.log("ok");
   }
   else {
