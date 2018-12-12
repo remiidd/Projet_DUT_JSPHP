@@ -28,7 +28,7 @@ if($nb_post["COUNT(*)"]<4) {
   header($url_header);
 }
 if($off>$nb_post["COUNT(*)"]){
-  echo "Voici une suggestion de profil à ajouter en amis pour profiter de l'experience bananabook";
+  include "scripts/php/suggestion_profil.php";
   $_SESSION["feedd"] = 0;
   $stop_pub = true;
 }
