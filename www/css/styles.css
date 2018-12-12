@@ -113,12 +113,14 @@
   outline: none;
   float: left;
   back
-  padding: 0;
-  color: white;
+  padding: 0 6px;
+  border-style: solid;
   background-color: transparent;
   font-size: 16px;
-  transition: 0.4s;
-  width: 0px;
+  border-width: 1px;
+  width: 240px;
+  height: 32px;
+  border-radius: 25px;
   font-weight: bold;
 }
 
@@ -129,17 +131,6 @@
 .search-box{
   margin-top: -8px;
   height: 32px;
-}
-.search-box:hover > .rechin{
-  width: 240px;
-  padding: 0 6px;
-  border-style: solid;
-  border-color: white;
-  border-width: 1px;
-  height: 32px;
-  border-radius: 25px;
-  color: white;
-  text-decoration: none;
 }
 
 #rechbut{
