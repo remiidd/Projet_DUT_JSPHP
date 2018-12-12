@@ -28,7 +28,24 @@ if($nb_post["COUNT(*)"]<4) {
   header($url_header);
 }
 if($off>$nb_post["COUNT(*)"]){
-  include "scripts/php/suggestion_profil.php";
+    echo "Voici une suggestion de profil à ajouter en amis pour profiter de l'experience bananabook";
+    $reponses = $bdd->query('SELECT profil,COUNT(*)
+                            FROM posts
+                            GROUP BY profil
+                            ORDER BY COUNT(*)
+                            DESC LIMIT 5');
+  ?>
+  <div class="suggestion_prof">
+    <ul>
+      <?php while($idprofil = $reponses->fetch()){
+        $reqs = $bdd->query('SELECT * FROM profil where id=\''.$idprofil["profil"].'\'');
+        $profil = $reqs->fetch();
+        ?>
+        <li><?php echo $profil["prenom"]." ".$profil["nom"]; ?></li>
+        <li>La Banane Officielle</li>
+      <?php } ?>
+    </ul>
+  </div><?php
   $_SESSION["feedd"] = 0;
   $stop_pub = true;
 }
