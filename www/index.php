@@ -24,7 +24,7 @@
               <input required id="prenom_input" class="inscriform" type="text" name="prenom" placeholder="Prénom">
             </div>
             <div id="nom_insci">
-              <input required class="inscriform" type="text" name="nom" placeholder="Nom">
+              <input required id="nom_input" class="inscriform" type="text" name="nom" placeholder="Nom">
             </div>
           </div>
           <div class="inscridiv">
