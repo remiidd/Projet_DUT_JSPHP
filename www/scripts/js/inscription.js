@@ -18,6 +18,7 @@ prenom.addEventListener("input", function(e){
   var re = /^[a-zA-Z]+$/;
   if (re.test(prenom.value)) {
     console.log("ok");
+    prenom.style.borderColor = "none";
   }
   else {
     console.log("pas ok");
