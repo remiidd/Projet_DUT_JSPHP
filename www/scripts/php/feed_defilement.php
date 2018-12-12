@@ -28,6 +28,7 @@ if($nb_post["COUNT(*)"]<4) {
 if($off>$nb_post["COUNT(*)"]){
   echo "Voici une suggestion de profil à ajouter en amis pour profiter de l'experience bananabook";
   $_SESSION["feedd"] = 0;
+  $stop_pub = true;
 }
 $reponse = $bdd->query('SELECT *
                         FROM posts
