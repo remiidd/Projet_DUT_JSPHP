@@ -32,10 +32,10 @@ if(!isset($_SESSION["idcon"])){
     <div class="content">
       <div class="wrapp">
         <h3>Bananafeed</h3>
-        <?php if($_GET["feed"]!=100){ include "scripts/php/feed_defilement.php"; } ?>
+        <?php if($_GET["feed"]!=100){ include "scripts/php/feed_defilement.php"; } else { include "scripts/php/suggestion_profil.php";}?>
       </div>
     </div>
-    <script src="scripts/js/feed.js">var sessionId = <?php echo $_SESSION['id']; ?>;</script>
+    <script src="scripts/js/feed.js"></script>
     <script src="scripts/js/req.js"></script>
   </body>
 
