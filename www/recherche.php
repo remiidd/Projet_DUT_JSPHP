@@ -21,7 +21,7 @@
   }
 
   if(isset($_SESSION['idcon'])){
-		$user = strtolower(str_to_noaccent(str_replace(' ','',$_GET['recherche'])));
+		$user = strtolower(str_to_noaccent(str_replace(' ','',htmlentities($_GET['recherche']))));
     $trouve = false;
     ?>
       <!DOCTYPE html>
