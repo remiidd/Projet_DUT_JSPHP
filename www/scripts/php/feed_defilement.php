@@ -3,7 +3,6 @@ session_start();
 if(!isset($_SESSION["feedd"])){
   $_SESSION["feedd"] = 0;
   $_SESSION["stop_pub"] = false;
-  header("Location : accueil");
 } else {
   $off = $_SESSION["feedd"];
   $_SESSION["feedd"] = $_SESSION["feedd"] + 5;
