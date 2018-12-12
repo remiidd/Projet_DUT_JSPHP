@@ -95,4 +95,4 @@ while($feed = $reponse->fetch()) {
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-</div><hr>
+</div>
