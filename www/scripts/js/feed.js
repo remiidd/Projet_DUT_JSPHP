@@ -1,5 +1,5 @@
 console.log("test");
-if($(document).height() < $(window).height()) {
+if(!($(document).height() > $(window).height())) {
     // scrollbar
     console.log("present");
 } else {
