@@ -24,6 +24,7 @@
       $profil = $req->fetch();
       ?>
       <li><?php echo $profil["prenom"]." ".$profil["nom"]; ?></li>
+      <li>La Banane Officielle</li>
     <?php } ?>
   </ul>
 </div>
