@@ -107,7 +107,7 @@
   transition: 0.5s;
 }
 
-.nav-link:hover > #rechin_id{
+#rechin_id:hover{
   border-color: white;
   transition: 0.5s;
 }
