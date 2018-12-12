@@ -376,6 +376,10 @@
   border-radius: 12px 0px;
 }
 
+.pub{
+  max-width: 40%;
+}
+
 /* ====================  Fin CSS page principale ==================== */
 
 /* ====================  CSS PAGE DE PROFIL ==================== */
