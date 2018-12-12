@@ -4,6 +4,7 @@ if(!isset($_SESSION["feedd"])){
   $_SESSION["feedd"] = 0;
 } else {
   $off = $_SESSION["feedd"];
+  $_SESSION["feedd"] = $_SESSION["feedd"] + 5;
 }
 try {
   $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;charset=utf8', 'derayalois', 'testdebrayalois');
