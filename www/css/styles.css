@@ -133,11 +133,6 @@
 }
 
 #rechbut{
-  display: none;
-  transition: 2s;
-}
-
-.search-box:hover > #rechbut{
   display: inline-block;
   background-color: transparent;
   height: 20px;
