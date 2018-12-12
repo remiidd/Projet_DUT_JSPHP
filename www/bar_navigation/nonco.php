@@ -22,7 +22,7 @@
             <li class="nav-item active">
               <form class="nav-link"  method="post" action="scripts/php/pre-recherche.php">
                 <div class="search-box">
-                  <input id="rechin" class="rechin" type="text" name="recherche" placeholder="Rechercher"/>
+                  <input id="rechin_id" class="rechin" type="text" name="recherche" placeholder="Rechercher"/>
                   <i class="fas fa-search" ></i>
                   <input id="rechbut" type="submit" value=""/>
                 </div>
