@@ -23,6 +23,8 @@ prenom.addEventListener("input", function(e){
   else {
     console.log("pas ok");
     prenom.style.borderColor = "red";
+    prenom.style.borderStyle = "solid";
+    prenom.style.borderWeight = "3px";
   }
 });
 
