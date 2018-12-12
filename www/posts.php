@@ -137,7 +137,7 @@
              ?>
              <div>
                <?php echo $com["nom_createur"]." commente : ".$com["text_com"];?>
-             </div>
+             </div><br/>
             <?php
           }
            ?>
