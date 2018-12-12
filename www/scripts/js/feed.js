@@ -1,10 +1,11 @@
 console.log("test");
-
-if($(window).scrollTop()){
-  console.log("present");
+if($(document).height() > $(window).height()) {
+    // scrollbar
+    console.log("present");
 } else {
   console.log("pas present");
 }
+
 function verif_bar() {
   var bottom = $(document).height() - $(window).height() - $(window).scrollTop();
     if(bottom == 0) {
