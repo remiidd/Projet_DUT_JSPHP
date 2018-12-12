@@ -1,4 +1,4 @@
-
+console.console.log($(window).scrollTop());
 function verif_bar() {
   var bottom = $(document).height() - $(window).height() - $(window).scrollTop();
     if(bottom == 0) {
