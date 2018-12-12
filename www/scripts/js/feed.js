@@ -1,8 +1,9 @@
 console.log(sessionId);
+var sessionId = request.
 function verif_bar() {
   var bottom = $(document).height() - $(window).height() - $(window).scrollTop();
     if(bottom == 0) {
-      var urll = "scripts/php/load_feed.php?id="+id_post["id"];
+      var urll = "scripts/php/load_feed.php";
       $.ajax({
           url : urll,
           type : "GET",
