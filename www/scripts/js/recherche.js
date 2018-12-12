@@ -11,3 +11,8 @@ function resize_img(){
     div[i].style.height = taille2 + "px";
   }
 }
+
+var prenom = document.getElementById("prenom_input");
+prenom.addEventListener("input", function(e){
+  console.log(prenom.value);
+});
