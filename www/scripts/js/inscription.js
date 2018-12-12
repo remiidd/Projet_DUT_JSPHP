@@ -17,13 +17,11 @@ email.addEventListener("input", function(e){
 prenom.addEventListener("input", function(e){
   var re = /^[a-zA-Z]+$/;
   if (re.test(prenom.value)) {
-    console.log("ok");
     prenom.style.borderColor = "none";
     prenom.style.borderStyle = "inset";
     prenom.style.borderWidth = "2px";
   }
   else {
-    console.log("pas ok");
     prenom.style.borderColor = "red";
     prenom.style.borderStyle = "solid";
     prenom.style.borderWidth = "4px";
@@ -33,10 +31,14 @@ prenom.addEventListener("input", function(e){
 nom.addEventListener("input", function(e){
   var re = /^[a-zA-Z]+$/;
   if (re.test(nom.value)) {
-    console.log("ok");
+    nom.style.borderColor = "none";
+    nom.style.borderStyle = "inset";
+    nom.style.borderWidth = "2px";
   }
   else {
-    console.log("pas ok");
+    nom.style.borderColor = "red";
+    nom.style.borderStyle = "solid";
+    nom.style.borderWidth = "4px";
   }
 });
 
