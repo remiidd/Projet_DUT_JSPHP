@@ -34,7 +34,7 @@
         <?php if($_GET["feed"]!=100){ include "scripts/php/feed_defilement.php"; } ?>
       </div>
     </div>
-    <script src="scripts/js/feed.js"></script>
+    <script src="scripts/js/feed.js">var sessionId = <?php echo $_SESSION['id']; ?>;</script>
     <script src="scripts/js/req.js"></script>
   </body>
 
