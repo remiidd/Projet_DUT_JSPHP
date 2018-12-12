@@ -1,7 +1,7 @@
 
 function verif_bar() {
   var bottom = $(document).height() - $(window).height() - $(window).scrollTop();
-    if(bottom == 50) {
+    if(bottom == 0) {
       var urll = "scripts/php/feed_defilement.php";
       $.ajax({
           url : urll,
