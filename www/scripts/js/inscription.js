@@ -21,6 +21,7 @@ prenom.addEventListener("input", function(e){
   }
   else {
     console.log("pas ok");
+    prenom.style.borderColor = "red";
   }
 });
 
