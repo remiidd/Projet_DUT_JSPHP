@@ -19,12 +19,14 @@ prenom.addEventListener("input", function(e){
   if (re.test(prenom.value)) {
     console.log("ok");
     prenom.style.borderColor = "none";
+    prenom.style.borderStyle = "inset";
+    prenom.style.borderWidth = "3px";
   }
   else {
     console.log("pas ok");
     prenom.style.borderColor = "red";
     prenom.style.borderStyle = "solid";
-    prenom.style.borderWeight = "3px";
+    prenom.style.borderWidth = "3px";
   }
 });
 
