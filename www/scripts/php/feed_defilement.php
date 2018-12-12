@@ -83,7 +83,7 @@ while($feed = $reponse->fetch()) {
 } ?><hr>
 <div>
   <h5><a class="no_deco_link" href="/accueil"><img class="pp_posts" src="src/media/sponso.gif" alt="Sponsophoto"/> Sponsorisé</h5></a><p>
-    <br><p>publicité d'un annonceur</p>
+    <br><img src="src/media/banane_pub.jpg" alt="publicite banane"/>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- pub feed -->
     <ins class="adsbygoogle"
