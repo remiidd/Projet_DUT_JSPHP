@@ -1,4 +1,4 @@
-var testee = document.getElementsByClassName('rechin');
+var testee = document.getElementsById('rechin_id');
 
 testee.addEventListener("input", function(e){
   console.log(document.getElementsByClassName('rechin').value);
