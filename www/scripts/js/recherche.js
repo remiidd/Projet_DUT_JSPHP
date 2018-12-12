@@ -1,4 +1,4 @@
-var rech = document.getElementById('rechin');
+var rech = document.getElementById('rechin_id');
 
 rech.addEventListener("input", function(e){
   console.log(rech.value);
