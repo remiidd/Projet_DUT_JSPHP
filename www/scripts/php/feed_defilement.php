@@ -2,9 +2,11 @@
 session_start();
 if(!isset($_SESSION["feedd"])){
   $_SESSION["feedd"] = 0;
+  $stop_pub = false;
 } else {
   $off = $_SESSION["feedd"];
   $_SESSION["feedd"] = $_SESSION["feedd"] + 5;
+  $stop_pub = false;
 }
 try {
   $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;charset=utf8', 'derayalois', 'testdebrayalois');
