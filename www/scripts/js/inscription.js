@@ -1,6 +1,7 @@
 var mdp = document.getElementById('mdp');
 var mdp1 = document.getElementById('mdp1');
 var email = document.getElementById('email');
+var prenom = document.getElementById("prenom_input");
 
 mdp.addEventListener("input", function (e){
   pass_match();
@@ -11,6 +12,11 @@ mdp1.addEventListener("input", function (e){
 email.addEventListener("input", function(e){
   regemail();
 });
+
+prenom.addEventListener("input", function(e){
+  console.log(prenom.value);
+});
+
 
 function emailexiste(){
   document.getElementById('mailerror').style.display = "inline";
