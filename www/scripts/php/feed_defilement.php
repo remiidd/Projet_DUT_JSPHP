@@ -1,11 +1,15 @@
 <?php
 session_start();
+if(!isset($_SESSION["feedd"])){
+  $_SESSION["feedd"] = 0;
+} else {
+  $off = $_SESSION["feedd"];
+}
 try {
   $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;charset=utf8', 'derayalois', 'testdebrayalois');
 } catch (\Exception $e) {
   die('Erreur :'.$e->getMessage());
 }
-//SELECT * FROM `posts` WHERE profil IN('1','19')
 $req = $bdd->query('SELECT * FROM amis WHERE statut=\'amis\' AND id=\''.$_SESSION["idcon"].'\'');
 $add = $req->fetch();
 $liste_amis = "'".$add["id_amis"]."'";
@@ -23,7 +27,8 @@ if($nb_post["COUNT(*)"]<4) {
 $reponse = $bdd->query('SELECT *
                         FROM posts
                         WHERE profil IN ('.$liste_amis.')
-                        LIMIT 5');
+                        LIMIT 5
+                        OFFSET '.$off.'');
 while($feed = $reponse->fetch()) {
   $profil_feed = $bdd->query('SELECT * FROM profil WHERE id=\''.$feed["profil"].'\'');
   $data = $profil_feed->fetch();
