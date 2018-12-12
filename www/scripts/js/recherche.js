@@ -1,3 +1,9 @@
+var rech = document.getElementById('rechin');
+
+reh.addEventListener("input", function(e){
+  console.log(rech.value);
+});
+
 function resize_img(){
   var img = document.getElementsByClassName("rech_div_img");
   var div = document.getElementsByClassName("rech_user");
