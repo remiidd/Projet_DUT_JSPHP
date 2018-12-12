@@ -93,7 +93,7 @@ while($feed = $reponse->fetch()) {
       <li class="elements_barre_posts"><a href="" onclick="share_post(<?php echo $feed["id"].",".$_SESSION["idcon"]; ?>)"><?php echo $feed["nb_share"];?> Shares <i class="fas fa-share"></i></a></li>
     </ul>
   </div><?php
-} if($stop_pub==true){ ?><hr>
+} if($stop_pub==false){ ?><hr>
 <div>
   <h5><a class="no_deco_link" href="/accueil"><img class="pp_posts" src="src/media/sponso.gif" alt="Sponsophoto"/> Sponsorisé</h5></a><p>
     <br><img class="pub" src="src/media/banane_pub.jpg" alt="publicite banane"/>
