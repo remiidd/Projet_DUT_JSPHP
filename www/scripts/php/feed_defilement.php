@@ -1,4 +1,5 @@
 <?php
+session_start();
 try {
   $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;charset=utf8', 'derayalois', 'testdebrayalois');
 } catch (\Exception $e) {
