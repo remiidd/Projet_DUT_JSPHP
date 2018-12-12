@@ -2,12 +2,12 @@
 session_start();
 if(!isset($_SESSION["feedd"])){
   $_SESSION["feedd"] = 0;
-  $stop_pub = false;
+  $_SESSION["stop_pub"] = false;
   //header
 } else {
   $off = $_SESSION["feedd"];
   $_SESSION["feedd"] = $_SESSION["feedd"] + 5;
-  $stop_pub = false;
+  $_SESSION["stop_pub"] = false;
 }
 try {
   $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;charset=utf8', 'derayalois', 'testdebrayalois');
@@ -48,7 +48,7 @@ if($off>$nb_post["COUNT(*)"]){
     </ul>
   </div><?php
   $_SESSION["feedd"] = 0;
-  $stop_pub = true;
+  $_SESSION["stop_pub"] = true;
 }
 $reponse = $bdd->query('SELECT *
                         FROM posts
@@ -111,7 +111,7 @@ while($feed = $reponse->fetch()) {
       <li class="elements_barre_posts"><a href="" onclick="share_post(<?php echo $feed["id"].",".$_SESSION["idcon"]; ?>)"><?php echo $feed["nb_share"];?> Shares <i class="fas fa-share"></i></a></li>
     </ul>
   </div><?php
-} if($stop_pub==false){ ?><hr>
+} if($_SESSION["stop_pub"]==false){ ?><hr>
 <div>
   <h5><a class="no_deco_link" href="/accueil"><img class="pp_posts" src="src/media/sponso.gif" alt="Sponsophoto"/> Sponsorisé</h5></a><p>
     <br><img class="pub" src="src/media/banane_pub.jpg" alt="publicite banane"/>
