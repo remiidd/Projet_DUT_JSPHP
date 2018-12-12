@@ -1,5 +1,7 @@
 $( document ).ready(function() {
     console.log("ici");
+    var testee = document.getElementById('rechin_id');
+    console.log(testee.value);
 });
 
 function resize_img(){
