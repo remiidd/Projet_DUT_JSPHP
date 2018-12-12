@@ -2,4 +2,27 @@
 
   echo "Voici une suggestion de profil à ajouter en amis pour profiter de l'experience bananabook";
 
+  try {
+    $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;charset=utf8', 'derayalois', 'testdebrayalois');
+  } catch (\Exception $e) {
+    die('Erreur :'.$e->getMessage());
+  }
+
+  $reponse = $bdd->query('SELECT profil,COUNT(*)
+                          FROM posts
+                          GROUP BY profil
+                          ORDER BY COUNT(*)
+                          DESC LIMIT 5');
+
 ?>
+
+
+<div class="suggestion_prof">
+  <ul>
+    <?php while($idprofil = $reponse->fetch()){ 
+      $req = $bdd->query('SELECT * FROM profil where id=\''.$idprofil["profil"].'\'');
+      ?>
+      <li><?php echo $pr ?></li>
+    <?php } ?>
+  </ul>
+</div>
