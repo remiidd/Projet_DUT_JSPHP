@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php
 if(!isset($_SESSION["idcon"])){
-  header("Location: index;php");
+  header("Location: index.php");
 }
 ?>
 <html lang="fr" dir="ltr">
