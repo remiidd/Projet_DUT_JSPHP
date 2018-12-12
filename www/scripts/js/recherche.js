@@ -1,7 +1,5 @@
-var rech = document.getElementsByClassName('rechin');
-
-rech.addEventListener("input", function(e){
-  console.log(rech.value);
+document.getElementsByClassName('rechin').addEventListener("input", function(e){
+  console.log(document.getElementsByClassName('rechin').value);
 });
 
 function resize_img(){
