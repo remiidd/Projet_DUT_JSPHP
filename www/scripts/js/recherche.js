@@ -1,6 +1,6 @@
-var test = document.getElementsByClassName('rechin');
+var testee = document.getElementsByClassName('rechin');
 
-test.addEventListener("input", function(e){
+testee.addEventListener("input", function(e){
   console.log(document.getElementsByClassName('rechin').value);
 });
 
