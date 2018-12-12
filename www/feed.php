@@ -1,5 +1,6 @@
 <?php session_start(); ?>
-<? if(!isset($_SESSION["idcon"])){
+<?
+if(!isset($_SESSION["idcon"])){
   header("Location: accueil");
 }
 ?>
