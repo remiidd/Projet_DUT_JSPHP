@@ -667,6 +667,7 @@
 /* ====================  FEED ==================== */
 .liste_profils {
   width: 100%;
+  clear: both;
 }
 .photo_profil_suggestion {
   max-width: 120px;
