@@ -641,11 +641,12 @@
 
 /* ====================  FEED ==================== */
 .liste_profils div {
-  display: inline;
+  width: 100%;
 }
 .photo_profil_suggestion {
   max-width: 120px;
   border-radius: 60px;
+  display: inline;
 }
 .profil_suggestion {
   max-width: 120px;
