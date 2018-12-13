@@ -18,7 +18,7 @@
       $profil = $req->fetch();
       ?>
       <li><img src="../../<?php echo $profil["photo_profil"]; ?>" class="photo_profil_suggestion" alt="">
-        <br/><?php echo $profil["prenom"]." ".$profil["nom"]; ?></li>
+        <?php echo $profil["prenom"]." ".$profil["nom"]; ?></li>
     <?php } ?>
     <li>La Banane Officielle</li>
   </ul>
