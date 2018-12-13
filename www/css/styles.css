@@ -650,6 +650,7 @@
 .profil_suggestion {
   max-width: 120px;
   display: inline;
+  float: left;
 }
 /* ====================  FIN FEED ==================== */
 
