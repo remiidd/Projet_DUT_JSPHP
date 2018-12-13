@@ -21,10 +21,22 @@
 #notificationContainer{
   position: absolute;
   display: none;
+  border:  1px solid #dddddd;
   right: 0;
+  padding: 3px;
   background-color: lightsalmon;
   margin-right: 139px;
-  margin-top: 75px;
+  margin-top: 44px;
+}
+
+#notificationTitle{
+  border-bottom:  1px solid #dddddd;
+}
+
+#notificationFooter{
+  border-top:  1px solid #dddddd;
+  text-align: center;
+  padding: 3px;
 }
 
 #messenger_i:hover + #notificationContainer{
