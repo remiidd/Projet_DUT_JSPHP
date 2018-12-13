@@ -38,10 +38,10 @@ if($off>$nb_post["COUNT(*)"]){ //suggestion de profils
   <div class="suggestion_prof">
     <div class="liste_profils">
       <?php while($idprofil = $reponse->fetch()){
-        $req = $bdd->query('SELECT * FROM profil where id=\''.$idprofil["profil"].'\'');
-        $profil = $req->fetch();
-        $req2 = $bdd->query('SELECT statut FROM amis WHERE id_amis=\''.$_SESSION["idcon"].'\' AND id=\''.$profil["id"].'\'');
-        $isfriend = $req2->fetch();
+        $req5 = $bdd->query('SELECT * FROM profil where id=\''.$idprofil["profil"].'\'');
+        $profil = $req5->fetch();
+        $req6 = $bdd->query('SELECT statut FROM amis WHERE id_amis=\''.$_SESSION["idcon"].'\' AND id=\''.$profil["id"].'\'');
+        $isfriend = $req6->fetch();
         $stamis = false;
         if(($isfriend["statut"]!=null)&&($isfriend["statut"]!="bloque")){
           $stamis = true;
