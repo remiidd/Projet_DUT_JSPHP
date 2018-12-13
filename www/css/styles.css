@@ -34,6 +34,10 @@
   margin-left: 15px;
 }
 
+.notifications:hover{
+  background-color: #ffa07a;
+}
+
 #notificationFooter{
   border-top:  1px solid #dddddd;
   text-align: center;
