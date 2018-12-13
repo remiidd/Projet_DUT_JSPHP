@@ -19,4 +19,5 @@ if(!($(document).height() > $(window).height())) {
 document.addEventListener('scroll', function() {
     var verif = $(document).height() - $(window).height() - $(window).scrollTop();
     verif_bar(verif);
+    console.log(verif);
 });
