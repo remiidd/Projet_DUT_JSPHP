@@ -20,7 +20,7 @@
       <div class="profil_suggestion"><img src="../../<?php echo $profil["photo_profil"]; ?>" class="photo_profil_suggestion" alt="">
         <p><?php echo $profil["prenom"]." ".$profil["nom"]; ?></p></div>
     <?php } ?>
-    <div class="profil_suggestion"><img src="../../src/media/profils/69-pp.gif" class="photo_profil_suggestion" alt="">
-      <p>La Banane Officielle</p></div>
+    <div class="profil_suggestion"><a href="profil-69" class="no_deco_link modif_infos_boutons"><img src="../../src/media/profils/69-pp.gif" class="photo_profil_suggestion" alt="">
+      <p>La Banane Officielle</p></a></div>
   </div>
 </div>
