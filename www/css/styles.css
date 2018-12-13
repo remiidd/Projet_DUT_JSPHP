@@ -27,7 +27,7 @@
   margin-top: 75px;
 }
 
-#messenger_i:hover>#notificationContainer{
+#messenger_i:hover > #notificationContainer{
   display: block;
 }
 
