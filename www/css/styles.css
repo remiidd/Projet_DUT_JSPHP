@@ -643,6 +643,10 @@
 .liste_profils li {
   display: inline;
 }
+.photo_profil_suggestion {
+  max-width: 120px;
+  border-radius: 60px;
+}
 /* ====================  FIN FEED ==================== */
 
 
