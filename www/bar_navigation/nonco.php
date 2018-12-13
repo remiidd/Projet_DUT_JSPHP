@@ -78,7 +78,7 @@
                     <?php echo "<div id=\"notificationsBody\" class=\"notifications\">".$donnees['prenom']. " " .$donnees['nom'] . "</div></a>";?>
               }
               ?>
-              <div id="notificationFooter"><a href="#">Voir tout</a></div>
+              <div id="notificationFooter"><a href="/messenger">Voir tout</a></div>
             </div>
             <form class="formbar" method="post" action="../scripts/php/deconnexion.php">
               <input id="cobout" type="submit" value="Déconnexion"/>
