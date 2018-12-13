@@ -83,21 +83,21 @@
                           if($stamis == true){
                             ?>
                             <form class="" action="scripts/php/supprimer_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $donnees['id'];?>" method="post">
-                              <input type="submit" name="Ajouter" value="Supprimer">
+                              <input class="button_result_rech" type="submit" name="Ajouter" value="Supprimer">
                             </form>
                             <?php
                           }
                           else {
                             ?>
                             <form class="" action="scripts/php/ajouter_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $donnees['id'];?>" method="post">
-                              <input type="submit" name="Ajouter" value="Ajouter">
+                              <input class="button_result_rech" type="submit" name="Ajouter" value="Ajouter">
                             </form>
                             <?php
                           }
                         ?>
 
                         <form class="" action="scripts/php/nouveau_message.php?id_amis=<?php echo $donnees['id'];?>" method="post">
-                          <input type="submit" name="Envoyer un message" value="Envoyer un message">
+                          <input class="button_result_rech" type="submit" name="Envoyer un message" value="Envoyer un message">
                         </form>
 
                       </div>

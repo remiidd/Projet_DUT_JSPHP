@@ -177,6 +177,16 @@
   width: 100%;
 }
 
+.button_result_rech{
+  background-color: lightsalmon;
+  padding: 3px;
+  color: white;
+  border-radius: 12px 0px;
+  border-style: dotted;
+  border-color: white;
+  margin-bottom: 15px;
+}
+
 .rech_div_img{
   overflow: hidden;
   float: left;
