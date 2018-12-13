@@ -16,6 +16,12 @@
     <?php while($idprofil = $reponse->fetch()){
       $req = $bdd->query('SELECT * FROM profil where id=\''.$idprofil["profil"].'\'');
       $profil = $req->fetch();
+      $req2 = $bdd->query('SELECT statut FROM amis WHERE id_amis=\''.$_SESSION["idcon"].'\' AND id=\''.$profil["id"].'\'');
+      $isfriend = $req2->fetch();
+      $estami = false;
+      if(($isfriend["statut"]!=null)||$isfriend["statut"]!="bloque"){
+        $estami = true;
+      }
       ?>
       <div class="profil_suggestion"><a href="profil-<?php echo $profil["id"]; ?>" class="no_deco_link modif_infos_boutons"><img src="../../<?php if($profil["photo_profil"]!="") { echo $profil["photo_profil"]; } else { echo "src/media/default_profil_picture.jpg"; } ?>" class="photo_profil_suggestion" alt="">
         <p><?php echo $profil["prenom"]." ".$profil["nom"]; ?></p></a></div>
