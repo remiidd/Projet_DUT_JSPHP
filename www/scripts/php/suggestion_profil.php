@@ -12,7 +12,7 @@
                           LIMIT 5');
 ?>
 <div class="suggestion_prof">
-  <ul>
+  <ul class="liste_profils">
     <?php while($idprofil = $reponse->fetch()){
       $req = $bdd->query('SELECT * FROM profil where id=\''.$idprofil["profil"].'\'');
       $profil = $req->fetch();
