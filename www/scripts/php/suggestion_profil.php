@@ -19,7 +19,7 @@
       $req2 = $bdd->query('SELECT statut FROM amis WHERE id_amis=\''.$_SESSION["idcon"].'\' AND id=\''.$profil["id"].'\'');
       $isfriend = $req2->fetch();
       $stamis = false;
-      if(($isfriend["statut"]!=null)||$isfriend["statut"]!="bloque"){
+      if(($isfriend["statut"]!=null)&&($isfriend["statut"]!="bloque")){
         $stamis = true;
       }
       ?>
