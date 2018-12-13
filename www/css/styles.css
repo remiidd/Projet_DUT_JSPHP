@@ -640,9 +640,8 @@
 /* ====================  FIN CSS PAGE messagerie ==================== */
 
 /* ====================  FEED ==================== */
-.liste_profils li {
+.liste_profils div {
   display: inline;
-  max-width: 120px;
 }
 .photo_profil_suggestion {
   max-width: 120px;
