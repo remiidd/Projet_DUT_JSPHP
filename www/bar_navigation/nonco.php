@@ -62,6 +62,10 @@
               if($donnees['notif']!= 0){
               ?>
                 <span id="notification_count_menu"><?php echo $donnees['notif']; ?></span>
+                <div id="notificationContainer">
+          			<div id="notificationTitle">Notifications</div>
+          			<div id="notificationsBody" class="notifications"></div>
+          			<div id="notificationFooter"><a href="#">See All</a></div>
               <?php } ?>
             </a>
             <form class="formbar" method="post" action="../scripts/php/deconnexion.php">
