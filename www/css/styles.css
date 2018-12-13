@@ -646,10 +646,10 @@
 .photo_profil_suggestion {
   max-width: 120px;
   border-radius: 60px;
-  display: inline;
 }
 .profil_suggestion {
   max-width: 120px;
+  display: inline;
 }
 /* ====================  FIN FEED ==================== */
 
