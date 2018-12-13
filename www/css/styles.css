@@ -44,6 +44,10 @@
   display: block;
 }
 
+#notificationContainer:hover{
+  display: block;
+}
+
 #notification_count_menu{
   position: absolute;
   top: 28px;
