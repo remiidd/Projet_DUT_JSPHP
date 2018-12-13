@@ -8,8 +8,8 @@
   $reponse = $bdd->query('SELECT profil,COUNT(*)
                           FROM posts
                           GROUP BY profil
-                          ORDER BY COUNT(*)
-                          DESC LIMIT 5');
+                          ORDER BY COUNT(*) DESC
+                          LIMIT 5');
 ?>
 <div class="suggestion_prof">
   <ul>
