@@ -65,7 +65,7 @@
               <?php } ?>
             </a>
             <div id="notificationContainer">
-              <div id="notificationTitle">Notifications</div>
+              <div id="notificationTitle">5 derniers messages</div>
               <?php
               $reponse = $bdd->query("SELECT DISTINCT(profil.id), profil.nom, profil.prenom
                                             FROM profil
