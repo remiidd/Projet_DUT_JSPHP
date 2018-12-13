@@ -17,7 +17,8 @@
       $req = $bdd->query('SELECT * FROM profil where id=\''.$idprofil["profil"].'\'');
       $profil = $req->fetch();
       ?>
-      <li><img src="../../<?php echo $profil["photo_profil"]; ?>" class="photo_profil_suggestion" alt=""> <?php echo $profil["prenom"]." ".$profil["nom"]; ?></li>
+      <li><img src="../../<?php echo $profil["photo_profil"]; ?>" class="photo_profil_suggestion" alt="">
+        <br/><?php echo $profil["prenom"]." ".$profil["nom"]; ?></li>
     <?php } ?>
     <li>La Banane Officielle</li>
   </ul>
