@@ -21,17 +21,17 @@
 #notificationContainer{
   position: absolute;
   display: none;
-  border:  1px solid #dddddd;
   right: 0;
   width: 300px;
   padding: 3px;
   background-color: lightsalmon;
   margin-right: 139px;
-  margin-top: 44px;
+  margin-top: 32px;
 }
 
 #notificationTitle{
   border-bottom:  1px solid #dddddd;
+  margin-left: 15px;
 }
 
 #notificationFooter{
