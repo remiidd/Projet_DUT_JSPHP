@@ -1,6 +1,5 @@
 
-function verif_bar() {
-  var bottom = $(document).height() - $(window).height() - $(window).scrollTop();
+function verif_bar(bottom) {
     if(bottom == 0) {
       var urll = "scripts/php/feed_defilement.php";
       $.ajax({
@@ -13,6 +12,11 @@ function verif_bar() {
     }
 }
 
+if(!($(document).height() > $(window).height())) {
+    verif_bar(0);
+}
+
 document.addEventListener('scroll', function() {
-  verif_bar();
+    var verif = $(document).height() - $(window).height() - $(window).scrollTop();
+    verif_bar(verif);
 });

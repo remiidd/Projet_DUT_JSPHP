@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php
 if(!isset($_SESSION["idcon"])){
-  header("Location: accueil");
+  header("Location: index.php");
 }
 ?>
 <html lang="fr" dir="ltr">
@@ -32,6 +32,10 @@ if(!isset($_SESSION["idcon"])){
     <div class="content">
       <div class="wrapp">
         <h3>Bananafeed</h3>
+        <?php if(!isset($_SESSION["feedd"])){
+          $_SESSION["feedd"] = 0;
+          $_SESSION["stop_pub"] = false;
+        } ?>
         <?php if($_GET["feed"]!=100){ include "scripts/php/feed_defilement.php"; } else { include "scripts/php/suggestion_profil.php";}?>
       </div>
     </div>

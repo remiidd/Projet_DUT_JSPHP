@@ -18,7 +18,7 @@
       $profil_du_com = $req->fetch();
 
       $mess .= "<div>
-        <p>".$com["nom_createur"]." commentes : ".$com["text_com"]."</p>
+        <p>".$com["nom_createur"]." commente : ".$com["text_com"]."</p>
         </div>";
     }
   }

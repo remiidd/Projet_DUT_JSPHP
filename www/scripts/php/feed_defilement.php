@@ -2,11 +2,11 @@
 session_start();
 if(!isset($_SESSION["feedd"])){
   $_SESSION["feedd"] = 0;
-  $stop_pub = false;
+  $_SESSION["stop_pub"] = false;
 } else {
   $off = $_SESSION["feedd"];
   $_SESSION["feedd"] = $_SESSION["feedd"] + 5;
-  $stop_pub = false;
+  $_SESSION["stop_pub"] = false;
 }
 try {
   $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;charset=utf8', 'derayalois', 'testdebrayalois');
@@ -28,9 +28,26 @@ if($nb_post["COUNT(*)"]<4) {
   header($url_header);
 }
 if($off>$nb_post["COUNT(*)"]){
-  include "scripts/php/suggestion_profil.php";
+    echo "Voici une suggestion de profil à ajouter en amis pour profiter de l'experience bananabook";
+    $reponses = $bdd->query('SELECT profil,COUNT(*)
+                            FROM posts
+                            GROUP BY profil
+                            ORDER BY COUNT(*)
+                            DESC LIMIT 5');
+  ?>
+  <div class="suggestion_prof">
+    <ul>
+      <?php while($idprofil = $reponses->fetch()){
+        $reqs = $bdd->query('SELECT * FROM profil where id=\''.$idprofil["profil"].'\'');
+        $profil = $reqs->fetch();
+        ?>
+        <li><?php echo $profil["prenom"]." ".$profil["nom"]; ?></li>
+      <?php } ?>
+        <li>La Banane Officielle</li>
+    </ul>
+  </div><?php
   $_SESSION["feedd"] = 0;
-  $stop_pub = true;
+  $_SESSION["stop_pub"] = true;
 }
 $reponse = $bdd->query('SELECT *
                         FROM posts
@@ -93,7 +110,7 @@ while($feed = $reponse->fetch()) {
       <li class="elements_barre_posts"><a href="" onclick="share_post(<?php echo $feed["id"].",".$_SESSION["idcon"]; ?>)"><?php echo $feed["nb_share"];?> Shares <i class="fas fa-share"></i></a></li>
     </ul>
   </div><?php
-} if($stop_pub==false){ ?><hr>
+} if($_SESSION["stop_pub"]==false){ ?><hr>
 <div>
   <h5><a class="no_deco_link" href="/accueil"><img class="pp_posts" src="src/media/sponso.gif" alt="Sponsophoto"/> Sponsorisé</h5></a><p>
     <br><img class="pub" src="src/media/banane_pub.jpg" alt="publicite banane"/>
