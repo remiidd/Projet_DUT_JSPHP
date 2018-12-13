@@ -27,25 +27,75 @@ if($nb_post["COUNT(*)"]<4) {
   $url_header = "Location: feed.php?feed=100";
   header($url_header);
 }
-if($off>$nb_post["COUNT(*)"]){
+if($off>$nb_post["COUNT(*)"]){ //suggestion de profils
     echo "Voici une suggestion de profil à ajouter en amis pour profiter de l'experience bananabook";
-    $reponses = $bdd->query('SELECT profil,COUNT(*)
+    $reponse = $bdd->query('SELECT profil,COUNT(*)
                             FROM posts
                             GROUP BY profil
-                            ORDER BY COUNT(*)
-                            DESC LIMIT 5');
+                            ORDER BY COUNT(*) DESC
+                            LIMIT 5');
   ?>
   <div class="suggestion_prof">
-    <ul>
-      <?php while($idprofil = $reponses->fetch()){
-        $reqs = $bdd->query('SELECT * FROM profil where id=\''.$idprofil["profil"].'\'');
-        $profil = $reqs->fetch();
+    <div class="liste_profils">
+      <?php while($idprofil = $reponse->fetch()){
+        $req = $bdd->query('SELECT * FROM profil where id=\''.$idprofil["profil"].'\'');
+        $profil = $req->fetch();
+        $req2 = $bdd->query('SELECT statut FROM amis WHERE id_amis=\''.$_SESSION["idcon"].'\' AND id=\''.$profil["id"].'\'');
+        $isfriend = $req2->fetch();
+        $stamis = false;
+        if(($isfriend["statut"]!=null)&&($isfriend["statut"]!="bloque")){
+          $stamis = true;
+        }
         ?>
-        <li><?php echo $profil["prenom"]." ".$profil["nom"]; ?></li>
+        <div class="profil_suggestion"><a href="profil-<?php echo $profil["id"]; ?>" class="no_deco_link modif_infos_boutons"><img src="../../<?php if($profil["photo_profil"]!="") { echo $profil["photo_profil"]; } else { echo "src/media/default_profil_picture.jpg"; } ?>" class="photo_profil_suggestion" alt="">
+          <p><?php echo $profil["prenom"]." ".$profil["nom"]; ?></p></a>
+          <?php
+            if($stamis == true){
+              ?>
+              <form class="" action="scripts/php/supprimer_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $profil['id'];?>" method="post">
+                <input class="button_result_rech" type="submit" name="Ajouter" value="Supprimer">
+              </form>
+              <?php
+            }
+            else {
+              ?>
+              <form class="" action="scripts/php/ajouter_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $profil['id'];?>" method="post">
+                <input class="button_result_rech" type="submit" name="Ajouter" value="Ajouter">
+              </form>
+              <?php
+            }
+          ?>
+        </div>
       <?php } ?>
-        <li>La Banane Officielle</li>
-    </ul>
-  </div><?php
+      <div class="profil_suggestion"><a href="profil-69" class="no_deco_link modif_infos_boutons"><img src="../../src/media/profils/69-pp.gif" class="photo_profil_suggestion" alt="">
+        <p>La Banane Officielle</p></a>
+        <?php $req2 = $bdd->query('SELECT statut FROM amis WHERE id_amis=\''.$_SESSION["idcon"].'\' AND id=69');
+        $isfriend = $req2->fetch();
+        $stamis = false;
+        if(($isfriend["statut"]!=null)&&($isfriend["statut"]!="bloque")){
+          $stamis = true;
+        }
+        ?>
+          <?php
+            if($stamis == true){
+              ?>
+              <form class="" action="scripts/php/supprimer_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=69" method="post">
+                <input class="button_result_rech" type="submit" name="Ajouter" value="Supprimer">
+              </form>
+              <?php
+            }
+            else {
+              ?>
+              <form class="" action="scripts/php/ajouter_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=69" method="post">
+                <input class="button_result_rech" type="submit" name="Ajouter" value="Ajouter">
+              </form>
+              <?php
+            }
+          ?>
+      </div>
+    </div>
+  </div>
+<?php //fin suggestion de profil
   $_SESSION["feedd"] = 0;
   $_SESSION["stop_pub"] = true;
 }
