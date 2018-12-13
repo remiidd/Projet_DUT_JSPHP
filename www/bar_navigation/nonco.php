@@ -74,7 +74,7 @@
                                             GROUP BY profil.id
                                             ORDER BY MAX(message.id) DESC LIMIT 5");
               while($donnees = $reponse->fetch()){
-                  ?><a class="histo_perso_href" href="scripts/php/messenger.php?amis=<?php echo $donnees['id']?>">
+                  ?>
                     <?php echo "<div id=\"notificationsBody\" class=\"notifications\">".$donnees['prenom']. " " .$donnees['nom'] . "</div></a>";?>
               }
               ?>
