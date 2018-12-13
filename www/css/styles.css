@@ -640,7 +640,7 @@
 /* ====================  FIN CSS PAGE messagerie ==================== */
 
 /* ====================  FEED ==================== */
-.liste_profils div {
+.liste_profils {
   width: 100%;
 }
 .photo_profil_suggestion {
