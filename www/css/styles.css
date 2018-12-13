@@ -653,6 +653,7 @@
   display: inline;
   float: left;
   margin-right: 30px;
+  text-align: center;
 }
 .un_post {
   clear: both;
