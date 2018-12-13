@@ -639,6 +639,12 @@
 
 /* ====================  FIN CSS PAGE messagerie ==================== */
 
+/* ====================  FEED ==================== */
+.liste_profils li {
+  display: inline;
+}
+/* ====================  FIN FEED ==================== */
+
 
 .no_deco_link {
   text-decoration: none;
