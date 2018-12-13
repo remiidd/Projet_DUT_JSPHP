@@ -640,7 +640,7 @@
 /* ====================  FIN CSS PAGE messagerie ==================== */
 
 /* ====================  FEED ==================== */
-.liste_profils li div {
+.liste_profils li {
   display: inline;
 }
 .photo_profil_suggestion {
