@@ -642,6 +642,7 @@
 /* ====================  FEED ==================== */
 .liste_profils li {
   display: inline;
+  max-width: 120px;
 }
 .photo_profil_suggestion {
   max-width: 120px;
