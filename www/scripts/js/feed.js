@@ -1,6 +1,6 @@
 
 function verif_bar(bottom) {
-    if(bottom == 0) {
+    if(bottom <= 0) {
       var urll = "scripts/php/feed_defilement.php";
       $.ajax({
           url : urll,
