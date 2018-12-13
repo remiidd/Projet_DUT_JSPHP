@@ -681,7 +681,7 @@
 .profil_suggestion {
   max-width: 120px;
   display: inline;
-  /*float: left;*/
+  float: left;
   margin-right: 30px;
   text-align: center;
 }
