@@ -79,7 +79,7 @@
                                         GROUP BY profil.id
                                         ORDER BY MAX(message.id) DESC LIMIT 5");
           while($donnees = $reponse->fetch()){
-            echo "<div id=\"notificationsBody\" class=\"notifications\">".$donnees['prenom']. " " .$donnees['nom']"</div>";
+            echo "<div id=\"notificationsBody\" class=\"notifications\">".$donnees['prenom']. " " .$donnees['nom'] . "</div>";
           }
           ?>
     			<div id="notificationFooter"><a href="#">Voir tout</a></div>
