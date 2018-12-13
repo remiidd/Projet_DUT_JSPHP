@@ -652,6 +652,7 @@
   max-width: 120px;
   display: inline;
   float: left;
+  margin-right: 30px;
 }
 .un_post {
   clear: both;
