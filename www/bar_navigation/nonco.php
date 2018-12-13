@@ -70,9 +70,10 @@
           </div>
         </div>
         <div id="notificationContainer">
-  			<div id="notificationTitle">Notifications</div>
-  			<div id="notificationsBody" class="notifications"></div>
-  			<div id="notificationFooter"><a href="#">See All</a></div>
+    			<div id="notificationTitle">Notifications</div>
+    			<div id="notificationsBody" class="notifications"></div>
+    			<div id="notificationFooter"><a href="#">Voir tout</a></div>
+        </div>
         <script src="scripts/js/notif.js"></script>
         <script src="/scripts/js/recherche.js"></script>
       </nav>
