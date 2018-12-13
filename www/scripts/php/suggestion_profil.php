@@ -28,14 +28,14 @@
         <?php
           if($stamis == true){
             ?>
-            <form class="" action="scripts/php/supprimer_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $donnees['id'];?>" method="post">
+            <form class="" action="scripts/php/supprimer_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $profil['id'];?>" method="post">
               <input class="button_result_rech" type="submit" name="Ajouter" value="Supprimer">
             </form>
             <?php
           }
           else {
             ?>
-            <form class="" action="scripts/php/ajouter_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $donnees['id'];?>" method="post">
+            <form class="" action="scripts/php/ajouter_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=<?php  echo $profil['id'];?>" method="post">
               <input class="button_result_rech" type="submit" name="Ajouter" value="Ajouter">
             </form>
             <?php
