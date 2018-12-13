@@ -12,14 +12,14 @@
                           LIMIT 5');
 ?>
 <div class="suggestion_prof">
-  <ul class="liste_profils">
+  <div class="liste_profils">
     <?php while($idprofil = $reponse->fetch()){
       $req = $bdd->query('SELECT * FROM profil where id=\''.$idprofil["profil"].'\'');
       $profil = $req->fetch();
       ?>
-      <li><div class="profil_suggestion"><img src="../../<?php echo $profil["photo_profil"]; ?>" class="photo_profil_suggestion" alt="">
-        <p><?php echo $profil["prenom"]." ".$profil["nom"]; ?></p></div></li>
+      <div class="profil_suggestion"><img src="../../<?php echo $profil["photo_profil"]; ?>" class="photo_profil_suggestion" alt="">
+        <p><?php echo $profil["prenom"]." ".$profil["nom"]; ?></p></div>
     <?php } ?>
-    <li>La Banane Officielle</li>
-  </ul>
+    <!--<li>La Banane Officielle</li>-->
+  </div>
 </div>
