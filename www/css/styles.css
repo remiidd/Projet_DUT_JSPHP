@@ -652,6 +652,9 @@
   display: inline;
   float: left;
 }
+.un_post {
+  clear: both;
+}
 /* ====================  FIN FEED ==================== */
 
 
