@@ -65,7 +65,7 @@
                 <div id="notificationContainer">
           			<div id="notificationTitle">Notifications</div>
           			<div id="notificationsBody" class="notifications"></div>
-          			<div id="notificationFooter"><a href="#">See All</a></div>
+          			<div id="notificationFooter"><a href="#">Voir tout</a></div>
               <?php } ?>
             </a>
             <form class="formbar" method="post" action="../scripts/php/deconnexion.php">
