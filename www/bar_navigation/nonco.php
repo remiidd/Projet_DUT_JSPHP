@@ -63,26 +63,26 @@
               ?>
                 <span id="notification_count_menu"><?php echo $donnees['notif']; ?></span>
               <?php } ?>
+              <div id="notificationContainer">
+          			<div id="notificationTitle">Notifications</div>
+                <?php
+                $reponse = $bdd->query("SELECT DISTINCT(profil.id), profil.nom, profil.prenom
+                                              FROM profil
+                                              LEFT JOIN message ON profil.id = message.id_exp
+                                              WHERE message IS NOT NULL AND message.id_dest=\"$moi\"
+                                              GROUP BY profil.id
+                                              ORDER BY MAX(message.id) DESC LIMIT 5");
+                while($donnees = $reponse->fetch()){
+                  echo "<div id=\"notificationsBody\" class=\"notifications\">".$donnees['prenom']. " " .$donnees['nom'] . "</div>";
+                }
+                ?>
+          			<div id="notificationFooter"><a href="#">Voir tout</a></div>
+              </div>
             </a>
             <form class="formbar" method="post" action="../scripts/php/deconnexion.php">
               <input id="cobout" type="submit" value="Déconnexion"/>
             </form>
           </div>
-        </div>
-        <div id="notificationContainer">
-    			<div id="notificationTitle">Notifications</div>
-          <?php
-          $reponse = $bdd->query("SELECT DISTINCT(profil.id), profil.nom, profil.prenom
-                                        FROM profil
-                                        LEFT JOIN message ON profil.id = message.id_exp
-                                        WHERE message IS NOT NULL AND message.id_dest=\"$moi\"
-                                        GROUP BY profil.id
-                                        ORDER BY MAX(message.id) DESC LIMIT 5");
-          while($donnees = $reponse->fetch()){
-            echo "<div id=\"notificationsBody\" class=\"notifications\">".$donnees['prenom']. " " .$donnees['nom'] . "</div>";
-          }
-          ?>
-    			<div id="notificationFooter"><a href="#">Voir tout</a></div>
         </div>
         <script src="scripts/js/notif.js"></script>
         <script src="/scripts/js/recherche.js"></script>
