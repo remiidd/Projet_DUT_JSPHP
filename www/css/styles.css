@@ -18,6 +18,15 @@
   top: 0;
 }
 
+#notificationContainer{
+  position: absolute;
+  display: none;
+  right: 0;
+  background-color: lightsalmon;
+  margin-right: 139px;
+  margin-top: 75px;
+}
+
 #notification_count_menu{
   position: absolute;
   top: 28px;
