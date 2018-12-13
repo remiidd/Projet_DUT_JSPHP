@@ -27,6 +27,10 @@
   margin-top: 75px;
 }
 
+#messenger_i:hover>#notificationContainer{
+  display: block;
+}
+
 #notification_count_menu{
   position: absolute;
   top: 28px;
