@@ -57,7 +57,7 @@ $reponse = $bdd->query('SELECT *
 while($feed = $reponse->fetch()) {
   $profil_feed = $bdd->query('SELECT * FROM profil WHERE id=\''.$feed["profil"].'\'');
   $data = $profil_feed->fetch();
-  ?><div><hr>
+  ?><div class="un_post"><hr>
     <h5><a class="no_deco_link" href="<?php echo "profil-".$feed["profil"]; ?>"><img class="pp_posts" src="<?php if($data["photo_profil"]!=null) { echo $data["photo_profil"]; } else { ?>src/media/default_profil_picture.jpg<?php } ?>" alt="Default profil cover"/><?php echo " ".$feed["nom_createur"]; ?></a></h5><p>
       <i><?php $d_publi = new DateTime($feed["date_publication"]); echo "Le ".$d_publi->format("d/m/Y") ?></i></p><br>
       <p><?php
