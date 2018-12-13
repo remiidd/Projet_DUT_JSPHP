@@ -35,7 +35,7 @@
         <body onresize="resize_img()" onload="resize_img()">
           <?php include 'bar_navigation/nonco.php'?>
           <div class="content">
-            <h1>Recherche</h1>
+            <h1>Recherche <?php echo $user; ?></h1>
             <?php
               try{
                 $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
