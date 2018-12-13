@@ -17,7 +17,7 @@
       $req = $bdd->query('SELECT * FROM profil where id=\''.$idprofil["profil"].'\'');
       $profil = $req->fetch();
       ?>
-      <div class="profil_suggestion"><a href="profil-<?php echo $profil["id"]; ?>"><img src="../../<?php if($profil["photo_profil"]!="") { echo $profil["photo_profil"]; } else { echo "src/media/default_profil_picture.jpg"; } ?>" class="photo_profil_suggestion" alt="">
+      <div class="profil_suggestion"><a href="profil-<?php echo $profil["id"]; ?>" class="no_deco_link modif_infos_boutons"><img src="../../<?php if($profil["photo_profil"]!="") { echo $profil["photo_profil"]; } else { echo "src/media/default_profil_picture.jpg"; } ?>" class="photo_profil_suggestion" alt="">
         <p><?php echo $profil["prenom"]." ".$profil["nom"]; ?></p></a></div>
     <?php } ?>
     <div class="profil_suggestion"><a href="profil-69" class="no_deco_link modif_infos_boutons"><img src="../../src/media/profils/69-pp.gif" class="photo_profil_suggestion" alt="">
