@@ -44,6 +44,30 @@
       </div>
     <?php } ?>
     <div class="profil_suggestion"><a href="profil-69" class="no_deco_link modif_infos_boutons"><img src="../../src/media/profils/69-pp.gif" class="photo_profil_suggestion" alt="">
-      <p>La Banane Officielle</p></a></div>
+      <p>La Banane Officielle</p></a>
+      <? $req2 = $bdd->query('SELECT statut FROM amis WHERE id_amis=\''.$_SESSION["idcon"].'\' AND id=69');
+      $isfriend = $req2->fetch();
+      $stamis = false;
+      if(($isfriend["statut"]!=null)&&($isfriend["statut"]!="bloque")){
+        $stamis = true;
+      }
+      ?>
+        <?php
+          if($stamis == true){
+            ?>
+            <form class="" action="scripts/php/supprimer_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=69" method="post">
+              <input class="button_result_rech" type="submit" name="Ajouter" value="Supprimer">
+            </form>
+            <?php
+          }
+          else {
+            ?>
+            <form class="" action="scripts/php/ajouter_amis.php?id=<?php echo $_SESSION['idcon'];?>&id_amis=69" method="post">
+              <input class="button_result_rech" type="submit" name="Ajouter" value="Ajouter">
+            </form>
+            <?php
+          }
+        ?>
+    </div>
   </div>
 </div>
