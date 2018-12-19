@@ -145,5 +145,6 @@
         </div>
       </div>
     <script src="scripts/js/comments.js"></script>
+    <script src="scripts/js/req.js"></script>
   </body>
 </html>
