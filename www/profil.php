@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/styles.css"/>
     <script src="scripts/js/profil.js" charset="utf-8"></script>
   </head>
-  <body>
+  <body onresize="resize_img()" onload="resize_img()">
     <?php include 'bar_navigation/nonco.php' ?>
     <?php
     try {
