@@ -459,6 +459,7 @@
 }
 #areapost {
   resize: none;
+  width: 100%;
   overflow:hidden;
 }
 #tableau_infos_perso td{
