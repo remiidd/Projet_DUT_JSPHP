@@ -32,6 +32,11 @@ function liker_post(id_posts, id_profils) {
   }
 }
 
+$(".mtest_bouton_like").click(function(){
+	var id_post;
+	var id_profil;
+});
+
 function share_post(id_posts, id_profils) {
 	var xhr = getXMLHttpRequest();
 
