@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav mr-auto">
             <a class="no_deco_link" href="/profil-<?php  echo $_SESSION['idcon']?>">
-              <a id="aff_prof">Mon profil</a><i class="fas fa-user"></i>
+              <i class="fas fa-user"></i>  <a id="aff_prof">Mon profil</a>
             </a>
           </div>
           <div class="navbar-nav my-2 my-lg-0">
