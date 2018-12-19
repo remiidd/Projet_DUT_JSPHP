@@ -1,4 +1,5 @@
 <?php
+session_start();
 header("Content-Type: text/plain");
 
 if(isset($_GET["id_post"])) {
@@ -6,7 +7,7 @@ if(isset($_GET["id_post"])) {
 } else {
   $id_post=null;
 }
-if(isset($_GET["id_profil"])) {
+if(isset($_SESSION["idcon"])) {
   $id_profil = $_SESSION["idcon"];
 } else {
   $id_profil=null;
