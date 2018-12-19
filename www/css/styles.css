@@ -419,6 +419,15 @@
   max-width: 40%;
 }
 
+.bouton_like {
+  text-decoration: none;
+  color: #007bff;
+}
+.bouton_like:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
 /* ====================  Fin CSS page principale ==================== */
 
 /* ====================  CSS PAGE DE PROFIL ==================== */
