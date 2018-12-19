@@ -420,12 +420,12 @@
 }
 
 .bouton_like {
-  text-decoration: none;
-  color: #007bff;
+  text-decoration: none ! important;
+  color: #007bff! important;
 }
 .bouton_like:hover {
-  text-decoration: underline;
-  color: #0056b3;
+  text-decoration: underline ! important;
+  color: #0056b3 ! important;
 }
 
 /* ====================  Fin CSS page principale ==================== */
