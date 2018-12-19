@@ -46,5 +46,5 @@ function notif_invitation(){
 
 }
 
-notif_messenger();
+//notif_messenger();
 //notif_invitation();
