@@ -25,7 +25,7 @@ function liker_post(id_posts, id_profils) {
   var id_post = encodeURIComponent(id_posts);
   var id_profil = encodeURIComponent(id_profils);
   try {
-    xhr.open("GET", "scripts/php/like.php?id_post="+id_post+"&id_profil="+id_profil,true);
+    xhr.open("GET", "scripts/php/like.php?id_post="+id_post,true);
     xhr.send(null);
   }catch(error) {
     alert(error);
@@ -34,7 +34,6 @@ function liker_post(id_posts, id_profils) {
 
 $(".mtest_bouton_like").click(function(){
 	var id_post;
-	var id_profil;
 });
 
 function share_post(id_posts, id_profils) {
