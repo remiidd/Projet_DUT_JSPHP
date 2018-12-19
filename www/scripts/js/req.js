@@ -34,13 +34,18 @@ $(".bouton_like").click(function(){
 	var id_post = this.getAttribute('id');
 	id_post = encodeURIComponent(id_post);
 	var xhr = getXMLHttpRequest();
-  
+
   try {
     xhr.open("GET", "scripts/php/like.php?id_post="+id_post,true);
     xhr.send(null);
   }catch(error) {
     alert(error);
   }
+
+		xhr.onload = function() {
+			console.log(xhr.responseXML);
+		};
+
 });
 
 function share_post(id_posts, id_profils) {
