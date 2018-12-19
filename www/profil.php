@@ -176,7 +176,7 @@
                 ?>
                 <li class="elements_barre_posts"><a id="<?php echo $feed["id"]; ?>like" class="bouton_like"><?php echo $feed["nb_like"];?> Likes <i class="<?php if($okk){ echo "fas"; } else { echo "far"; } ?> fa-thumbs-up"></i></a></li>
                 <li class="elements_barre_posts"><a href="posts.php?id=<?php echo $feed["id"]; ?>"><?php echo $feed["nb_com"];?> Commentaires <i class="far fa-comments"></i></a></li>
-                <li class="elements_barre_posts"><a id="<?php echo $feed["id"]; ?>share" class="bouton_share"><?php echo $feed["nb_share"];?> Shares <i class="fas fa-share"></i></a></li>
+                <li class="elements_barre_posts"><a id="<?php echo $feed["id"]; ?>shar" class="bouton_share"><?php echo $feed["nb_share"];?> Shares <i class="fas fa-share"></i></a></li>
               </ul>
             </div><?php
           } ?><hr>
