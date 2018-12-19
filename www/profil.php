@@ -174,9 +174,9 @@
                 $result = $bdd->query('SELECT * FROM like_table WHERE profil_like=\''.$_SESSION["idcon"].'\' AND id_post=\''.$feed["id"].'\'');
                 if($result->fetch()){$okk=true;}
                 ?>
-                <li class="elements_barre_posts"><a id="<?php echo $feed["id"]; ?>" class="bouton_like"><?php echo $feed["nb_like"];?> Likes <i class="<?php if($okk){ echo "fas"; } else { echo "far"; } ?> fa-thumbs-up"></i></a></li>
+                <li class="elements_barre_posts"><a id="<?php echo $feed["id"]; ?>like" class="bouton_like"><?php echo $feed["nb_like"];?> Likes <i class="<?php if($okk){ echo "fas"; } else { echo "far"; } ?> fa-thumbs-up"></i></a></li>
                 <li class="elements_barre_posts"><a href="posts.php?id=<?php echo $feed["id"]; ?>"><?php echo $feed["nb_com"];?> Commentaires <i class="far fa-comments"></i></a></li>
-                <li class="elements_barre_posts"><a id="<?php echo $feed["id"]; ?>" class="bouton_share"><?php echo $feed["nb_share"];?> Shares <i class="fas fa-share"></i></a></li>
+                <li class="elements_barre_posts"><a id="<?php echo $feed["id"]; ?>post" class="bouton_share"><?php echo $feed["nb_share"];?> Shares <i class="fas fa-share"></i></a></li>
               </ul>
             </div><?php
           } ?><hr>
