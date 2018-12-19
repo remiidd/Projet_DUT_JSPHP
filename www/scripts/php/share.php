@@ -30,6 +30,7 @@ if(($id_post!=null)&&($id_profil!=null)&&($id_post!=0)&&($id_profil!=0)) {
   ));
   //UPDATE `derayalois`.`posts` SET `nb_like` = '1' WHERE `posts`.`id` = 3;
   $req = $bdd->query('UPDATE posts SET nb_share=nb_share+1 WHERE id=\''.$id_post.'\'');
+  $nbshare = $nbshare+1;
   echo $nbshare.' Shares <i class="fas fa-share"></i>';
 }
 
