@@ -1,4 +1,5 @@
 <?php
+session_start();
 header("Content-Type: text/plain");
 
 if(isset($_GET["id_post"])) {
