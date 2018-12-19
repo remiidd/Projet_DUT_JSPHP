@@ -19,17 +19,6 @@ function getXMLHttpRequest() {
 	return xhr;
 }
 
-function liker_post(id_posts) {
-  var xhr = getXMLHttpRequest();
-  var id_post = encodeURIComponent(id_posts);
-  try {
-    xhr.open("GET", "scripts/php/like.php?id_post="+id_post,true);
-    xhr.send(null);
-  }catch(error) {
-    alert(error);
-  }
-}
-
 $(".bouton_like").click(function(){
 	var id_post = this.getAttribute('id');
 	id_post = encodeURIComponent(id_post);
