@@ -1,6 +1,6 @@
 <?php
   session_start();
-  $mess="<i class=\"fas fa-comments\"></i>";
+  $mess="<p id=\"aff_mess\">Messenger</p><i class=\"fas fa-comments\"></i>";
   try{
     $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
   }
