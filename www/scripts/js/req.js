@@ -30,8 +30,8 @@ function liker_post(id_posts) {
   }
 }
 
-$(".mtest_bouton_like").click(function(){
-	var id_post;
+$(".test_bouton_like").click(function(){
+	var id_post = ;
 });
 
 function share_post(id_posts, id_profils) {
