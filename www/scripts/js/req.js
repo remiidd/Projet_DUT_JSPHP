@@ -43,7 +43,8 @@ $(".bouton_like").click(function(){
 
 });
 
-function share_post(id_posts, id_profils) {
+
+$(".bouton_share").click(function(){
 	var id_post = this.getAttribute('id');
 	id_post = encodeURIComponent(id_post);
 	var xhr = getXMLHttpRequest();
