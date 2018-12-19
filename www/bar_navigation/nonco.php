@@ -45,9 +45,6 @@
                 <span id="notification_count_menu_invit"><?php echo $donnees['nb_demande']; ?></span>
               <?php } ?>
             </a>
-            <a id="notif_i" class="no_deco_link" href="/notification">
-              <p id="aff_demande">Notifications</p><i class="fas fa-bell"></i>
-            </a>
             <a id="messenger_i" class="no_deco_link" href="/messenger">
               <p id="aff_mess">Messenger</p><i class="fas fa-comments"></i>
               <?php
