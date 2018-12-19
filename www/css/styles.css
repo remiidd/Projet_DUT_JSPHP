@@ -422,6 +422,7 @@
 .bouton_like {
   text-decoration: none ! important;
   color: #007bff! important;
+  cursor: pointer;
 }
 .bouton_like:hover {
   text-decoration: underline ! important;
@@ -430,6 +431,7 @@
 .bouton_share {
   text-decoration: none ! important;
   color: #007bff! important;
+  cursor: pointer;
 }
 .bouton_share:hover {
   text-decoration: underline ! important;
