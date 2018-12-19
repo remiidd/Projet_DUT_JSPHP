@@ -52,3 +52,12 @@
 .fa-user-friends{
   display: inline;
 }
+
+.historique{
+  width: 25%;
+}
+
+.discution{
+  width: 75%;
+  left: 25%;
+}
