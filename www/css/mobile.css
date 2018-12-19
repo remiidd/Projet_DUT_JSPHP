@@ -55,9 +55,11 @@
 
 #historique{
   width: 25%;
+  font-size: 1.3em;
 }
 
 .discution{
   width: 75%;
   left: 25%;
+  font-size: 1.3em;
 }
