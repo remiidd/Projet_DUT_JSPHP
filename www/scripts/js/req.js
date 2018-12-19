@@ -46,7 +46,7 @@ $(".bouton_like").click(function(){
 			if (xhr.readyState === xhr.DONE) {
 				if (xhr.status === 200) {
 					console.log(xhr.response);
-					$(".bouton_like").innerHtml(xhr.response);
+					$(".bouton_like").innerHtml = xhr.response;
 				}
 			}
 		};
