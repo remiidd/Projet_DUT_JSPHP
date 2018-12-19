@@ -18,6 +18,10 @@
   top: 0;
 }
 
+#aff_prof{
+  display: none;
+}
+
 #notificationContainer{
   position: absolute;
   display: none;
