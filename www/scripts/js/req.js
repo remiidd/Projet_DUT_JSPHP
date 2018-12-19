@@ -19,6 +19,7 @@ function getXMLHttpRequest() {
 	return xhr;
 }
 
+
 $(".bouton_like").click(function(){
 	var id_post = this.getAttribute('id');
 	id_post = encodeURIComponent(id_post);
@@ -62,7 +63,6 @@ function share_post(id_posts, id_profils) {
 				}
 			}
 		};
-
 }
 
 function suppr_emploi(id,element) {
