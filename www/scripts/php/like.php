@@ -27,13 +27,14 @@ if(($id_post!=null)&&($id_profil!=null)&&($id_post!=0)&&($id_profil!=0)) {
     $req = $bdd->query('INSERT INTO like_table(id, id_post, profil_like) VALUES(NULL, \''.$id_post.'\', \''.$id_profil.'\')');
     //UPDATE `derayalois`.`posts` SET `nb_like` = '1' WHERE `posts`.`id` = 3;
     $req = $bdd->query('UPDATE posts SET nb_like=nb_like+1 WHERE id=\''.$id_post.'\'');
-    echo $nblike;
+    echo $nblike.' Likes <i class="<?php if($okk){ echo "fas"; } else { echo "far"; } ?> fa-thumbs-up"></i>';
   }
   if($ok){
     //DELETE FROM `derayalois`.`like_table` WHERE `like_table`.`id` = 8;
     $req = $bdd->query('DELETE FROM like_table WHERE profil_like=\''.$id_profil.'\' AND id_post=\''.$id_post.'\'');
     $req = $bdd->query('UPDATE posts SET nb_like=nb_like-1 WHERE id=\''.$id_post.'\'');
-    echo $nblike-1;
+    $nblike = $nblike-1;
+    echo $nblike.' Likes <i class="<?php if($okk){ echo "fas"; } else { echo "far"; } ?> fa-thumbs-up"></i>';
   }
 }
 
