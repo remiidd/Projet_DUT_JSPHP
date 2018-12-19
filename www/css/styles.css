@@ -427,6 +427,14 @@
   text-decoration: underline ! important;
   color: #0056b3 ! important;
 }
+.bouton_share {
+  text-decoration: none ! important;
+  color: #007bff! important;
+}
+.bouton_share:hover {
+  text-decoration: underline ! important;
+  color: #0056b3 ! important;
+}
 
 /* ====================  Fin CSS page principale ==================== */
 
