@@ -79,3 +79,7 @@
 .message_area{
   width: 75%;
 }
+
+.navbar-nav > a{
+  margin-top: 7px;
+}
