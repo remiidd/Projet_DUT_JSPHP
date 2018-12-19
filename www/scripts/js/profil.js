@@ -5,4 +5,5 @@ function resize_img(){
     img[i].style.width = taille + "px";
     img[i].style.height = taille + "px";
   }
+  console.log(taille);
 }
