@@ -22,6 +22,7 @@ function getXMLHttpRequest() {
 
 $(".bouton_like").click(function(){
 	var id_post = this.getAttribute('id');
+	id_post = id_post.substr(id_post.length-4, id_post.length);
 	id_post = encodeURIComponent(id_post);
 	var xhr = getXMLHttpRequest();
 
@@ -36,7 +37,7 @@ $(".bouton_like").click(function(){
 			if (xhr.readyState === xhr.DONE) {
 				if (xhr.status === 200) {
 					console.log(xhr.response);
-					el = "#"+id_post;
+					el = "#"+id_post+"like";
 					$(el).html(xhr.response);
 				}
 			}
@@ -47,6 +48,7 @@ $(".bouton_like").click(function(){
 
 $(".bouton_share").click(function(){
 	var id_post = this.getAttribute('id');
+	id_post = id_post.substr(id_post.length-4, id_post.length);
 	id_post = encodeURIComponent(id_post);
 	var xhr = getXMLHttpRequest();
 
@@ -61,7 +63,7 @@ $(".bouton_share").click(function(){
 			if (xhr.readyState === xhr.DONE) {
 				if (xhr.status === 200) {
 					console.log(xhr.response);
-					el = "#"+id_post;
+					el = "#"+id_post+"share";
 					$(el).html(xhr.response);
 				}
 			}
