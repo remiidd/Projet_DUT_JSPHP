@@ -72,6 +72,10 @@
   display: none;
 }
 
+.envoie_msg{
+  width: 15%;
+}
+
 .message_area{
   width: 75%;
 }
