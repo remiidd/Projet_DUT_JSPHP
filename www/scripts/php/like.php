@@ -31,6 +31,9 @@ if(($id_post!=null)&&($id_profil!=null)&&($id_post!=0)&&($id_profil!=0)) {
     $req = $bdd->query('DELETE FROM like_table WHERE profil_like=\''.$id_profil.'\' AND id_post=\''.$id_post.'\'');
     $req = $bdd->query('UPDATE posts SET nb_like=nb_like-1 WHERE id=\''.$id_post.'\'');
   }
+  $req = $bdd->query('SELECT COUNT(*) AS nb_like FROM posts WHERE id=\''.$id_post.'\'');
+  $nb = $req->fetch();
+  echo $nb;
 }
 
 
