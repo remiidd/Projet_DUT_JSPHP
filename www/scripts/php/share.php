@@ -20,8 +20,6 @@ if(($id_post!=null)&&($id_profil!=null)&&($id_post!=0)&&($id_profil!=0)) {
   $nb = $req->fetch();
   $nbshare = $nb["nb_share"];
 
-  echo "id post = ".$id_post." id profil = ".$id_profil;
-
   $content = md5("share").".$id_post";
   $req = $bdd->prepare('INSERT INTO posts(id, nom_createur, date_publication, contenu, photo, profil, nb_com, nb_like, nb_share) VALUES(NULL, :noms, CURRENT_DATE(), :contenu, :photo, :profil,\'0\',\'0\',\'0\')');
   $req->execute(array(
