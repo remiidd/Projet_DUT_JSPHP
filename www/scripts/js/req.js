@@ -30,9 +30,17 @@ function liker_post(id_posts) {
   }
 }
 
-$(".test_bouton_like").click(function(){
+$(".bouton_like").click(function(){
 	var id_post = this.getAttribute('id');
-	liker_post(id_post);
+	id_post = encodeURIComponent(id_post);
+	var xhr = getXMLHttpRequest();
+  
+  try {
+    xhr.open("GET", "scripts/php/like.php?id_post="+id_post,true);
+    xhr.send(null);
+  }catch(error) {
+    alert(error);
+  }
 });
 
 function share_post(id_posts, id_profils) {
