@@ -42,13 +42,11 @@ $(".bouton_like").click(function(){
     alert(error);
   }
 
-	//xhr.responseType = 'document';
-	//xhr.overrideMimeType('text/html');
-
 		xhr.onload = function() {
 			if (xhr.readyState === xhr.DONE) {
 				if (xhr.status === 200) {
 					console.log(xhr.response);
+					$(".bouton_like").replaceWith(xhr.response);
 				}
 			}
 		};
