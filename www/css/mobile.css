@@ -78,6 +78,12 @@
   right: unset;
 }
 
+#notification_count_menu_invit{
+  right: unset;
+  left: 165px;
+  top: 155px;
+}
+
 .envoie_msg{
   width: 15%;
 }
