@@ -27,7 +27,7 @@ if(($id_post!=null)&&($id_profil!=null)&&($id_post!=0)&&($id_profil!=0)) {
     $req = $bdd->query('INSERT INTO like_table(id, id_post, profil_like) VALUES(NULL, \''.$id_post.'\', \''.$id_profil.'\')');
     //UPDATE `derayalois`.`posts` SET `nb_like` = '1' WHERE `posts`.`id` = 3;
     $req = $bdd->query('UPDATE posts SET nb_like=nb_like+1 WHERE id=\''.$id_post.'\'');
-    echo $nblike+1;
+    echo $nblike;
   }
   if($ok){
     //DELETE FROM `derayalois`.`like_table` WHERE `like_table`.`id` = 8;
