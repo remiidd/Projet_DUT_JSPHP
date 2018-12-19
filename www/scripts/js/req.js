@@ -34,6 +34,7 @@ $(".bouton_like").click(function(){
 	var id_post = this.getAttribute('id');
 	id_post = encodeURIComponent(id_post);
 	var xhr = getXMLHttpRequest();
+	console.log("ça marche !");
 
   try {
     xhr.open("GET", "scripts/php/like.php?id_post="+id_post,true);
