@@ -60,7 +60,8 @@ $(".bouton_share").click(function(){
 			if (xhr.readyState === xhr.DONE) {
 				if (xhr.status === 200) {
 					console.log(xhr.response);
-					$(".bouton_share").html(xhr.response);
+					el = "#"+id_post;
+					$(el).html(xhr.response);
 				}
 			}
 		};
