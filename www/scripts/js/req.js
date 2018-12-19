@@ -48,7 +48,7 @@ $(".bouton_like").click(function(){
 		xhr.onload = function() {
 			if (xhr.readyState === xhr.DONE) {
 				if (xhr.status === 200) {
-					console.log(xhr.responseXML);
+					console.log(xhr.response);
 				}
 			}
 		};
