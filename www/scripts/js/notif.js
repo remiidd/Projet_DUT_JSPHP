@@ -1,3 +1,17 @@
+function notif_feed(){
+    setTimeout(function(){
+      $.ajax({
+        utl : "scripts/php/notif_feed.php",
+        type : "GET",
+        success : function(html){
+          $('').html(html);
+        }
+      });
+
+      notif_feed();
+    }, 3000);
+}
+
 function notif_messenger(){
 
     setTimeout( function(){
