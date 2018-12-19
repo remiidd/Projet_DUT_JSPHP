@@ -64,7 +64,7 @@ $(".bouton_share").click(function(){
 				}
 			}
 		};
-}
+});
 
 function suppr_emploi(id,element) {
   var xhr = getXMLHttpRequest();
