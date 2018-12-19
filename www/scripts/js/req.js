@@ -31,7 +31,8 @@ function liker_post(id_posts) {
 }
 
 $(".test_bouton_like").click(function(){
-	var id_post = ;
+	var id_post = this.getAttribute('id');
+	liker_post(id_post);
 });
 
 function share_post(id_posts, id_profils) {
