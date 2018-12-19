@@ -16,6 +16,9 @@ if(($id_post!=null)&&($id_profil!=null)&&($id_post!=0)&&($id_profil!=0)) {
   $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;charset=utf8', 'derayalois', 'testdebrayalois');
   $req = $bdd->query('SELECT * FROM profil WHERE id=\''.$id_profil.'\'');
   $data = $req->fetch();
+  $req = $bdd->query('SELECT * AS nb_share FROM posts WHERE id=\''.$id_post.'\'');
+  $nb = $req->fetch();
+  $nbshare = $nb["nb_share"];
 
   echo "id post = ".$id_post." id profil = ".$id_profil;
 
@@ -29,6 +32,7 @@ if(($id_post!=null)&&($id_profil!=null)&&($id_post!=0)&&($id_profil!=0)) {
   ));
   //UPDATE `derayalois`.`posts` SET `nb_like` = '1' WHERE `posts`.`id` = 3;
   $req = $bdd->query('UPDATE posts SET nb_share=nb_share+1 WHERE id=\''.$id_post.'\'');
+  echo $nbshare.' Shares <i class="fas fa-share"></i>';
 }
 
 
