@@ -71,3 +71,7 @@
 #notificationContainer:hover{
   display: none;
 }
+
+.message_area{
+  width: 75%;
+}
