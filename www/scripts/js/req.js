@@ -21,7 +21,6 @@ function getXMLHttpRequest() {
 
 function liker_post(id_posts) {
   var xhr = getXMLHttpRequest();
-
   var id_post = encodeURIComponent(id_posts);
   try {
     xhr.open("GET", "scripts/php/like.php?id_post="+id_post,true);
