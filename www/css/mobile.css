@@ -63,3 +63,11 @@
   left: 25%;
   font-size: 1.3em;
 }
+
+#messenger_i:hover + #notificationContainer{
+  display: none;
+}
+
+#notificationContainer:hover{
+  display: none;
+}
