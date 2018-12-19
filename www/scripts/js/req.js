@@ -43,16 +43,26 @@ $(".bouton_like").click(function(){
 });
 
 function share_post(id_posts, id_profils) {
+	var id_post = this.getAttribute('id');
+	id_post = encodeURIComponent(id_post);
 	var xhr = getXMLHttpRequest();
 
-	var id_post = encodeURIComponent(id_posts);
-  var id_profil = encodeURIComponent(id_profils);
-	try {
-    xhr.open("GET", "scripts/php/share.php?id_post="+id_post+"&id_profil="+id_profil,true);
+  try {
+    xhr.open("GET", "scripts/php/share.php?id_post="+id_post,true);
     xhr.send(null);
   }catch(error) {
     alert(error);
   }
+
+		xhr.onload = function() {
+			if (xhr.readyState === xhr.DONE) {
+				if (xhr.status === 200) {
+					console.log(xhr.response);
+					$(".bouton_share").html(xhr.response);
+				}
+			}
+		};
+
 }
 
 function suppr_emploi(id,element) {
