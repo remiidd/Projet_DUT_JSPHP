@@ -102,6 +102,17 @@
   transition: 0.4s;
 }
 
+.fa-bell {
+  margin-top: 8px;
+  margin-right: 20px;
+  margin-left: 15px;
+}
+
+.fa-bell:hover{
+  color: white;
+  transition: 0.4s;
+}
+
 .fa-user-friends {
   margin-top: 8px;
   margin-left: 15px;
