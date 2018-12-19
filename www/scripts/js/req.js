@@ -43,7 +43,11 @@ $(".bouton_like").click(function(){
   }
 
 		xhr.onload = function() {
-			console.log(xhr.responseXML);
+			if (xhr.readyState === xhr.DONE) {
+				if (xhr.status === 200) {
+					console.log(xhr.responseXML);
+				}
+			}
 		};
 
 });
