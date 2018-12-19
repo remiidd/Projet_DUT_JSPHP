@@ -416,8 +416,8 @@
   text-align: center;
 }
 .pp {
-  height: 30%;
-  width: 180px;
+  max-width: 180px;
+  max-height: 180px;
   overflow: hidden;
   border-radius: 90px;
   margin-top: -50px;
