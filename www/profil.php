@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <!--Fin des fichiers bootstrap-->
     <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" media="(max-width: 1092px)" href="css/mobile.css" />
     <script src="scripts/js/profil.js" charset="utf-8"></script>
   </head>
   <body onresize="resize_img()" onload="resize_img()">
