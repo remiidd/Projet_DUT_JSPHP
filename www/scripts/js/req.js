@@ -34,7 +34,6 @@ $(".bouton_like").click(function(){
 	var id_post = this.getAttribute('id');
 	id_post = encodeURIComponent(id_post);
 	var xhr = getXMLHttpRequest();
-	console.log("ça marche !");
 
   try {
     xhr.open("GET", "scripts/php/like.php?id_post="+id_post,true);
@@ -47,7 +46,7 @@ $(".bouton_like").click(function(){
 			if (xhr.readyState === xhr.DONE) {
 				if (xhr.status === 200) {
 					console.log(xhr.response);
-					$(".bouton_like").replaceWith(xhr.response);
+					$(".bouton_like").innerHtml(xhr.response);
 				}
 			}
 		};
