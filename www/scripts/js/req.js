@@ -23,7 +23,6 @@ function getXMLHttpRequest() {
 $(".bouton_like").click(function(){
 	var id_post = this.getAttribute('id');
 	id_post = id_post.substr(0, id_post.length-4);
-	console.log(id_post);
 	id_post = encodeURIComponent(id_post);
 	var xhr = getXMLHttpRequest();
 
@@ -49,7 +48,7 @@ $(".bouton_like").click(function(){
 
 $(".bouton_share").click(function(){
 	var id_post = this.getAttribute('id');
-	id_post = id_post.substr(id_post.length-4, id_post.length);
+	id_post = id_post.substr(0, id_post.length-4);
 	id_post = encodeURIComponent(id_post);
 	var xhr = getXMLHttpRequest();
 
