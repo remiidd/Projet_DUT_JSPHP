@@ -72,6 +72,12 @@
   display: none;
 }
 
+#notification_count_menu{
+  left: 121px;
+  top: 220px;
+  right: unset;
+}
+
 .envoie_msg{
   width: 15%;
 }
