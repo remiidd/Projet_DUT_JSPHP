@@ -22,6 +22,14 @@
   display: none;
 }
 
+#aff_mess{
+  display: none;
+}
+
+#aff_demande{
+  display: none;
+}
+
 #notificationContainer{
   position: absolute;
   display: none;
