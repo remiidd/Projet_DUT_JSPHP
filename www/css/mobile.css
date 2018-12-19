@@ -28,3 +28,11 @@
 #gauche{
   height: 600px;
 }
+
+#aff_prof{
+  display: inline;
+}
+
+.fa-user{
+  display: inline;
+}
