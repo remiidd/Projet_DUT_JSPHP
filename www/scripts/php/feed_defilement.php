@@ -102,6 +102,7 @@ if($off>$nb_post["COUNT(*)"]){ //suggestion de profils
 $reponse = $bdd->query('SELECT *
                         FROM posts
                         WHERE profil IN ('.$liste_amis.')
+                        ORDER BY id DESC
                         LIMIT 5
                         OFFSET '.$off.'');
 while($feed = $reponse->fetch()) {
