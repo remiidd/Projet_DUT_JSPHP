@@ -29,7 +29,7 @@
               </form>
             </li>
             <a id="invitation_i" class="no_deco_link" href="/invitation">
-              <i class="fas fa-user-friends"></i>
+              <p id="aff_demande">Demande d'amis</p><i class="fas fa-user-friends"></i>
               <?php
               try{
                 $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
@@ -46,7 +46,7 @@
               <?php } ?>
             </a>
             <a id="messenger_i" class="no_deco_link" href="/messenger">
-              <i class="fas fa-comments"></i>
+              <p id="aff_mess">Messenger</p><i class="fas fa-comments"></i>
               <?php
               try{
                 $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
