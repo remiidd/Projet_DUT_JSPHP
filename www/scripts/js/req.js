@@ -23,6 +23,7 @@ function getXMLHttpRequest() {
 $(".bouton_like").click(function(){
 	var id_post = this.getAttribute('id');
 	id_post = id_post.substr(id_post.length-4, id_post.length);
+	console.log(id_post);
 	id_post = encodeURIComponent(id_post);
 	var xhr = getXMLHttpRequest();
 
