@@ -1,6 +1,6 @@
 <?php
   session_start();
-  $mess = "<i class=\"fas fa-user-friends\"></i>";
+  $mess = "<p id=\"aff_demande\">Demande d'amis</p><i class=\"fas fa-user-friends\"></i>";
   $moi = $_SESSION['idcon'];
   try{
     $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;port=3306;charset=utf8', 'derayalois', 'testdebrayalois');
