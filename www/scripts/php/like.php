@@ -15,7 +15,7 @@ if(isset($_SESSION["idcon"])) {
 
 if(($id_post!=null)&&($id_profil!=null)&&($id_post!=0)&&($id_profil!=0)) {
   $bdd = new PDO('mysql:host=lulipa.server.r-heberg.fr;dbname=derayalois;charset=utf8', 'derayalois', 'testdebrayalois');
-  $req = $bdd->query('SELECT COUNT(*) AS nb_like FROM posts WHERE id=\''.$id_post.'\'');
+  $req = $bdd->query('SELECT nb_like FROM posts WHERE id=\''.$id_post.'\'');
   $nb = $req->fetch();
   $nblike = $nb["nb_like"];
 
@@ -27,6 +27,7 @@ if(($id_post!=null)&&($id_profil!=null)&&($id_post!=0)&&($id_profil!=0)) {
     $req = $bdd->query('INSERT INTO like_table(id, id_post, profil_like) VALUES(NULL, \''.$id_post.'\', \''.$id_profil.'\')');
     //UPDATE `derayalois`.`posts` SET `nb_like` = '1' WHERE `posts`.`id` = 3;
     $req = $bdd->query('UPDATE posts SET nb_like=nb_like+1 WHERE id=\''.$id_post.'\'');
+    $nblike = $nblike+1;
     echo $nblike.' Likes <i class="fas fa-thumbs-up"></i>';
   }
   if($ok){
